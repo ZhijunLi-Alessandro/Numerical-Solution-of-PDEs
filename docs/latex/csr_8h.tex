@@ -1,0 +1,232 @@
+\doxysection{include/csr.h File Reference}
+\hypertarget{csr_8h}{}\label{csr_8h}\index{include/csr.h@{include/csr.h}}
+
+
+Header file for CSR matrix operations and iterative solvers.  
+
+
+{\ttfamily \#include "{}vec.\+h"{}}\newline
+Include dependency graph for csr.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{csr_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{csr_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}}
+\begin{DoxyCompactList}\small\item\em Structure to represent a sparse matrix in Compressed Sparse Row (CSR) format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{csr_8h_a4ebe4ef38d73a028ea6ed78e6dce46f2}{create\+Sparse\+CSR}} (int rows, int cols, int nnz)
+\begin{DoxyCompactList}\small\item\em Create a new \doxylink{structSparseCSR}{Sparse\+CSR} matrix structure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{csr_8h_ad76b7aa766ec949cb15bcf6ede8aadcb}{free\+Sparse\+CSR}} (\mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix)
+\begin{DoxyCompactList}\small\item\em Free the memory allocated for a \doxylink{structSparseCSR}{Sparse\+CSR} matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{csr_8h_ad757786fcb200f58e1b48d771f2e5e6d}{spmv\+\_\+csr}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, const double \texorpdfstring{$\ast$}{*}x, double \texorpdfstring{$\ast$}{*}y)
+\begin{DoxyCompactList}\small\item\em Sparse matrix-\/vector multiplication (y = A\texorpdfstring{$\ast$}{*}x) for CSR format. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{csr_8h_a511084c45e428b7302a4f789f43de246}{get\+\_\+\+D\+\_\+\+L\+\_\+\+U\+\_\+csr}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix)
+\begin{DoxyCompactList}\small\item\em Decompose a CSR matrix into diagonal, lower, and upper matrices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{csr_8h_a7cf1992062cdbed207ef7217c4a3e20d}{Jacobi\+\_\+csr}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, const double \texorpdfstring{$\ast$}{*}b, double \texorpdfstring{$\ast$}{*}x, int max\+\_\+iter, double tol)
+\begin{DoxyCompactList}\small\item\em Solve Ax = b using the Jacobi iterative method for CSR matrices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{csr_8h_a8e498df649d55f5935286ea1351ee89a}{Gauss\+Seidel\+\_\+csr}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, const double \texorpdfstring{$\ast$}{*}b, double \texorpdfstring{$\ast$}{*}x, int max\+\_\+iter, double tol)
+\begin{DoxyCompactList}\small\item\em Solve Ax = b using the Gauss-\/\+Seidel iterative method for CSR matrices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{csr_8h_a1aa4226c6ac96692cc5b691c5364b02f}{CG\+\_\+csr}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, const double \texorpdfstring{$\ast$}{*}b, double \texorpdfstring{$\ast$}{*}x, int max\+\_\+iter, double tol)
+\begin{DoxyCompactList}\small\item\em Solve Ax = b using the Conjugate Gradient method for CSR matrices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for CSR matrix operations and iterative solvers. 
+
+This header file declares the \doxylink{structSparseCSR}{Sparse\+CSR} structure and functions for creating, freeing, decomposing, performing matrix-\/vector multiplication, and solving linear systems using iterative methods (Jacobi, Gauss-\/\+Seidel, Conjugate Gradient) for sparse matrices stored in Compressed Sparse Row (CSR) format. \begin{DoxySeeAlso}{See also}
+\doxylink{csr_8c}{csr.\+c} 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Li Zhijun 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/10-\/10 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{csr_8h_a1aa4226c6ac96692cc5b691c5364b02f}\label{csr_8h_a1aa4226c6ac96692cc5b691c5364b02f} 
+\index{csr.h@{csr.h}!CG\_csr@{CG\_csr}}
+\index{CG\_csr@{CG\_csr}!csr.h@{csr.h}}
+\doxysubsubsection{\texorpdfstring{CG\_csr()}{CG\_csr()}}
+{\footnotesize\ttfamily void CG\+\_\+csr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{b,  }\item[{double \texorpdfstring{$\ast$}{*}}]{x,  }\item[{int}]{max\+\_\+iter,  }\item[{double}]{tol }\end{DoxyParamCaption})}
+
+
+
+Solve Ax = b using the Conjugate Gradient method for CSR matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the \doxylink{structSparseCSR}{Sparse\+CSR} matrix (A). \\
+\hline
+{\em b} & Right-\/hand side vector. \\
+\hline
+{\em x} & Solution vector (input\+: initial guess, output\+: result). \\
+\hline
+{\em max\+\_\+iter} & Maximum number of iterations. \\
+\hline
+{\em tol} & Tolerance for convergence. \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{test_csr_3x3_8c-example}{test\+\_\+csr\+\_\+3x3.\+c}}, and \mbox{\hyperlink{test_csr_5x5_8c-example}{test\+\_\+csr\+\_\+5x5.\+c}}.\end{Desc}
+\Hypertarget{csr_8h_a4ebe4ef38d73a028ea6ed78e6dce46f2}\label{csr_8h_a4ebe4ef38d73a028ea6ed78e6dce46f2} 
+\index{csr.h@{csr.h}!createSparseCSR@{createSparseCSR}}
+\index{createSparseCSR@{createSparseCSR}!csr.h@{csr.h}}
+\doxysubsubsection{\texorpdfstring{createSparseCSR()}{createSparseCSR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*} create\+Sparse\+CSR (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols,  }\item[{int}]{nnz }\end{DoxyParamCaption})}
+
+
+
+Create a new \doxylink{structSparseCSR}{Sparse\+CSR} matrix structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & Number of rows. \\
+\hline
+{\em cols} & Number of columns. \\
+\hline
+{\em nnz} & Number of non-\/zero elements. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly allocated \doxylink{structSparseCSR}{Sparse\+CSR} structure.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The caller is responsible for freeing the allocated memory using \doxylink{csr_8h_ad76b7aa766ec949cb15bcf6ede8aadcb}{free\+Sparse\+CSR()}. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{csr_8h_ad76b7aa766ec949cb15bcf6ede8aadcb}{free\+Sparse\+CSR()} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{2D-Poisson_8c-example}{2\+D-\/\+Poisson.\+c}}, \mbox{\hyperlink{test_csr_3x3_8c-example}{test\+\_\+csr\+\_\+3x3.\+c}}, and \mbox{\hyperlink{test_csr_5x5_8c-example}{test\+\_\+csr\+\_\+5x5.\+c}}.\end{Desc}
+\Hypertarget{csr_8h_ad76b7aa766ec949cb15bcf6ede8aadcb}\label{csr_8h_ad76b7aa766ec949cb15bcf6ede8aadcb} 
+\index{csr.h@{csr.h}!freeSparseCSR@{freeSparseCSR}}
+\index{freeSparseCSR@{freeSparseCSR}!csr.h@{csr.h}}
+\doxysubsubsection{\texorpdfstring{freeSparseCSR()}{freeSparseCSR()}}
+{\footnotesize\ttfamily void free\+Sparse\+CSR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}}]{matrix }\end{DoxyParamCaption})}
+
+
+
+Free the memory allocated for a \doxylink{structSparseCSR}{Sparse\+CSR} matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the \doxylink{structSparseCSR}{Sparse\+CSR} structure to free. \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{2D-Poisson_8c-example}{2\+D-\/\+Poisson.\+c}}, \mbox{\hyperlink{test_csr_3x3_8c-example}{test\+\_\+csr\+\_\+3x3.\+c}}, and \mbox{\hyperlink{test_csr_5x5_8c-example}{test\+\_\+csr\+\_\+5x5.\+c}}.\end{Desc}
+\Hypertarget{csr_8h_a8e498df649d55f5935286ea1351ee89a}\label{csr_8h_a8e498df649d55f5935286ea1351ee89a} 
+\index{csr.h@{csr.h}!GaussSeidel\_csr@{GaussSeidel\_csr}}
+\index{GaussSeidel\_csr@{GaussSeidel\_csr}!csr.h@{csr.h}}
+\doxysubsubsection{\texorpdfstring{GaussSeidel\_csr()}{GaussSeidel\_csr()}}
+{\footnotesize\ttfamily void Gauss\+Seidel\+\_\+csr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{b,  }\item[{double \texorpdfstring{$\ast$}{*}}]{x,  }\item[{int}]{max\+\_\+iter,  }\item[{double}]{tol }\end{DoxyParamCaption})}
+
+
+
+Solve Ax = b using the Gauss-\/\+Seidel iterative method for CSR matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the \doxylink{structSparseCSR}{Sparse\+CSR} matrix (A). \\
+\hline
+{\em b} & Right-\/hand side vector. \\
+\hline
+{\em x} & Solution vector (input\+: initial guess, output\+: result). \\
+\hline
+{\em max\+\_\+iter} & Maximum number of iterations. \\
+\hline
+{\em tol} & Tolerance for convergence. \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{test_csr_3x3_8c-example}{test\+\_\+csr\+\_\+3x3.\+c}}, and \mbox{\hyperlink{test_csr_5x5_8c-example}{test\+\_\+csr\+\_\+5x5.\+c}}.\end{Desc}
+\Hypertarget{csr_8h_a511084c45e428b7302a4f789f43de246}\label{csr_8h_a511084c45e428b7302a4f789f43de246} 
+\index{csr.h@{csr.h}!get\_D\_L\_U\_csr@{get\_D\_L\_U\_csr}}
+\index{get\_D\_L\_U\_csr@{get\_D\_L\_U\_csr}!csr.h@{csr.h}}
+\doxysubsubsection{\texorpdfstring{get\_D\_L\_U\_csr()}{get\_D\_L\_U\_csr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} get\+\_\+\+D\+\_\+\+L\+\_\+\+U\+\_\+csr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}}]{matrix }\end{DoxyParamCaption})}
+
+
+
+Decompose a CSR matrix into diagonal, lower, and upper matrices. 
+
+Returns an array of three \doxylink{structSparseCSR}{Sparse\+CSR} pointers\+:
+\begin{DoxyItemize}
+\item result\mbox{[}0\mbox{]}\+: Diagonal matrix (D)
+\item result\mbox{[}1\mbox{]}\+: Lower triangular matrix (L)
+\item result\mbox{[}2\mbox{]}\+: Upper triangular matrix (U)
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the input \doxylink{structSparseCSR}{Sparse\+CSR} matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of three Sparse\+CSR\texorpdfstring{$\ast$}{*} (D, L, U) 
+\end{DoxyReturn}
+\Hypertarget{csr_8h_a7cf1992062cdbed207ef7217c4a3e20d}\label{csr_8h_a7cf1992062cdbed207ef7217c4a3e20d} 
+\index{csr.h@{csr.h}!Jacobi\_csr@{Jacobi\_csr}}
+\index{Jacobi\_csr@{Jacobi\_csr}!csr.h@{csr.h}}
+\doxysubsubsection{\texorpdfstring{Jacobi\_csr()}{Jacobi\_csr()}}
+{\footnotesize\ttfamily void Jacobi\+\_\+csr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{b,  }\item[{double \texorpdfstring{$\ast$}{*}}]{x,  }\item[{int}]{max\+\_\+iter,  }\item[{double}]{tol }\end{DoxyParamCaption})}
+
+
+
+Solve Ax = b using the Jacobi iterative method for CSR matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the \doxylink{structSparseCSR}{Sparse\+CSR} matrix (A). \\
+\hline
+{\em b} & Right-\/hand side vector. \\
+\hline
+{\em x} & Solution vector (input\+: initial guess, output\+: result). \\
+\hline
+{\em max\+\_\+iter} & Maximum number of iterations. \\
+\hline
+{\em tol} & Tolerance for convergence. \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{test_csr_3x3_8c-example}{test\+\_\+csr\+\_\+3x3.\+c}}, and \mbox{\hyperlink{test_csr_5x5_8c-example}{test\+\_\+csr\+\_\+5x5.\+c}}.\end{Desc}
+\Hypertarget{csr_8h_ad757786fcb200f58e1b48d771f2e5e6d}\label{csr_8h_ad757786fcb200f58e1b48d771f2e5e6d} 
+\index{csr.h@{csr.h}!spmv\_csr@{spmv\_csr}}
+\index{spmv\_csr@{spmv\_csr}!csr.h@{csr.h}}
+\doxysubsubsection{\texorpdfstring{spmv\_csr()}{spmv\_csr()}}
+{\footnotesize\ttfamily void spmv\+\_\+csr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{x,  }\item[{double \texorpdfstring{$\ast$}{*}}]{y }\end{DoxyParamCaption})}
+
+
+
+Sparse matrix-\/vector multiplication (y = A\texorpdfstring{$\ast$}{*}x) for CSR format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the \doxylink{structSparseCSR}{Sparse\+CSR} matrix. \\
+\hline
+{\em x} & Input vector. \\
+\hline
+{\em y} & Output vector (result). \\
+\hline
+\end{DoxyParams}

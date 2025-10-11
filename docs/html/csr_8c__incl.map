@@ -1,0 +1,11 @@
+<map id="src/csr.c" name="src/csr.c">
+<area shape="rect" id="Node000001" title="Implementation of sparse matrix operations in CSR format." alt="" coords="89,5,161,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,69,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,33,64,72,61,68,110,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="94,79,157,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="128,31,128,65,123,65,123,31"/>
+<area shape="rect" id="Node000004" href="$csr_8h.html" title="Header file for CSR matrix operations and iterative solvers." alt="" coords="181,79,232,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="140,29,185,68,181,72,137,33"/>
+<area shape="rect" id="Node000005" href="$vec_8h.html" title="Header file for basic vector operations." alt="" coords="179,152,234,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="209,104,209,138,204,138,204,104"/>
+</map>

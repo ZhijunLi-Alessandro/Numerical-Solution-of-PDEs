@@ -1,0 +1,18 @@
+<map id="include/csr.h" name="include/csr.h">
+<area shape="rect" id="Node000001" title="Header file for CSR matrix operations and iterative solvers." alt="" coords="317,5,412,31"/>
+<area shape="rect" id="Node000002" href="$2D-Poisson_8c.html" title="Example program to generate a 2D Poisson matrix in CSR format." alt="" coords="5,152,167,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="316,38,265,57,213,81,150,119,102,154,99,150,147,115,210,76,263,52,314,33"/>
+<area shape="rect" id="Node000003" href="$utils_8h.html" title="Header file for utility functions to print vectors and CSR matrices." alt="" coords="224,79,327,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="341,41,292,81,288,76,338,37"/>
+<area shape="rect" id="Node000005" href="$test__csr__3x3_8c.html" title="Test program for 3x3 CSR matrix operations and iterative solvers." alt="" coords="294,152,435,177"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="367,45,367,152,362,152,362,45"/>
+<area shape="rect" id="Node000006" href="$test__csr__5x5_8c.html" title="Test program for 5x5 CSR matrix operations and iterative solvers." alt="" coords="459,152,601,177"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="384,40,411,71,442,102,478,129,511,150,508,154,475,133,439,106,407,74,380,43"/>
+<area shape="rect" id="Node000007" href="$csr_8c.html" title="Implementation of sparse matrix operations in CSR format." alt="" coords="453,79,525,104"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="398,35,470,76,467,81,395,40"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="233,111,118,154,116,149,231,106"/>
+<area shape="rect" id="Node000004" href="$utils_8c.html" title="Utility functions for printing vectors and SparseCSR matrices." alt="" coords="191,152,269,177"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="263,117,240,153,235,150,258,114"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="302,110,352,150,348,154,299,115"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="330,105,489,149,488,154,329,110"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="examples/2D&#45;Poisson.c" name="examples/2D&#45;Poisson.c">
+<area shape="rect" id="Node000001" title="Example program to generate a 2D Poisson matrix in CSR format." alt="" coords="77,5,238,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,67,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,33,69,74,66,69,136,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="91,79,155,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,32,137,67,132,65,149,30"/>
+<area shape="rect" id="Node000004" href="$csr_8h.html" title="Header file for CSR matrix operations and iterative solvers." alt="" coords="200,152,251,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="165,30,217,138,212,141,160,32"/>
+<area shape="rect" id="Node000006" href="$utils_8h.html" title="Header file for utility functions to print vectors and CSR matrices." alt="" coords="230,79,287,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="175,28,232,68,229,73,172,33"/>
+<area shape="rect" id="Node000005" href="$vec_8h.html" title="Header file for basic vector operations." alt="" coords="198,225,253,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="228,178,228,212,223,212,223,178"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="256,105,239,141,234,139,251,103"/>
+</map>

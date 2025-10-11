@@ -1,0 +1,142 @@
+\doxysection{include/vec.h File Reference}
+\hypertarget{vec_8h}{}\label{vec_8h}\index{include/vec.h@{include/vec.h}}
+
+
+Header file for basic vector operations.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vec_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{vec_8h_a8064438ad30fa53dc30568732a16897e}{vec\+\_\+copy}} (double \texorpdfstring{$\ast$}{*}dest, const double \texorpdfstring{$\ast$}{*}src, int n)
+\begin{DoxyCompactList}\small\item\em Copy vector src to dest. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vec_8h_aa1105b8dbe22d20005cf240620d26c60}{vec\+\_\+add}} (double \texorpdfstring{$\ast$}{*}a, const double \texorpdfstring{$\ast$}{*}b, int n)
+\begin{DoxyCompactList}\small\item\em Add vector b to vector a (a = a + b). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vec_8h_a6a7fe282666585a3d51ae183a5944446}{vec\+\_\+sub}} (double \texorpdfstring{$\ast$}{*}a, const double \texorpdfstring{$\ast$}{*}b, int n)
+\begin{DoxyCompactList}\small\item\em Subtract vector b from vector a (a = a -\/ b). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vec_8h_a20711f8122303f9a0a91c6ebdd457ca5}{vec\+\_\+scale}} (double \texorpdfstring{$\ast$}{*}a, double scalar, int n)
+\begin{DoxyCompactList}\small\item\em Scale vector a by a scalar (a = a \texorpdfstring{$\ast$}{*} scalar). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{vec_8h_acad3dacc2d865817b4007ae129a77ca1}{vec\+\_\+dot}} (const double \texorpdfstring{$\ast$}{*}a, const double \texorpdfstring{$\ast$}{*}b, int n)
+\begin{DoxyCompactList}\small\item\em Compute the dot product of vectors a and b. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for basic vector operations. 
+
+This header file declares functions for basic vector operations such as copying, addition, subtraction, scaling, and dot product. \begin{DoxySeeAlso}{See also}
+\doxylink{vec_8c}{vec.\+c} 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Li Zhijun 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/10-\/10 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{vec_8h_aa1105b8dbe22d20005cf240620d26c60}\label{vec_8h_aa1105b8dbe22d20005cf240620d26c60} 
+\index{vec.h@{vec.h}!vec\_add@{vec\_add}}
+\index{vec\_add@{vec\_add}!vec.h@{vec.h}}
+\doxysubsubsection{\texorpdfstring{vec\_add()}{vec\_add()}}
+{\footnotesize\ttfamily void vec\+\_\+add (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{a,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{b,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Add vector b to vector a (a = a + b). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First vector and result vector. \\
+\hline
+{\em b} & Second vector to add. \\
+\hline
+{\em n} & Number of elements in the vectors. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{vec_8h_a8064438ad30fa53dc30568732a16897e}\label{vec_8h_a8064438ad30fa53dc30568732a16897e} 
+\index{vec.h@{vec.h}!vec\_copy@{vec\_copy}}
+\index{vec\_copy@{vec\_copy}!vec.h@{vec.h}}
+\doxysubsubsection{\texorpdfstring{vec\_copy()}{vec\_copy()}}
+{\footnotesize\ttfamily void vec\+\_\+copy (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{dest,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{src,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Copy vector src to dest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & Destination vector. \\
+\hline
+{\em src} & Source vector. \\
+\hline
+{\em n} & Number of elements to copy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{vec_8h_acad3dacc2d865817b4007ae129a77ca1}\label{vec_8h_acad3dacc2d865817b4007ae129a77ca1} 
+\index{vec.h@{vec.h}!vec\_dot@{vec\_dot}}
+\index{vec\_dot@{vec\_dot}!vec.h@{vec.h}}
+\doxysubsubsection{\texorpdfstring{vec\_dot()}{vec\_dot()}}
+{\footnotesize\ttfamily double vec\+\_\+dot (\begin{DoxyParamCaption}\item[{const double \texorpdfstring{$\ast$}{*}}]{a,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{b,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Compute the dot product of vectors a and b. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First vector. \\
+\hline
+{\em b} & Second vector. \\
+\hline
+{\em n} & Number of elements in the vectors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The dot product (a . b). 
+\end{DoxyReturn}
+\Hypertarget{vec_8h_a20711f8122303f9a0a91c6ebdd457ca5}\label{vec_8h_a20711f8122303f9a0a91c6ebdd457ca5} 
+\index{vec.h@{vec.h}!vec\_scale@{vec\_scale}}
+\index{vec\_scale@{vec\_scale}!vec.h@{vec.h}}
+\doxysubsubsection{\texorpdfstring{vec\_scale()}{vec\_scale()}}
+{\footnotesize\ttfamily void vec\+\_\+scale (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{a,  }\item[{double}]{scalar,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Scale vector a by a scalar (a = a \texorpdfstring{$\ast$}{*} scalar). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Vector to scale. \\
+\hline
+{\em scalar} & Scaling factor. \\
+\hline
+{\em n} & Number of elements in the vector. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{vec_8h_a6a7fe282666585a3d51ae183a5944446}\label{vec_8h_a6a7fe282666585a3d51ae183a5944446} 
+\index{vec.h@{vec.h}!vec\_sub@{vec\_sub}}
+\index{vec\_sub@{vec\_sub}!vec.h@{vec.h}}
+\doxysubsubsection{\texorpdfstring{vec\_sub()}{vec\_sub()}}
+{\footnotesize\ttfamily void vec\+\_\+sub (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{a,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{b,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Subtract vector b from vector a (a = a -\/ b). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First vector and result vector. \\
+\hline
+{\em b} & Second vector to subtract. \\
+\hline
+{\em n} & Number of elements in the vectors. \\
+\hline
+\end{DoxyParams}

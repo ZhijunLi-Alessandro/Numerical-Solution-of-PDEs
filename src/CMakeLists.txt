@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+project(CSRLIB)
+aux_source_directory(./ SRC)
+link_libraries(m)
+include_directories(${HEAD_PATH})
+set(LIBRARY_OUTPUT_PATH ${LIB_PATH})
+add_library(${CSR_LIB} SHARED ${SRC})

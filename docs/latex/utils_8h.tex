@@ -1,0 +1,132 @@
+\doxysection{include/utils.h File Reference}
+\hypertarget{utils_8h}{}\label{utils_8h}\index{include/utils.h@{include/utils.h}}
+
+
+Header file for utility functions to print vectors and CSR matrices.  
+
+
+{\ttfamily \#include "{}csr.\+h"{}}\newline
+Include dependency graph for utils.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{utils_8h_a882dd77955362cc0e2f22717258d742f}{print\+\_\+vector}} (const double \texorpdfstring{$\ast$}{*}vec, int n, int ndec)
+\begin{DoxyCompactList}\small\item\em Print a dense vector with specified decimal places. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils_8h_a11820138833e6725f1060ae252999b99}{print\+\_\+int\+\_\+vector}} (const int \texorpdfstring{$\ast$}{*}vec, int n)
+\begin{DoxyCompactList}\small\item\em Print an integer vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils_8h_aa83175aba8797e248985c725fd63c828}{print\+\_\+\+Sparse\+CSR}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, int ndec)
+\begin{DoxyCompactList}\small\item\em Print a \doxylink{structSparseCSR}{Sparse\+CSR} matrix in dense format with specified decimal places. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils_8h_a39645fbbf53a4794428fc836ed651292}{print\+\_\+\+Sparse\+CSR\+\_\+simple}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, int ndec)
+\begin{DoxyCompactList}\small\item\em Print the internal representation of a \doxylink{structSparseCSR}{Sparse\+CSR} matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for utility functions to print vectors and CSR matrices. 
+
+This header file declares functions for printing dense vectors, integer vectors, and sparse matrices in Compressed Sparse Row (CSR) format. The printing functions allow for specifying the number of decimal places for floating-\/point values. \begin{DoxySeeAlso}{See also}
+\doxylink{utils_8c}{utils.\+c} 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Li Zhijun 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/10-\/10 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{utils_8h_a11820138833e6725f1060ae252999b99}\label{utils_8h_a11820138833e6725f1060ae252999b99} 
+\index{utils.h@{utils.h}!print\_int\_vector@{print\_int\_vector}}
+\index{print\_int\_vector@{print\_int\_vector}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{print\_int\_vector()}{print\_int\_vector()}}
+{\footnotesize\ttfamily void print\+\_\+int\+\_\+vector (\begin{DoxyParamCaption}\item[{const int \texorpdfstring{$\ast$}{*}}]{vec,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Print an integer vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & Pointer to the integer vector. \\
+\hline
+{\em n} & Number of elements in the vector. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{utils_8h_aa83175aba8797e248985c725fd63c828}\label{utils_8h_aa83175aba8797e248985c725fd63c828} 
+\index{utils.h@{utils.h}!print\_SparseCSR@{print\_SparseCSR}}
+\index{print\_SparseCSR@{print\_SparseCSR}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{print\_SparseCSR()}{print\_SparseCSR()}}
+{\footnotesize\ttfamily void print\+\_\+\+Sparse\+CSR (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{int}]{ndec }\end{DoxyParamCaption})}
+
+
+
+Print a \doxylink{structSparseCSR}{Sparse\+CSR} matrix in dense format with specified decimal places. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the \doxylink{structSparseCSR}{Sparse\+CSR} matrix. \\
+\hline
+{\em ndec} & Number of decimal places to print.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is only suitable for CSR matrices with columns sorted within each row. 
+\end{DoxyNote}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{2D-Poisson_8c-example}{2\+D-\/\+Poisson.\+c}}, \mbox{\hyperlink{test_csr_3x3_8c-example}{test\+\_\+csr\+\_\+3x3.\+c}}, and \mbox{\hyperlink{test_csr_5x5_8c-example}{test\+\_\+csr\+\_\+5x5.\+c}}.\end{Desc}
+\Hypertarget{utils_8h_a39645fbbf53a4794428fc836ed651292}\label{utils_8h_a39645fbbf53a4794428fc836ed651292} 
+\index{utils.h@{utils.h}!print\_SparseCSR\_simple@{print\_SparseCSR\_simple}}
+\index{print\_SparseCSR\_simple@{print\_SparseCSR\_simple}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{print\_SparseCSR\_simple()}{print\_SparseCSR\_simple()}}
+{\footnotesize\ttfamily void print\+\_\+\+Sparse\+CSR\+\_\+simple (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{int}]{ndec }\end{DoxyParamCaption})}
+
+
+
+Print the internal representation of a \doxylink{structSparseCSR}{Sparse\+CSR} matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the \doxylink{structSparseCSR}{Sparse\+CSR} matrix. \\
+\hline
+{\em ndec} & Number of decimal places to print for values. \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{2D-Poisson_8c-example}{2\+D-\/\+Poisson.\+c}}.\end{Desc}
+\Hypertarget{utils_8h_a882dd77955362cc0e2f22717258d742f}\label{utils_8h_a882dd77955362cc0e2f22717258d742f} 
+\index{utils.h@{utils.h}!print\_vector@{print\_vector}}
+\index{print\_vector@{print\_vector}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{print\_vector()}{print\_vector()}}
+{\footnotesize\ttfamily void print\+\_\+vector (\begin{DoxyParamCaption}\item[{const double \texorpdfstring{$\ast$}{*}}]{vec,  }\item[{int}]{n,  }\item[{int}]{ndec }\end{DoxyParamCaption})}
+
+
+
+Print a dense vector with specified decimal places. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & Pointer to the vector. \\
+\hline
+{\em n} & Number of elements in the vector. \\
+\hline
+{\em ndec} & Number of decimal places to print. \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{test_csr_3x3_8c-example}{test\+\_\+csr\+\_\+3x3.\+c}}, and \mbox{\hyperlink{test_csr_5x5_8c-example}{test\+\_\+csr\+\_\+5x5.\+c}}.\end{Desc}

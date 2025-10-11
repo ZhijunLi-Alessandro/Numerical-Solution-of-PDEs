@@ -1,0 +1,22 @@
+<map id="include/vec.h" name="include/vec.h">
+<area shape="rect" id="Node000001" title="Header file for basic vector operations." alt="" coords="370,5,469,31"/>
+<area shape="rect" id="Node000002" href="$csr_8h.html" title="Header file for CSR matrix operations and iterative solvers." alt="" coords="317,79,412,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="404,43,376,80,371,77,400,40"/>
+<area shape="rect" id="Node000009" href="$vec_8c.html" title="Implementation of basic vector operations." alt="" coords="436,79,512,104"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="439,40,467,77,463,80,435,43"/>
+<area shape="rect" id="Node000003" href="$2D-Poisson_8c.html" title="Example program to generate a 2D Poisson matrix in CSR format." alt="" coords="5,225,167,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="316,111,265,130,213,154,150,193,102,227,99,223,147,188,210,150,263,125,314,106"/>
+<area shape="rect" id="Node000004" href="$utils_8h.html" title="Header file for utility functions to print vectors and CSR matrices." alt="" coords="224,152,327,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="341,115,292,154,288,150,338,110"/>
+<area shape="rect" id="Node000006" href="$test__csr__3x3_8c.html" title="Test program for 3x3 CSR matrix operations and iterative solvers." alt="" coords="294,225,435,251"/>
+<area shape="poly" id="edge9_Node000002_Node000006" title=" " alt="" coords="367,118,367,225,362,225,362,118"/>
+<area shape="rect" id="Node000007" href="$test__csr__5x5_8c.html" title="Test program for 5x5 CSR matrix operations and iterative solvers." alt="" coords="459,225,601,251"/>
+<area shape="poly" id="edge10_Node000002_Node000007" title=" " alt="" coords="384,113,411,144,442,175,478,202,511,223,508,228,475,206,439,179,407,148,380,117"/>
+<area shape="rect" id="Node000008" href="$csr_8c.html" title="Implementation of sparse matrix operations in CSR format." alt="" coords="453,152,525,177"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="398,108,470,149,467,154,395,113"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="233,185,118,228,116,223,231,180"/>
+<area shape="rect" id="Node000005" href="$utils_8c.html" title="Utility functions for printing vectors and SparseCSR matrices." alt="" coords="191,225,269,251"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="263,191,240,227,235,224,258,188"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="302,184,352,223,348,227,299,188"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="330,179,489,223,488,228,329,184"/>
+</map>

@@ -1,0 +1,35 @@
+\doxysection{csr.\+h}
+\hypertarget{csr_8h_source}{}\label{csr_8h_source}\index{include/csr.h@{include/csr.h}}
+\mbox{\hyperlink{csr_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#\ ifndef\ CSR\_H}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#\ define\ CSR\_H}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#\ include\ "{}\mbox{\hyperlink{vec_8h}{vec.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSparseCSR_a01028b80ac878638b97bba94e3163e24}{rows}};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSparseCSR_a2981b9a9511082c4409a31850de5bd5b}{cols}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSparseCSR_aa28c2121443bb1d2cb2781fd5645a647}{nnz}};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{structSparseCSR_aca3a053424b8f259cf0230bd0a38f4ad}{row\_ptr}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{structSparseCSR_a0760445d97c362538aa1082a504b89d5}{col\_ind}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{double}\ *\mbox{\hyperlink{structSparseCSR_a7d69fbd5592863ce652cc4d9a6d30674}{values}};}
+\DoxyCodeLine{00034\ \}\ \mbox{\hyperlink{structSparseCSR}{SparseCSR}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00046\ \mbox{\hyperlink{structSparseCSR}{SparseCSR}}*\ \mbox{\hyperlink{csr_8h_a4ebe4ef38d73a028ea6ed78e6dce46f2}{createSparseCSR}}(\textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols,\ \textcolor{keywordtype}{int}\ nnz);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{csr_8h_ad76b7aa766ec949cb15bcf6ede8aadcb}{freeSparseCSR}}(\mbox{\hyperlink{structSparseCSR}{SparseCSR}}\ *matrix);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{csr_8h_ad757786fcb200f58e1b48d771f2e5e6d}{spmv\_csr}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structSparseCSR}{SparseCSR}}\ *matrix,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ *x,\ \textcolor{keywordtype}{double}\ *y);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00073\ \mbox{\hyperlink{structSparseCSR}{SparseCSR}}**\ \mbox{\hyperlink{csr_8h_a511084c45e428b7302a4f789f43de246}{get\_D\_L\_U\_csr}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structSparseCSR}{SparseCSR}}\ *matrix);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{csr_8h_a7cf1992062cdbed207ef7217c4a3e20d}{Jacobi\_csr}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structSparseCSR}{SparseCSR}}\ *matrix,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ *b,\ \textcolor{keywordtype}{double}\ *x,\ \textcolor{keywordtype}{int}\ max\_iter,\ \textcolor{keywordtype}{double}\ tol);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00093\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{csr_8h_a8e498df649d55f5935286ea1351ee89a}{GaussSeidel\_csr}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structSparseCSR}{SparseCSR}}\ *matrix,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ *b,\ \textcolor{keywordtype}{double}\ *x,\ \textcolor{keywordtype}{int}\ max\_iter,\ \textcolor{keywordtype}{double}\ tol);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00103\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{csr_8h_a1aa4226c6ac96692cc5b691c5364b02f}{CG\_csr}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structSparseCSR}{SparseCSR}}\ *matrix,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ *b,\ \textcolor{keywordtype}{double}\ *x,\ \textcolor{keywordtype}{int}\ max\_iter,\ \textcolor{keywordtype}{double}\ tol);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#\ endif}}
+
+\end{DoxyCode}

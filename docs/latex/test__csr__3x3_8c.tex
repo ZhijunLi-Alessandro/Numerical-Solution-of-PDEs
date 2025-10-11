@@ -1,0 +1,75 @@
+\doxysection{tests/test\+\_\+csr\+\_\+3x3.c File Reference}
+\hypertarget{test__csr__3x3_8c}{}\label{test__csr__3x3_8c}\index{tests/test\_csr\_3x3.c@{tests/test\_csr\_3x3.c}}
+
+
+Test program for 3x3 CSR matrix operations and iterative solvers.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}csr.\+h"{}}\newline
+{\ttfamily \#include "{}utils.\+h"{}}\newline
+Include dependency graph for test\+\_\+csr\+\_\+3x3.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{test__csr__3x3_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{test__csr__3x3_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function to test 3x3 CSR matrix operations and iterative solvers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Test program for 3x3 CSR matrix operations and iterative solvers. 
+
+This test program creates a 3x3 sparse matrix in CSR format, defines a right-\/hand side vector, and solves the linear system using Jacobi, Gauss-\/\+Seidel, and Conjugate Gradient methods. The results are printed to the console.
+
+Usage\+: Compile the program and run it.
+
+Example\+: \begin{DoxyVerb}mkdir build && cd build
+cmake ..
+make
+../bin/test_csr_3x3 \end{DoxyVerb}
+ \begin{DoxyNote}{Note}
+This file will be regarded as a test file in doxygen documentation in next edition. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{csr_8h}{csr.\+h}, \doxylink{utils_8h}{utils.\+h} 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Li Zhijun 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/10-\/10 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{test__csr__3x3_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{test__csr__3x3_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{test\_csr\_3x3.c@{test\_csr\_3x3.c}!main@{main}}
+\index{main@{main}!test\_csr\_3x3.c@{test\_csr\_3x3.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function to test 3x3 CSR matrix operations and iterative solvers. 
+
+The main function creates a 3x3 sparse matrix in CSR format, defines a right-\/hand side vector, and solves the linear system using Jacobi, Gauss-\/\+Seidel, and Conjugate Gradient methods. The results are printed to the console.
+
+example matrix\+: \begin{DoxyVerb}[ 4 -1  0]
+[-1  4 -1]
+[ 0 -1  3]
+b = [15, 10 10]^T
+x = [5 5 5]^T \end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+int Exit status of the program. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{2D-Poisson_8c-example}{2\+D-\/\+Poisson.\+c}}, \mbox{\hyperlink{test_csr_3x3_8c-example}{test\+\_\+csr\+\_\+3x3.\+c}}, and \mbox{\hyperlink{test_csr_5x5_8c-example}{test\+\_\+csr\+\_\+5x5.\+c}}.\end{Desc}

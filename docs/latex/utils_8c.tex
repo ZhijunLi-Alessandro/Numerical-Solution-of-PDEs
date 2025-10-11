@@ -1,0 +1,124 @@
+\doxysection{src/utils.c File Reference}
+\hypertarget{utils_8c}{}\label{utils_8c}\index{src/utils.c@{src/utils.c}}
+
+
+Utility functions for printing vectors and \doxylink{structSparseCSR}{Sparse\+CSR} matrices.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}utils.\+h"{}}\newline
+Include dependency graph for utils.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{utils_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{utils_8c_a882dd77955362cc0e2f22717258d742f}{print\+\_\+vector}} (const double \texorpdfstring{$\ast$}{*}vec, int n, int ndec)
+\begin{DoxyCompactList}\small\item\em Print a dense vector with specified decimal places. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils_8c_a11820138833e6725f1060ae252999b99}{print\+\_\+int\+\_\+vector}} (const int \texorpdfstring{$\ast$}{*}vec, int n)
+\begin{DoxyCompactList}\small\item\em Print an integer vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils_8c_aa83175aba8797e248985c725fd63c828}{print\+\_\+\+Sparse\+CSR}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, int ndec)
+\begin{DoxyCompactList}\small\item\em Print a \doxylink{structSparseCSR}{Sparse\+CSR} matrix in dense format with specified decimal places. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils_8c_a39645fbbf53a4794428fc836ed651292}{print\+\_\+\+Sparse\+CSR\+\_\+simple}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, int ndec)
+\begin{DoxyCompactList}\small\item\em Print the internal representation of a \doxylink{structSparseCSR}{Sparse\+CSR} matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utility functions for printing vectors and \doxylink{structSparseCSR}{Sparse\+CSR} matrices. 
+
+This file contains functions to print dense vectors, integer vectors, and sparse matrices in Compressed Sparse Row (CSR) format. The printing functions allow for specifying the number of decimal places for floating-\/point values.
+
+Functions\+:
+\begin{DoxyItemize}
+\item print\+\_\+vector\+: Print a dense vector with specified decimal places.
+\item print\+\_\+int\+\_\+vector\+: Print an integer vector.
+\item print\+\_\+\+Sparse\+CSR\+: Print a \doxylink{structSparseCSR}{Sparse\+CSR} matrix in dense format with specified decimal places.
+\item print\+\_\+\+Sparse\+CSR\+\_\+simple\+: Print the internal representation of a \doxylink{structSparseCSR}{Sparse\+CSR} matrix.
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Li Zhijun 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/10-\/10 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{utils_8c_a11820138833e6725f1060ae252999b99}\label{utils_8c_a11820138833e6725f1060ae252999b99} 
+\index{utils.c@{utils.c}!print\_int\_vector@{print\_int\_vector}}
+\index{print\_int\_vector@{print\_int\_vector}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{print\_int\_vector()}{print\_int\_vector()}}
+{\footnotesize\ttfamily void print\+\_\+int\+\_\+vector (\begin{DoxyParamCaption}\item[{const int \texorpdfstring{$\ast$}{*}}]{vec,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Print an integer vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & Pointer to the integer vector. \\
+\hline
+{\em n} & Number of elements in the vector. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{utils_8c_aa83175aba8797e248985c725fd63c828}\label{utils_8c_aa83175aba8797e248985c725fd63c828} 
+\index{utils.c@{utils.c}!print\_SparseCSR@{print\_SparseCSR}}
+\index{print\_SparseCSR@{print\_SparseCSR}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{print\_SparseCSR()}{print\_SparseCSR()}}
+{\footnotesize\ttfamily void print\+\_\+\+Sparse\+CSR (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{int}]{ndec }\end{DoxyParamCaption})}
+
+
+
+Print a \doxylink{structSparseCSR}{Sparse\+CSR} matrix in dense format with specified decimal places. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the \doxylink{structSparseCSR}{Sparse\+CSR} matrix. \\
+\hline
+{\em ndec} & Number of decimal places to print.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is only suitable for CSR matrices with columns sorted within each row. 
+\end{DoxyNote}
+\Hypertarget{utils_8c_a39645fbbf53a4794428fc836ed651292}\label{utils_8c_a39645fbbf53a4794428fc836ed651292} 
+\index{utils.c@{utils.c}!print\_SparseCSR\_simple@{print\_SparseCSR\_simple}}
+\index{print\_SparseCSR\_simple@{print\_SparseCSR\_simple}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{print\_SparseCSR\_simple()}{print\_SparseCSR\_simple()}}
+{\footnotesize\ttfamily void print\+\_\+\+Sparse\+CSR\+\_\+simple (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{int}]{ndec }\end{DoxyParamCaption})}
+
+
+
+Print the internal representation of a \doxylink{structSparseCSR}{Sparse\+CSR} matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the \doxylink{structSparseCSR}{Sparse\+CSR} matrix. \\
+\hline
+{\em ndec} & Number of decimal places to print for values. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{utils_8c_a882dd77955362cc0e2f22717258d742f}\label{utils_8c_a882dd77955362cc0e2f22717258d742f} 
+\index{utils.c@{utils.c}!print\_vector@{print\_vector}}
+\index{print\_vector@{print\_vector}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{print\_vector()}{print\_vector()}}
+{\footnotesize\ttfamily void print\+\_\+vector (\begin{DoxyParamCaption}\item[{const double \texorpdfstring{$\ast$}{*}}]{vec,  }\item[{int}]{n,  }\item[{int}]{ndec }\end{DoxyParamCaption})}
+
+
+
+Print a dense vector with specified decimal places. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & Pointer to the vector. \\
+\hline
+{\em n} & Number of elements in the vector. \\
+\hline
+{\em ndec} & Number of decimal places to print. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,47 @@
+\doxysection{test\+\_\+csr\+\_\+5x5.\+c}
+\hypertarget{test_csr_5x5_8c-example}{}\label{test_csr_5x5_8c-example}
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#\ include\ <stdio.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#\ include\ "{}\mbox{\hyperlink{csr_8h}{csr.h}}"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#\ include\ "{}\mbox{\hyperlink{utils_8h}{utils.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{test__csr__3x3_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ rows\ =\ 5,\ cols\ =\ 5,\ nnz\ =\ 13;}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{structSparseCSR}{SparseCSR}}\ *matrix\ =\ \mbox{\hyperlink{csr_8h_a4ebe4ef38d73a028ea6ed78e6dce46f2}{createSparseCSR}}(rows,\ cols,\ nnz);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ row\_ptr[]\ =\ \{0,\ 2,\ 5,\ 8,\ 11,\ 13\};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ col\_ind[]\ =\ \{0,\ 1,\ 0,\ 1,\ 2,\ 1,\ 2,\ 3,\ 2,\ 3,\ 4,\ 3,\ 4,\ 5,\ 4,\ 5\};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ values[]\ =\ \{2.0,\ -\/1.0,\ \ -\/1.0,\ 2.0,\ -\/1.0,\ \ -\/1.0,\ 2.0,\ -\/1.0,\ \ -\/1.0,\ 2.0,\ -\/1.0,\ \ -\/1.0,\ 2.0\};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ rows\ +\ 1;\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ matrix-\/>\mbox{\hyperlink{structSparseCSR_aca3a053424b8f259cf0230bd0a38f4ad}{row\_ptr}}[i]\ =\ row\_ptr[i];}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <nnz;\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ matrix-\/>\mbox{\hyperlink{structSparseCSR_a0760445d97c362538aa1082a504b89d5}{col\_ind}}[i]\ =\ col\_ind[i];}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ matrix-\/>\mbox{\hyperlink{structSparseCSR_a7d69fbd5592863ce652cc4d9a6d30674}{values}}[i]\ =\ values[i];}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ b[]\ =\ \{1.0,\ 2.0,\ 3.0,\ 4.0,\ 5.0\};}
+\DoxyCodeLine{\ \ \ \ printf(\textcolor{stringliteral}{"{}Matrix\ A\ in\ CSR\ format:\(\backslash\)n"{}});}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{utils_8h_aa83175aba8797e248985c725fd63c828}{print\_SparseCSR}}(matrix,\ 6);}
+\DoxyCodeLine{\ \ \ \ printf(\textcolor{stringliteral}{"{}Right-\/hand\ side\ vector\ b:\(\backslash\)n"{}});}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{utils_8h_a882dd77955362cc0e2f22717258d742f}{print\_vector}}(b,\ rows,\ 6);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ x\_Jacobi[]\ =\ \{0.0,\ 0.0,\ 0.0,\ 0.0,\ 0.0\};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ x\_GS[]\ =\ \{0.0,\ 0.0,\ 0.0,\ 0.0,\ 0.0\};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ x\_CG[]\ =\ \{0.0,\ 0.0,\ 0.0,\ 0.0,\ 0.0\};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ max\_iter\ =\ 50;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ tol\ =\ 1e-\/6;}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{csr_8h_a7cf1992062cdbed207ef7217c4a3e20d}{Jacobi\_csr}}(matrix,\ b,\ x\_Jacobi,\ max\_iter,\ tol);}
+\DoxyCodeLine{\ \ \ \ printf(\textcolor{stringliteral}{"{}Jacobi\ Solution\ x:\(\backslash\)n"{}});}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{utils_8h_a882dd77955362cc0e2f22717258d742f}{print\_vector}}(x\_Jacobi,\ rows,\ 6);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{csr_8h_a8e498df649d55f5935286ea1351ee89a}{GaussSeidel\_csr}}(matrix,\ b,\ x\_GS,\ max\_iter,\ tol);}
+\DoxyCodeLine{\ \ \ \ printf(\textcolor{stringliteral}{"{}Gauss-\/Seidel\ Solution\ x:\(\backslash\)n"{}});}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{utils_8h_a882dd77955362cc0e2f22717258d742f}{print\_vector}}(x\_GS,\ rows,\ 6);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{csr_8h_a1aa4226c6ac96692cc5b691c5364b02f}{CG\_csr}}(matrix,\ b,\ x\_CG,\ max\_iter,\ tol);}
+\DoxyCodeLine{\ \ \ \ printf(\textcolor{stringliteral}{"{}Conjugate\ Gradient\ Solution\ x:\(\backslash\)n"{}});}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{utils_8h_a882dd77955362cc0e2f22717258d742f}{print\_vector}}(x\_CG,\ rows,\ 6);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{csr_8h_ad76b7aa766ec949cb15bcf6ede8aadcb}{freeSparseCSR}}(matrix);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 

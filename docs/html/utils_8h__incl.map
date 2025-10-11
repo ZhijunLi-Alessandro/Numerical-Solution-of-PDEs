@@ -1,0 +1,7 @@
+<map id="include/utils.h" name="include/utils.h">
+<area shape="rect" id="Node000001" title="Header file for utility functions to print vectors and CSR matrices." alt="" coords="5,5,108,31"/>
+<area shape="rect" id="Node000002" href="$csr_8h.html" title="Header file for CSR matrix operations and iterative solvers." alt="" coords="31,79,82,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,31,59,65,54,65,54,31"/>
+<area shape="rect" id="Node000003" href="$vec_8h.html" title="Header file for basic vector operations." alt="" coords="29,152,84,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="59,104,59,138,54,138,54,104"/>
+</map>
