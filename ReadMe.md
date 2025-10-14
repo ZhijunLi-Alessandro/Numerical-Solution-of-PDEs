@@ -2,6 +2,8 @@
 
 This project is a **homework** for the Numerical Solution of Partial Differential Equations course at **Peking University**.
 
+This project has only been tested on **Linux**.
+
 ## Introduction
 
 Currently includes a lightweight **C language library** for sparse matrix computation based on the **Compressed Sparse Row (CSR)** format.
