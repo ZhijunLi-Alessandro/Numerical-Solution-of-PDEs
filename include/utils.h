@@ -29,6 +29,10 @@ void print_vector(const double *vec, int n, int ndec);
  */
 void print_int_vector(const int *vec, int n);
 
+void print_matrix(const double **matrix, int rows, int cols, int ndec);
+
+void print_int_matrix(const int **matrix, int rows, int cols);
+
 /**
  * @brief Print a SparseCSR matrix in dense format with specified decimal places.
  * @param matrix Pointer to the SparseCSR matrix.

@@ -11,6 +11,7 @@
  * @date 2025-10-10
  */
 #include <stdlib.h>
+#include <stdio.h>
 #include <math.h>
 #include "csr.h"
 
@@ -120,6 +121,7 @@ void Jacobi_csr(const SparseCSR *matrix, const double *b, double *x, int max_ite
             x[i] = x_new[i];
         }
         norm = sqrt(norm);
+        printf("Jacobi Iteration %d: Residual = %e\n", iter + 1, norm);
         if (norm < tol) break;
     }
     free(x_new);
@@ -143,6 +145,7 @@ void GaussSeidel_csr(const SparseCSR *matrix, const double *b, double *x, int ma
             norm += (x[i] - x_old) * (x[i] - x_old);
         }
         norm = sqrt(norm);
+        printf("GS Iteration %d: Residual = %e\n", iter + 1, norm);
         if (norm < tol) break;
     }
 }
@@ -173,6 +176,8 @@ void CG_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, d
         }
 
         double rsnew = vec_dot(r, r, matrix->rows);
+
+        printf("CG Iteration %d: Residual = %e\n", iter + 1, sqrt(rsnew));
 
         if (sqrt(rsnew) < tol) break;
 

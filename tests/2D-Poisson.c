@@ -66,8 +66,8 @@ SparseCSR* createMatrix(int nx, int ny) {
                 col_ind[idx] = mapping(i, j, nx);
                 values[idx] = 1.0;
                 idx++;
-                row_ptr[mapping(i, j, nx) + 1] = idx;
-                continue;
+                // row_ptr[mapping(i, j, nx) + 1] = idx;
+                // continue;
             }
 
             // Interior

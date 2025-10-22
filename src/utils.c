@@ -35,6 +35,34 @@ void print_int_vector(const int *vec, int n) {
     printf("]\n");
 }
 
+void print_matrix(const double **matrix, int rows, int cols, int ndec) {
+    for (int i = 0; i < rows; i++) {
+        if (i == 0) {printf("[");}
+        else {printf(" ");}
+        printf("[");
+        for (int j = 0; j < cols; j++) {
+            printf("%.*f ", ndec, matrix[i][j]);
+        }
+        printf("]");
+        if (i == rows - 1) {printf("]\n");}
+        else {printf(",\n");}
+    }
+}
+
+void print_int_matrix(const int **matrix, int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        if (i == 0) {printf("[");}
+        else {printf(" ");}
+        printf("[");
+        for (int j = 0; j < cols; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("]");
+        if (i == rows - 1) {printf("]\n");}
+        else {printf(",\n");}
+    }
+}
+
 void print_SparseCSR(const SparseCSR *matrix, int ndec) {
     /*Only Suitable for Columns Sorted CSR Format*/
     for (int i = 0; i < matrix->rows; i++) {
