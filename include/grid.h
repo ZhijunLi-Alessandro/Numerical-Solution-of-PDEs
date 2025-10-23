@@ -6,10 +6,12 @@
  * The Grid structure represents a 2D grid with specified dimensions and spacing.
  * @see grid.c
  * @author Li Zhijun
- * @date 2025-10-10
+ * @date 2025-10-21
  */
 # ifndef GRID_H
 # define GRID_H
+
+typedef int (*region_divider_func)(double, double, double, double);
 
 typedef struct {
     int nx;         /**< Number of grid points in the x direction */
@@ -31,6 +33,8 @@ typedef struct {
 } Grid2D;
 
 Grid2D* create_uniform_grid(int nx, int ny, double x0, double x1, double y0, double y1);
+Grid2D* initialize_Grid(int nx, int ny, double x0, double x1, double y0, double y1, region_divider_func region_divider);
+double **read_indices_to_points(Grid2D *grid, double* data_indices);
 void* free_grid(Grid2D *grid);
 
 # endif

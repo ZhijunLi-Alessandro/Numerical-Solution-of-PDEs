@@ -49,4 +49,6 @@ void print_SparseCSR(const SparseCSR *matrix, int ndec);
  */
 void print_SparseCSR_simple(const SparseCSR *matrix, int ndec);
 
+void write_csv_matrix(const char *filename, double **matrix, int rows, int cols);
+
 # endif
