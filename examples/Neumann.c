@@ -37,8 +37,14 @@ int region_divider(double x, double y, double hx, double hy) {
     else if (y >= (-2.0 - eps) && y <= -1.0) {
         if (x >= -eps && x <= (-y + eps)) {
             if (x <= hx - 2 * eps) {
+                // if (y <= -2.0 + hy - 2 * eps) {
+                //     return 0; // Exclude Corner
+                // }
                 return 4; // Left boundary
             } else if (x >= -y - hx + 2 * eps) {
+                if (y <= -2.0 + hy - 2 * eps) {
+                    return 0; // Exclude Corner
+                }
                 return 6; // Lower right boundary
             } else if (y <= -2.0 + hy - 2 * eps) {
                 return 7; // Bottom boundary
@@ -51,6 +57,25 @@ int region_divider(double x, double y, double hx, double hy) {
     }
 };
 
+double get_normal(int boundary_type) {
+    switch (boundary_type) {
+        case 2: // Top left slant boundary
+            return 3.0 * Pi / 4.0;
+        case 3: // Top right slant boundary
+            return Pi / 4.0;
+        case 4: // Left boundary
+            return Pi;
+        case 5: // Upper right boundary
+            return - atan(0.5);
+        case 6: // Lower right boundary
+            return Pi / 4.0;
+        case 7: // Bottom boundary
+            return -Pi / 2.0;
+        default:
+            return 0.0; // Not a boundary
+    }
+}
+
 double compute_f(double x, double y) {
     return sin(Pi * x) * cos(2 * Pi * y);
 }
@@ -59,8 +84,19 @@ double compute_u_exact(double x, double y) {
     return 1.0 / (5 * Pi * Pi) * sin(Pi * x) * cos(2 * Pi * y);
 }
 
+double compute_derivative_exact(double x, double y, int direction) {
+    if (direction == 0) { // derivative w.r.t x
+        return (1.0 / (5 * Pi * Pi)) * Pi * cos(Pi * x) * cos(2 * Pi * y);
+    } else if (direction == 1) { // derivative w.r.t y
+        return (1.0 / (5 * Pi * Pi)) * (-2.0 * Pi) * sin(Pi * x) * sin(2 * Pi * y);
+    } else {
+        return 0.0;
+    }
+}
+
 double compute_boundary_value(double x, double y, int boundary_type) {
-    double x_b, y_b, result;
+    double x_b, y_b, result, derivx, derivy, alpha;
+    alpha = get_normal(boundary_type);
     switch (boundary_type) {
         case 2: // Top left slant boundary
             x_b = (x + y - 1.0) / 2.0;
@@ -89,8 +125,43 @@ double compute_boundary_value(double x, double y, int boundary_type) {
         default:
             return 0.0;
     }
-    result = compute_u_exact(x_b, y_b);
+    derivx = compute_derivative_exact(x_b, y_b, 0);
+    derivy = compute_derivative_exact(x_b, y_b, 1);
+    result = (derivx * cos(alpha) + derivy * sin(alpha));
     return result;
+}
+
+double *numerical_deriv(Grid2D* grid, double*data_indices, int direction) {
+    double *derivative = (double *)malloc(grid->n_active * sizeof(double));
+    int **region = grid->region, **id_map = grid->id_map;
+    double hx = grid->hx, hy = grid->hy;
+    for (int i = 0; i < grid->n_active; i++) {
+        int gi = grid->id_i[i];
+        int gj = grid->id_j[i];
+        if (direction == 0) { // numerical derivative w.r.t x
+            if ((gi == 0) || (region[gi - 1][gj] == 0)) {
+                derivative[i] = (data_indices[id_map[gi + 1][gj]] - data_indices[i]) / hx;
+            }
+            else if ((gi == grid->nx-1) || (region[gi + 1][gj] == 0)) {
+                derivative[i] = (data_indices[i] - data_indices[id_map[gi - 1][gj]]) / hx;
+            }
+            else {
+                derivative[i] = (data_indices[id_map[gi + 1][gj]] - data_indices[id_map[gi - 1][gj]]) / hx / 2;
+            }
+        }
+        else if (direction == 1) { // numerical derivative w.r.t y
+            if ((gj == 0) || (region[gi][gj - 1] == 0)) {
+                derivative[i] = (data_indices[id_map[gi][gj + 1]] - data_indices[i]) / hy;
+            }
+            else if ((gj == grid->ny-1) || (region[gi][gj + 1] == 0)) {
+                derivative[i] = (data_indices[i] - data_indices[id_map[gi][gj - 1]]) / hy;
+            }
+            else {
+                derivative[i] = (data_indices[id_map[gi][gj + 1]] - data_indices[id_map[gi][gj - 1]]) / hy / 2;
+            }
+        }
+    }
+    return derivative;
 }
 
 int main() {
@@ -101,7 +172,7 @@ int main() {
     // printf("%.6f\n", compute_u_exact(grid->x[10], grid->y[40]));
     printf("Grid region layout (0: exterior, 1: interior, others: boundary types):\n");
     print_int_matrix((const int **)grid->region, grid->nx, grid->ny);
-    SparseCSR* matrix = assemble_Matrix_Dirichlet(grid);
+    SparseCSR* matrix = assemble_Matrix_Neumann(grid, get_normal);
 
     // printf("Assembled sparse matrix in CSR format:\n");
     // if (grid->n_active <= 36) {
@@ -111,13 +182,13 @@ int main() {
     //     print_SparseCSR_simple(matrix, 1);
     // }
 
-    double* rhs = assemble_RHS_Dirichlet(grid, compute_f, compute_boundary_value);
+    double* rhs = assemble_RHS_Neumann(grid, compute_f, compute_boundary_value, compute_u_exact);
     // Solve the linear system using Conjugate Gradient method
     double* solution = (double *)malloc(grid->n_active * sizeof(double));
     for (int i = 0; i < grid->n_active; i++) {
         solution[i] = 0.0; // Initial guess
     }
-    GaussSeidel_csr(matrix, rhs, solution, 1000, 1e-6);
+    GaussSeidel_csr(matrix, rhs, solution, 100000, 1e-6);
 
     double *exact = (double *)malloc(grid->n_active * sizeof(double));
     for (int i = 0; i < grid->n_active; i++) {
@@ -139,14 +210,19 @@ int main() {
     //     printf("u(%.4f, %.4f) = %.6f, Exact = %.6f, Error = %.6e\n", xi, yj, solution[i], u_exact, fabs(solution[i] - u_exact));
     // }
 
+    double *solution_deriv = numerical_deriv(grid, solution, 0);
+    double *exact_deriv = numerical_deriv(grid, exact, 0);
+
     double **data_points = read_indices_to_points(grid, solution);
+    // double **data_points = read_indices_to_points(grid, solution_deriv);
     // print_matrix((const double **)data_points, grid->nx, grid->ny, 6);
     double **exact_points = read_indices_to_points(grid, exact);
+    // double **exact_points = read_indices_to_points(grid, exact_deriv);
     // print_matrix((const double **)exact_points, grid->nx, grid->ny, 6);
 
     // Optionally, write the solution to a CSV file for visualization
-    write_csv_matrix("results/Dirichlet_solution.csv", data_points, grid->nx, grid->ny);
-    write_csv_matrix("results/Dirichlet_exact.csv", exact_points, grid->nx, grid->ny);
+    write_csv_matrix("results/Neumann_solution.csv", data_points, grid->nx, grid->ny);
+    write_csv_matrix("results/Neumann_exact.csv", exact_points, grid->nx, grid->ny);
 
     // Clean up
     // Save grid dimensions because free_grid(grid) will deallocate the structure

@@ -15,8 +15,11 @@
 
 typedef double (*f_func)(double, double);
 typedef double (*boundary_func)(double, double, int);
+typedef double (*normal_func)(int);
 
 SparseCSR* assemble_Matrix_Dirichlet(Grid2D* grid);
 double* assemble_RHS_Dirichlet(Grid2D* grid, f_func f, boundary_func compute_boundary_value);
+SparseCSR* assemble_Matrix_Neumann(Grid2D* grid, normal_func get_normal);
+double* assemble_RHS_Neumann(Grid2D* grid, f_func f, boundary_func compute_boundary_value, f_func get_exact);
 
 # endif

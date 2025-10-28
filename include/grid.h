@@ -27,6 +27,7 @@ typedef struct {
 
     int **id_map;   /**< Mapping from 2D grid points to 1D indices */
     int n_active;   /**< Number of active grid points */
+    int n_interior; /**< Number of interior grid points */
 
     int *id_i;      /**< Array of i-coordinates of active points */
     int *id_j;      /**< Array of j-coordinates of active points */

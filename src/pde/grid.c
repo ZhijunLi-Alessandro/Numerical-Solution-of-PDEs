@@ -43,6 +43,7 @@ Grid2D* create_uniform_grid(int nx, int ny, double x0, double x1, double y0, dou
 Grid2D* initialize_Grid(int nx, int ny, double x0, double x1, double y0, double y1, region_divider_func region_divider) {
     Grid2D *grid = create_uniform_grid(nx, ny, x0, x1, y0, y1);
     grid->n_active = 0;
+    grid->n_interior = 0;
     for (int i = 0; i < grid->nx; i++) {
         for (int j = 0; j < grid->ny; j++) {
             int region_value = region_divider(grid->x[i], grid->y[j], grid->hx, grid->hy);
@@ -50,6 +51,9 @@ Grid2D* initialize_Grid(int nx, int ny, double x0, double x1, double y0, double 
                 grid->region[i][j] = region_value;
                 grid->id_map[i][j] = grid->n_active;
                 grid->n_active++;
+                if (region_value == 1) {
+                    grid->n_interior++;
+                }
             } else {
                 grid->region[i][j] = 0;
                 grid->id_map[i][j] = -1;
