@@ -23,7 +23,7 @@
  * @see csr.h, utils.h
  * @author Li Zhijun
  * @date 2025-10-10
- * @example 2D-Poisson.c
+ * @test 2D-Poisson.c
  */
 #include <stdio.h>
 #include <stdlib.h>

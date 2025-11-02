@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['row_5fptr_0',['row_ptr',['../structSparseCSR.html#aca3a053424b8f259cf0230bd0a38f4ad',1,'SparseCSR']]],
-  ['rows_1',['rows',['../structSparseCSR.html#a01028b80ac878638b97bba94e3163e24',1,'SparseCSR']]]
+  ['ex_0',['ex',['../namespacevisualize__Neumann.html#a30d420c94f6cdd7e998b2df6291a9290',1,'visualize_Neumann']]],
+  ['exact_1',['exact',['../namespacevisualize__Dirichlet.html#a0f0076ba646b40bc1a7bbda06e1583ae',1,'visualize_Dirichlet.exact'],['../namespacevisualize__Neumann.html#ae582e12b8bb60997bc7cf27354d1ad16',1,'visualize_Neumann.exact']]]
 ];

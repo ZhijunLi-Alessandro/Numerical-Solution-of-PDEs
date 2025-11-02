@@ -1,18 +1,19 @@
-\doxysection{src/csr.c File Reference}
-\hypertarget{csr_8c}{}\label{csr_8c}\index{src/csr.c@{src/csr.c}}
+\doxysection{src/sparse/csr.c File Reference}
+\hypertarget{csr_8c}{}\label{csr_8c}\index{src/sparse/csr.c@{src/sparse/csr.c}}
 
 
 Implementation of sparse matrix operations in CSR format.  
 
 
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$math.\+h$>$}\newline
 {\ttfamily \#include "{}csr.\+h"{}}\newline
 Include dependency graph for csr.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=252pt]{csr_8c__incl}
+\includegraphics[width=316pt]{csr_8c__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
@@ -37,7 +38,7 @@ void \mbox{\hyperlink{csr_8c_a1aa4226c6ac96692cc5b691c5364b02f}{CG\+\_\+csr}} (c
 \doxysubsection{Detailed Description}
 Implementation of sparse matrix operations in CSR format. 
 
-This file incudes functions for creating, freeing, decomposing, matrix-\/vector multiplication, and solving linear systems using iterative methods (Jacobi, Gauss-\/\+Seidel, Conjugate Gradient) for sparse matrices stored in Compressed Sparse Row (CSR) format.
+This file includes functions for creating, freeing, decomposing, matrix-\/vector multiplication, and solving linear systems using iterative methods (Jacobi, Gauss-\/\+Seidel, Conjugate Gradient) for sparse matrices stored in Compressed Sparse Row (CSR) format.
 
 \begin{DoxyAuthor}{Author}
 Li Zhijun 

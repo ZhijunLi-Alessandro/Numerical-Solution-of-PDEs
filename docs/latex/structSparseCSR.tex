@@ -36,7 +36,7 @@ CSR format stores a sparse matrix using three arrays\+:
 \item values\+: Array of size nnz storing the non-\/zero values of the matrix. 
 \end{DoxyItemize}\begin{Desc}
 \item[Examples]\par
-\mbox{\hyperlink{2D-Poisson_8c-example}{2\+D-\/\+Poisson.\+c}}, \mbox{\hyperlink{test_csr_3x3_8c-example}{test\+\_\+csr\+\_\+3x3.\+c}}, and \mbox{\hyperlink{test_csr_5x5_8c-example}{test\+\_\+csr\+\_\+5x5.\+c}}.\end{Desc}
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
 
 
 \doxysubsection{Member Data Documentation}
@@ -46,49 +46,37 @@ CSR format stores a sparse matrix using three arrays\+:
 \doxysubsubsection{\texorpdfstring{col\_ind}{col\_ind}}
 {\footnotesize\ttfamily int\texorpdfstring{$\ast$}{*} Sparse\+CSR\+::col\+\_\+ind}
 
-\begin{Desc}
-\item[Examples]\par
-\mbox{\hyperlink{2D-Poisson_8c-example}{2\+D-\/\+Poisson.\+c}}, \mbox{\hyperlink{test_csr_3x3_8c-example}{test\+\_\+csr\+\_\+3x3.\+c}}, and \mbox{\hyperlink{test_csr_5x5_8c-example}{test\+\_\+csr\+\_\+5x5.\+c}}.\end{Desc}
-\Hypertarget{structSparseCSR_a2981b9a9511082c4409a31850de5bd5b}\label{structSparseCSR_a2981b9a9511082c4409a31850de5bd5b} 
+Column index array of size \textquotesingle{}nnz\textquotesingle{}. \Hypertarget{structSparseCSR_a2981b9a9511082c4409a31850de5bd5b}\label{structSparseCSR_a2981b9a9511082c4409a31850de5bd5b} 
 \index{SparseCSR@{SparseCSR}!cols@{cols}}
 \index{cols@{cols}!SparseCSR@{SparseCSR}}
 \doxysubsubsection{\texorpdfstring{cols}{cols}}
 {\footnotesize\ttfamily int Sparse\+CSR\+::cols}
 
-\Hypertarget{structSparseCSR_aa28c2121443bb1d2cb2781fd5645a647}\label{structSparseCSR_aa28c2121443bb1d2cb2781fd5645a647} 
+Number of columns in the matrix. \Hypertarget{structSparseCSR_aa28c2121443bb1d2cb2781fd5645a647}\label{structSparseCSR_aa28c2121443bb1d2cb2781fd5645a647} 
 \index{SparseCSR@{SparseCSR}!nnz@{nnz}}
 \index{nnz@{nnz}!SparseCSR@{SparseCSR}}
 \doxysubsubsection{\texorpdfstring{nnz}{nnz}}
 {\footnotesize\ttfamily int Sparse\+CSR\+::nnz}
 
-\begin{Desc}
-\item[Examples]\par
-\mbox{\hyperlink{2D-Poisson_8c-example}{2\+D-\/\+Poisson.\+c}}.\end{Desc}
-\Hypertarget{structSparseCSR_aca3a053424b8f259cf0230bd0a38f4ad}\label{structSparseCSR_aca3a053424b8f259cf0230bd0a38f4ad} 
+Number of non-\/zero elements in the matrix. \Hypertarget{structSparseCSR_aca3a053424b8f259cf0230bd0a38f4ad}\label{structSparseCSR_aca3a053424b8f259cf0230bd0a38f4ad} 
 \index{SparseCSR@{SparseCSR}!row\_ptr@{row\_ptr}}
 \index{row\_ptr@{row\_ptr}!SparseCSR@{SparseCSR}}
 \doxysubsubsection{\texorpdfstring{row\_ptr}{row\_ptr}}
 {\footnotesize\ttfamily int\texorpdfstring{$\ast$}{*} Sparse\+CSR\+::row\+\_\+ptr}
 
-\begin{Desc}
-\item[Examples]\par
-\mbox{\hyperlink{2D-Poisson_8c-example}{2\+D-\/\+Poisson.\+c}}, \mbox{\hyperlink{test_csr_3x3_8c-example}{test\+\_\+csr\+\_\+3x3.\+c}}, and \mbox{\hyperlink{test_csr_5x5_8c-example}{test\+\_\+csr\+\_\+5x5.\+c}}.\end{Desc}
-\Hypertarget{structSparseCSR_a01028b80ac878638b97bba94e3163e24}\label{structSparseCSR_a01028b80ac878638b97bba94e3163e24} 
+Row pointer array of size \textquotesingle{}rows + 1\textquotesingle{}. \Hypertarget{structSparseCSR_a01028b80ac878638b97bba94e3163e24}\label{structSparseCSR_a01028b80ac878638b97bba94e3163e24} 
 \index{SparseCSR@{SparseCSR}!rows@{rows}}
 \index{rows@{rows}!SparseCSR@{SparseCSR}}
 \doxysubsubsection{\texorpdfstring{rows}{rows}}
 {\footnotesize\ttfamily int Sparse\+CSR\+::rows}
 
-\Hypertarget{structSparseCSR_a7d69fbd5592863ce652cc4d9a6d30674}\label{structSparseCSR_a7d69fbd5592863ce652cc4d9a6d30674} 
+Number of rows in the matrix. \Hypertarget{structSparseCSR_a7d69fbd5592863ce652cc4d9a6d30674}\label{structSparseCSR_a7d69fbd5592863ce652cc4d9a6d30674} 
 \index{SparseCSR@{SparseCSR}!values@{values}}
 \index{values@{values}!SparseCSR@{SparseCSR}}
 \doxysubsubsection{\texorpdfstring{values}{values}}
 {\footnotesize\ttfamily double\texorpdfstring{$\ast$}{*} Sparse\+CSR\+::values}
 
-\begin{Desc}
-\item[Examples]\par
-\mbox{\hyperlink{2D-Poisson_8c-example}{2\+D-\/\+Poisson.\+c}}, \mbox{\hyperlink{test_csr_3x3_8c-example}{test\+\_\+csr\+\_\+3x3.\+c}}, and \mbox{\hyperlink{test_csr_5x5_8c-example}{test\+\_\+csr\+\_\+5x5.\+c}}.\end{Desc}
-
+Non-\/zero values array of size \textquotesingle{}nnz\textquotesingle{}. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

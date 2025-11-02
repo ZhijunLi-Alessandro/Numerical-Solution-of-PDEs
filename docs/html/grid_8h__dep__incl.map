@@ -1,0 +1,13 @@
+<map id="include/grid.h" name="include/grid.h">
+<area shape="rect" id="Node000001" title="Header file for a uniform grid structure and related functions." alt="" coords="268,5,367,31"/>
+<area shape="rect" id="Node000002" href="$poisson2d_8h.html" title="Header file for assembling 2D Poisson equation matrix and RHS vector." alt="" coords="177,79,314,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,43,259,80,255,77,294,39"/>
+<area shape="rect" id="Node000006" href="$grid_8c.html" title="Implementation of uniform grid operations." alt="" coords="339,79,440,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="341,39,380,77,376,80,337,43"/>
+<area shape="rect" id="Node000003" href="$Dirichlet_8c.html" title="Example program to solve a 2D Poisson problem with Dirichlet boundary condition." alt="" coords="5,152,147,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="207,112,105,154,103,149,204,107"/>
+<area shape="rect" id="Node000004" href="$Neumann_8c.html" title="Example program to solve a 2D Poisson problem with Neumann boundary condition." alt="" coords="171,152,320,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="248,118,248,152,243,152,243,118"/>
+<area shape="rect" id="Node000005" href="$poisson2d_8c.html" title="Implementation of assembling the matrix and right&#45;hand side (RHS) for the Poisson equation with Diric..." alt="" coords="344,152,483,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="286,107,387,149,385,154,284,112"/>
+</map>

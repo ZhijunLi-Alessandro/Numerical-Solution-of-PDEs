@@ -248,6 +248,9 @@ Solution Error visualization:
 
 ![image](/results/Neumann_error.png)
 
+**Notice:**  
+Under current grid point division, the interpolation of boundary points on the boundary in the Dirichlet boundary condition is accurate in the vast majority of edges. However, the approximation of the boundary normal derivative using the first-order difference in Neumann boundary conditions has errors at almost all boundary positions. This might be one of the reasons why the numerical solution error under the Neumann boundary condition is significantly higher than that under the Dirichlet boundary condition. The error on the boundary conditions can also be seen from the part near the boundary in the above figure.
+
 ## Doxygen Documentation
  
 Current version doxygen documents are contained in `docs\`.

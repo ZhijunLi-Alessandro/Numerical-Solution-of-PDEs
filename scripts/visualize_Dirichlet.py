@@ -1,3 +1,11 @@
+## @file visualize_Dirichlet.py
+#  @brief A python script for visualizing the calculation results of the Dirichlet problem
+#  
+#  This script is used to process and analyze data and generate figures.
+#  Includes data loading and preprocessing, generate multiple figures.
+#  @see Dirichlet.c
+#  @author Li Zhijun
+#  @date 2025-10-27
 import numpy as np
 import matplotlib.pyplot as plt
 

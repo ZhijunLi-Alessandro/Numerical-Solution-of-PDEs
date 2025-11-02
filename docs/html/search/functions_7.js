@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['vec_5fadd_0',['vec_add',['../vec_8h.html#aa1105b8dbe22d20005cf240620d26c60',1,'vec_add(double *a, const double *b, int n):&#160;vec.c'],['../vec_8c.html#aa1105b8dbe22d20005cf240620d26c60',1,'vec_add(double *a, const double *b, int n):&#160;vec.c']]],
-  ['vec_5fcopy_1',['vec_copy',['../vec_8h.html#a8064438ad30fa53dc30568732a16897e',1,'vec_copy(double *dest, const double *src, int n):&#160;vec.c'],['../vec_8c.html#a8064438ad30fa53dc30568732a16897e',1,'vec_copy(double *dest, const double *src, int n):&#160;vec.c']]],
-  ['vec_5fdot_2',['vec_dot',['../vec_8h.html#acad3dacc2d865817b4007ae129a77ca1',1,'vec_dot(const double *a, const double *b, int n):&#160;vec.c'],['../vec_8c.html#acad3dacc2d865817b4007ae129a77ca1',1,'vec_dot(const double *a, const double *b, int n):&#160;vec.c']]],
-  ['vec_5fscale_3',['vec_scale',['../vec_8h.html#a20711f8122303f9a0a91c6ebdd457ca5',1,'vec_scale(double *a, double scalar, int n):&#160;vec.c'],['../vec_8c.html#a20711f8122303f9a0a91c6ebdd457ca5',1,'vec_scale(double *a, double scalar, int n):&#160;vec.c']]],
-  ['vec_5fsub_4',['vec_sub',['../vec_8h.html#a6a7fe282666585a3d51ae183a5944446',1,'vec_sub(double *a, const double *b, int n):&#160;vec.c'],['../vec_8c.html#a6a7fe282666585a3d51ae183a5944446',1,'vec_sub(double *a, const double *b, int n):&#160;vec.c']]]
+  ['main_0',['main',['../2D-Poisson_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;2D-Poisson.c'],['../test__csr__3x3_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;test_csr_3x3.c'],['../test__csr__5x5_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;test_csr_5x5.c'],['../Dirichlet_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;Dirichlet.c'],['../Neumann_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;Neumann.c']]],
+  ['mapping_1',['mapping',['../2D-Poisson_8c.html#ac9bd6eed3b390d3a63607cecf8ef831f',1,'2D-Poisson.c']]]
 ];

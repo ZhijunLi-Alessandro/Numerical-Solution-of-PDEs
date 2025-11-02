@@ -1,0 +1,175 @@
+\doxysection{include/poisson2d.h File Reference}
+\hypertarget{poisson2d_8h}{}\label{poisson2d_8h}\index{include/poisson2d.h@{include/poisson2d.h}}
+
+
+Header file for assembling 2D Poisson equation matrix and RHS vector.  
+
+
+{\ttfamily \#include "{}grid.\+h"{}}\newline
+{\ttfamily \#include "{}csr.\+h"{}}\newline
+Include dependency graph for poisson2d.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{poisson2d_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{poisson2d_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef double(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{poisson2d_8h_add32025aca99a1cef280b04c18ef4c13}{f\+\_\+func}}) (double, double)
+\item 
+typedef double(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{poisson2d_8h_ae525cbdd371bcedf54ffb20cf287e226}{boundary\+\_\+func}}) (double, double, int)
+\item 
+typedef double(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{poisson2d_8h_a87f39fd68deace58fb7e11121a69e547}{normal\+\_\+func}}) (int)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{poisson2d_8h_a9dfcc954e4037dcdc6e282257c5a6680}{assemble\+\_\+\+Matrix\+\_\+\+Dirichlet}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid)
+\begin{DoxyCompactList}\small\item\em Assemble the system matrix for the numerical solution of the Dirichlet problem. \end{DoxyCompactList}\item 
+double \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{poisson2d_8h_a6c40240979a69876ae0f863825f16837}{assemble\+\_\+\+RHS\+\_\+\+Dirichlet}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid, \mbox{\hyperlink{poisson2d_8h_add32025aca99a1cef280b04c18ef4c13}{f\+\_\+func}} f, \mbox{\hyperlink{poisson2d_8h_ae525cbdd371bcedf54ffb20cf287e226}{boundary\+\_\+func}} \mbox{\hyperlink{Dirichlet_8c_aeea3fae40839a4c211e863fb2d10657a}{compute\+\_\+boundary\+\_\+value}})
+\begin{DoxyCompactList}\small\item\em Assemble the right-\/hand side (RHS) vector for the numerical solution of the Dirichlet problem. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{poisson2d_8h_a9243db2282f8b4efe10a8bc305dc7519}{assemble\+\_\+\+Matrix\+\_\+\+Neumann}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid, \mbox{\hyperlink{poisson2d_8h_a87f39fd68deace58fb7e11121a69e547}{normal\+\_\+func}} \mbox{\hyperlink{Neumann_8c_a56d53d0409ca28a73a903b974a8bf075}{get\+\_\+normal}})
+\item 
+double \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{poisson2d_8h_aa2e4a20b7a92c6d45c0d91d94e70cb54}{assemble\+\_\+\+RHS\+\_\+\+Neumann}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid, \mbox{\hyperlink{poisson2d_8h_add32025aca99a1cef280b04c18ef4c13}{f\+\_\+func}} f, \mbox{\hyperlink{poisson2d_8h_ae525cbdd371bcedf54ffb20cf287e226}{boundary\+\_\+func}} \mbox{\hyperlink{Dirichlet_8c_aeea3fae40839a4c211e863fb2d10657a}{compute\+\_\+boundary\+\_\+value}}, \mbox{\hyperlink{poisson2d_8h_add32025aca99a1cef280b04c18ef4c13}{f\+\_\+func}} get\+\_\+exact)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for assembling 2D Poisson equation matrix and RHS vector. 
+
+This header file declares functions to assemble the sparse matrix and right-\/hand side vector for the 2D Poisson equation on a given grid. \begin{DoxySeeAlso}{See also}
+\doxylink{poisson2d_8c}{poisson2d.\+c} 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Li Zhijun 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/10-\/22 
+\end{DoxyDate}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{poisson2d_8h_ae525cbdd371bcedf54ffb20cf287e226}\label{poisson2d_8h_ae525cbdd371bcedf54ffb20cf287e226} 
+\index{poisson2d.h@{poisson2d.h}!boundary\_func@{boundary\_func}}
+\index{boundary\_func@{boundary\_func}!poisson2d.h@{poisson2d.h}}
+\doxysubsubsection{\texorpdfstring{boundary\_func}{boundary\_func}}
+{\footnotesize\ttfamily typedef double(\texorpdfstring{$\ast$}{*} boundary\+\_\+func) (double, double, int)}
+
+\Hypertarget{poisson2d_8h_add32025aca99a1cef280b04c18ef4c13}\label{poisson2d_8h_add32025aca99a1cef280b04c18ef4c13} 
+\index{poisson2d.h@{poisson2d.h}!f\_func@{f\_func}}
+\index{f\_func@{f\_func}!poisson2d.h@{poisson2d.h}}
+\doxysubsubsection{\texorpdfstring{f\_func}{f\_func}}
+{\footnotesize\ttfamily typedef double(\texorpdfstring{$\ast$}{*} f\+\_\+func) (double, double)}
+
+\Hypertarget{poisson2d_8h_a87f39fd68deace58fb7e11121a69e547}\label{poisson2d_8h_a87f39fd68deace58fb7e11121a69e547} 
+\index{poisson2d.h@{poisson2d.h}!normal\_func@{normal\_func}}
+\index{normal\_func@{normal\_func}!poisson2d.h@{poisson2d.h}}
+\doxysubsubsection{\texorpdfstring{normal\_func}{normal\_func}}
+{\footnotesize\ttfamily typedef double(\texorpdfstring{$\ast$}{*} normal\+\_\+func) (int)}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{poisson2d_8h_a9dfcc954e4037dcdc6e282257c5a6680}\label{poisson2d_8h_a9dfcc954e4037dcdc6e282257c5a6680} 
+\index{poisson2d.h@{poisson2d.h}!assemble\_Matrix\_Dirichlet@{assemble\_Matrix\_Dirichlet}}
+\index{assemble\_Matrix\_Dirichlet@{assemble\_Matrix\_Dirichlet}!poisson2d.h@{poisson2d.h}}
+\doxysubsubsection{\texorpdfstring{assemble\_Matrix\_Dirichlet()}{assemble\_Matrix\_Dirichlet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*} assemble\+\_\+\+Matrix\+\_\+\+Dirichlet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption})}
+
+
+
+Assemble the system matrix for the numerical solution of the Dirichlet problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & Pointer to the grid structure which defines the solution region and boundary conditions.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+User should also call \doxylink{poisson2d_8h_a6c40240979a69876ae0f863825f16837}{assemble\+\_\+\+RHS\+\_\+\+Dirichlet()} to assemble the right-\/hand side vector. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+assmble\+\_\+\+RHS\+\_\+\+Dirichlet() 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}.\end{Desc}
+\Hypertarget{poisson2d_8h_a9243db2282f8b4efe10a8bc305dc7519}\label{poisson2d_8h_a9243db2282f8b4efe10a8bc305dc7519} 
+\index{poisson2d.h@{poisson2d.h}!assemble\_Matrix\_Neumann@{assemble\_Matrix\_Neumann}}
+\index{assemble\_Matrix\_Neumann@{assemble\_Matrix\_Neumann}!poisson2d.h@{poisson2d.h}}
+\doxysubsubsection{\texorpdfstring{assemble\_Matrix\_Neumann()}{assemble\_Matrix\_Neumann()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*} assemble\+\_\+\+Matrix\+\_\+\+Neumann (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{\mbox{\hyperlink{poisson2d_8h_a87f39fd68deace58fb7e11121a69e547}{normal\+\_\+func}}}]{get\+\_\+normal }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{poisson2d_8h_a6c40240979a69876ae0f863825f16837}\label{poisson2d_8h_a6c40240979a69876ae0f863825f16837} 
+\index{poisson2d.h@{poisson2d.h}!assemble\_RHS\_Dirichlet@{assemble\_RHS\_Dirichlet}}
+\index{assemble\_RHS\_Dirichlet@{assemble\_RHS\_Dirichlet}!poisson2d.h@{poisson2d.h}}
+\doxysubsubsection{\texorpdfstring{assemble\_RHS\_Dirichlet()}{assemble\_RHS\_Dirichlet()}}
+{\footnotesize\ttfamily double \texorpdfstring{$\ast$}{*} assemble\+\_\+\+RHS\+\_\+\+Dirichlet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{\mbox{\hyperlink{poisson2d_8h_add32025aca99a1cef280b04c18ef4c13}{f\+\_\+func}}}]{f,  }\item[{\mbox{\hyperlink{poisson2d_8h_ae525cbdd371bcedf54ffb20cf287e226}{boundary\+\_\+func}}}]{compute\+\_\+boundary\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Assemble the right-\/hand side (RHS) vector for the numerical solution of the Dirichlet problem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & Pointer to the grid structure which defines the solution region and boundary conditions. \\
+\hline
+{\em f} & Function pointer to calculate the source term of the Poisson function. \\
+\hline
+{\em compute\+\_\+boundary\+\_\+value} & Function pointer to assigns values to boundaries. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Function signature requirements\+:}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ f(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y)}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item param x\+: X-\/coordinate of the grid point
+\item param y\+: Y-\/coordinate of the grid point
+\item return value\+: the source term value at point (x, y) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ \mbox{\hyperlink{Dirichlet_8c_aeea3fae40839a4c211e863fb2d10657a}{compute\_boundary\_value}}(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{int}\ boundary\_type)}
+
+\end{DoxyCode}
+
+\item param x\+: X-\/coordinate of the grid point
+\item param y\+: Y-\/coordinate of the grid point
+\item param boundary\+\_\+type\+: the region type. (defined by Grid2d-\/\texorpdfstring{$>$}{>}region)
+\item return value\+: Interpolation of the boundary point\textquotesingle{}s value
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+User should also call \doxylink{poisson2d_8h_a9dfcc954e4037dcdc6e282257c5a6680}{assemble\+\_\+\+Matrix\+\_\+\+Dirichlet()} to assemble the system matrix 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{poisson2d_8h_a9dfcc954e4037dcdc6e282257c5a6680}{assemble\+\_\+\+Matrix\+\_\+\+Dirichlet()} 
+
+\doxylink{structGrid2D}{Grid2D} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}.\end{Desc}
+\Hypertarget{poisson2d_8h_aa2e4a20b7a92c6d45c0d91d94e70cb54}\label{poisson2d_8h_aa2e4a20b7a92c6d45c0d91d94e70cb54} 
+\index{poisson2d.h@{poisson2d.h}!assemble\_RHS\_Neumann@{assemble\_RHS\_Neumann}}
+\index{assemble\_RHS\_Neumann@{assemble\_RHS\_Neumann}!poisson2d.h@{poisson2d.h}}
+\doxysubsubsection{\texorpdfstring{assemble\_RHS\_Neumann()}{assemble\_RHS\_Neumann()}}
+{\footnotesize\ttfamily double \texorpdfstring{$\ast$}{*} assemble\+\_\+\+RHS\+\_\+\+Neumann (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{\mbox{\hyperlink{poisson2d_8h_add32025aca99a1cef280b04c18ef4c13}{f\+\_\+func}}}]{f,  }\item[{\mbox{\hyperlink{poisson2d_8h_ae525cbdd371bcedf54ffb20cf287e226}{boundary\+\_\+func}}}]{compute\+\_\+boundary\+\_\+value,  }\item[{\mbox{\hyperlink{poisson2d_8h_add32025aca99a1cef280b04c18ef4c13}{f\+\_\+func}}}]{get\+\_\+exact }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}

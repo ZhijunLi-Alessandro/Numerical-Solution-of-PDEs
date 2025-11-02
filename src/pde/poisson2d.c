@@ -1,3 +1,16 @@
+/**
+ * @file poisson2d.c
+ * @brief Implementation of assembling the matrix and right-hand side (RHS) for the 
+ *        Poisson equation with Dirichlet and Neumann boundary conditions.
+ * 
+ * This file includes functions to construct the finite difference discretization of 
+ * the Poisson equation, handling both Dirichlet (essential) and Neumann (natural) 
+ * boundary conditions. The system matrix and RHS vector are assembled accordingly for 
+ * numerical solution.
+ * 
+ * @author Li Zhijun
+ * @date 2025-10-22
+ */
 #include <stdlib.h>
 #include <math.h>
 #include "poisson2d.h"

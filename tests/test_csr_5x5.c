@@ -20,7 +20,7 @@
  * @see csr.h, utils.h
  * @author Li Zhijun
  * @date 2025-10-10
- * @example test_csr_5x5.c
+ * @test test_csr_5x5.c
  */
 # include <stdio.h>
 # include "csr.h"

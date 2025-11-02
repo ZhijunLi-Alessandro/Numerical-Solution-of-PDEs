@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Numerical Solution of Partial Differential Equations: src/csr.c File Reference</title>
+<title>Numerical Solution of Partial Differential Equations: src/sparse/csr.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0d126990016457eb3db78b202c239837.html">sparse</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -82,22 +82,25 @@ $(function() {
 <p>Implementation of sparse matrix operations in CSR format.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="csr_8h_source.html">csr.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for csr.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="csr_8c__incl.png" border="0" usemap="#asrc_2csr_8c" alt=""/></div>
-<map name="asrc_2csr_8c" id="asrc_2csr_8c">
-<area shape="rect" title="Implementation of sparse matrix operations in CSR format." alt="" coords="89,5,161,31"/>
+<div class="center"><img src="csr_8c__incl.png" border="0" usemap="#asrc_2sparse_2csr_8c" alt=""/></div>
+<map name="asrc_2sparse_2csr_8c" id="asrc_2sparse_2csr_8c">
+<area shape="rect" title="Implementation of sparse matrix operations in CSR format." alt="" coords="109,5,224,31"/>
 <area shape="rect" title=" " alt="" coords="5,79,69,104"/>
-<area shape="poly" title=" " alt="" coords="113,33,64,72,61,68,110,29"/>
-<area shape="rect" title=" " alt="" coords="94,79,157,104"/>
-<area shape="poly" title=" " alt="" coords="128,31,128,65,123,65,123,31"/>
-<area shape="rect" href="csr_8h.html" title="Header file for CSR matrix operations and iterative solvers." alt="" coords="181,79,232,104"/>
-<area shape="poly" title=" " alt="" coords="140,29,185,68,181,72,137,33"/>
-<area shape="rect" href="vec_8h.html" title="Header file for basic vector operations." alt="" coords="179,152,234,177"/>
-<area shape="poly" title=" " alt="" coords="209,104,209,138,204,138,204,104"/>
+<area shape="poly" title=" " alt="" coords="147,33,72,74,70,69,145,28"/>
+<area shape="rect" title=" " alt="" coords="93,79,155,104"/>
+<area shape="poly" title=" " alt="" coords="162,32,140,68,136,66,157,30"/>
+<area shape="rect" title=" " alt="" coords="179,79,242,104"/>
+<area shape="poly" title=" " alt="" coords="176,30,199,66,194,68,172,32"/>
+<area shape="rect" href="csr_8h.html" title="Header file for CSR matrix operations and iterative solvers." alt="" coords="267,79,317,104"/>
+<area shape="poly" title=" " alt="" coords="188,28,261,69,258,74,185,33"/>
+<area shape="rect" href="vec_8h.html" title="Header file for basic vector operations." alt="" coords="265,152,319,177"/>
+<area shape="poly" title=" " alt="" coords="295,104,295,138,289,138,289,104"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -127,7 +130,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of sparse matrix operations in CSR format. </p>
-<p>This file incudes functions for creating, freeing, decomposing, matrix-vector multiplication, and solving linear systems using iterative methods (Jacobi, Gauss-Seidel, Conjugate Gradient) for sparse matrices stored in Compressed Sparse Row (CSR) format.</p>
+<p>This file includes functions for creating, freeing, decomposing, matrix-vector multiplication, and solving linear systems using iterative methods (Jacobi, Gauss-Seidel, Conjugate Gradient) for sparse matrices stored in Compressed Sparse Row (CSR) format.</p>
 <dl class="section author"><dt>Author</dt><dd>Li Zhijun </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2025-10-10 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>

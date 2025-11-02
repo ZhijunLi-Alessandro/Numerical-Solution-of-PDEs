@@ -2,7 +2,7 @@
  * @file csr.c
  * @brief Implementation of sparse matrix operations in CSR format.
  * 
- * This file incudes functions for creating, freeing, decomposing, matrix-vector
+ * This file includes functions for creating, freeing, decomposing, matrix-vector
  * multiplication, and solving linear systems using iterative methods (Jacobi,
  * Gauss-Seidel, Conjugate Gradient) for sparse matrices stored in Compressed
  * Sparse Row (CSR) format.

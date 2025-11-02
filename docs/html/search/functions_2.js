@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gaussseidel_5fcsr_0',['gaussseidel_csr',['../csr_8h.html#a8e498df649d55f5935286ea1351ee89a',1,'GaussSeidel_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c'],['../csr_8c.html#a8e498df649d55f5935286ea1351ee89a',1,'GaussSeidel_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c']]],
-  ['get_5fd_5fl_5fu_5fcsr_1',['get_d_l_u_csr',['../csr_8h.html#a511084c45e428b7302a4f789f43de246',1,'get_D_L_U_csr(const SparseCSR *matrix):&#160;csr.c'],['../csr_8c.html#a511084c45e428b7302a4f789f43de246',1,'get_D_L_U_csr(const SparseCSR *matrix):&#160;csr.c']]]
+  ['free_5fgrid_0',['free_grid',['../grid_8h.html#a31befaf760e994473b73acce12ad6546',1,'free_grid(Grid2D *grid):&#160;grid.c'],['../grid_8c.html#a31befaf760e994473b73acce12ad6546',1,'free_grid(Grid2D *grid):&#160;grid.c']]],
+  ['freesparsecsr_1',['freesparsecsr',['../csr_8h.html#ad76b7aa766ec949cb15bcf6ede8aadcb',1,'freeSparseCSR(SparseCSR *matrix):&#160;csr.c'],['../csr_8c.html#ad76b7aa766ec949cb15bcf6ede8aadcb',1,'freeSparseCSR(SparseCSR *matrix):&#160;csr.c']]]
 ];

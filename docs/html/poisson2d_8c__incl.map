@@ -1,0 +1,15 @@
+<map id="src/pde/poisson2d.c" name="src/pde/poisson2d.c">
+<area shape="rect" id="Node000001" title="Implementation of assembling the matrix and right&#45;hand side (RHS) for the Poisson equation with Diric..." alt="" coords="56,5,195,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,69,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,33,64,72,61,68,110,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="94,79,157,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="128,31,128,65,123,65,123,31"/>
+<area shape="rect" id="Node000004" href="$poisson2d_8h.html" title="Header file for assembling 2D Poisson equation matrix and RHS vector." alt="" coords="181,79,273,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="143,28,200,68,197,73,140,33"/>
+<area shape="rect" id="Node000005" href="$grid_8h.html" title="Header file for a uniform grid structure and related functions." alt="" coords="161,152,215,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="223,106,203,141,198,139,218,103"/>
+<area shape="rect" id="Node000006" href="$csr_8h.html" title="Header file for CSR matrix operations and iterative solvers." alt="" coords="240,152,291,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="235,103,255,139,250,141,231,106"/>
+<area shape="rect" id="Node000007" href="$vec_8h.html" title="Header file for basic vector operations." alt="" coords="238,225,293,251"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="268,178,268,212,263,212,263,178"/>
+</map>

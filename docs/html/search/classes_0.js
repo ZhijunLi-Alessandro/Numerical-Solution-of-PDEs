@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sparsecsr_0',['SparseCSR',['../structSparseCSR.html',1,'']]]
+  ['grid2d_0',['Grid2D',['../structGrid2D.html',1,'']]]
 ];

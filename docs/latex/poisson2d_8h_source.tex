@@ -1,0 +1,24 @@
+\doxysection{poisson2d.\+h}
+\hypertarget{poisson2d_8h_source}{}\label{poisson2d_8h_source}\index{include/poisson2d.h@{include/poisson2d.h}}
+\mbox{\hyperlink{poisson2d_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#\ ifndef\ POISSON2D\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#\ define\ POISSON2D\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#\ include\ "{}\mbox{\hyperlink{grid_8h}{grid.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#\ include\ "{}\mbox{\hyperlink{csr_8h}{csr.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ double\ (*\mbox{\hyperlink{poisson2d_8h_add32025aca99a1cef280b04c18ef4c13}{f\_func}})(double,\ double);}
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ double\ (*\mbox{\hyperlink{poisson2d_8h_ae525cbdd371bcedf54ffb20cf287e226}{boundary\_func}})(double,\ double,\ int);}
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ double\ (*\mbox{\hyperlink{poisson2d_8h_a87f39fd68deace58fb7e11121a69e547}{normal\_func}})(int);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00027\ \mbox{\hyperlink{structSparseCSR}{SparseCSR}}*\ \mbox{\hyperlink{poisson2d_8h_a9dfcc954e4037dcdc6e282257c5a6680}{assemble\_Matrix\_Dirichlet}}(\mbox{\hyperlink{structGrid2D}{Grid2D}}*\ grid);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{poisson2d_8h_a6c40240979a69876ae0f863825f16837}{assemble\_RHS\_Dirichlet}}(\mbox{\hyperlink{structGrid2D}{Grid2D}}*\ grid,\ \mbox{\hyperlink{poisson2d_8h_add32025aca99a1cef280b04c18ef4c13}{f\_func}}\ f,\ \mbox{\hyperlink{poisson2d_8h_ae525cbdd371bcedf54ffb20cf287e226}{boundary\_func}}\ \mbox{\hyperlink{Dirichlet_8c_aeea3fae40839a4c211e863fb2d10657a}{compute\_boundary\_value}});}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \mbox{\hyperlink{structSparseCSR}{SparseCSR}}*\ \mbox{\hyperlink{poisson2d_8h_a9243db2282f8b4efe10a8bc305dc7519}{assemble\_Matrix\_Neumann}}(\mbox{\hyperlink{structGrid2D}{Grid2D}}*\ grid,\ \mbox{\hyperlink{poisson2d_8h_a87f39fd68deace58fb7e11121a69e547}{normal\_func}}\ \mbox{\hyperlink{Neumann_8c_a56d53d0409ca28a73a903b974a8bf075}{get\_normal}});}
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{poisson2d_8h_aa2e4a20b7a92c6d45c0d91d94e70cb54}{assemble\_RHS\_Neumann}}(\mbox{\hyperlink{structGrid2D}{Grid2D}}*\ grid,\ \mbox{\hyperlink{poisson2d_8h_add32025aca99a1cef280b04c18ef4c13}{f\_func}}\ f,\ \mbox{\hyperlink{poisson2d_8h_ae525cbdd371bcedf54ffb20cf287e226}{boundary\_func}}\ \mbox{\hyperlink{Dirichlet_8c_aeea3fae40839a4c211e863fb2d10657a}{compute\_boundary\_value}},\ \mbox{\hyperlink{poisson2d_8h_add32025aca99a1cef280b04c18ef4c13}{f\_func}}\ get\_exact);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#\ endif}}
+
+\end{DoxyCode}

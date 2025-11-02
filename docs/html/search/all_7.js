@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['print_5fint_5fvector_0',['print_int_vector',['../utils_8h.html#a11820138833e6725f1060ae252999b99',1,'print_int_vector(const int *vec, int n):&#160;utils.c'],['../utils_8c.html#a11820138833e6725f1060ae252999b99',1,'print_int_vector(const int *vec, int n):&#160;utils.c']]],
-  ['print_5fsparsecsr_1',['print_sparsecsr',['../utils_8h.html#aa83175aba8797e248985c725fd63c828',1,'print_SparseCSR(const SparseCSR *matrix, int ndec):&#160;utils.c'],['../utils_8c.html#aa83175aba8797e248985c725fd63c828',1,'print_SparseCSR(const SparseCSR *matrix, int ndec):&#160;utils.c']]],
-  ['print_5fsparsecsr_5fsimple_2',['print_sparsecsr_simple',['../utils_8h.html#a39645fbbf53a4794428fc836ed651292',1,'print_SparseCSR_simple(const SparseCSR *matrix, int ndec):&#160;utils.c'],['../utils_8c.html#a39645fbbf53a4794428fc836ed651292',1,'print_SparseCSR_simple(const SparseCSR *matrix, int ndec):&#160;utils.c']]],
-  ['print_5fvector_3',['print_vector',['../utils_8h.html#a882dd77955362cc0e2f22717258d742f',1,'print_vector(const double *vec, int n, int ndec):&#160;utils.c'],['../utils_8c.html#a882dd77955362cc0e2f22717258d742f',1,'print_vector(const double *vec, int n, int ndec):&#160;utils.c']]]
+  ['gaussseidel_5fcsr_0',['gaussseidel_csr',['../csr_8h.html#a8e498df649d55f5935286ea1351ee89a',1,'GaussSeidel_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c'],['../csr_8c.html#a8e498df649d55f5935286ea1351ee89a',1,'GaussSeidel_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c']]],
+  ['get_5fd_5fl_5fu_5fcsr_1',['get_d_l_u_csr',['../csr_8h.html#a511084c45e428b7302a4f789f43de246',1,'get_D_L_U_csr(const SparseCSR *matrix):&#160;csr.c'],['../csr_8c.html#a511084c45e428b7302a4f789f43de246',1,'get_D_L_U_csr(const SparseCSR *matrix):&#160;csr.c']]],
+  ['get_5fnormal_2',['get_normal',['../Neumann_8c.html#a56d53d0409ca28a73a903b974a8bf075',1,'Neumann.c']]],
+  ['grid_2ec_3',['grid.c',['../grid_8c.html',1,'']]],
+  ['grid_2eh_4',['grid.h',['../grid_8h.html',1,'']]],
+  ['grid2d_5',['Grid2D',['../structGrid2D.html',1,'']]],
+  ['grid_5fx_6',['grid_x',['../namespacevisualize__Dirichlet.html#a162c6b30cb4aead405d4fcff27d09690',1,'visualize_Dirichlet.grid_x'],['../namespacevisualize__Neumann.html#a47b4397a467761583135ac0727cad9d0',1,'visualize_Neumann.grid_x']]],
+  ['grid_5fy_7',['grid_y',['../namespacevisualize__Dirichlet.html#afa761d0c83dbbb1119bc66df67ca0eb9',1,'visualize_Dirichlet.grid_y'],['../namespacevisualize__Neumann.html#a4525d0f516e3904abdddd3af4073ff3b',1,'visualize_Neumann.grid_y']]]
 ];

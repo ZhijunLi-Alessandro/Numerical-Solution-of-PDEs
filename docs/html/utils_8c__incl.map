@@ -1,5 +1,5 @@
-<map id="src/utils.c" name="src/utils.c">
-<area shape="rect" id="Node000001" title="Utility functions for printing vectors and SparseCSR matrices." alt="" coords="38,5,117,31"/>
+<map id="src/sparse/utils.c" name="src/sparse/utils.c">
+<area shape="rect" id="Node000001" title="Utility functions for printing vectors and SparseCSR matrices." alt="" coords="16,5,139,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,79,67,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,32,52,68,47,65,68,30"/>
 <area shape="rect" id="Node000003" href="$utils_8h.html" title="Header file for utility functions to print vectors and CSR matrices." alt="" coords="91,79,149,104"/>

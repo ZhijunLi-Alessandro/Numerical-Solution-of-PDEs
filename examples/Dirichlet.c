@@ -1,3 +1,19 @@
+/**
+ * @file Dirichlet.c
+ * @brief Example program to solve a 2D Poisson problem with Dirichlet boundary condition.
+ * 
+ * @details
+ * This program define a Poisson problem of Dirichlet boundary conditions on the two-
+ * dimensional irregular computational region of periodic solutions and constructs a 
+ * finite difference method to numerically solve and calculate it. 
+ * The solution is set to be periodic. (u=(1/(5*Pi*Pi))*sin*(Pi*x)*cos(2*Pi*x)).
+ * See details in ReadMe.md
+ * 
+ * @see csr.h, poisson2d.h, grid.h
+ * @author Li Zhijun
+ * @date 2025-10-24
+ * @example Dirichlet.c
+ */
 # include <stdlib.h>
 # include <stdio.h>
 # include <math.h>

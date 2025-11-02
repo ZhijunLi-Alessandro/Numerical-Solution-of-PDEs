@@ -1,0 +1,111 @@
+\doxysection{examples/\+Dirichlet.c File Reference}
+\hypertarget{Dirichlet_8c}{}\label{Dirichlet_8c}\index{examples/Dirichlet.c@{examples/Dirichlet.c}}
+
+
+Example program to solve a 2D Poisson problem with Dirichlet boundary condition.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$csr.\+h$>$}\newline
+{\ttfamily \#include $<$poisson2d.\+h$>$}\newline
+{\ttfamily \#include $<$utils.\+h$>$}\newline
+Include dependency graph for Dirichlet.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Dirichlet_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Dirichlet_8c_a0c233fcb94ea9f05596b48427095806e}{Pi}}~3.\+14159265358979323846
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{Dirichlet_8c_aac37605abfd3877c437fde984df578fd}{region\+\_\+divider}} (double x, double y, double hx, double hy)
+\item 
+double \mbox{\hyperlink{Dirichlet_8c_a32bbdc8425395283b0fd596c9b606247}{compute\+\_\+f}} (double x, double y)
+\item 
+double \mbox{\hyperlink{Dirichlet_8c_aba14f08f1dad2c5d6b360652e8ae2d74}{compute\+\_\+u\+\_\+exact}} (double x, double y)
+\item 
+double \mbox{\hyperlink{Dirichlet_8c_aeea3fae40839a4c211e863fb2d10657a}{compute\+\_\+boundary\+\_\+value}} (double x, double y, int boundary\+\_\+type)
+\item 
+int \mbox{\hyperlink{Dirichlet_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Example program to solve a 2D Poisson problem with Dirichlet boundary condition. 
+
+This program define a Poisson problem of Dirichlet boundary conditions on the two-\/ dimensional irregular computational region of periodic solutions and constructs a finite difference method to numerically solve and calculate it. The solution is set to be periodic. (u=(1/(5\texorpdfstring{$\ast$}{*}\+Pi\texorpdfstring{$\ast$}{*}\+Pi))\texorpdfstring{$\ast$}{*}sin\texorpdfstring{$\ast$}{*}(Pi\texorpdfstring{$\ast$}{*}x)\texorpdfstring{$\ast$}{*}cos(2\texorpdfstring{$\ast$}{*}\+Pi\texorpdfstring{$\ast$}{*}x)). See details in Read\+Me.\+md
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{csr_8h}{csr.\+h}, \doxylink{poisson2d_8h}{poisson2d.\+h}, \doxylink{grid_8h}{grid.\+h} 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Li Zhijun 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/10-\/24 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{Dirichlet_8c_a0c233fcb94ea9f05596b48427095806e}\label{Dirichlet_8c_a0c233fcb94ea9f05596b48427095806e} 
+\index{Dirichlet.c@{Dirichlet.c}!Pi@{Pi}}
+\index{Pi@{Pi}!Dirichlet.c@{Dirichlet.c}}
+\doxysubsubsection{\texorpdfstring{Pi}{Pi}}
+{\footnotesize\ttfamily \#define Pi~3.\+14159265358979323846}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Dirichlet_8c_aeea3fae40839a4c211e863fb2d10657a}\label{Dirichlet_8c_aeea3fae40839a4c211e863fb2d10657a} 
+\index{Dirichlet.c@{Dirichlet.c}!compute\_boundary\_value@{compute\_boundary\_value}}
+\index{compute\_boundary\_value@{compute\_boundary\_value}!Dirichlet.c@{Dirichlet.c}}
+\doxysubsubsection{\texorpdfstring{compute\_boundary\_value()}{compute\_boundary\_value()}}
+{\footnotesize\ttfamily double compute\+\_\+boundary\+\_\+value (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{int}]{boundary\+\_\+type }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{Dirichlet_8c_a32bbdc8425395283b0fd596c9b606247}\label{Dirichlet_8c_a32bbdc8425395283b0fd596c9b606247} 
+\index{Dirichlet.c@{Dirichlet.c}!compute\_f@{compute\_f}}
+\index{compute\_f@{compute\_f}!Dirichlet.c@{Dirichlet.c}}
+\doxysubsubsection{\texorpdfstring{compute\_f()}{compute\_f()}}
+{\footnotesize\ttfamily double compute\+\_\+f (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{Dirichlet_8c_aba14f08f1dad2c5d6b360652e8ae2d74}\label{Dirichlet_8c_aba14f08f1dad2c5d6b360652e8ae2d74} 
+\index{Dirichlet.c@{Dirichlet.c}!compute\_u\_exact@{compute\_u\_exact}}
+\index{compute\_u\_exact@{compute\_u\_exact}!Dirichlet.c@{Dirichlet.c}}
+\doxysubsubsection{\texorpdfstring{compute\_u\_exact()}{compute\_u\_exact()}}
+{\footnotesize\ttfamily double compute\+\_\+u\+\_\+exact (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{Dirichlet_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Dirichlet_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{Dirichlet.c@{Dirichlet.c}!main@{main}}
+\index{main@{main}!Dirichlet.c@{Dirichlet.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{Dirichlet_8c_aac37605abfd3877c437fde984df578fd}\label{Dirichlet_8c_aac37605abfd3877c437fde984df578fd} 
+\index{Dirichlet.c@{Dirichlet.c}!region\_divider@{region\_divider}}
+\index{region\_divider@{region\_divider}!Dirichlet.c@{Dirichlet.c}}
+\doxysubsubsection{\texorpdfstring{region\_divider()}{region\_divider()}}
+{\footnotesize\ttfamily int region\+\_\+divider (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{hx,  }\item[{double}]{hy }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}

@@ -1,0 +1,129 @@
+\doxysection{examples/\+Neumann.c File Reference}
+\hypertarget{Neumann_8c}{}\label{Neumann_8c}\index{examples/Neumann.c@{examples/Neumann.c}}
+
+
+Example program to solve a 2D Poisson problem with Neumann boundary condition.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$csr.\+h$>$}\newline
+{\ttfamily \#include $<$poisson2d.\+h$>$}\newline
+{\ttfamily \#include $<$utils.\+h$>$}\newline
+Include dependency graph for Neumann.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Neumann_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Neumann_8c_a0c233fcb94ea9f05596b48427095806e}{Pi}}~3.\+14159265358979323846
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{Neumann_8c_aac37605abfd3877c437fde984df578fd}{region\+\_\+divider}} (double x, double y, double hx, double hy)
+\item 
+double \mbox{\hyperlink{Neumann_8c_a56d53d0409ca28a73a903b974a8bf075}{get\+\_\+normal}} (int boundary\+\_\+type)
+\item 
+double \mbox{\hyperlink{Neumann_8c_a32bbdc8425395283b0fd596c9b606247}{compute\+\_\+f}} (double x, double y)
+\item 
+double \mbox{\hyperlink{Neumann_8c_aba14f08f1dad2c5d6b360652e8ae2d74}{compute\+\_\+u\+\_\+exact}} (double x, double y)
+\item 
+double \mbox{\hyperlink{Neumann_8c_a8ec7f7df68357f1e75b480c405dca6c1}{compute\+\_\+derivative\+\_\+exact}} (double x, double y, int direction)
+\item 
+double \mbox{\hyperlink{Neumann_8c_aeea3fae40839a4c211e863fb2d10657a}{compute\+\_\+boundary\+\_\+value}} (double x, double y, int boundary\+\_\+type)
+\item 
+double \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Neumann_8c_adb62cc300f93151f4226125ed8e21215}{numerical\+\_\+deriv}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid, double \texorpdfstring{$\ast$}{*}data\+\_\+indices, int direction)
+\item 
+int \mbox{\hyperlink{Neumann_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Example program to solve a 2D Poisson problem with Neumann boundary condition. 
+
+This program define a Poisson problem of Neumann boundary conditions on the two-\/ dimensional irregular computational region of periodic solutions and constructs a finite difference method to numerically solve and calculate it. The solution is set to be periodic. (u=(1/(5\texorpdfstring{$\ast$}{*}\+Pi\texorpdfstring{$\ast$}{*}\+Pi))\texorpdfstring{$\ast$}{*}sin\texorpdfstring{$\ast$}{*}(Pi\texorpdfstring{$\ast$}{*}x)\texorpdfstring{$\ast$}{*}cos(2\texorpdfstring{$\ast$}{*}\+Pi\texorpdfstring{$\ast$}{*}x)). See details in Read\+Me.\+md
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{csr_8h}{csr.\+h}, \doxylink{poisson2d_8h}{poisson2d.\+h}, \doxylink{grid_8h}{grid.\+h} 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Li Zhijun 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/10-\/28 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{Neumann_8c_a0c233fcb94ea9f05596b48427095806e}\label{Neumann_8c_a0c233fcb94ea9f05596b48427095806e} 
+\index{Neumann.c@{Neumann.c}!Pi@{Pi}}
+\index{Pi@{Pi}!Neumann.c@{Neumann.c}}
+\doxysubsubsection{\texorpdfstring{Pi}{Pi}}
+{\footnotesize\ttfamily \#define Pi~3.\+14159265358979323846}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Neumann_8c_aeea3fae40839a4c211e863fb2d10657a}\label{Neumann_8c_aeea3fae40839a4c211e863fb2d10657a} 
+\index{Neumann.c@{Neumann.c}!compute\_boundary\_value@{compute\_boundary\_value}}
+\index{compute\_boundary\_value@{compute\_boundary\_value}!Neumann.c@{Neumann.c}}
+\doxysubsubsection{\texorpdfstring{compute\_boundary\_value()}{compute\_boundary\_value()}}
+{\footnotesize\ttfamily double compute\+\_\+boundary\+\_\+value (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{int}]{boundary\+\_\+type }\end{DoxyParamCaption})}
+
+\Hypertarget{Neumann_8c_a8ec7f7df68357f1e75b480c405dca6c1}\label{Neumann_8c_a8ec7f7df68357f1e75b480c405dca6c1} 
+\index{Neumann.c@{Neumann.c}!compute\_derivative\_exact@{compute\_derivative\_exact}}
+\index{compute\_derivative\_exact@{compute\_derivative\_exact}!Neumann.c@{Neumann.c}}
+\doxysubsubsection{\texorpdfstring{compute\_derivative\_exact()}{compute\_derivative\_exact()}}
+{\footnotesize\ttfamily double compute\+\_\+derivative\+\_\+exact (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{Neumann_8c_a32bbdc8425395283b0fd596c9b606247}\label{Neumann_8c_a32bbdc8425395283b0fd596c9b606247} 
+\index{Neumann.c@{Neumann.c}!compute\_f@{compute\_f}}
+\index{compute\_f@{compute\_f}!Neumann.c@{Neumann.c}}
+\doxysubsubsection{\texorpdfstring{compute\_f()}{compute\_f()}}
+{\footnotesize\ttfamily double compute\+\_\+f (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+\Hypertarget{Neumann_8c_aba14f08f1dad2c5d6b360652e8ae2d74}\label{Neumann_8c_aba14f08f1dad2c5d6b360652e8ae2d74} 
+\index{Neumann.c@{Neumann.c}!compute\_u\_exact@{compute\_u\_exact}}
+\index{compute\_u\_exact@{compute\_u\_exact}!Neumann.c@{Neumann.c}}
+\doxysubsubsection{\texorpdfstring{compute\_u\_exact()}{compute\_u\_exact()}}
+{\footnotesize\ttfamily double compute\+\_\+u\+\_\+exact (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+\Hypertarget{Neumann_8c_a56d53d0409ca28a73a903b974a8bf075}\label{Neumann_8c_a56d53d0409ca28a73a903b974a8bf075} 
+\index{Neumann.c@{Neumann.c}!get\_normal@{get\_normal}}
+\index{get\_normal@{get\_normal}!Neumann.c@{Neumann.c}}
+\doxysubsubsection{\texorpdfstring{get\_normal()}{get\_normal()}}
+{\footnotesize\ttfamily double get\+\_\+normal (\begin{DoxyParamCaption}\item[{int}]{boundary\+\_\+type }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{Neumann_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Neumann_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{Neumann.c@{Neumann.c}!main@{main}}
+\index{main@{main}!Neumann.c@{Neumann.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{Neumann_8c_adb62cc300f93151f4226125ed8e21215}\label{Neumann_8c_adb62cc300f93151f4226125ed8e21215} 
+\index{Neumann.c@{Neumann.c}!numerical\_deriv@{numerical\_deriv}}
+\index{numerical\_deriv@{numerical\_deriv}!Neumann.c@{Neumann.c}}
+\doxysubsubsection{\texorpdfstring{numerical\_deriv()}{numerical\_deriv()}}
+{\footnotesize\ttfamily double \texorpdfstring{$\ast$}{*} numerical\+\_\+deriv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{double \texorpdfstring{$\ast$}{*}}]{data\+\_\+indices,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{Neumann_8c_aac37605abfd3877c437fde984df578fd}\label{Neumann_8c_aac37605abfd3877c437fde984df578fd} 
+\index{Neumann.c@{Neumann.c}!region\_divider@{region\_divider}}
+\index{region\_divider@{region\_divider}!Neumann.c@{Neumann.c}}
+\doxysubsubsection{\texorpdfstring{region\_divider()}{region\_divider()}}
+{\footnotesize\ttfamily int region\+\_\+divider (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{hx,  }\item[{double}]{hy }\end{DoxyParamCaption})}
+

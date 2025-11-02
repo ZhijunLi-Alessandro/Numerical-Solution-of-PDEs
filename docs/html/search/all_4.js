@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['jacobi_5fcsr_0',['jacobi_csr',['../csr_8h.html#a7cf1992062cdbed207ef7217c4a3e20d',1,'Jacobi_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c'],['../csr_8c.html#a7cf1992062cdbed207ef7217c4a3e20d',1,'Jacobi_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c']]]
+  ['data_5fmask_0',['data_mask',['../namespacevisualize__Neumann.html#a874eaf5d275e2299429bb5d89f38f3ef',1,'visualize_Neumann']]],
+  ['dirichlet_2ec_1',['Dirichlet.c',['../Dirichlet_8c.html',1,'']]]
 ];

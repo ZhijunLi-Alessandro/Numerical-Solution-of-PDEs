@@ -1,0 +1,160 @@
+\doxysection{src/pde/grid.c File Reference}
+\hypertarget{grid_8c}{}\label{grid_8c}\index{src/pde/grid.c@{src/pde/grid.c}}
+
+
+Implementation of uniform grid operations.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}grid.\+h"{}}\newline
+Include dependency graph for grid.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{grid_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8c_a827f3575406b8b99a6eb56f476bbcf4d}{create\+\_\+uniform\+\_\+grid}} (int nx, int ny, double x0, double x1, double y0, double y1)
+\begin{DoxyCompactList}\small\item\em Create new uniform 2D grid points. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8c_a2c256fcb14b9e2ebb265d2ab35d936b0}{initialize\+\_\+\+Grid}} (int nx, int ny, double x0, double x1, double y0, double y1, \mbox{\hyperlink{grid_8h_a509e5659520129614e3072a7bd63c29d}{region\+\_\+divider\+\_\+func}} \mbox{\hyperlink{Dirichlet_8c_aac37605abfd3877c437fde984df578fd}{region\+\_\+divider}})
+\begin{DoxyCompactList}\small\item\em Create a new 2D grid structure with the division of the computing domain. \end{DoxyCompactList}\item 
+double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8c_a1ea426a678e98ecb5bec65d4cb876ef4}{read\+\_\+indices\+\_\+to\+\_\+points}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid, double \texorpdfstring{$\ast$}{*}data\+\_\+indices)
+\begin{DoxyCompactList}\small\item\em Remap the data in the form of column vectors to the grid points. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8c_a31befaf760e994473b73acce12ad6546}{free\+\_\+grid}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid)
+\begin{DoxyCompactList}\small\item\em Free the memory allocated for a grid structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of uniform grid operations. 
+
+This file includes functions for creating, freeing, initializing, and remapping data in form of column vectors to data in form of matrix.
+
+\begin{DoxyAuthor}{Author}
+Li Zhijun 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/10-\/21 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{grid_8c_a827f3575406b8b99a6eb56f476bbcf4d}\label{grid_8c_a827f3575406b8b99a6eb56f476bbcf4d} 
+\index{grid.c@{grid.c}!create\_uniform\_grid@{create\_uniform\_grid}}
+\index{create\_uniform\_grid@{create\_uniform\_grid}!grid.c@{grid.c}}
+\doxysubsubsection{\texorpdfstring{create\_uniform\_grid()}{create\_uniform\_grid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*} create\+\_\+uniform\+\_\+grid (\begin{DoxyParamCaption}\item[{int}]{nx,  }\item[{int}]{ny,  }\item[{double}]{x0,  }\item[{double}]{x1,  }\item[{double}]{y0,  }\item[{double}]{y1 }\end{DoxyParamCaption})}
+
+
+
+Create new uniform 2D grid points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nx} & Number of points in x direction. \\
+\hline
+{\em ny} & Number of points in y direction. \\
+\hline
+{\em x0} & X-\/coordinate on the left of the domain. \\
+\hline
+{\em x1} & X-\/coordinate on the right of the domain. \\
+\hline
+{\em y0} & Y-\/coordinate on the bottom of the domain. \\
+\hline
+{\em y1} & Y-\/coordinate on the top of the domain.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is a built-\/in method and it is not recommended to call it directly from the outside. 
+
+Use initialize\+\_\+\+Grid to create a new grid structure 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{grid_8h_a2c256fcb14b9e2ebb265d2ab35d936b0}{initialize\+\_\+\+Grid()} 
+\end{DoxySeeAlso}
+\Hypertarget{grid_8c_a31befaf760e994473b73acce12ad6546}\label{grid_8c_a31befaf760e994473b73acce12ad6546} 
+\index{grid.c@{grid.c}!free\_grid@{free\_grid}}
+\index{free\_grid@{free\_grid}!grid.c@{grid.c}}
+\doxysubsubsection{\texorpdfstring{free\_grid()}{free\_grid()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} free\+\_\+grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption})}
+
+
+
+Free the memory allocated for a grid structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & Pointer to the grid structure to free. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{grid_8c_a2c256fcb14b9e2ebb265d2ab35d936b0}\label{grid_8c_a2c256fcb14b9e2ebb265d2ab35d936b0} 
+\index{grid.c@{grid.c}!initialize\_Grid@{initialize\_Grid}}
+\index{initialize\_Grid@{initialize\_Grid}!grid.c@{grid.c}}
+\doxysubsubsection{\texorpdfstring{initialize\_Grid()}{initialize\_Grid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*} initialize\+\_\+\+Grid (\begin{DoxyParamCaption}\item[{int}]{nx,  }\item[{int}]{ny,  }\item[{double}]{x0,  }\item[{double}]{x1,  }\item[{double}]{y0,  }\item[{double}]{y1,  }\item[{\mbox{\hyperlink{grid_8h_a509e5659520129614e3072a7bd63c29d}{region\+\_\+divider\+\_\+func}}}]{region\+\_\+divider }\end{DoxyParamCaption})}
+
+
+
+Create a new 2D grid structure with the division of the computing domain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nx} & Number of points in x direction. \\
+\hline
+{\em ny} & Number of points in y direction. \\
+\hline
+{\em x0} & X-\/coordinate on the left of the domain. \\
+\hline
+{\em x1} & X-\/coordinate on the right of the domain. \\
+\hline
+{\em y0} & Y-\/coordinate on the bottom of the domain. \\
+\hline
+{\em y1} & Y-\/coordinate on the top of the domain. \\
+\hline
+{\em region\+\_\+divider} & Function pointer to define which domain a grid point belongs to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Function signature requirements\+:}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{Dirichlet_8c_aac37605abfd3877c437fde984df578fd}{region\_divider}}(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{double}\ hx,\ \textcolor{keywordtype}{double}\ hy)}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item param x\+: X-\/coordinate of the grid point
+\item param y\+: Y-\/coordinate of the grid point
+\item param hx\+: Grid spacing in the x direction
+\item param hy\+: Grid spacing in the y direction
+\item return value\+: An integer representing the area to which the grid point belongs.
+\item return value\+: ==0 -\/\texorpdfstring{$>$}{>} not calculated; ==1 -\/\texorpdfstring{$>$}{>} interior point; \texorpdfstring{$>$}{>}1 -\/\texorpdfstring{$>$}{>} boundarys
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+The caller is responsible for freeing the allocated memory using \doxylink{grid_8h_a31befaf760e994473b73acce12ad6546}{free\+\_\+grid()}. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{grid_8h_a31befaf760e994473b73acce12ad6546}{free\+\_\+grid()} 
+\end{DoxySeeAlso}
+\Hypertarget{grid_8c_a1ea426a678e98ecb5bec65d4cb876ef4}\label{grid_8c_a1ea426a678e98ecb5bec65d4cb876ef4} 
+\index{grid.c@{grid.c}!read\_indices\_to\_points@{read\_indices\_to\_points}}
+\index{read\_indices\_to\_points@{read\_indices\_to\_points}!grid.c@{grid.c}}
+\doxysubsubsection{\texorpdfstring{read\_indices\_to\_points()}{read\_indices\_to\_points()}}
+{\footnotesize\ttfamily double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} read\+\_\+indices\+\_\+to\+\_\+points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{double \texorpdfstring{$\ast$}{*}}]{data\+\_\+indices }\end{DoxyParamCaption})}
+
+
+
+Remap the data in the form of column vectors to the grid points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & Pointer to the grid structure with mapping relationships established by initalize\+\_\+\+Grid(). \\
+\hline
+{\em data\+\_\+indices} & The data in the form of column vectors.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{grid_8h_a2c256fcb14b9e2ebb265d2ab35d936b0}{initialize\+\_\+\+Grid()} 
+\end{DoxySeeAlso}

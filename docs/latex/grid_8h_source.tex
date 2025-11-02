@@ -1,0 +1,38 @@
+\doxysection{grid.\+h}
+\hypertarget{grid_8h_source}{}\label{grid_8h_source}\index{include/grid.h@{include/grid.h}}
+\mbox{\hyperlink{grid_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#\ ifndef\ GRID\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#\ define\ GRID\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ int\ (*\mbox{\hyperlink{grid_8h_a509e5659520129614e3072a7bd63c29d}{region\_divider\_func}})(double,\ double,\ double,\ double);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structGrid2D_a0c3422cde3a4b614748cc292b951b164}{nx}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structGrid2D_af5921b23b32d3c3de66dd4a1c21732c1}{ny}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structGrid2D_a054b3716553569ee7795e22a9b19f911}{hx}};\ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structGrid2D_a9f8a8b2a0ac7cc4aef0f4c3dc95f00fe}{hy}};\ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structGrid2D_a01de7f5ddd98dc424cb12d0c47ba514e}{x0}},\ x1;\ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structGrid2D_a8e17c38d9b5a31a8dfb73585d20fe514}{y0}},\ y1;\ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{double}\ *\mbox{\hyperlink{structGrid2D_a281b2c62e717b77b6d8abaa2c0eec96a}{x}};\ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{double}\ *\mbox{\hyperlink{structGrid2D_a4f009df2be8e70aa69ebc230a446087e}{y}};\ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ **\mbox{\hyperlink{structGrid2D_a4721ccb58cee6d39ac51bb9ce0d6b124}{region}};\ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ **\mbox{\hyperlink{structGrid2D_a8aae7aa0e1d222722432f90cdbe6d95c}{id\_map}};\ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structGrid2D_a8231d84ac1f0a464234d02cd5d337069}{n\_active}};\ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structGrid2D_a1c1c10319e56a6d16e2348f641bb31d2}{n\_interior}};\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{structGrid2D_afeb989770456207eb8c5bcc9a48061f0}{id\_i}};\ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{structGrid2D_a215aa877c48d1414101eb2d8261395ff}{id\_j}};\ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \}\ \mbox{\hyperlink{structGrid2D}{Grid2D}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00056\ \mbox{\hyperlink{structGrid2D}{Grid2D}}*\ \mbox{\hyperlink{grid_8h_a827f3575406b8b99a6eb56f476bbcf4d}{create\_uniform\_grid}}(\textcolor{keywordtype}{int}\ nx,\ \textcolor{keywordtype}{int}\ ny,\ \textcolor{keywordtype}{double}\ x0,\ \textcolor{keywordtype}{double}\ x1,\ \textcolor{keywordtype}{double}\ y0,\ \textcolor{keywordtype}{double}\ y1);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00081\ \mbox{\hyperlink{structGrid2D}{Grid2D}}*\ \mbox{\hyperlink{grid_8h_a2c256fcb14b9e2ebb265d2ab35d936b0}{initialize\_Grid}}(\textcolor{keywordtype}{int}\ nx,\ \textcolor{keywordtype}{int}\ ny,\ \textcolor{keywordtype}{double}\ x0,\ \textcolor{keywordtype}{double}\ x1,\ \textcolor{keywordtype}{double}\ y0,\ \textcolor{keywordtype}{double}\ y1,\ \mbox{\hyperlink{grid_8h_a509e5659520129614e3072a7bd63c29d}{region\_divider\_func}}\ \mbox{\hyperlink{Dirichlet_8c_aac37605abfd3877c437fde984df578fd}{region\_divider}});}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{double}\ **\mbox{\hyperlink{grid_8h_a1ea426a678e98ecb5bec65d4cb876ef4}{read\_indices\_to\_points}}(\mbox{\hyperlink{structGrid2D}{Grid2D}}\ *grid,\ \textcolor{keywordtype}{double}*\ data\_indices);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{grid_8h_a31befaf760e994473b73acce12ad6546}{free\_grid}}(\mbox{\hyperlink{structGrid2D}{Grid2D}}\ *grid);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#\ endif}}
+
+\end{DoxyCode}

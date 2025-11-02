@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Numerical Solution of Partial Differential Equations: src/utils.c File Reference</title>
+<title>Numerical Solution of Partial Differential Equations: src/sparse/utils.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0d126990016457eb3db78b202c239837.html">sparse</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -86,9 +86,9 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for utils.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="utils_8c__incl.png" border="0" usemap="#asrc_2utils_8c" alt=""/></div>
-<map name="asrc_2utils_8c" id="asrc_2utils_8c">
-<area shape="rect" title="Utility functions for printing vectors and SparseCSR matrices." alt="" coords="38,5,117,31"/>
+<div class="center"><img src="utils_8c__incl.png" border="0" usemap="#asrc_2sparse_2utils_8c" alt=""/></div>
+<map name="asrc_2sparse_2utils_8c" id="asrc_2sparse_2utils_8c">
+<area shape="rect" title="Utility functions for printing vectors and SparseCSR matrices." alt="" coords="16,5,139,31"/>
 <area shape="rect" title=" " alt="" coords="5,79,67,104"/>
 <area shape="poly" title=" " alt="" coords="73,32,52,68,47,65,68,30"/>
 <area shape="rect" href="utils_8h.html" title="Header file for utility functions to print vectors and CSR matrices." alt="" coords="91,79,149,104"/>
@@ -108,12 +108,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a11820138833e6725f1060ae252999b99" id="r_a11820138833e6725f1060ae252999b99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a11820138833e6725f1060ae252999b99">print_int_vector</a> (const int *vec, int n)</td></tr>
 <tr class="memdesc:a11820138833e6725f1060ae252999b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print an integer vector.  <br /></td></tr>
 <tr class="separator:a11820138833e6725f1060ae252999b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac650fdcfbe5b5dde5817be6742bd157d" id="r_ac650fdcfbe5b5dde5817be6742bd157d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#ac650fdcfbe5b5dde5817be6742bd157d">print_matrix</a> (const double **matrix, int rows, int cols, int ndec)</td></tr>
+<tr class="separator:ac650fdcfbe5b5dde5817be6742bd157d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba6ad9ac327380731ee2429984a974e" id="r_a1ba6ad9ac327380731ee2429984a974e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a1ba6ad9ac327380731ee2429984a974e">print_int_matrix</a> (const int **matrix, int rows, int cols)</td></tr>
+<tr class="separator:a1ba6ad9ac327380731ee2429984a974e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa83175aba8797e248985c725fd63c828" id="r_aa83175aba8797e248985c725fd63c828"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#aa83175aba8797e248985c725fd63c828">print_SparseCSR</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, int ndec)</td></tr>
 <tr class="memdesc:aa83175aba8797e248985c725fd63c828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a <a class="el" href="structSparseCSR.html" title="Structure to represent a sparse matrix in Compressed Sparse Row (CSR) format.">SparseCSR</a> matrix in dense format with specified decimal places.  <br /></td></tr>
 <tr class="separator:aa83175aba8797e248985c725fd63c828"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39645fbbf53a4794428fc836ed651292" id="r_a39645fbbf53a4794428fc836ed651292"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a39645fbbf53a4794428fc836ed651292">print_SparseCSR_simple</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, int ndec)</td></tr>
 <tr class="memdesc:a39645fbbf53a4794428fc836ed651292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the internal representation of a <a class="el" href="structSparseCSR.html" title="Structure to represent a sparse matrix in Compressed Sparse Row (CSR) format.">SparseCSR</a> matrix.  <br /></td></tr>
 <tr class="separator:a39645fbbf53a4794428fc836ed651292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a657e8a54c161d913fa4761b9c9d41" id="r_ad5a657e8a54c161d913fa4761b9c9d41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#ad5a657e8a54c161d913fa4761b9c9d41">write_csv_matrix</a> (const char *filename, double **matrix, int rows, int cols)</td></tr>
+<tr class="separator:ad5a657e8a54c161d913fa4761b9c9d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Utility functions for printing vectors and <a class="el" href="structSparseCSR.html" title="Structure to represent a sparse matrix in Compressed Sparse Row (CSR) format.">SparseCSR</a> matrices. </p>
@@ -127,6 +133,40 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Li Zhijun </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2025-10-10 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a1ba6ad9ac327380731ee2429984a974e" name="a1ba6ad9ac327380731ee2429984a974e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba6ad9ac327380731ee2429984a974e">&#9670;&#160;</a></span>print_int_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_int_matrix </td>
+          <td>(</td>
+          <td class="paramtype">const int **&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a11820138833e6725f1060ae252999b99" name="a11820138833e6725f1060ae252999b99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11820138833e6725f1060ae252999b99">&#9670;&#160;</a></span>print_int_vector()</h2>
 
@@ -161,6 +201,46 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ac650fdcfbe5b5dde5817be6742bd157d" name="ac650fdcfbe5b5dde5817be6742bd157d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac650fdcfbe5b5dde5817be6742bd157d">&#9670;&#160;</a></span>print_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_matrix </td>
+          <td>(</td>
+          <td class="paramtype">const double **&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ndec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -280,6 +360,46 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ad5a657e8a54c161d913fa4761b9c9d41" name="ad5a657e8a54c161d913fa4761b9c9d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a657e8a54c161d913fa4761b9c9d41">&#9670;&#160;</a></span>write_csv_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write_csv_matrix </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double **&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

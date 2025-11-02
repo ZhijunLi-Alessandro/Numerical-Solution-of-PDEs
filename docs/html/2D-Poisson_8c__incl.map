@@ -1,5 +1,5 @@
-<map id="examples/2D&#45;Poisson.c" name="examples/2D&#45;Poisson.c">
-<area shape="rect" id="Node000001" title="Example program to generate a 2D Poisson matrix in CSR format." alt="" coords="77,5,238,31"/>
+<map id="tests/2D&#45;Poisson.c" name="tests/2D&#45;Poisson.c">
+<area shape="rect" id="Node000001" title="Example program to generate a 2D Poisson matrix in CSR format." alt="" coords="90,5,225,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,79,67,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,33,69,74,66,69,136,28"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="91,79,155,104"/>

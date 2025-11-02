@@ -1,0 +1,9 @@
+<map id="include/poisson2d.h" name="include/poisson2d.h">
+<area shape="rect" id="Node000001" title="Header file for assembling 2D Poisson equation matrix and RHS vector." alt="" coords="5,5,143,31"/>
+<area shape="rect" id="Node000002" href="$grid_8h.html" title="Header file for a uniform grid structure and related functions." alt="" coords="8,79,63,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,32,50,68,46,65,65,30"/>
+<area shape="rect" id="Node000003" href="$csr_8h.html" title="Header file for CSR matrix operations and iterative solvers." alt="" coords="87,79,138,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="83,30,102,65,98,68,78,32"/>
+<area shape="rect" id="Node000004" href="$vec_8h.html" title="Header file for basic vector operations." alt="" coords="85,152,140,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="115,104,115,138,110,138,110,104"/>
+</map>

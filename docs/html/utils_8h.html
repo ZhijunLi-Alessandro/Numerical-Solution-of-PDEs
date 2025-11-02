@@ -99,15 +99,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="utils_8h__dep__incl.png" border="0" usemap="#ainclude_2utils_8hdep" alt=""/></div>
 <map name="ainclude_2utils_8hdep" id="ainclude_2utils_8hdep">
-<area shape="rect" title="Header file for utility functions to print vectors and CSR matrices." alt="" coords="245,5,348,31"/>
-<area shape="rect" href="2D-Poisson_8c.html" title="Example program to generate a 2D Poisson matrix in CSR format." alt="" coords="5,79,167,104"/>
-<area shape="poly" title=" " alt="" coords="251,37,121,81,119,76,249,32"/>
-<area shape="rect" href="utils_8c.html" title="Utility functions for printing vectors and SparseCSR matrices." alt="" coords="191,79,269,104"/>
-<area shape="poly" title=" " alt="" coords="278,43,243,80,239,77,274,39"/>
-<area shape="rect" href="test__csr__3x3_8c.html" title="Test program for 3x3 CSR matrix operations and iterative solvers." alt="" coords="294,79,435,104"/>
-<area shape="poly" title=" " alt="" coords="319,39,356,77,352,80,315,42"/>
-<area shape="rect" href="test__csr__5x5_8c.html" title="Test program for 5x5 CSR matrix operations and iterative solvers." alt="" coords="459,79,601,104"/>
-<area shape="poly" title=" " alt="" coords="348,32,493,76,491,81,346,37"/>
+<area shape="rect" title="Header file for utility functions to print vectors and CSR matrices." alt="" coords="430,5,533,31"/>
+<area shape="rect" href="Dirichlet_8c.html" title="Example program to solve a 2D Poisson problem with Dirichlet boundary condition." alt="" coords="5,79,147,104"/>
+<area shape="poly" title=" " alt="" coords="417,33,142,81,141,76,416,28"/>
+<area shape="rect" href="Neumann_8c.html" title="Example program to solve a 2D Poisson problem with Neumann boundary condition." alt="" coords="171,79,320,104"/>
+<area shape="poly" title=" " alt="" coords="431,37,284,81,283,76,430,32"/>
+<area shape="rect" href="utils_8c.html" title="Utility functions for printing vectors and SparseCSR matrices." alt="" coords="344,79,467,104"/>
+<area shape="poly" title=" " alt="" coords="461,42,420,80,416,76,457,38"/>
+<area shape="rect" href="2D-Poisson_8c.html" title="Example program to generate a 2D Poisson matrix in CSR format." alt="" coords="491,79,626,104"/>
+<area shape="poly" title=" " alt="" coords="506,38,548,76,544,80,502,42"/>
+<area shape="rect" href="test__csr__3x3_8c.html" title="Test program for 3x3 CSR matrix operations and iterative solvers." alt="" coords="651,79,792,104"/>
+<area shape="poly" title=" " alt="" coords="534,32,683,76,682,81,532,37"/>
+<area shape="rect" href="test__csr__5x5_8c.html" title="Test program for 5x5 CSR matrix operations and iterative solvers." alt="" coords="816,79,957,104"/>
+<area shape="poly" title=" " alt="" coords="547,28,822,76,821,81,546,33"/>
 </map>
 </div>
 </div>
@@ -121,12 +125,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a11820138833e6725f1060ae252999b99" id="r_a11820138833e6725f1060ae252999b99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a11820138833e6725f1060ae252999b99">print_int_vector</a> (const int *vec, int n)</td></tr>
 <tr class="memdesc:a11820138833e6725f1060ae252999b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print an integer vector.  <br /></td></tr>
 <tr class="separator:a11820138833e6725f1060ae252999b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac650fdcfbe5b5dde5817be6742bd157d" id="r_ac650fdcfbe5b5dde5817be6742bd157d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#ac650fdcfbe5b5dde5817be6742bd157d">print_matrix</a> (const double **matrix, int rows, int cols, int ndec)</td></tr>
+<tr class="separator:ac650fdcfbe5b5dde5817be6742bd157d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba6ad9ac327380731ee2429984a974e" id="r_a1ba6ad9ac327380731ee2429984a974e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a1ba6ad9ac327380731ee2429984a974e">print_int_matrix</a> (const int **matrix, int rows, int cols)</td></tr>
+<tr class="separator:a1ba6ad9ac327380731ee2429984a974e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa83175aba8797e248985c725fd63c828" id="r_aa83175aba8797e248985c725fd63c828"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#aa83175aba8797e248985c725fd63c828">print_SparseCSR</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, int ndec)</td></tr>
 <tr class="memdesc:aa83175aba8797e248985c725fd63c828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a <a class="el" href="structSparseCSR.html" title="Structure to represent a sparse matrix in Compressed Sparse Row (CSR) format.">SparseCSR</a> matrix in dense format with specified decimal places.  <br /></td></tr>
 <tr class="separator:aa83175aba8797e248985c725fd63c828"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39645fbbf53a4794428fc836ed651292" id="r_a39645fbbf53a4794428fc836ed651292"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a39645fbbf53a4794428fc836ed651292">print_SparseCSR_simple</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, int ndec)</td></tr>
 <tr class="memdesc:a39645fbbf53a4794428fc836ed651292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the internal representation of a <a class="el" href="structSparseCSR.html" title="Structure to represent a sparse matrix in Compressed Sparse Row (CSR) format.">SparseCSR</a> matrix.  <br /></td></tr>
 <tr class="separator:a39645fbbf53a4794428fc836ed651292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a657e8a54c161d913fa4761b9c9d41" id="r_ad5a657e8a54c161d913fa4761b9c9d41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#ad5a657e8a54c161d913fa4761b9c9d41">write_csv_matrix</a> (const char *filename, double **matrix, int rows, int cols)</td></tr>
+<tr class="separator:ad5a657e8a54c161d913fa4761b9c9d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for utility functions to print vectors and CSR matrices. </p>
@@ -134,6 +144,42 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Li Zhijun </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2025-10-10 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a1ba6ad9ac327380731ee2429984a974e" name="a1ba6ad9ac327380731ee2429984a974e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba6ad9ac327380731ee2429984a974e">&#9670;&#160;</a></span>print_int_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_int_matrix </td>
+          <td>(</td>
+          <td class="paramtype">const int **&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="Dirichlet_8c-example.html#a8">Dirichlet.c</a>, and <a class="el" href="Neumann_8c-example.html#a20">Neumann.c</a>.</dd>
+</dl>
+
+</div>
+</div>
 <a id="a11820138833e6725f1060ae252999b99" name="a11820138833e6725f1060ae252999b99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11820138833e6725f1060ae252999b99">&#9670;&#160;</a></span>print_int_vector()</h2>
 
@@ -168,6 +214,46 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ac650fdcfbe5b5dde5817be6742bd157d" name="ac650fdcfbe5b5dde5817be6742bd157d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac650fdcfbe5b5dde5817be6742bd157d">&#9670;&#160;</a></span>print_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_matrix </td>
+          <td>(</td>
+          <td class="paramtype">const double **&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ndec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -206,8 +292,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This function is only suitable for CSR matrices with columns sorted within each row. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="2D-Poisson_8c-example.html#a9">2D-Poisson.c</a>, <a class="el" href="test_csr_3x3_8c-example.html#a6">test_csr_3x3.c</a>, and <a class="el" href="test_csr_5x5_8c-example.html#a6">test_csr_5x5.c</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -244,8 +328,6 @@ Functions</h2></td></tr>
     <tr><td class="paramname">ndec</td><td>Number of decimal places to print for values. </td></tr>
   </table>
   </dd>
-</dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="2D-Poisson_8c-example.html#a10">2D-Poisson.c</a>.</dd>
 </dl>
 
 </div>
@@ -291,7 +373,47 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="test_csr_3x3_8c-example.html#a7">test_csr_3x3.c</a>, and <a class="el" href="test_csr_5x5_8c-example.html#a7">test_csr_5x5.c</a>.</dd>
+
+</div>
+</div>
+<a id="ad5a657e8a54c161d913fa4761b9c9d41" name="ad5a657e8a54c161d913fa4761b9c9d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a657e8a54c161d913fa4761b9c9d41">&#9670;&#160;</a></span>write_csv_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write_csv_matrix </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double **&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="Dirichlet_8c-example.html#a22">Dirichlet.c</a>, and <a class="el" href="Neumann_8c-example.html#a28">Neumann.c</a>.</dd>
 </dl>
 
 </div>

@@ -25,12 +25,12 @@
  * - values: Array of size nnz storing the non-zero values of the matrix.
  */
 typedef struct {
-    int rows;
-    int cols;
-    int nnz;
-    int *row_ptr;
-    int *col_ind;
-    double *values;
+    int rows;       /**< Number of rows in the matrix. */
+    int cols;       /**< Number of columns in the matrix. */
+    int nnz;        /**< Number of non-zero elements in the matrix. */
+    int *row_ptr;   /**< Row pointer array of size 'rows + 1'. */
+    int *col_ind;   /**< Column index array of size 'nnz'. */
+    double *values; /**< Non-zero values array of size 'nnz'. */
 } SparseCSR;
 
 /**

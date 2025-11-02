@@ -1,0 +1,21 @@
+<map id="examples/Dirichlet.c" name="examples/Dirichlet.c">
+<area shape="rect" id="Node000001" title="Example program to solve a 2D Poisson problem with Dirichlet boundary condition." alt="" coords="175,5,316,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,69,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,33,84,77,82,72,211,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="93,79,155,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,33,157,74,154,69,224,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="179,79,242,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="242,32,225,67,220,65,237,30"/>
+<area shape="rect" id="Node000005" href="$csr_8h.html" title="Header file for CSR matrix operations and iterative solvers." alt="" coords="321,152,372,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="256,30,333,139,329,142,251,33"/>
+<area shape="rect" id="Node000007" href="$poisson2d_8h.html" title="Header file for assembling 2D Poisson equation matrix and RHS vector." alt="" coords="399,79,491,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="278,28,400,71,399,76,277,33"/>
+<area shape="rect" id="Node000009" href="$utils_8h.html" title="Header file for utility functions to print vectors and CSR matrices." alt="" coords="318,79,375,104"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="263,28,320,68,317,73,260,33"/>
+<area shape="rect" id="Node000006" href="$vec_8h.html" title="Header file for basic vector operations." alt="" coords="319,225,374,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="349,178,349,212,344,212,344,178"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="431,106,375,146,372,142,428,102"/>
+<area shape="rect" id="Node000008" href="$grid_8h.html" title="Header file for a uniform grid structure and related functions." alt="" coords="418,152,473,177"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="448,104,448,138,443,138,443,104"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="349,104,349,138,344,138,344,104"/>
+</map>

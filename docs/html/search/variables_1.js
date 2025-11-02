@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nnz_0',['nnz',['../structSparseCSR.html#aa28c2121443bb1d2cb2781fd5645a647',1,'SparseCSR']]]
+  ['data_5fmask_0',['data_mask',['../namespacevisualize__Neumann.html#a874eaf5d275e2299429bb5d89f38f3ef',1,'visualize_Neumann']]]
 ];

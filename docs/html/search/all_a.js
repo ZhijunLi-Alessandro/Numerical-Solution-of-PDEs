@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['test_5fcsr_5f3x3_2ec_0',['test_csr_3x3.c',['../test__csr__3x3_8c.html',1,'']]],
-  ['test_5fcsr_5f5x5_2ec_1',['test_csr_5x5.c',['../test__csr__5x5_8c.html',1,'']]]
+  ['jacobi_5fcsr_0',['jacobi_csr',['../csr_8h.html#a7cf1992062cdbed207ef7217c4a3e20d',1,'Jacobi_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c'],['../csr_8c.html#a7cf1992062cdbed207ef7217c4a3e20d',1,'Jacobi_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c']]]
 ];

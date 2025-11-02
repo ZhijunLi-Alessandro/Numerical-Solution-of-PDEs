@@ -1,3 +1,13 @@
+/**
+ * @file grid.c
+ * @brief Implementation of uniform grid operations.
+ * 
+ * This file includes functions for creating, freeing, initializing, and
+ * remapping data in form of column vectors to data in form of matrix.
+ * 
+ * @author Li Zhijun
+ * @date 2025-10-21
+ */
 #include <stdlib.h>
 #include "grid.h"
 

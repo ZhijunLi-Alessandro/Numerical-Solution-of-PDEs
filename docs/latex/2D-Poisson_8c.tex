@@ -1,5 +1,5 @@
-\doxysection{examples/2\+D-\/\+Poisson.c File Reference}
-\hypertarget{2D-Poisson_8c}{}\label{2D-Poisson_8c}\index{examples/2D-\/Poisson.c@{examples/2D-\/Poisson.c}}
+\doxysection{tests/2\+D-\/\+Poisson.c File Reference}
+\hypertarget{2D-Poisson_8c}{}\label{2D-Poisson_8c}\index{tests/2D-\/Poisson.c@{tests/2D-\/Poisson.c}}
 
 
 Example program to generate a 2D Poisson matrix in CSR format.  
@@ -49,6 +49,8 @@ Li Zhijun
 \begin{DoxyDate}{Date}
 2025-\/10-\/10 
 \end{DoxyDate}
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000001}{Test}}]\doxylink{2D-Poisson_8c}{2\+D-\/\+Poisson.\+c} \end{DoxyRefDesc}
 
 
 \doxysubsection{Function Documentation}
@@ -72,9 +74,6 @@ Create a 2D Poisson matrix in CSR format.
 \begin{DoxyReturn}{Returns}
 Pointer to the generated \doxylink{structSparseCSR}{Sparse\+CSR} matrix. 
 \end{DoxyReturn}
-\begin{Desc}
-\item[Examples]\par
-\mbox{\hyperlink{2D-Poisson_8c-example}{2\+D-\/\+Poisson.\+c}}.\end{Desc}
 \Hypertarget{2D-Poisson_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{2D-Poisson_8c_a0ddf1224851353fc92bfbff6f499fa97} 
 \index{2D-\/Poisson.c@{2D-\/Poisson.c}!main@{main}}
 \index{main@{main}!2D-\/Poisson.c@{2D-\/Poisson.c}}
@@ -103,7 +102,7 @@ nx \texorpdfstring{$>$}{>} 6 or ny \texorpdfstring{$>$}{>} 6 will result in a si
 \DoxyCodeLine{mkdir\ build\ \&\&\ cd\ build}
 \DoxyCodeLine{cmake\ ..}
 \DoxyCodeLine{make}
-\DoxyCodeLine{../bin/2D-\/Poisson\_2d\ <nx>\ <ny>}
+\DoxyCodeLine{../bin/2D-\/Poisson\_2d\ <nx>\ <\mbox{\hyperlink{namespacevisualize__Dirichlet_a3d00d921c010ee0b28d3c6cd41849dd2}{ny}}>}
 
 \end{DoxyCode}
  
@@ -127,6 +126,3 @@ Map 2D grid coordinates to 1D index.
 {\em nx} & Number of interior grid points in x direction. \\
 \hline
 \end{DoxyParams}
-\begin{Desc}
-\item[Examples]\par
-\mbox{\hyperlink{2D-Poisson_8c-example}{2\+D-\/\+Poisson.\+c}}.\end{Desc}

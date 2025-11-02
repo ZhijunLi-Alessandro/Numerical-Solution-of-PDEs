@@ -1,5 +1,5 @@
-\doxysection{src/utils.c File Reference}
-\hypertarget{utils_8c}{}\label{utils_8c}\index{src/utils.c@{src/utils.c}}
+\doxysection{src/sparse/utils.c File Reference}
+\hypertarget{utils_8c}{}\label{utils_8c}\index{src/sparse/utils.c@{src/sparse/utils.c}}
 
 
 Utility functions for printing vectors and \doxylink{structSparseCSR}{Sparse\+CSR} matrices.  
@@ -21,10 +21,16 @@ void \mbox{\hyperlink{utils_8c_a882dd77955362cc0e2f22717258d742f}{print\+\_\+vec
 \begin{DoxyCompactList}\small\item\em Print a dense vector with specified decimal places. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{utils_8c_a11820138833e6725f1060ae252999b99}{print\+\_\+int\+\_\+vector}} (const int \texorpdfstring{$\ast$}{*}vec, int n)
 \begin{DoxyCompactList}\small\item\em Print an integer vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils_8c_ac650fdcfbe5b5dde5817be6742bd157d}{print\+\_\+matrix}} (const double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}matrix, int rows, int cols, int ndec)
+\item 
+void \mbox{\hyperlink{utils_8c_a1ba6ad9ac327380731ee2429984a974e}{print\+\_\+int\+\_\+matrix}} (const int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}matrix, int rows, int cols)
+\item 
 void \mbox{\hyperlink{utils_8c_aa83175aba8797e248985c725fd63c828}{print\+\_\+\+Sparse\+CSR}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, int ndec)
 \begin{DoxyCompactList}\small\item\em Print a \doxylink{structSparseCSR}{Sparse\+CSR} matrix in dense format with specified decimal places. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{utils_8c_a39645fbbf53a4794428fc836ed651292}{print\+\_\+\+Sparse\+CSR\+\_\+simple}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, int ndec)
-\begin{DoxyCompactList}\small\item\em Print the internal representation of a \doxylink{structSparseCSR}{Sparse\+CSR} matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Print the internal representation of a \doxylink{structSparseCSR}{Sparse\+CSR} matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utils_8c_ad5a657e8a54c161d913fa4761b9c9d41}{write\+\_\+csv\+\_\+matrix}} (const char \texorpdfstring{$\ast$}{*}filename, double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}matrix, int rows, int cols)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -49,6 +55,12 @@ Li Zhijun
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{utils_8c_a1ba6ad9ac327380731ee2429984a974e}\label{utils_8c_a1ba6ad9ac327380731ee2429984a974e} 
+\index{utils.c@{utils.c}!print\_int\_matrix@{print\_int\_matrix}}
+\index{print\_int\_matrix@{print\_int\_matrix}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{print\_int\_matrix()}{print\_int\_matrix()}}
+{\footnotesize\ttfamily void print\+\_\+int\+\_\+matrix (\begin{DoxyParamCaption}\item[{const int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})}
+
 \Hypertarget{utils_8c_a11820138833e6725f1060ae252999b99}\label{utils_8c_a11820138833e6725f1060ae252999b99} 
 \index{utils.c@{utils.c}!print\_int\_vector@{print\_int\_vector}}
 \index{print\_int\_vector@{print\_int\_vector}!utils.c@{utils.c}}
@@ -66,6 +78,12 @@ Print an integer vector.
 {\em n} & Number of elements in the vector. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{utils_8c_ac650fdcfbe5b5dde5817be6742bd157d}\label{utils_8c_ac650fdcfbe5b5dde5817be6742bd157d} 
+\index{utils.c@{utils.c}!print\_matrix@{print\_matrix}}
+\index{print\_matrix@{print\_matrix}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{print\_matrix()}{print\_matrix()}}
+{\footnotesize\ttfamily void print\+\_\+matrix (\begin{DoxyParamCaption}\item[{const double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{int}]{rows,  }\item[{int}]{cols,  }\item[{int}]{ndec }\end{DoxyParamCaption})}
+
 \Hypertarget{utils_8c_aa83175aba8797e248985c725fd63c828}\label{utils_8c_aa83175aba8797e248985c725fd63c828} 
 \index{utils.c@{utils.c}!print\_SparseCSR@{print\_SparseCSR}}
 \index{print\_SparseCSR@{print\_SparseCSR}!utils.c@{utils.c}}
@@ -122,3 +140,9 @@ Print a dense vector with specified decimal places.
 {\em ndec} & Number of decimal places to print. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{utils_8c_ad5a657e8a54c161d913fa4761b9c9d41}\label{utils_8c_ad5a657e8a54c161d913fa4761b9c9d41} 
+\index{utils.c@{utils.c}!write\_csv\_matrix@{write\_csv\_matrix}}
+\index{write\_csv\_matrix@{write\_csv\_matrix}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{write\_csv\_matrix()}{write\_csv\_matrix()}}
+{\footnotesize\ttfamily void write\+\_\+csv\+\_\+matrix (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})}
+

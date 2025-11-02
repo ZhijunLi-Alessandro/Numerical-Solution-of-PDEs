@@ -1,0 +1,189 @@
+\doxysection{Grid2D Struct Reference}
+\hypertarget{structGrid2D}{}\label{structGrid2D}\index{Grid2D@{Grid2D}}
+
+
+Structure to represent a 2D orthogonal grid.  
+
+
+
+
+{\ttfamily \#include $<$grid.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structGrid2D_a0c3422cde3a4b614748cc292b951b164}{nx}}
+\item 
+int \mbox{\hyperlink{structGrid2D_af5921b23b32d3c3de66dd4a1c21732c1}{ny}}
+\item 
+double \mbox{\hyperlink{structGrid2D_a054b3716553569ee7795e22a9b19f911}{hx}}
+\item 
+double \mbox{\hyperlink{structGrid2D_a9f8a8b2a0ac7cc4aef0f4c3dc95f00fe}{hy}}
+\item 
+double \mbox{\hyperlink{structGrid2D_a01de7f5ddd98dc424cb12d0c47ba514e}{x0}}
+\item 
+double \mbox{\hyperlink{structGrid2D_aa8b1488c6e3b576fa84f27918d741366}{x1}}
+\item 
+double \mbox{\hyperlink{structGrid2D_a8e17c38d9b5a31a8dfb73585d20fe514}{y0}}
+\item 
+double \mbox{\hyperlink{structGrid2D_a23514c21ae7f7cbd8218e9f550bc2b9a}{y1}}
+\item 
+double \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structGrid2D_a281b2c62e717b77b6d8abaa2c0eec96a}{x}}
+\item 
+double \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structGrid2D_a4f009df2be8e70aa69ebc230a446087e}{y}}
+\item 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structGrid2D_a4721ccb58cee6d39ac51bb9ce0d6b124}{region}}
+\item 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structGrid2D_a8aae7aa0e1d222722432f90cdbe6d95c}{id\+\_\+map}}
+\item 
+int \mbox{\hyperlink{structGrid2D_a8231d84ac1f0a464234d02cd5d337069}{n\+\_\+active}}
+\item 
+int \mbox{\hyperlink{structGrid2D_a1c1c10319e56a6d16e2348f641bb31d2}{n\+\_\+interior}}
+\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structGrid2D_afeb989770456207eb8c5bcc9a48061f0}{id\+\_\+i}}
+\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structGrid2D_a215aa877c48d1414101eb2d8261395ff}{id\+\_\+j}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure to represent a 2D orthogonal grid. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structGrid2D_a054b3716553569ee7795e22a9b19f911}\label{structGrid2D_a054b3716553569ee7795e22a9b19f911} 
+\index{Grid2D@{Grid2D}!hx@{hx}}
+\index{hx@{hx}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{hx}{hx}}
+{\footnotesize\ttfamily double Grid2\+D\+::hx}
+
+Grid spacing in the x direction \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{structGrid2D_a9f8a8b2a0ac7cc4aef0f4c3dc95f00fe}\label{structGrid2D_a9f8a8b2a0ac7cc4aef0f4c3dc95f00fe} 
+\index{Grid2D@{Grid2D}!hy@{hy}}
+\index{hy@{hy}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{hy}{hy}}
+{\footnotesize\ttfamily double Grid2\+D\+::hy}
+
+Grid spacing in the y direction \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{structGrid2D_afeb989770456207eb8c5bcc9a48061f0}\label{structGrid2D_afeb989770456207eb8c5bcc9a48061f0} 
+\index{Grid2D@{Grid2D}!id\_i@{id\_i}}
+\index{id\_i@{id\_i}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{id\_i}{id\_i}}
+{\footnotesize\ttfamily int\texorpdfstring{$\ast$}{*} Grid2\+D\+::id\+\_\+i}
+
+Array of i-\/coordinates of active points \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{structGrid2D_a215aa877c48d1414101eb2d8261395ff}\label{structGrid2D_a215aa877c48d1414101eb2d8261395ff} 
+\index{Grid2D@{Grid2D}!id\_j@{id\_j}}
+\index{id\_j@{id\_j}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{id\_j}{id\_j}}
+{\footnotesize\ttfamily int\texorpdfstring{$\ast$}{*} Grid2\+D\+::id\+\_\+j}
+
+Array of j-\/coordinates of active points \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{structGrid2D_a8aae7aa0e1d222722432f90cdbe6d95c}\label{structGrid2D_a8aae7aa0e1d222722432f90cdbe6d95c} 
+\index{Grid2D@{Grid2D}!id\_map@{id\_map}}
+\index{id\_map@{id\_map}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{id\_map}{id\_map}}
+{\footnotesize\ttfamily int\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Grid2\+D\+::id\+\_\+map}
+
+Mapping from 2D grid points to 1D indices \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{structGrid2D_a8231d84ac1f0a464234d02cd5d337069}\label{structGrid2D_a8231d84ac1f0a464234d02cd5d337069} 
+\index{Grid2D@{Grid2D}!n\_active@{n\_active}}
+\index{n\_active@{n\_active}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{n\_active}{n\_active}}
+{\footnotesize\ttfamily int Grid2\+D\+::n\+\_\+active}
+
+Number of active grid points \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{structGrid2D_a1c1c10319e56a6d16e2348f641bb31d2}\label{structGrid2D_a1c1c10319e56a6d16e2348f641bb31d2} 
+\index{Grid2D@{Grid2D}!n\_interior@{n\_interior}}
+\index{n\_interior@{n\_interior}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{n\_interior}{n\_interior}}
+{\footnotesize\ttfamily int Grid2\+D\+::n\+\_\+interior}
+
+Number of interior grid points \Hypertarget{structGrid2D_a0c3422cde3a4b614748cc292b951b164}\label{structGrid2D_a0c3422cde3a4b614748cc292b951b164} 
+\index{Grid2D@{Grid2D}!nx@{nx}}
+\index{nx@{nx}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{nx}{nx}}
+{\footnotesize\ttfamily int Grid2\+D\+::nx}
+
+Number of grid points in the x direction \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{structGrid2D_af5921b23b32d3c3de66dd4a1c21732c1}\label{structGrid2D_af5921b23b32d3c3de66dd4a1c21732c1} 
+\index{Grid2D@{Grid2D}!ny@{ny}}
+\index{ny@{ny}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{ny}{ny}}
+{\footnotesize\ttfamily int Grid2\+D\+::ny}
+
+Number of grid points in the y direction \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{structGrid2D_a4721ccb58cee6d39ac51bb9ce0d6b124}\label{structGrid2D_a4721ccb58cee6d39ac51bb9ce0d6b124} 
+\index{Grid2D@{Grid2D}!region@{region}}
+\index{region@{region}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{region}{region}}
+{\footnotesize\ttfamily int\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Grid2\+D\+::region}
+
+Region array indicating active grid points and boundaries \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{structGrid2D_a281b2c62e717b77b6d8abaa2c0eec96a}\label{structGrid2D_a281b2c62e717b77b6d8abaa2c0eec96a} 
+\index{Grid2D@{Grid2D}!x@{x}}
+\index{x@{x}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily double\texorpdfstring{$\ast$}{*} Grid2\+D\+::x}
+
+Array of x-\/coordinates of grid points \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{structGrid2D_a01de7f5ddd98dc424cb12d0c47ba514e}\label{structGrid2D_a01de7f5ddd98dc424cb12d0c47ba514e} 
+\index{Grid2D@{Grid2D}!x0@{x0}}
+\index{x0@{x0}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{x0}{x0}}
+{\footnotesize\ttfamily double Grid2\+D\+::x0}
+
+\Hypertarget{structGrid2D_aa8b1488c6e3b576fa84f27918d741366}\label{structGrid2D_aa8b1488c6e3b576fa84f27918d741366} 
+\index{Grid2D@{Grid2D}!x1@{x1}}
+\index{x1@{x1}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{x1}{x1}}
+{\footnotesize\ttfamily double Grid2\+D\+::x1}
+
+Domain boundaries in the x direction \Hypertarget{structGrid2D_a4f009df2be8e70aa69ebc230a446087e}\label{structGrid2D_a4f009df2be8e70aa69ebc230a446087e} 
+\index{Grid2D@{Grid2D}!y@{y}}
+\index{y@{y}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily double\texorpdfstring{$\ast$}{*} Grid2\+D\+::y}
+
+Array of y-\/coordinates of grid points \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\Hypertarget{structGrid2D_a8e17c38d9b5a31a8dfb73585d20fe514}\label{structGrid2D_a8e17c38d9b5a31a8dfb73585d20fe514} 
+\index{Grid2D@{Grid2D}!y0@{y0}}
+\index{y0@{y0}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{y0}{y0}}
+{\footnotesize\ttfamily double Grid2\+D\+::y0}
+
+\Hypertarget{structGrid2D_a23514c21ae7f7cbd8218e9f550bc2b9a}\label{structGrid2D_a23514c21ae7f7cbd8218e9f550bc2b9a} 
+\index{Grid2D@{Grid2D}!y1@{y1}}
+\index{y1@{y1}!Grid2D@{Grid2D}}
+\doxysubsubsection{\texorpdfstring{y1}{y1}}
+{\footnotesize\ttfamily double Grid2\+D\+::y1}
+
+Domain boundaries in the y direction 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{grid_8h}{grid.\+h}}\end{DoxyCompactItemize}
