@@ -155,15 +155,18 @@ int main() {
     //     printf("u(%.4f, %.4f) = %.6f, Exact = %.6f, Error = %.6e\n", xi, yj, solution[i], u_exact, fabs(solution[i] - u_exact));
     // }
 
-    double **data_points = read_indices_to_points(grid, solution);
+    double **data_points = create_grid_2D_array(grid);
+    read_indices_to_points(grid, solution, data_points);
     // print_matrix((const double **)data_points, grid->nx, grid->ny, 6);
-    double **exact_points = read_indices_to_points(grid, exact);
+    double **exact_points = create_grid_2D_array(grid);
+    read_indices_to_points(grid, exact, exact_points);
     // print_matrix((const double **)exact_points, grid->nx, grid->ny, 6);
 
     // Optionally, write the solution to a CSV file for visualization
-    write_csv_matrix("results/Dirichlet_solution.csv", data_points, grid->nx, grid->ny);
-    write_csv_matrix("results/Dirichlet_exact.csv", exact_points, grid->nx, grid->ny);
-
+    write_csv_matrix("results/Poisson/data/Dirichlet_solution.csv", data_points, grid->nx, grid->ny);
+    write_csv_matrix("results/Poisson/data/Dirichlet_exact.csv", exact_points, grid->nx, grid->ny);
+    write_csv_int_matrix("results/Poisson/data/grid_data.csv", grid->region, grid->nx, grid->ny);
+    
     // Clean up
     // Save grid dimensions because free_grid(grid) will deallocate the structure
     int nx_grid = grid->nx;
@@ -171,14 +174,11 @@ int main() {
 
     freeSparseCSR(matrix);
     free(rhs);
+    free(exact);
     free(solution);
 
-    for (int i = 0; i < nx_grid; i++) {
-        free(data_points[i]);
-        free(exact_points[i]);
-    }
-    free(data_points);
-    free(exact_points);
+    free_grid_2D_array(data_points, grid);
+    free_grid_2D_array(exact_points, grid);
 
     // Now free the grid structure itself
     free_grid(grid);

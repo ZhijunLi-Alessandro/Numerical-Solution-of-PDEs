@@ -121,7 +121,7 @@ bin\
 
 Computational domain:
 
-![image](/results/region.png)
+![image](/results/Poisson/region.png)
 
 Function set up:
 
@@ -134,7 +134,7 @@ $$ u=\frac{1}{5\pi^2}\sin(\pi x)\cos(2\pi y) $$
 
 Exact solution:
 
-![image](/results/Dirichlet_exact.png)
+![image](/results/Poisson/Dirichlet_exact.png)
 
 ### Dirichlet Boundary
 
@@ -187,11 +187,11 @@ Output of *Dirichlet* gird setup:
 
 Solution visualization:
 
-![image](/results/Dirichlet_solution.png)
+![image](/results/Poisson/Dirichlet_solution.png)
 
 Solution Error visualization:
 
-![image](/results/Dirichlet_error.png)
+![image](/results/Poisson/Dirichlet_error.png)
 
 ### Neumann Boundary
 Output of *Neumann* gird setup (eliminate several corners):
@@ -242,11 +242,11 @@ Output of *Neumann* gird setup (eliminate several corners):
 
 Solution visualization:
 
-![image](/results/Neumann_solution.png)
+![image](/results/Poisson/Neumann_solution.png)
 
 Solution Error visualization:
 
-![image](/results/Neumann_error.png)
+![image](/results/Poisson/Neumann_error.png)
 
 **Notice:**  
 Under current grid point division, the interpolation of boundary points on the boundary in the Dirichlet boundary condition is accurate in the vast majority of edges. However, the approximation of the boundary normal derivative using the first-order difference in Neumann boundary conditions has errors at almost all boundary positions. This might be one of the reasons why the numerical solution error under the Neumann boundary condition is significantly higher than that under the Dirichlet boundary condition. The error on the boundary conditions can also be seen from the part near the boundary in the above figure.

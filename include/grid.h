@@ -80,6 +80,10 @@ Grid2D* create_uniform_grid(int nx, int ny, double x0, double x1, double y0, dou
  */
 Grid2D* initialize_Grid(int nx, int ny, double x0, double x1, double y0, double y1, region_divider_func region_divider);
 
+double **create_grid_2D_array(Grid2D *grid);
+
+void* free_grid_2D_array(double** array, Grid2D *grid);
+
 /**
  * @brief Remap the data in the form of column vectors to the grid points.
  * @param grid Pointer to the grid structure with mapping relationships established by initalize_Grid().
@@ -87,7 +91,7 @@ Grid2D* initialize_Grid(int nx, int ny, double x0, double x1, double y0, double 
  * 
  * @see initialize_Grid()
  */
-double **read_indices_to_points(Grid2D *grid, double* data_indices);
+void read_indices_to_points(Grid2D *grid, double* data_indices, double** data_points);
 
 /**
  * @brief Free the memory allocated for a grid structure.

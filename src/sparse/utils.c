@@ -113,3 +113,23 @@ void write_csv_matrix(const char *filename, double **matrix, int rows, int cols)
 
     fclose(file);
 }
+
+void write_csv_int_matrix(const char *filename, int **matrix, int rows, int cols) {
+    FILE *file = fopen(filename, "w");
+    if (file == NULL) {
+        perror("Error opening file for writing");
+        return;
+    }
+
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            fprintf(file, "%d", matrix[i][j]);
+            if (j < cols - 1) {
+                fprintf(file, ",");
+            }
+        }
+        fprintf(file, "\n");
+    }
+
+    fclose(file);
+}

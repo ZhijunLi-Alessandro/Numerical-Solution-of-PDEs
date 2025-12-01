@@ -83,8 +83,23 @@ Grid2D* initialize_Grid(int nx, int ny, double x0, double x1, double y0, double 
     return grid;
 }
 
-double **read_indices_to_points(Grid2D *grid, double* data_indices) {
+double **create_grid_2D_array(Grid2D *grid) {
     double **data_points = (double **)malloc(grid->nx * sizeof(double *));
+    for (int i = 0; i < grid->nx; i++) {
+        data_points[i] = (double *)malloc(grid->ny * sizeof(double));
+    }
+    return data_points;
+}
+
+void* free_grid_2D_array(double** array, Grid2D *grid) {
+    for (int i = 0; i < grid->nx; i++) {
+        free(array[i]);
+    }
+    free(array);
+}
+
+void read_indices_to_points(Grid2D *grid, double* data_indices, double **data_points) {
+    // double **data_points = (double **)malloc(grid->nx * sizeof(double *));
     for (int i = 0; i < grid->nx; i++) {
         data_points[i] = (double *)malloc(grid->ny * sizeof(double));
         for (int j = 0; j < grid->ny; j++) {
@@ -95,7 +110,7 @@ double **read_indices_to_points(Grid2D *grid, double* data_indices) {
             }
         }
     }
-    return data_points;
+    // return data_points;
 }
 
 void* free_grid(Grid2D *grid) {
