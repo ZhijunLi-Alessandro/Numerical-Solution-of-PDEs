@@ -80,6 +80,8 @@ SparseCSR** get_D_L_U_csr(const SparseCSR *matrix);
  * @param max_iter Maximum number of iterations.
  * @param tol Tolerance for convergence.
  */
+void Jacobi_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol);
+
 void Jacobi_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol);
 
 /**
@@ -90,6 +92,8 @@ void Jacobi_csr(const SparseCSR *matrix, const double *b, double *x, int max_ite
  * @param max_iter Maximum number of iterations.
  * @param tol Tolerance for convergence.
  */
+void GaussSeidel_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol);
+
 void GaussSeidel_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol);
 
 /**
@@ -100,6 +104,8 @@ void GaussSeidel_csr(const SparseCSR *matrix, const double *b, double *x, int ma
  * @param max_iter Maximum number of iterations.
  * @param tol Tolerance for convergence.
  */
+void CG_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol);
+
 void CG_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol);
 
 # endif

@@ -118,13 +118,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a511084c45e428b7302a4f789f43de246" id="r_a511084c45e428b7302a4f789f43de246"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSparseCSR.html">SparseCSR</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a511084c45e428b7302a4f789f43de246">get_D_L_U_csr</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix)</td></tr>
 <tr class="memdesc:a511084c45e428b7302a4f789f43de246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompose a CSR matrix into diagonal, lower, and upper matrices.  <br /></td></tr>
 <tr class="separator:a511084c45e428b7302a4f789f43de246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cf1992062cdbed207ef7217c4a3e20d" id="r_a7cf1992062cdbed207ef7217c4a3e20d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a7cf1992062cdbed207ef7217c4a3e20d">Jacobi_csr</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
+<tr class="memitem:a7cf1992062cdbed207ef7217c4a3e20d" id="r_a7cf1992062cdbed207ef7217c4a3e20d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a7cf1992062cdbed207ef7217c4a3e20d">Jacobi_csr_debug</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
 <tr class="memdesc:a7cf1992062cdbed207ef7217c4a3e20d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Ax = b using the Jacobi iterative method for CSR matrices.  <br /></td></tr>
 <tr class="separator:a7cf1992062cdbed207ef7217c4a3e20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e498df649d55f5935286ea1351ee89a" id="r_a8e498df649d55f5935286ea1351ee89a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a8e498df649d55f5935286ea1351ee89a">GaussSeidel_csr</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
+<tr class="memitem:a8e498df649d55f5935286ea1351ee89a" id="r_a8e498df649d55f5935286ea1351ee89a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a8e498df649d55f5935286ea1351ee89a">GaussSeidel_csr_debug</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
 <tr class="memdesc:a8e498df649d55f5935286ea1351ee89a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Ax = b using the Gauss-Seidel iterative method for CSR matrices.  <br /></td></tr>
 <tr class="separator:a8e498df649d55f5935286ea1351ee89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aa4226c6ac96692cc5b691c5364b02f" id="r_a1aa4226c6ac96692cc5b691c5364b02f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a1aa4226c6ac96692cc5b691c5364b02f">CG_csr</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
+<tr class="memitem:a1aa4226c6ac96692cc5b691c5364b02f" id="r_a1aa4226c6ac96692cc5b691c5364b02f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a1aa4226c6ac96692cc5b691c5364b02f">CG_csr_debug</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
 <tr class="memdesc:a1aa4226c6ac96692cc5b691c5364b02f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Ax = b using the Conjugate Gradient method for CSR matrices.  <br /></td></tr>
 <tr class="separator:a1aa4226c6ac96692cc5b691c5364b02f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -135,13 +135,13 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>2025-10-10 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a1aa4226c6ac96692cc5b691c5364b02f" name="a1aa4226c6ac96692cc5b691c5364b02f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1aa4226c6ac96692cc5b691c5364b02f">&#9670;&#160;</a></span>CG_csr()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aa4226c6ac96692cc5b691c5364b02f">&#9670;&#160;</a></span>CG_csr_debug()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CG_csr </td>
+          <td class="memname">void CG_csr_debug </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structSparseCSR.html">SparseCSR</a> *&#160;</td>
           <td class="paramname"><em>matrix</em>, </td>
@@ -266,13 +266,13 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a8e498df649d55f5935286ea1351ee89a" name="a8e498df649d55f5935286ea1351ee89a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e498df649d55f5935286ea1351ee89a">&#9670;&#160;</a></span>GaussSeidel_csr()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e498df649d55f5935286ea1351ee89a">&#9670;&#160;</a></span>GaussSeidel_csr_debug()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void GaussSeidel_csr </td>
+          <td class="memname">void GaussSeidel_csr_debug </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structSparseCSR.html">SparseCSR</a> *&#160;</td>
           <td class="paramname"><em>matrix</em>, </td>
@@ -356,13 +356,13 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a7cf1992062cdbed207ef7217c4a3e20d" name="a7cf1992062cdbed207ef7217c4a3e20d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cf1992062cdbed207ef7217c4a3e20d">&#9670;&#160;</a></span>Jacobi_csr()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cf1992062cdbed207ef7217c4a3e20d">&#9670;&#160;</a></span>Jacobi_csr_debug()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Jacobi_csr </td>
+          <td class="memname">void Jacobi_csr_debug </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structSparseCSR.html">SparseCSR</a> *&#160;</td>
           <td class="paramname"><em>matrix</em>, </td>

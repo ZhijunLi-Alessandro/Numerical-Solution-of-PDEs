@@ -1,8 +1,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <math.h>
-# include <csr.h>
-# include <poisson2d.h>
+# include <vec.h>
 # include <utils.h>
 # include <bessel.h>
 # include <parabolic.h>
@@ -62,13 +61,61 @@ double compute_u_exact(double x, double y, double t, double hx, double hy) {
     }
 }
 
+double compute_u_boundary(double x, double y, double t) {
+    double r = sqrt((x - 1) * (x - 1) + (y - 1) * (y - 1));
+    return -plane_solution_function(r, t) / 4;
+}
+
+double integrated_source_term(double x, double y, double t, double hx, double hy) {
+    if ((fabs(x - 1) < (hx / 2)) && (fabs(y - 1) < (hy / 2))) {
+        return sin(t) / hx / hy;
+    }
+    else {
+        return 0;
+    }
+}
+
+double compute_boundary_value(double x, double y, double t, int boundary_type) {
+    double x_b, y_b, result;
+    switch (boundary_type) {
+        case 2: // Top left slant boundary
+            x_b = (x + y - 1.0) / 2.0;
+            y_b = (x + y + 1.0) / 2.0;
+            break;
+        case 3: // Top right slant boundary
+            x_b = (x - y + 3.0) / 2.0;
+            y_b = (-x + y + 3.0) / 2.0;
+            break;
+        case 4: // Left boundary
+            x_b = 0.0;
+            y_b = y;
+            break;
+        case 5: // Upper right boundary
+            x_b = (x + 2.0 * y + 6.0) / 5.0;
+            y_b = (2.0 * x + 4.0 * y -3.0) / 5.0;
+            break;
+        case 6: // Lower right boundary
+            x_b = (x - y) / 2.0;
+            y_b = (-x + y) / 2.0;
+            break;
+        case 7: // Bottom boundary
+            x_b = x;
+            y_b = -2.0;
+            break;
+        default:
+            return 0.0;
+    }
+    result = compute_u_boundary(x_b, y_b, t);
+    return result;
+}
+
 int main(){
-    double T_max = 6 * M_PI;
+    double T_max = 2 * M_PI;
     int nx = 41;
     int ny = 81;
     Grid2D* grid = initialize_Grid(nx, ny, 0.0, 2.0, -2.0, 2.0, region_divider);
-    double t = grid->hx * grid->hx * grid->hy * grid->hy / (grid->hx * grid->hx + grid->hy * grid->hy) / 4 * 12;
-    SparseCSR* iteration_matrix = assemble_Matrix_Parabolic_Explicit(grid, t);
+    double tau = grid->hx * grid->hx * grid->hy * grid->hy / (grid->hx * grid->hx + grid->hy * grid->hy) / 2;
+    SparseCSR* iteration_matrix = assemble_Matrix_Parabolic_Explicit(grid, tau);
     // printf("Number of active grid points: %d\n", grid->n_active);
     // printf("%.6f\n", compute_u_exact(grid->x[10], grid->y[40]));
     // printf("Grid region layout (0: exterior, 1: interior, others: boundary types):\n");
@@ -78,62 +125,56 @@ int main(){
     int output_interval = 100;
 
     double *exact = (double *)malloc(grid->n_active * sizeof(double));
-    double *compute = (double *)malloc(grid->n_active * sizeof(double));
+    double *solution = (double *)malloc(grid->n_active * sizeof(double));
     double *rhs = (double *)malloc(grid->n_active * sizeof(double));
+    double *temp = (double *)malloc(grid->n_active * sizeof(double));
     
     double **exact_points = create_grid_2D_array(grid);
-    double **rhs_points = create_grid_2D_array(grid);
+    double **solution_points = create_grid_2D_array(grid);
 
     for (int i = 0; i < grid->n_active; i++) {
         int gi = grid->id_i[i];
         int gj = grid->id_j[i];
         double xi = grid->x[gi];
         double yj = grid->y[gj];
-        exact[i] = compute_u_exact(xi, yj, t_now, grid->hx, grid->hy);
+        solution[i] = compute_u_exact(xi, yj, t_now, grid->hx, grid->hy);
     }
 
-    write_csv_int_matrix("results/Parabolic/data/grid_data.csv", grid->region, grid->nx, grid->ny);
+    write_csv_int_matrix("results/Parabolic/data/Explicit/grid_data.csv", grid->region, grid->nx, grid->ny);
 
     while (t_now < T_max) {
-        t_now += t;
+        t_now += tau;
         step ++;
-        spmv_csr(iteration_matrix, exact, compute);
+        spmv_csr(iteration_matrix, solution, temp);
+        assemble_RHS_Parabolic(grid, integrated_source_term, compute_boundary_value, rhs, t_now, tau);
         for (int i = 0; i < grid->n_active; i++) {
             int gi = grid->id_i[i];
             int gj = grid->id_j[i];
             double xi = grid->x[gi];
             double yj = grid->y[gj];
+            solution[i] = temp[i] + rhs[i];
             exact[i] = compute_u_exact(xi, yj, t_now, grid->hx, grid->hy);
-        }
-        for (int i = 0; i < grid->n_active; i++) {
-            int gi = grid->id_i[i];
-            int gj = grid->id_j[i];
-            if (grid->region[gi][gj] == 1) {
-                rhs[i] = exact[i] - compute[i];
-            }
-            else {
-                rhs[i] = 0;
-            }
         }
         if ((step % output_interval) == 0) {
             printf("Current Step: %06d, Writing Output\n", step);
             read_indices_to_points(grid, exact, exact_points);
-            read_indices_to_points(grid, rhs, rhs_points);
+            read_indices_to_points(grid, solution, solution_points);
             
             char fname_exact[256];
-            sprintf(fname_exact, "results/Parabolic/data/exact_%06d.csv", step);
+            sprintf(fname_exact, "results/Parabolic/data/Explicit/exact_%06d.csv", step);
             char fname_rhs[256];
-            sprintf(fname_rhs, "results/Parabolic/data/rhs_%06d.csv", step);
+            sprintf(fname_rhs, "results/Parabolic/data/Explicit/solution_%06d.csv", step);
             write_csv_matrix(fname_exact, exact_points, grid->nx, grid->ny);
-            write_csv_matrix(fname_rhs, rhs_points, grid->nx, grid->ny);
+            write_csv_matrix(fname_rhs, solution_points, grid->nx, grid->ny);
         }
     }
 
     free(exact);
-    free(compute);
+    free(solution);
     free(rhs);
+    free(temp);
     free_grid_2D_array(exact_points, grid);
-    free_grid_2D_array(rhs_points, grid);
+    free_grid_2D_array(solution_points, grid);
     free_grid(grid);
     return 0;
 }

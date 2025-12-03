@@ -100,7 +100,7 @@ SparseCSR** get_D_L_U_csr(const SparseCSR *matrix) {
     return result;
 }
 
-void Jacobi_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol) {
+void Jacobi_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol) {
     double *x_new = (double *)malloc(matrix->rows * sizeof(double));
     for (int iter = 0; iter < max_iter; iter++) {
         for (int i = 0; i < matrix->rows; i++) {
@@ -127,7 +127,33 @@ void Jacobi_csr(const SparseCSR *matrix, const double *b, double *x, int max_ite
     free(x_new);
 }
 
-void GaussSeidel_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol) {
+void Jacobi_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol) {
+    double *x_new = (double *)malloc(matrix->rows * sizeof(double));
+    for (int iter = 0; iter < max_iter; iter++) {
+        for (int i = 0; i < matrix->rows; i++) {
+            double sum = 0.0;
+            double diag = 0.0;
+            for (int j = matrix->row_ptr[i]; j < matrix->row_ptr[i + 1]; j++) {
+                if (matrix->col_ind[j] == i) {
+                    diag = matrix->values[j];
+                } else {
+                    sum += matrix->values[j] * x[matrix->col_ind[j]];
+                }
+            }
+            x_new[i] = (b[i] - sum) / diag;
+        }
+        double norm = 0.0;
+        for (int i = 0; i < matrix->rows; i++) {
+            norm += (x_new[i] - x[i]) * (x_new[i] - x[i]);
+            x[i] = x_new[i];
+        }
+        norm = sqrt(norm);
+        if (norm < tol) break;
+    }
+    free(x_new);
+}
+
+void GaussSeidel_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol) {
     for (int iter = 0; iter < max_iter; iter++) {
         double norm = 0.0;
         for (int i = 0; i < matrix->rows; i++) {
@@ -148,6 +174,70 @@ void GaussSeidel_csr(const SparseCSR *matrix, const double *b, double *x, int ma
         printf("GS Iteration %d: Residual = %e\n", iter + 1, norm);
         if (norm < tol) break;
     }
+}
+
+void GaussSeidel_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol) {
+    for (int iter = 0; iter < max_iter; iter++) {
+        double norm = 0.0;
+        for (int i = 0; i < matrix->rows; i++) {
+            double sum = 0.0;
+            double diag = 0.0;
+            for (int j = matrix->row_ptr[i]; j < matrix->row_ptr[i + 1]; j++) {
+                if (matrix->col_ind[j] == i) {
+                    diag = matrix->values[j];
+                } else {
+                    sum += matrix->values[j] * x[matrix->col_ind[j]];
+                }
+            }
+            double x_old = x[i];
+            x[i] = (b[i] - sum) / diag;
+            norm += (x[i] - x_old) * (x[i] - x_old);
+        }
+        norm = sqrt(norm);
+        if (norm < tol) break;
+    }
+}
+
+void CG_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol) {
+    double *r = (double *)malloc(matrix->rows * sizeof(double));
+    double *p = (double *)malloc(matrix->rows * sizeof(double));
+    double *Ap = (double *)malloc(matrix->rows * sizeof(double));
+
+    // r = b - A*x
+    spmv_csr(matrix, x, r);
+    for (int i = 0; i < matrix->rows; i++) {
+        r[i] = b[i] - r[i];
+        p[i] = r[i];
+    }
+
+    double rsold = vec_dot(r, r, matrix->rows);
+
+    for (int iter = 0; iter < max_iter; iter++) {
+        spmv_csr(matrix, p, Ap);
+        double alpha = rsold;
+        double pAp = vec_dot(p, Ap, matrix->rows);
+        alpha /= pAp;
+
+        for (int i = 0; i < matrix->rows; i++) {
+            x[i] += alpha * p[i];
+            r[i] -= alpha * Ap[i];
+        }
+
+        double rsnew = vec_dot(r, r, matrix->rows);
+
+        printf("CG Iteration %d: Residual = %e\n", iter + 1, sqrt(rsnew));
+
+        if (sqrt(rsnew) < tol) break;
+
+        for (int i = 0; i < matrix->rows; i++) {
+            p[i] = r[i] + (rsnew / rsold) * p[i];
+        }
+        rsold = rsnew;
+    }
+
+    free(r);
+    free(p);
+    free(Ap);
 }
 
 void CG_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol) {
@@ -176,8 +266,6 @@ void CG_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, d
         }
 
         double rsnew = vec_dot(r, r, matrix->rows);
-
-        printf("CG Iteration %d: Residual = %e\n", iter + 1, sqrt(rsnew));
 
         if (sqrt(rsnew) < tol) break;
 

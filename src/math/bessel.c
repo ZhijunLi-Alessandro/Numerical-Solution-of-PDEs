@@ -31,7 +31,7 @@ double complex bessel_Y0_complex(double complex z) {
         if (cabs(term) < 1e-15 * cabs(sum)) break;
     }
 
-    return (2.0/M_PI) * ( (gamma + clog(z/2.0)) * J0 + sum );
+    return (2.0/M_PI) * ( (gamma + clog(z/2.0)) * J0 - sum );
 }
 
 double complex hankel_H0_2(double complex z) {
@@ -40,8 +40,6 @@ double complex hankel_H0_2(double complex z) {
 
 double plane_solution_function(double r, double t) {
     if (r < 1e-8) r = 1e-8;
-
-    const double complex iC = 0.0 + 1.0*I;
 
     // sqrt(-i) = exp(- i π/4)
     double complex sqrt_minus_i = cexp(-I * M_PI / 4.0);

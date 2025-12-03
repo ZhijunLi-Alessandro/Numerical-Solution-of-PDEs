@@ -133,7 +133,7 @@ int main() {
     for (int i = 0; i < grid->n_active; i++) {
         solution[i] = 0.0; // Initial guess
     }
-    GaussSeidel_csr(matrix, rhs, solution, 1000, 1e-6);
+    GaussSeidel_csr_debug(matrix, rhs, solution, 1000, 1e-6);
 
     double *exact = (double *)malloc(grid->n_active * sizeof(double));
     for (int i = 0; i < grid->n_active; i++) {

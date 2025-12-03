@@ -68,13 +68,13 @@ int main() {
     double x_CG[] = {0.0, 0.0, 0.0};
     int max_iter = 50;
     double tol = 1e-6;
-    Jacobi_csr(matrix, b, x_Jacobi, max_iter, tol);
+    Jacobi_csr_debug(matrix, b, x_Jacobi, max_iter, tol);
     printf("Jacobi Solution x:\n");
     print_vector(x_Jacobi, rows, 6);
-    GaussSeidel_csr(matrix, b, x_GS, max_iter, tol);
+    GaussSeidel_csr_debug(matrix, b, x_GS, max_iter, tol);
     printf("Gauss-Seidel Solution x:\n");
     print_vector(x_GS, rows, 6);
-    CG_csr(matrix, b, x_CG, max_iter, tol);
+    CG_csr_debug(matrix, b, x_CG, max_iter, tol);
     printf("Conjugate Gradient Solution x:\n");
     print_vector(x_CG, rows, 6);
     freeSparseCSR(matrix);

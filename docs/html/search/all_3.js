@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cg_5fcsr_0',['cg_csr',['../csr_8h.html#a1aa4226c6ac96692cc5b691c5364b02f',1,'CG_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c'],['../csr_8c.html#a1aa4226c6ac96692cc5b691c5364b02f',1,'CG_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c']]],
+  ['cg_5fcsr_0',['CG_csr_debug',['../csr_8h.html#a1aa4226c6ac96692cc5b691c5364b02f',1,'CG_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c'],['../csr_8c.html#a1aa4226c6ac96692cc5b691c5364b02f',1,'CG_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c']]],
   ['col_5find_1',['col_ind',['../structSparseCSR.html#a0760445d97c362538aa1082a504b89d5',1,'SparseCSR']]],
   ['cols_2',['cols',['../structSparseCSR.html#a2981b9a9511082c4409a31850de5bd5b',1,'SparseCSR']]],
   ['compute_5fboundary_5fvalue_3',['compute_boundary_value',['../Dirichlet_8c.html#aeea3fae40839a4c211e863fb2d10657a',1,'compute_boundary_value(double x, double y, int boundary_type):&#160;Dirichlet.c'],['../Neumann_8c.html#aeea3fae40839a4c211e863fb2d10657a',1,'compute_boundary_value(double x, double y, int boundary_type):&#160;Neumann.c']]],
