@@ -1,32 +1,13 @@
 \doxysection{visualize\+\_\+\+Dirichlet Namespace Reference}
 \hypertarget{namespacevisualize__Dirichlet}{}\label{namespacevisualize__Dirichlet}\index{visualize\_Dirichlet@{visualize\_Dirichlet}}
-\doxysubsubsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_a03f97f9d47fd007fd3a67e25f7e7fe18}{load\+\_\+solution\+\_\+from\+\_\+csv}} (filename)
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_ae90357613099e1ba2a3caac578255d6e}{visualize\+\_\+solution}} (\mbox{\hyperlink{namespacevisualize__Dirichlet_a162c6b30cb4aead405d4fcff27d09690}{grid\+\_\+x}}, \mbox{\hyperlink{namespacevisualize__Dirichlet_afa761d0c83dbbb1119bc66df67ca0eb9}{grid\+\_\+y}}, \mbox{\hyperlink{namespacevisualize__Dirichlet_a58f01210f8d2b38ddfedc3681237e942}{solution}}, \mbox{\hyperlink{namespacevisualize__Dirichlet_a893860ad4defb3904167d068b024fa69}{title}}="{}Solution Visualization"{}, \mbox{\hyperlink{namespacevisualize__Dirichlet_a892325c9a46fd78296850c344498b863}{save\+\_\+path}}=None)
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_a58f01210f8d2b38ddfedc3681237e942}{solution}} = \mbox{\hyperlink{namespacevisualize__Dirichlet_a03f97f9d47fd007fd3a67e25f7e7fe18}{load\+\_\+solution\+\_\+from\+\_\+csv}}(\textquotesingle{}results/Dirichlet\+\_\+solution.\+csv\textquotesingle{})
+\mbox{\hyperlink{namespacevisualize__Dirichlet_a58f01210f8d2b38ddfedc3681237e942}{solution}} = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/Dirichlet\+\_\+solution.\+csv\textquotesingle{})
 \item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_a0f0076ba646b40bc1a7bbda06e1583ae}{exact}} = \mbox{\hyperlink{namespacevisualize__Dirichlet_a03f97f9d47fd007fd3a67e25f7e7fe18}{load\+\_\+solution\+\_\+from\+\_\+csv}}(\textquotesingle{}results/Dirichlet\+\_\+exact.\+csv\textquotesingle{})
+\mbox{\hyperlink{namespacevisualize__Dirichlet_a0f0076ba646b40bc1a7bbda06e1583ae}{exact}} = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/Dirichlet\+\_\+exact.\+csv\textquotesingle{})
 \item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_ad3ac391ebea89214f896b9083a909325}{nx}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_a3d00d921c010ee0b28d3c6cd41849dd2}{ny}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}} = np.\+linspace(0, 2, \mbox{\hyperlink{namespacevisualize__Dirichlet_ad3ac391ebea89214f896b9083a909325}{nx}})
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}} = np.\+linspace(-\/2, 2, \mbox{\hyperlink{namespacevisualize__Dirichlet_a3d00d921c010ee0b28d3c6cd41849dd2}{ny}})
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_a162c6b30cb4aead405d4fcff27d09690}{grid\+\_\+x}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_afa761d0c83dbbb1119bc66df67ca0eb9}{grid\+\_\+y}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_a010ebafc37986c86af55b212b2729816}{T}}
+\mbox{\hyperlink{namespacevisualize__Dirichlet_a0bbc41be64d622cc0cdb70cf9405eb9c}{grid\+\_\+data}} = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/grid\+\_\+data.\+csv\textquotesingle{})
 \item 
 \mbox{\hyperlink{namespacevisualize__Dirichlet_a893860ad4defb3904167d068b024fa69}{title}}
 \item 
@@ -34,34 +15,17 @@
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Function Documentation}
-\Hypertarget{namespacevisualize__Dirichlet_a03f97f9d47fd007fd3a67e25f7e7fe18}\label{namespacevisualize__Dirichlet_a03f97f9d47fd007fd3a67e25f7e7fe18} 
-\index{visualize\_Dirichlet@{visualize\_Dirichlet}!load\_solution\_from\_csv@{load\_solution\_from\_csv}}
-\index{load\_solution\_from\_csv@{load\_solution\_from\_csv}!visualize\_Dirichlet@{visualize\_Dirichlet}}
-\doxysubsubsection{\texorpdfstring{load\_solution\_from\_csv()}{load\_solution\_from\_csv()}}
-{\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+load\+\_\+solution\+\_\+from\+\_\+csv (\begin{DoxyParamCaption}\item[{}]{filename }\end{DoxyParamCaption})}
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@file visualize_Dirichlet.py
+@brief Visualization helpers for Dirichlet problem outputs.
 
-\begin{DoxyVerb}Loads a solution from a CSV file.
+This module loads CSV output produced by the Dirichlet example and
+generates figures (solution, exact, error) suitable for analysis and
+publication. It delegates plotting work to `visualize_utils.visualize_solution`.
 
-Parameters:
-filename (str): Path to the CSV file.
-
-Returns:
-2D array: Loaded solution values.
-\end{DoxyVerb}
- \Hypertarget{namespacevisualize__Dirichlet_ae90357613099e1ba2a3caac578255d6e}\label{namespacevisualize__Dirichlet_ae90357613099e1ba2a3caac578255d6e} 
-\index{visualize\_Dirichlet@{visualize\_Dirichlet}!visualize\_solution@{visualize\_solution}}
-\index{visualize\_solution@{visualize\_solution}!visualize\_Dirichlet@{visualize\_Dirichlet}}
-\doxysubsubsection{\texorpdfstring{visualize\_solution()}{visualize\_solution()}}
-{\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+visualize\+\_\+solution (\begin{DoxyParamCaption}\item[{}]{grid\+\_\+x,  }\item[{}]{grid\+\_\+y,  }\item[{}]{solution,  }\item[{}]{title = {\ttfamily "{}Solution~Visualization"{}},  }\item[{}]{save\+\_\+path = {\ttfamily None} }\end{DoxyParamCaption})}
-
-\begin{DoxyVerb}Visualizes the solution on a 2D grid using a heatmap.
-
-Parameters:
-grid_x (2D array): X coordinates of the grid points.
-grid_y (2D array): Y coordinates of the grid points.
-solution (2D array): Solution values at the grid points.
-title (str): Title of the plot.
+@see Dirichlet.c
+@author Li Zhijun
+@date 2025-10-27
 \end{DoxyVerb}
  
 
@@ -70,31 +34,13 @@ title (str): Title of the plot.
 \index{visualize\_Dirichlet@{visualize\_Dirichlet}!exact@{exact}}
 \index{exact@{exact}!visualize\_Dirichlet@{visualize\_Dirichlet}}
 \doxysubsubsection{\texorpdfstring{exact}{exact}}
-{\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+exact = \mbox{\hyperlink{namespacevisualize__Dirichlet_a03f97f9d47fd007fd3a67e25f7e7fe18}{load\+\_\+solution\+\_\+from\+\_\+csv}}(\textquotesingle{}results/Dirichlet\+\_\+exact.\+csv\textquotesingle{})}
+{\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+exact = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/Dirichlet\+\_\+exact.\+csv\textquotesingle{})}
 
-\Hypertarget{namespacevisualize__Dirichlet_a162c6b30cb4aead405d4fcff27d09690}\label{namespacevisualize__Dirichlet_a162c6b30cb4aead405d4fcff27d09690} 
-\index{visualize\_Dirichlet@{visualize\_Dirichlet}!grid\_x@{grid\_x}}
-\index{grid\_x@{grid\_x}!visualize\_Dirichlet@{visualize\_Dirichlet}}
-\doxysubsubsection{\texorpdfstring{grid\_x}{grid\_x}}
-{\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+grid\+\_\+x}
-
-\Hypertarget{namespacevisualize__Dirichlet_afa761d0c83dbbb1119bc66df67ca0eb9}\label{namespacevisualize__Dirichlet_afa761d0c83dbbb1119bc66df67ca0eb9} 
-\index{visualize\_Dirichlet@{visualize\_Dirichlet}!grid\_y@{grid\_y}}
-\index{grid\_y@{grid\_y}!visualize\_Dirichlet@{visualize\_Dirichlet}}
-\doxysubsubsection{\texorpdfstring{grid\_y}{grid\_y}}
-{\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+grid\+\_\+y}
-
-\Hypertarget{namespacevisualize__Dirichlet_ad3ac391ebea89214f896b9083a909325}\label{namespacevisualize__Dirichlet_ad3ac391ebea89214f896b9083a909325} 
-\index{visualize\_Dirichlet@{visualize\_Dirichlet}!nx@{nx}}
-\index{nx@{nx}!visualize\_Dirichlet@{visualize\_Dirichlet}}
-\doxysubsubsection{\texorpdfstring{nx}{nx}}
-{\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+nx}
-
-\Hypertarget{namespacevisualize__Dirichlet_a3d00d921c010ee0b28d3c6cd41849dd2}\label{namespacevisualize__Dirichlet_a3d00d921c010ee0b28d3c6cd41849dd2} 
-\index{visualize\_Dirichlet@{visualize\_Dirichlet}!ny@{ny}}
-\index{ny@{ny}!visualize\_Dirichlet@{visualize\_Dirichlet}}
-\doxysubsubsection{\texorpdfstring{ny}{ny}}
-{\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+ny}
+\Hypertarget{namespacevisualize__Dirichlet_a0bbc41be64d622cc0cdb70cf9405eb9c}\label{namespacevisualize__Dirichlet_a0bbc41be64d622cc0cdb70cf9405eb9c} 
+\index{visualize\_Dirichlet@{visualize\_Dirichlet}!grid\_data@{grid\_data}}
+\index{grid\_data@{grid\_data}!visualize\_Dirichlet@{visualize\_Dirichlet}}
+\doxysubsubsection{\texorpdfstring{grid\_data}{grid\_data}}
+{\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+grid\+\_\+data = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/grid\+\_\+data.\+csv\textquotesingle{})}
 
 \Hypertarget{namespacevisualize__Dirichlet_a892325c9a46fd78296850c344498b863}\label{namespacevisualize__Dirichlet_a892325c9a46fd78296850c344498b863} 
 \index{visualize\_Dirichlet@{visualize\_Dirichlet}!save\_path@{save\_path}}
@@ -106,29 +52,11 @@ title (str): Title of the plot.
 \index{visualize\_Dirichlet@{visualize\_Dirichlet}!solution@{solution}}
 \index{solution@{solution}!visualize\_Dirichlet@{visualize\_Dirichlet}}
 \doxysubsubsection{\texorpdfstring{solution}{solution}}
-{\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+solution = \mbox{\hyperlink{namespacevisualize__Dirichlet_a03f97f9d47fd007fd3a67e25f7e7fe18}{load\+\_\+solution\+\_\+from\+\_\+csv}}(\textquotesingle{}results/Dirichlet\+\_\+solution.\+csv\textquotesingle{})}
-
-\Hypertarget{namespacevisualize__Dirichlet_a010ebafc37986c86af55b212b2729816}\label{namespacevisualize__Dirichlet_a010ebafc37986c86af55b212b2729816} 
-\index{visualize\_Dirichlet@{visualize\_Dirichlet}!T@{T}}
-\index{T@{T}!visualize\_Dirichlet@{visualize\_Dirichlet}}
-\doxysubsubsection{\texorpdfstring{T}{T}}
-{\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+T}
+{\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+solution = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/Dirichlet\+\_\+solution.\+csv\textquotesingle{})}
 
 \Hypertarget{namespacevisualize__Dirichlet_a893860ad4defb3904167d068b024fa69}\label{namespacevisualize__Dirichlet_a893860ad4defb3904167d068b024fa69} 
 \index{visualize\_Dirichlet@{visualize\_Dirichlet}!title@{title}}
 \index{title@{title}!visualize\_Dirichlet@{visualize\_Dirichlet}}
 \doxysubsubsection{\texorpdfstring{title}{title}}
 {\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+title}
-
-\Hypertarget{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}\label{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a} 
-\index{visualize\_Dirichlet@{visualize\_Dirichlet}!x@{x}}
-\index{x@{x}!visualize\_Dirichlet@{visualize\_Dirichlet}}
-\doxysubsubsection{\texorpdfstring{x}{x}}
-{\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+x = np.\+linspace(0, 2, \mbox{\hyperlink{namespacevisualize__Dirichlet_ad3ac391ebea89214f896b9083a909325}{nx}})}
-
-\Hypertarget{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}\label{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720} 
-\index{visualize\_Dirichlet@{visualize\_Dirichlet}!y@{y}}
-\index{y@{y}!visualize\_Dirichlet@{visualize\_Dirichlet}}
-\doxysubsubsection{\texorpdfstring{y}{y}}
-{\footnotesize\ttfamily visualize\+\_\+\+Dirichlet.\+y = np.\+linspace(-\/2, 2, \mbox{\hyperlink{namespacevisualize__Dirichlet_a3d00d921c010ee0b28d3c6cd41849dd2}{ny}})}
 

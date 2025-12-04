@@ -118,13 +118,22 @@ Functions</h2></td></tr>
 <tr class="memitem:a511084c45e428b7302a4f789f43de246" id="r_a511084c45e428b7302a4f789f43de246"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSparseCSR.html">SparseCSR</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a511084c45e428b7302a4f789f43de246">get_D_L_U_csr</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix)</td></tr>
 <tr class="memdesc:a511084c45e428b7302a4f789f43de246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompose a CSR matrix into diagonal, lower, and upper matrices.  <br /></td></tr>
 <tr class="separator:a511084c45e428b7302a4f789f43de246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cf1992062cdbed207ef7217c4a3e20d" id="r_a7cf1992062cdbed207ef7217c4a3e20d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a7cf1992062cdbed207ef7217c4a3e20d">Jacobi_csr_debug</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
+<tr class="memitem:af089bf84e8cfa337a88a9772a4d840a0" id="r_af089bf84e8cfa337a88a9772a4d840a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#af089bf84e8cfa337a88a9772a4d840a0">Jacobi_csr_debug</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
+<tr class="memdesc:af089bf84e8cfa337a88a9772a4d840a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Ax = b using the Jacobi iterative method for CSR matrices.  <br /></td></tr>
+<tr class="separator:af089bf84e8cfa337a88a9772a4d840a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cf1992062cdbed207ef7217c4a3e20d" id="r_a7cf1992062cdbed207ef7217c4a3e20d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a7cf1992062cdbed207ef7217c4a3e20d">Jacobi_csr</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
 <tr class="memdesc:a7cf1992062cdbed207ef7217c4a3e20d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Ax = b using the Jacobi iterative method for CSR matrices.  <br /></td></tr>
 <tr class="separator:a7cf1992062cdbed207ef7217c4a3e20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e498df649d55f5935286ea1351ee89a" id="r_a8e498df649d55f5935286ea1351ee89a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a8e498df649d55f5935286ea1351ee89a">GaussSeidel_csr_debug</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
+<tr class="memitem:a9e9cdef8c8d7069f34646f6393448e9e" id="r_a9e9cdef8c8d7069f34646f6393448e9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a9e9cdef8c8d7069f34646f6393448e9e">GaussSeidel_csr_debug</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
+<tr class="memdesc:a9e9cdef8c8d7069f34646f6393448e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Ax = b using the Gauss-Seidel iterative method for CSR matrices.  <br /></td></tr>
+<tr class="separator:a9e9cdef8c8d7069f34646f6393448e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e498df649d55f5935286ea1351ee89a" id="r_a8e498df649d55f5935286ea1351ee89a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a8e498df649d55f5935286ea1351ee89a">GaussSeidel_csr</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
 <tr class="memdesc:a8e498df649d55f5935286ea1351ee89a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Ax = b using the Gauss-Seidel iterative method for CSR matrices.  <br /></td></tr>
 <tr class="separator:a8e498df649d55f5935286ea1351ee89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aa4226c6ac96692cc5b691c5364b02f" id="r_a1aa4226c6ac96692cc5b691c5364b02f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a1aa4226c6ac96692cc5b691c5364b02f">CG_csr_debug</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
+<tr class="memitem:a35cd5588467e8c609ca01006634ea372" id="r_a35cd5588467e8c609ca01006634ea372"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a35cd5588467e8c609ca01006634ea372">CG_csr_debug</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
+<tr class="memdesc:a35cd5588467e8c609ca01006634ea372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Ax = b using the Conjugate Gradient method for CSR matrices.  <br /></td></tr>
+<tr class="separator:a35cd5588467e8c609ca01006634ea372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa4226c6ac96692cc5b691c5364b02f" id="r_a1aa4226c6ac96692cc5b691c5364b02f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csr_8c.html#a1aa4226c6ac96692cc5b691c5364b02f">CG_csr</a> (const <a class="el" href="structSparseCSR.html">SparseCSR</a> *matrix, const double *b, double *x, int max_iter, double tol)</td></tr>
 <tr class="memdesc:a1aa4226c6ac96692cc5b691c5364b02f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve Ax = b using the Conjugate Gradient method for CSR matrices.  <br /></td></tr>
 <tr class="separator:a1aa4226c6ac96692cc5b691c5364b02f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -135,7 +144,65 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>2025-10-10 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a1aa4226c6ac96692cc5b691c5364b02f" name="a1aa4226c6ac96692cc5b691c5364b02f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1aa4226c6ac96692cc5b691c5364b02f">&#9670;&#160;</a></span>CG_csr_debug()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aa4226c6ac96692cc5b691c5364b02f">&#9670;&#160;</a></span>CG_csr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CG_csr </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structSparseCSR.html">SparseCSR</a> *&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_iter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solve Ax = b using the Conjugate Gradient method for CSR matrices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>Pointer to the <a class="el" href="structSparseCSR.html" title="Structure to represent a sparse matrix in Compressed Sparse Row (CSR) format.">SparseCSR</a> matrix (A). </td></tr>
+    <tr><td class="paramname">b</td><td>Right-hand side vector. </td></tr>
+    <tr><td class="paramname">x</td><td>Solution vector (input: initial guess, output: result). </td></tr>
+    <tr><td class="paramname">max_iter</td><td>Maximum number of iterations. </td></tr>
+    <tr><td class="paramname">tol</td><td>Tolerance for convergence. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a35cd5588467e8c609ca01006634ea372" name="a35cd5588467e8c609ca01006634ea372"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35cd5588467e8c609ca01006634ea372">&#9670;&#160;</a></span>CG_csr_debug()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,6 +256,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>This function will print residuals every step. </dd></dl>
 
 </div>
 </div>
@@ -266,7 +334,65 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a8e498df649d55f5935286ea1351ee89a" name="a8e498df649d55f5935286ea1351ee89a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e498df649d55f5935286ea1351ee89a">&#9670;&#160;</a></span>GaussSeidel_csr_debug()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e498df649d55f5935286ea1351ee89a">&#9670;&#160;</a></span>GaussSeidel_csr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GaussSeidel_csr </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structSparseCSR.html">SparseCSR</a> *&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_iter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solve Ax = b using the Gauss-Seidel iterative method for CSR matrices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>Pointer to the <a class="el" href="structSparseCSR.html" title="Structure to represent a sparse matrix in Compressed Sparse Row (CSR) format.">SparseCSR</a> matrix (A). </td></tr>
+    <tr><td class="paramname">b</td><td>Right-hand side vector. </td></tr>
+    <tr><td class="paramname">x</td><td>Solution vector (input: initial guess, output: result). </td></tr>
+    <tr><td class="paramname">max_iter</td><td>Maximum number of iterations. </td></tr>
+    <tr><td class="paramname">tol</td><td>Tolerance for convergence. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9e9cdef8c8d7069f34646f6393448e9e" name="a9e9cdef8c8d7069f34646f6393448e9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e9cdef8c8d7069f34646f6393448e9e">&#9670;&#160;</a></span>GaussSeidel_csr_debug()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,6 +446,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>This function will print residuals every step. </dd></dl>
 
 </div>
 </div>
@@ -356,7 +483,65 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a7cf1992062cdbed207ef7217c4a3e20d" name="a7cf1992062cdbed207ef7217c4a3e20d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cf1992062cdbed207ef7217c4a3e20d">&#9670;&#160;</a></span>Jacobi_csr_debug()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cf1992062cdbed207ef7217c4a3e20d">&#9670;&#160;</a></span>Jacobi_csr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Jacobi_csr </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structSparseCSR.html">SparseCSR</a> *&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_iter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solve Ax = b using the Jacobi iterative method for CSR matrices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>Pointer to the <a class="el" href="structSparseCSR.html" title="Structure to represent a sparse matrix in Compressed Sparse Row (CSR) format.">SparseCSR</a> matrix (A). </td></tr>
+    <tr><td class="paramname">b</td><td>Right-hand side vector. </td></tr>
+    <tr><td class="paramname">x</td><td>Solution vector (input: initial guess, output: result). </td></tr>
+    <tr><td class="paramname">max_iter</td><td>Maximum number of iterations. </td></tr>
+    <tr><td class="paramname">tol</td><td>Tolerance for convergence. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af089bf84e8cfa337a88a9772a4d840a0" name="af089bf84e8cfa337a88a9772a4d840a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af089bf84e8cfa337a88a9772a4d840a0">&#9670;&#160;</a></span>Jacobi_csr_debug()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -410,6 +595,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>This function will print residuals every step. </dd></dl>
 
 </div>
 </div>

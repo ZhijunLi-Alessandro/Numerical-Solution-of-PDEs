@@ -1,36 +1,13 @@
 \doxysection{visualize\+\_\+\+Neumann Namespace Reference}
 \hypertarget{namespacevisualize__Neumann}{}\label{namespacevisualize__Neumann}\index{visualize\_Neumann@{visualize\_Neumann}}
-\doxysubsubsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a64b5fe9e259951055d08f56c916eafea}{load\+\_\+solution\+\_\+from\+\_\+csv}} (filename)
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_aff475bf5f519f5abb490962c283c7a92}{visualize\+\_\+solution}} (\mbox{\hyperlink{namespacevisualize__Neumann_a47b4397a467761583135ac0727cad9d0}{grid\+\_\+x}}, \mbox{\hyperlink{namespacevisualize__Neumann_a4525d0f516e3904abdddd3af4073ff3b}{grid\+\_\+y}}, \mbox{\hyperlink{namespacevisualize__Neumann_a80245993f43085a0407eec35ea709501}{solution}}, \mbox{\hyperlink{namespacevisualize__Neumann_a028216f3699ba9c8e42ea6ee7da113a3}{title}}="{}Solution Visualization"{}, \mbox{\hyperlink{namespacevisualize__Neumann_a12f96dcce7b23c121e7ebe218b08d08a}{save\+\_\+path}}=None, overlay\+\_\+mask=None, overlay\+\_\+points=None, point\+\_\+style=None)
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a80245993f43085a0407eec35ea709501}{solution}} = \mbox{\hyperlink{namespacevisualize__Neumann_a64b5fe9e259951055d08f56c916eafea}{load\+\_\+solution\+\_\+from\+\_\+csv}}(\textquotesingle{}results/Neumann\+\_\+solution.\+csv\textquotesingle{})
+\mbox{\hyperlink{namespacevisualize__Neumann_a80245993f43085a0407eec35ea709501}{solution}} = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/Neumann\+\_\+solution.\+csv\textquotesingle{})
 \item 
-\mbox{\hyperlink{namespacevisualize__Neumann_ae582e12b8bb60997bc7cf27354d1ad16}{exact}} = \mbox{\hyperlink{namespacevisualize__Neumann_a64b5fe9e259951055d08f56c916eafea}{load\+\_\+solution\+\_\+from\+\_\+csv}}(\textquotesingle{}results/Neumann\+\_\+exact.\+csv\textquotesingle{})
+\mbox{\hyperlink{namespacevisualize__Neumann_ae582e12b8bb60997bc7cf27354d1ad16}{exact}} = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/Neumann\+\_\+exact.\+csv\textquotesingle{})
 \item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a254e174f3f2ce400ddd3a4ad6c03cbf1}{nx}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_aa08daf6c0e9d7c932b9c92dd424963b8}{ny}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a9af37d93e87a08fccef621afdf75fdfa}{x}} = np.\+linspace(0, 2, \mbox{\hyperlink{namespacevisualize__Neumann_a254e174f3f2ce400ddd3a4ad6c03cbf1}{nx}})
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a474c2ed42b67573a82fd20837ab91892}{y}} = np.\+linspace(-\/2, 2, \mbox{\hyperlink{namespacevisualize__Neumann_aa08daf6c0e9d7c932b9c92dd424963b8}{ny}})
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a47b4397a467761583135ac0727cad9d0}{grid\+\_\+x}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a4525d0f516e3904abdddd3af4073ff3b}{grid\+\_\+y}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_ac29e747cdad36ce27d7b36ecbdf0ef2a}{sol}} = solution.\+T
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a30d420c94f6cdd7e998b2df6291a9290}{ex}} = exact.\+T
-\item 
-int \mbox{\hyperlink{namespacevisualize__Neumann_a874eaf5d275e2299429bb5d89f38f3ef}{data\+\_\+mask}} = 0
+\mbox{\hyperlink{namespacevisualize__Neumann_a0b464256869e16cab06b20528d2e98f6}{grid\+\_\+data}} = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/grid\+\_\+data.\+csv\textquotesingle{})
 \item 
 \mbox{\hyperlink{namespacevisualize__Neumann_a028216f3699ba9c8e42ea6ee7da113a3}{title}}
 \item 
@@ -38,79 +15,32 @@ int \mbox{\hyperlink{namespacevisualize__Neumann_a874eaf5d275e2299429bb5d89f38f3
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Function Documentation}
-\Hypertarget{namespacevisualize__Neumann_a64b5fe9e259951055d08f56c916eafea}\label{namespacevisualize__Neumann_a64b5fe9e259951055d08f56c916eafea} 
-\index{visualize\_Neumann@{visualize\_Neumann}!load\_solution\_from\_csv@{load\_solution\_from\_csv}}
-\index{load\_solution\_from\_csv@{load\_solution\_from\_csv}!visualize\_Neumann@{visualize\_Neumann}}
-\doxysubsubsection{\texorpdfstring{load\_solution\_from\_csv()}{load\_solution\_from\_csv()}}
-{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+load\+\_\+solution\+\_\+from\+\_\+csv (\begin{DoxyParamCaption}\item[{}]{filename }\end{DoxyParamCaption})}
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@file visualize_Neumann.py
+@brief Visualization helpers for Neumann problem outputs.
 
-\begin{DoxyVerb}Loads a solution from a CSV file.
+This module loads CSV output produced by the Neumann example and
+generates figures (solution, exact, error) suitable for analysis and
+publication. It delegates plotting work to `visualize_utils.visualize_solution`.
 
-Parameters:
-filename (str): Path to the CSV file.
-
-Returns:
-2D array: Loaded solution values.
-\end{DoxyVerb}
- \Hypertarget{namespacevisualize__Neumann_aff475bf5f519f5abb490962c283c7a92}\label{namespacevisualize__Neumann_aff475bf5f519f5abb490962c283c7a92} 
-\index{visualize\_Neumann@{visualize\_Neumann}!visualize\_solution@{visualize\_solution}}
-\index{visualize\_solution@{visualize\_solution}!visualize\_Neumann@{visualize\_Neumann}}
-\doxysubsubsection{\texorpdfstring{visualize\_solution()}{visualize\_solution()}}
-{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+visualize\+\_\+solution (\begin{DoxyParamCaption}\item[{}]{grid\+\_\+x,  }\item[{}]{grid\+\_\+y,  }\item[{}]{solution,  }\item[{}]{title = {\ttfamily "{}Solution~Visualization"{}},  }\item[{}]{save\+\_\+path = {\ttfamily None},  }\item[{}]{overlay\+\_\+mask = {\ttfamily None},  }\item[{}]{overlay\+\_\+points = {\ttfamily None},  }\item[{}]{point\+\_\+style = {\ttfamily None} }\end{DoxyParamCaption})}
-
-\begin{DoxyVerb}Visualizes the solution on a 2D grid using a heatmap.
-
-Parameters:
-grid_x (2D array): X coordinates of the grid points.
-grid_y (2D array): Y coordinates of the grid points.
-solution (2D array): Solution values at the grid points.
-title (str): Title of the plot.
+@see Neumann.c
+@author Li Zhijun
+@date 2025-10-29
 \end{DoxyVerb}
  
 
 \doxysubsection{Variable Documentation}
-\Hypertarget{namespacevisualize__Neumann_a874eaf5d275e2299429bb5d89f38f3ef}\label{namespacevisualize__Neumann_a874eaf5d275e2299429bb5d89f38f3ef} 
-\index{visualize\_Neumann@{visualize\_Neumann}!data\_mask@{data\_mask}}
-\index{data\_mask@{data\_mask}!visualize\_Neumann@{visualize\_Neumann}}
-\doxysubsubsection{\texorpdfstring{data\_mask}{data\_mask}}
-{\footnotesize\ttfamily int visualize\+\_\+\+Neumann.\+data\+\_\+mask = 0}
-
-\Hypertarget{namespacevisualize__Neumann_a30d420c94f6cdd7e998b2df6291a9290}\label{namespacevisualize__Neumann_a30d420c94f6cdd7e998b2df6291a9290} 
-\index{visualize\_Neumann@{visualize\_Neumann}!ex@{ex}}
-\index{ex@{ex}!visualize\_Neumann@{visualize\_Neumann}}
-\doxysubsubsection{\texorpdfstring{ex}{ex}}
-{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+ex = exact.\+T}
-
 \Hypertarget{namespacevisualize__Neumann_ae582e12b8bb60997bc7cf27354d1ad16}\label{namespacevisualize__Neumann_ae582e12b8bb60997bc7cf27354d1ad16} 
 \index{visualize\_Neumann@{visualize\_Neumann}!exact@{exact}}
 \index{exact@{exact}!visualize\_Neumann@{visualize\_Neumann}}
 \doxysubsubsection{\texorpdfstring{exact}{exact}}
-{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+exact = \mbox{\hyperlink{namespacevisualize__Neumann_a64b5fe9e259951055d08f56c916eafea}{load\+\_\+solution\+\_\+from\+\_\+csv}}(\textquotesingle{}results/Neumann\+\_\+exact.\+csv\textquotesingle{})}
+{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+exact = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/Neumann\+\_\+exact.\+csv\textquotesingle{})}
 
-\Hypertarget{namespacevisualize__Neumann_a47b4397a467761583135ac0727cad9d0}\label{namespacevisualize__Neumann_a47b4397a467761583135ac0727cad9d0} 
-\index{visualize\_Neumann@{visualize\_Neumann}!grid\_x@{grid\_x}}
-\index{grid\_x@{grid\_x}!visualize\_Neumann@{visualize\_Neumann}}
-\doxysubsubsection{\texorpdfstring{grid\_x}{grid\_x}}
-{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+grid\+\_\+x}
-
-\Hypertarget{namespacevisualize__Neumann_a4525d0f516e3904abdddd3af4073ff3b}\label{namespacevisualize__Neumann_a4525d0f516e3904abdddd3af4073ff3b} 
-\index{visualize\_Neumann@{visualize\_Neumann}!grid\_y@{grid\_y}}
-\index{grid\_y@{grid\_y}!visualize\_Neumann@{visualize\_Neumann}}
-\doxysubsubsection{\texorpdfstring{grid\_y}{grid\_y}}
-{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+grid\+\_\+y}
-
-\Hypertarget{namespacevisualize__Neumann_a254e174f3f2ce400ddd3a4ad6c03cbf1}\label{namespacevisualize__Neumann_a254e174f3f2ce400ddd3a4ad6c03cbf1} 
-\index{visualize\_Neumann@{visualize\_Neumann}!nx@{nx}}
-\index{nx@{nx}!visualize\_Neumann@{visualize\_Neumann}}
-\doxysubsubsection{\texorpdfstring{nx}{nx}}
-{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+nx}
-
-\Hypertarget{namespacevisualize__Neumann_aa08daf6c0e9d7c932b9c92dd424963b8}\label{namespacevisualize__Neumann_aa08daf6c0e9d7c932b9c92dd424963b8} 
-\index{visualize\_Neumann@{visualize\_Neumann}!ny@{ny}}
-\index{ny@{ny}!visualize\_Neumann@{visualize\_Neumann}}
-\doxysubsubsection{\texorpdfstring{ny}{ny}}
-{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+ny}
+\Hypertarget{namespacevisualize__Neumann_a0b464256869e16cab06b20528d2e98f6}\label{namespacevisualize__Neumann_a0b464256869e16cab06b20528d2e98f6} 
+\index{visualize\_Neumann@{visualize\_Neumann}!grid\_data@{grid\_data}}
+\index{grid\_data@{grid\_data}!visualize\_Neumann@{visualize\_Neumann}}
+\doxysubsubsection{\texorpdfstring{grid\_data}{grid\_data}}
+{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+grid\+\_\+data = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/grid\+\_\+data.\+csv\textquotesingle{})}
 
 \Hypertarget{namespacevisualize__Neumann_a12f96dcce7b23c121e7ebe218b08d08a}\label{namespacevisualize__Neumann_a12f96dcce7b23c121e7ebe218b08d08a} 
 \index{visualize\_Neumann@{visualize\_Neumann}!save\_path@{save\_path}}
@@ -118,33 +48,15 @@ title (str): Title of the plot.
 \doxysubsubsection{\texorpdfstring{save\_path}{save\_path}}
 {\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+save\+\_\+path}
 
-\Hypertarget{namespacevisualize__Neumann_ac29e747cdad36ce27d7b36ecbdf0ef2a}\label{namespacevisualize__Neumann_ac29e747cdad36ce27d7b36ecbdf0ef2a} 
-\index{visualize\_Neumann@{visualize\_Neumann}!sol@{sol}}
-\index{sol@{sol}!visualize\_Neumann@{visualize\_Neumann}}
-\doxysubsubsection{\texorpdfstring{sol}{sol}}
-{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+sol = solution.\+T}
-
 \Hypertarget{namespacevisualize__Neumann_a80245993f43085a0407eec35ea709501}\label{namespacevisualize__Neumann_a80245993f43085a0407eec35ea709501} 
 \index{visualize\_Neumann@{visualize\_Neumann}!solution@{solution}}
 \index{solution@{solution}!visualize\_Neumann@{visualize\_Neumann}}
 \doxysubsubsection{\texorpdfstring{solution}{solution}}
-{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+solution = \mbox{\hyperlink{namespacevisualize__Neumann_a64b5fe9e259951055d08f56c916eafea}{load\+\_\+solution\+\_\+from\+\_\+csv}}(\textquotesingle{}results/Neumann\+\_\+solution.\+csv\textquotesingle{})}
+{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+solution = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/Neumann\+\_\+solution.\+csv\textquotesingle{})}
 
 \Hypertarget{namespacevisualize__Neumann_a028216f3699ba9c8e42ea6ee7da113a3}\label{namespacevisualize__Neumann_a028216f3699ba9c8e42ea6ee7da113a3} 
 \index{visualize\_Neumann@{visualize\_Neumann}!title@{title}}
 \index{title@{title}!visualize\_Neumann@{visualize\_Neumann}}
 \doxysubsubsection{\texorpdfstring{title}{title}}
 {\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+title}
-
-\Hypertarget{namespacevisualize__Neumann_a9af37d93e87a08fccef621afdf75fdfa}\label{namespacevisualize__Neumann_a9af37d93e87a08fccef621afdf75fdfa} 
-\index{visualize\_Neumann@{visualize\_Neumann}!x@{x}}
-\index{x@{x}!visualize\_Neumann@{visualize\_Neumann}}
-\doxysubsubsection{\texorpdfstring{x}{x}}
-{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+x = np.\+linspace(0, 2, \mbox{\hyperlink{namespacevisualize__Neumann_a254e174f3f2ce400ddd3a4ad6c03cbf1}{nx}})}
-
-\Hypertarget{namespacevisualize__Neumann_a474c2ed42b67573a82fd20837ab91892}\label{namespacevisualize__Neumann_a474c2ed42b67573a82fd20837ab91892} 
-\index{visualize\_Neumann@{visualize\_Neumann}!y@{y}}
-\index{y@{y}!visualize\_Neumann@{visualize\_Neumann}}
-\doxysubsubsection{\texorpdfstring{y}{y}}
-{\footnotesize\ttfamily visualize\+\_\+\+Neumann.\+y = np.\+linspace(-\/2, 2, \mbox{\hyperlink{namespacevisualize__Neumann_aa08daf6c0e9d7c932b9c92dd424963b8}{ny}})}
 

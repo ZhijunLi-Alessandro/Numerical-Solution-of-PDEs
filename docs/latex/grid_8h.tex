@@ -29,7 +29,11 @@ typedef int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8h_a509e56595201296
 \begin{DoxyCompactList}\small\item\em Create new uniform 2D grid points. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8h_a2c256fcb14b9e2ebb265d2ab35d936b0}{initialize\+\_\+\+Grid}} (int nx, int ny, double x0, double x1, double y0, double y1, \mbox{\hyperlink{grid_8h_a509e5659520129614e3072a7bd63c29d}{region\+\_\+divider\+\_\+func}} \mbox{\hyperlink{Dirichlet_8c_aac37605abfd3877c437fde984df578fd}{region\+\_\+divider}})
 \begin{DoxyCompactList}\small\item\em Create a new 2D grid structure with the division of the computing domain. \end{DoxyCompactList}\item 
-double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8h_a1ea426a678e98ecb5bec65d4cb876ef4}{read\+\_\+indices\+\_\+to\+\_\+points}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid, double \texorpdfstring{$\ast$}{*}data\+\_\+indices)
+double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8h_af2eedadd0f889624d4efe433d7c9d8bd}{create\+\_\+grid\+\_\+2\+D\+\_\+array}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8h_abd0051e3e0bc770db2a33638dd509d3e}{free\+\_\+grid\+\_\+2\+D\+\_\+array}} (double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}array, \mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid)
+\item 
+void \mbox{\hyperlink{grid_8h_a59cf713af413a93809a2ffc4ac87e69d}{read\+\_\+indices\+\_\+to\+\_\+points}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid, double \texorpdfstring{$\ast$}{*}data\+\_\+indices, double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}data\+\_\+points)
 \begin{DoxyCompactList}\small\item\em Remap the data in the form of column vectors to the grid points. \end{DoxyCompactList}\item 
 void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8h_a31befaf760e994473b73acce12ad6546}{free\+\_\+grid}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid)
 \begin{DoxyCompactList}\small\item\em Free the memory allocated for a grid structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -59,6 +63,15 @@ Li Zhijun
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{grid_8h_af2eedadd0f889624d4efe433d7c9d8bd}\label{grid_8h_af2eedadd0f889624d4efe433d7c9d8bd} 
+\index{grid.h@{grid.h}!create\_grid\_2D\_array@{create\_grid\_2D\_array}}
+\index{create\_grid\_2D\_array@{create\_grid\_2D\_array}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{create\_grid\_2D\_array()}{create\_grid\_2D\_array()}}
+{\footnotesize\ttfamily double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} create\+\_\+grid\+\_\+2\+D\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}, \mbox{\hyperlink{Parabolic_ADI_8c-example}{Parabolic\+\_\+\+ADI.\+c}}, \mbox{\hyperlink{Parabolic_Explicit_8c-example}{Parabolic\+\_\+\+Explicit.\+c}}, and \mbox{\hyperlink{Parabolic_Verify_8c-example}{Parabolic\+\_\+\+Verify.\+c}}.\end{Desc}
 \Hypertarget{grid_8h_a827f3575406b8b99a6eb56f476bbcf4d}\label{grid_8h_a827f3575406b8b99a6eb56f476bbcf4d} 
 \index{grid.h@{grid.h}!create\_uniform\_grid@{create\_uniform\_grid}}
 \index{create\_uniform\_grid@{create\_uniform\_grid}!grid.h@{grid.h}}
@@ -109,7 +122,16 @@ Free the memory allocated for a grid structure.
 \end{DoxyParams}
 \begin{Desc}
 \item[Examples]\par
-\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}, \mbox{\hyperlink{Parabolic_ADI_8c-example}{Parabolic\+\_\+\+ADI.\+c}}, \mbox{\hyperlink{Parabolic_Explicit_8c-example}{Parabolic\+\_\+\+Explicit.\+c}}, and \mbox{\hyperlink{Parabolic_Verify_8c-example}{Parabolic\+\_\+\+Verify.\+c}}.\end{Desc}
+\Hypertarget{grid_8h_abd0051e3e0bc770db2a33638dd509d3e}\label{grid_8h_abd0051e3e0bc770db2a33638dd509d3e} 
+\index{grid.h@{grid.h}!free\_grid\_2D\_array@{free\_grid\_2D\_array}}
+\index{free\_grid\_2D\_array@{free\_grid\_2D\_array}!grid.h@{grid.h}}
+\doxysubsubsection{\texorpdfstring{free\_grid\_2D\_array()}{free\_grid\_2D\_array()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} free\+\_\+grid\+\_\+2\+D\+\_\+array (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array,  }\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}, \mbox{\hyperlink{Parabolic_ADI_8c-example}{Parabolic\+\_\+\+ADI.\+c}}, \mbox{\hyperlink{Parabolic_Explicit_8c-example}{Parabolic\+\_\+\+Explicit.\+c}}, and \mbox{\hyperlink{Parabolic_Verify_8c-example}{Parabolic\+\_\+\+Verify.\+c}}.\end{Desc}
 \Hypertarget{grid_8h_a2c256fcb14b9e2ebb265d2ab35d936b0}\label{grid_8h_a2c256fcb14b9e2ebb265d2ab35d936b0} 
 \index{grid.h@{grid.h}!initialize\_Grid@{initialize\_Grid}}
 \index{initialize\_Grid@{initialize\_Grid}!grid.h@{grid.h}}
@@ -161,12 +183,12 @@ The caller is responsible for freeing the allocated memory using \doxylink{grid_
 \end{DoxySeeAlso}
 \begin{Desc}
 \item[Examples]\par
-\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
-\Hypertarget{grid_8h_a1ea426a678e98ecb5bec65d4cb876ef4}\label{grid_8h_a1ea426a678e98ecb5bec65d4cb876ef4} 
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}, \mbox{\hyperlink{Parabolic_ADI_8c-example}{Parabolic\+\_\+\+ADI.\+c}}, \mbox{\hyperlink{Parabolic_Explicit_8c-example}{Parabolic\+\_\+\+Explicit.\+c}}, and \mbox{\hyperlink{Parabolic_Verify_8c-example}{Parabolic\+\_\+\+Verify.\+c}}.\end{Desc}
+\Hypertarget{grid_8h_a59cf713af413a93809a2ffc4ac87e69d}\label{grid_8h_a59cf713af413a93809a2ffc4ac87e69d} 
 \index{grid.h@{grid.h}!read\_indices\_to\_points@{read\_indices\_to\_points}}
 \index{read\_indices\_to\_points@{read\_indices\_to\_points}!grid.h@{grid.h}}
 \doxysubsubsection{\texorpdfstring{read\_indices\_to\_points()}{read\_indices\_to\_points()}}
-{\footnotesize\ttfamily double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} read\+\_\+indices\+\_\+to\+\_\+points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{double \texorpdfstring{$\ast$}{*}}]{data\+\_\+indices }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void read\+\_\+indices\+\_\+to\+\_\+points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{double \texorpdfstring{$\ast$}{*}}]{data\+\_\+indices,  }\item[{double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{data\+\_\+points }\end{DoxyParamCaption})}
 
 
 
@@ -184,4 +206,4 @@ Remap the data in the form of column vectors to the grid points.
 \end{DoxySeeAlso}
 \begin{Desc}
 \item[Examples]\par
-\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
+\mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}, \mbox{\hyperlink{Parabolic_ADI_8c-example}{Parabolic\+\_\+\+ADI.\+c}}, \mbox{\hyperlink{Parabolic_Explicit_8c-example}{Parabolic\+\_\+\+Explicit.\+c}}, and \mbox{\hyperlink{Parabolic_Verify_8c-example}{Parabolic\+\_\+\+Verify.\+c}}.\end{Desc}

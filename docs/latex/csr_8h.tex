@@ -36,10 +36,16 @@ void \mbox{\hyperlink{csr_8h_ad757786fcb200f58e1b48d771f2e5e6d}{spmv\+\_\+csr}} 
 \begin{DoxyCompactList}\small\item\em Sparse matrix-\/vector multiplication (y = A\texorpdfstring{$\ast$}{*}x) for CSR format. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{csr_8h_a511084c45e428b7302a4f789f43de246}{get\+\_\+\+D\+\_\+\+L\+\_\+\+U\+\_\+csr}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix)
 \begin{DoxyCompactList}\small\item\em Decompose a CSR matrix into diagonal, lower, and upper matrices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{csr_8h_af089bf84e8cfa337a88a9772a4d840a0}{Jacobi\+\_\+csr\+\_\+debug}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, const double \texorpdfstring{$\ast$}{*}b, double \texorpdfstring{$\ast$}{*}x, int max\+\_\+iter, double tol)
+\begin{DoxyCompactList}\small\item\em Solve Ax = b using the Jacobi iterative method for CSR matrices. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{csr_8h_a7cf1992062cdbed207ef7217c4a3e20d}{Jacobi\+\_\+csr}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, const double \texorpdfstring{$\ast$}{*}b, double \texorpdfstring{$\ast$}{*}x, int max\+\_\+iter, double tol)
 \begin{DoxyCompactList}\small\item\em Solve Ax = b using the Jacobi iterative method for CSR matrices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{csr_8h_a9e9cdef8c8d7069f34646f6393448e9e}{Gauss\+Seidel\+\_\+csr\+\_\+debug}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, const double \texorpdfstring{$\ast$}{*}b, double \texorpdfstring{$\ast$}{*}x, int max\+\_\+iter, double tol)
+\begin{DoxyCompactList}\small\item\em Solve Ax = b using the Gauss-\/\+Seidel iterative method for CSR matrices. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{csr_8h_a8e498df649d55f5935286ea1351ee89a}{Gauss\+Seidel\+\_\+csr}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, const double \texorpdfstring{$\ast$}{*}b, double \texorpdfstring{$\ast$}{*}x, int max\+\_\+iter, double tol)
 \begin{DoxyCompactList}\small\item\em Solve Ax = b using the Gauss-\/\+Seidel iterative method for CSR matrices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{csr_8h_a35cd5588467e8c609ca01006634ea372}{CG\+\_\+csr\+\_\+debug}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, const double \texorpdfstring{$\ast$}{*}b, double \texorpdfstring{$\ast$}{*}x, int max\+\_\+iter, double tol)
+\begin{DoxyCompactList}\small\item\em Solve Ax = b using the Conjugate Gradient method for CSR matrices. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{csr_8h_a1aa4226c6ac96692cc5b691c5364b02f}{CG\+\_\+csr}} (const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}matrix, const double \texorpdfstring{$\ast$}{*}b, double \texorpdfstring{$\ast$}{*}x, int max\+\_\+iter, double tol)
 \begin{DoxyCompactList}\small\item\em Solve Ax = b using the Conjugate Gradient method for CSR matrices. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -82,6 +88,32 @@ Solve Ax = b using the Conjugate Gradient method for CSR matrices.
 {\em tol} & Tolerance for convergence. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{csr_8h_a35cd5588467e8c609ca01006634ea372}\label{csr_8h_a35cd5588467e8c609ca01006634ea372} 
+\index{csr.h@{csr.h}!CG\_csr\_debug@{CG\_csr\_debug}}
+\index{CG\_csr\_debug@{CG\_csr\_debug}!csr.h@{csr.h}}
+\doxysubsubsection{\texorpdfstring{CG\_csr\_debug()}{CG\_csr\_debug()}}
+{\footnotesize\ttfamily void CG\+\_\+csr\+\_\+debug (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{b,  }\item[{double \texorpdfstring{$\ast$}{*}}]{x,  }\item[{int}]{max\+\_\+iter,  }\item[{double}]{tol }\end{DoxyParamCaption})}
+
+
+
+Solve Ax = b using the Conjugate Gradient method for CSR matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the \doxylink{structSparseCSR}{Sparse\+CSR} matrix (A). \\
+\hline
+{\em b} & Right-\/hand side vector. \\
+\hline
+{\em x} & Solution vector (input\+: initial guess, output\+: result). \\
+\hline
+{\em max\+\_\+iter} & Maximum number of iterations. \\
+\hline
+{\em tol} & Tolerance for convergence. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function will print residuals every step. 
+\end{DoxyNote}
 \Hypertarget{csr_8h_a4ebe4ef38d73a028ea6ed78e6dce46f2}\label{csr_8h_a4ebe4ef38d73a028ea6ed78e6dce46f2} 
 \index{csr.h@{csr.h}!createSparseCSR@{createSparseCSR}}
 \index{createSparseCSR@{createSparseCSR}!csr.h@{csr.h}}
@@ -153,6 +185,35 @@ Solve Ax = b using the Gauss-\/\+Seidel iterative method for CSR matrices.
 \end{DoxyParams}
 \begin{Desc}
 \item[Examples]\par
+\mbox{\hyperlink{Parabolic_ADI_8c-example}{Parabolic\+\_\+\+ADI.\+c}}.\end{Desc}
+\Hypertarget{csr_8h_a9e9cdef8c8d7069f34646f6393448e9e}\label{csr_8h_a9e9cdef8c8d7069f34646f6393448e9e} 
+\index{csr.h@{csr.h}!GaussSeidel\_csr\_debug@{GaussSeidel\_csr\_debug}}
+\index{GaussSeidel\_csr\_debug@{GaussSeidel\_csr\_debug}!csr.h@{csr.h}}
+\doxysubsubsection{\texorpdfstring{GaussSeidel\_csr\_debug()}{GaussSeidel\_csr\_debug()}}
+{\footnotesize\ttfamily void Gauss\+Seidel\+\_\+csr\+\_\+debug (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{b,  }\item[{double \texorpdfstring{$\ast$}{*}}]{x,  }\item[{int}]{max\+\_\+iter,  }\item[{double}]{tol }\end{DoxyParamCaption})}
+
+
+
+Solve Ax = b using the Gauss-\/\+Seidel iterative method for CSR matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the \doxylink{structSparseCSR}{Sparse\+CSR} matrix (A). \\
+\hline
+{\em b} & Right-\/hand side vector. \\
+\hline
+{\em x} & Solution vector (input\+: initial guess, output\+: result). \\
+\hline
+{\em max\+\_\+iter} & Maximum number of iterations. \\
+\hline
+{\em tol} & Tolerance for convergence. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function will print residuals every step. 
+\end{DoxyNote}
+\begin{Desc}
+\item[Examples]\par
 \mbox{\hyperlink{Dirichlet_8c-example}{Dirichlet.\+c}}, and \mbox{\hyperlink{Neumann_8c-example}{Neumann.\+c}}.\end{Desc}
 \Hypertarget{csr_8h_a511084c45e428b7302a4f789f43de246}\label{csr_8h_a511084c45e428b7302a4f789f43de246} 
 \index{csr.h@{csr.h}!get\_D\_L\_U\_csr@{get\_D\_L\_U\_csr}}
@@ -202,6 +263,32 @@ Solve Ax = b using the Jacobi iterative method for CSR matrices.
 {\em tol} & Tolerance for convergence. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{csr_8h_af089bf84e8cfa337a88a9772a4d840a0}\label{csr_8h_af089bf84e8cfa337a88a9772a4d840a0} 
+\index{csr.h@{csr.h}!Jacobi\_csr\_debug@{Jacobi\_csr\_debug}}
+\index{Jacobi\_csr\_debug@{Jacobi\_csr\_debug}!csr.h@{csr.h}}
+\doxysubsubsection{\texorpdfstring{Jacobi\_csr\_debug()}{Jacobi\_csr\_debug()}}
+{\footnotesize\ttfamily void Jacobi\+\_\+csr\+\_\+debug (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{b,  }\item[{double \texorpdfstring{$\ast$}{*}}]{x,  }\item[{int}]{max\+\_\+iter,  }\item[{double}]{tol }\end{DoxyParamCaption})}
+
+
+
+Solve Ax = b using the Jacobi iterative method for CSR matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Pointer to the \doxylink{structSparseCSR}{Sparse\+CSR} matrix (A). \\
+\hline
+{\em b} & Right-\/hand side vector. \\
+\hline
+{\em x} & Solution vector (input\+: initial guess, output\+: result). \\
+\hline
+{\em max\+\_\+iter} & Maximum number of iterations. \\
+\hline
+{\em tol} & Tolerance for convergence. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function will print residuals every step. 
+\end{DoxyNote}
 \Hypertarget{csr_8h_ad757786fcb200f58e1b48d771f2e5e6d}\label{csr_8h_ad757786fcb200f58e1b48d771f2e5e6d} 
 \index{csr.h@{csr.h}!spmv\_csr@{spmv\_csr}}
 \index{spmv\_csr@{spmv\_csr}!csr.h@{csr.h}}
@@ -221,3 +308,6 @@ Sparse matrix-\/vector multiplication (y = A\texorpdfstring{$\ast$}{*}x) for CSR
 {\em y} & Output vector (result). \\
 \hline
 \end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Parabolic_ADI_8c-example}{Parabolic\+\_\+\+ADI.\+c}}, \mbox{\hyperlink{Parabolic_Explicit_8c-example}{Parabolic\+\_\+\+Explicit.\+c}}, and \mbox{\hyperlink{Parabolic_Verify_8c-example}{Parabolic\+\_\+\+Verify.\+c}}.\end{Desc}

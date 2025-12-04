@@ -79,9 +79,18 @@ SparseCSR** get_D_L_U_csr(const SparseCSR *matrix);
  * @param x Solution vector (input: initial guess, output: result).
  * @param max_iter Maximum number of iterations.
  * @param tol Tolerance for convergence.
+ * @note This function will print residuals every step.
  */
 void Jacobi_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol);
 
+/**
+ * @brief Solve Ax = b using the Jacobi iterative method for CSR matrices.
+ * @param matrix Pointer to the SparseCSR matrix (A).
+ * @param b Right-hand side vector.
+ * @param x Solution vector (input: initial guess, output: result).
+ * @param max_iter Maximum number of iterations.
+ * @param tol Tolerance for convergence.
+ */
 void Jacobi_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol);
 
 /**
@@ -91,9 +100,18 @@ void Jacobi_csr(const SparseCSR *matrix, const double *b, double *x, int max_ite
  * @param x Solution vector (input: initial guess, output: result).
  * @param max_iter Maximum number of iterations.
  * @param tol Tolerance for convergence.
+ * @note This function will print residuals every step.
  */
 void GaussSeidel_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol);
 
+/**
+ * @brief Solve Ax = b using the Gauss-Seidel iterative method for CSR matrices.
+ * @param matrix Pointer to the SparseCSR matrix (A).
+ * @param b Right-hand side vector.
+ * @param x Solution vector (input: initial guess, output: result).
+ * @param max_iter Maximum number of iterations.
+ * @param tol Tolerance for convergence.
+ */
 void GaussSeidel_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol);
 
 /**
@@ -103,9 +121,18 @@ void GaussSeidel_csr(const SparseCSR *matrix, const double *b, double *x, int ma
  * @param x Solution vector (input: initial guess, output: result).
  * @param max_iter Maximum number of iterations.
  * @param tol Tolerance for convergence.
+ * @note This function will print residuals every step.
  */
 void CG_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol);
 
+/**
+ * @brief Solve Ax = b using the Conjugate Gradient method for CSR matrices.
+ * @param matrix Pointer to the SparseCSR matrix (A).
+ * @param b Right-hand side vector.
+ * @param x Solution vector (input: initial guess, output: result).
+ * @param max_iter Maximum number of iterations.
+ * @param tol Tolerance for convergence.
+ */
 void CG_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol);
 
 # endif

@@ -1,0 +1,150 @@
+\doxysection{include/bessel.h File Reference}
+\hypertarget{bessel_8h}{}\label{bessel_8h}\index{include/bessel.h@{include/bessel.h}}
+
+
+Declarations for Bessel/\+Hankel-\/based helper functions used by analytical / semi-\/analytical plane solutions in tests and examples.  
+
+
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$complex.\+h$>$}\newline
+Include dependency graph for bessel.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{bessel_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bessel_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{bessel_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}~3.\+14159265358979323846
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{bessel_8h_a344dc4a2251d132e5d7de0f0c144aba4}{plane\+\_\+solution\+\_\+function}} (double r, double t)
+\begin{DoxyCompactList}\small\item\em Evaluate an analytic plane-\/like solution built from Hankel functions. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{bessel_8h_aafa02b81ce672bc84ac59a55a38b0abd}{average\+\_\+cell}} (double hx, double hy, double t)
+\begin{DoxyCompactList}\small\item\em Approximate average value of the plane solution over a cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declarations for Bessel/\+Hankel-\/based helper functions used by analytical / semi-\/analytical plane solutions in tests and examples. 
+
+This header exposes routines used to evaluate complex Bessel/\+Hankel functions (implemented in {\ttfamily \doxylink{bessel_8c}{src/math/bessel.\+c}}) and higher-\/level helpers that compute plane-\/wave-\/like solutions and cell averages used by the parabolic/heat examples.
+
+\begin{DoxyAuthor}{Author}
+Li Zhijun 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/12-\/02 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{bessel_8h_ae71449b1cc6e6250b91f539153a7a0d3}\label{bessel_8h_ae71449b1cc6e6250b91f539153a7a0d3} 
+\index{bessel.h@{bessel.h}!M\_PI@{M\_PI}}
+\index{M\_PI@{M\_PI}!bessel.h@{bessel.h}}
+\doxysubsubsection{\texorpdfstring{M\_PI}{M\_PI}}
+{\footnotesize\ttfamily \#define M\+\_\+\+PI~3.\+14159265358979323846}
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Parabolic_ADI_8c-example}{Parabolic\+\_\+\+ADI.\+c}}, \mbox{\hyperlink{Parabolic_Explicit_8c-example}{Parabolic\+\_\+\+Explicit.\+c}}, and \mbox{\hyperlink{Parabolic_Verify_8c-example}{Parabolic\+\_\+\+Verify.\+c}}.\end{Desc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bessel_8h_aafa02b81ce672bc84ac59a55a38b0abd}\label{bessel_8h_aafa02b81ce672bc84ac59a55a38b0abd} 
+\index{bessel.h@{bessel.h}!average\_cell@{average\_cell}}
+\index{average\_cell@{average\_cell}!bessel.h@{bessel.h}}
+\doxysubsubsection{\texorpdfstring{average\_cell()}{average\_cell()}}
+{\footnotesize\ttfamily double average\+\_\+cell (\begin{DoxyParamCaption}\item[{double}]{hx,  }\item[{double}]{hy,  }\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Approximate average value of the plane solution over a cell. 
+
+This helper computes an asymptotic average used when writing cell-\/centered boundary/source terms for tests. The formula uses the Euler--Mascheroni constant and a leading logarithmic dependence on the effective cell area.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hx} & Cell width in x-\/direction. \\
+\hline
+{\em hy} & Cell width in y-\/direction. \\
+\hline
+{\em t} & Time-\/like phase parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Approximate average of the plane solution on a cell of size hx\texorpdfstring{$\ast$}{*}hy.
+\end{DoxyReturn}
+Approximate average value of the plane solution over a cell.
+
+The formula is derived from asymptotic expansions and includes the Euler--Mascheroni constant. It returns an approximate cell-\/average used in test RHS/\+BC assembly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hx} & Cell width in x-\/direction. \\
+\hline
+{\em hy} & Cell width in y-\/direction. \\
+\hline
+{\em t} & Phase parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Approximate average value on the cell. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Parabolic_ADI_8c-example}{Parabolic\+\_\+\+ADI.\+c}}, \mbox{\hyperlink{Parabolic_Explicit_8c-example}{Parabolic\+\_\+\+Explicit.\+c}}, and \mbox{\hyperlink{Parabolic_Verify_8c-example}{Parabolic\+\_\+\+Verify.\+c}}.\end{Desc}
+\Hypertarget{bessel_8h_a344dc4a2251d132e5d7de0f0c144aba4}\label{bessel_8h_a344dc4a2251d132e5d7de0f0c144aba4} 
+\index{bessel.h@{bessel.h}!plane\_solution\_function@{plane\_solution\_function}}
+\index{plane\_solution\_function@{plane\_solution\_function}!bessel.h@{bessel.h}}
+\doxysubsubsection{\texorpdfstring{plane\_solution\_function()}{plane\_solution\_function()}}
+{\footnotesize\ttfamily double plane\+\_\+solution\+\_\+function (\begin{DoxyParamCaption}\item[{double}]{r,  }\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Evaluate an analytic plane-\/like solution built from Hankel functions. 
+
+The function computes the real part of e\texorpdfstring{$^\wedge$}{\string^}\{i t\} \texorpdfstring{$\ast$}{*} H\+\_\+0\texorpdfstring{$^\wedge$}{\string^}\{(2)\}(sqrt(-\/i) \texorpdfstring{$\ast$}{*} r), where H\+\_\+0\texorpdfstring{$^\wedge$}{\string^}\{(2)\} is the Hankel function of the second kind and r is the radial coordinate. The small-\/radius behaviour is regularized by forcing a minimum r value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Radial coordinate (r \texorpdfstring{$>$}{>}= 0). Small values are clamped for stability. \\
+\hline
+{\em t} & Time-\/like phase parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The real-\/valued plane solution at (r,t).
+\end{DoxyReturn}
+Evaluate an analytic plane-\/like solution built from Hankel functions.
+
+Implementation notes\+:
+\begin{DoxyItemize}
+\item The function protects against r==0 by clamping a tiny positive radius.
+\item Uses sqrt(-\/i) = exp(-\/i\texorpdfstring{$\ast$}{*}pi/4) to form the complex argument z = sqrt(-\/i)\texorpdfstring{$\ast$}{*}r.
+\item Evaluates H\+\_\+0\texorpdfstring{$^\wedge$}{\string^}\{(2)\}(z) and multiplies by exp(i t), returning the real part.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Radius (distance from origin). Small values are clamped for stability. \\
+\hline
+{\em t} & Phase parameter (real-\/valued). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Real-\/valued plane-\/solution (Re\{ e\texorpdfstring{$^\wedge$}{\string^}\{i t\} H\+\_\+0\texorpdfstring{$^\wedge$}{\string^}\{(2)\}(sqrt(-\/i) r) \}). 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Parabolic_ADI_8c-example}{Parabolic\+\_\+\+ADI.\+c}}, \mbox{\hyperlink{Parabolic_Explicit_8c-example}{Parabolic\+\_\+\+Explicit.\+c}}, and \mbox{\hyperlink{Parabolic_Verify_8c-example}{Parabolic\+\_\+\+Verify.\+c}}.\end{Desc}

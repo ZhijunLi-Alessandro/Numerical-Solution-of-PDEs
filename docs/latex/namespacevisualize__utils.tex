@@ -1,0 +1,116 @@
+\doxysection{visualize\+\_\+utils Namespace Reference}
+\hypertarget{namespacevisualize__utils}{}\label{namespacevisualize__utils}\index{visualize\_utils@{visualize\_utils}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacevisualize__utils_a4d2609ac561b85e021464983cc54e296}{load\+\_\+solution\+\_\+from\+\_\+csv}} (filename)
+\item 
+\mbox{\hyperlink{namespacevisualize__utils_a5d057365eb8ea3abe0aa39233e0c2186}{visualize\+\_\+solution}} (np.\+ndarray data, np.\+ndarray grid, title="{}Data Visualization"{}, \mbox{\hyperlink{namespacevisualize__utils_a197a8ce9b2c2997aa5dfcb9480675fb3}{save\+\_\+path}}=None)
+\item 
+\mbox{\hyperlink{namespacevisualize__utils_a600d79c4e7c0392f8ff54b8d7f4d09ac}{animate\+\_\+time\+\_\+series}} (str data\+\_\+dir, str prefix, np.\+ndarray grid, list steps, str title, interval=100, \mbox{\hyperlink{namespacevisualize__utils_a197a8ce9b2c2997aa5dfcb9480675fb3}{save\+\_\+path}}=None)
+\item 
+\mbox{\hyperlink{namespacevisualize__utils_aa90a38bec9b14496474295a81e386636}{animate\+\_\+time\+\_\+series\+\_\+difference}} (str data\+\_\+dir, str prefix1, str prefix2, np.\+ndarray grid, list steps, str title, interval=100, \mbox{\hyperlink{namespacevisualize__utils_a197a8ce9b2c2997aa5dfcb9480675fb3}{save\+\_\+path}}=None)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacevisualize__utils_af78f1156f8fe9349fda5138cb2ba38d8}{grid\+\_\+data}} = \mbox{\hyperlink{namespacevisualize__utils_a4d2609ac561b85e021464983cc54e296}{load\+\_\+solution\+\_\+from\+\_\+csv}}(\textquotesingle{}results/Parabolic/data/exact\+\_\+test/grid\+\_\+data.\+csv\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacevisualize__utils_a197a8ce9b2c2997aa5dfcb9480675fb3}{save\+\_\+path}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@file visualize_utils.py
+@brief Utility plotting helpers for all visualization scripts.
+
+Contains helper functions to load CSV outputs, visualize 2D solution fields,
+and build simple animations from a sequence of CSV snapshots. Functions are
+written for the repository's uniform-grid CSV output format and accept a grid
+mask produced by the C examples.
+
+@author Li Zhijun
+@date 2025-12-03
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacevisualize__utils_a600d79c4e7c0392f8ff54b8d7f4d09ac}\label{namespacevisualize__utils_a600d79c4e7c0392f8ff54b8d7f4d09ac} 
+\index{visualize\_utils@{visualize\_utils}!animate\_time\_series@{animate\_time\_series}}
+\index{animate\_time\_series@{animate\_time\_series}!visualize\_utils@{visualize\_utils}}
+\doxysubsubsection{\texorpdfstring{animate\_time\_series()}{animate\_time\_series()}}
+{\footnotesize\ttfamily visualize\+\_\+utils.\+animate\+\_\+time\+\_\+series (\begin{DoxyParamCaption}\item[{str}]{data\+\_\+dir,  }\item[{str}]{prefix,  }\item[{np.\+ndarray}]{grid,  }\item[{list}]{steps,  }\item[{str}]{title,  }\item[{}]{interval = {\ttfamily 100},  }\item[{}]{save\+\_\+path = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate animation from a time series of CSV solution snapshots.
+
+Parameters:
+- data_dir (str): Directory containing CSV files.
+- prefix (str): File prefix, e.g. "rhs" for rhs_000100.csv.
+- grid (2D array): Grid mask data (same as visualize_solution).
+- steps (list[int]): A list of time steps, e.g. range(100, 5001, 100)
+- title (str): Title of the plot.
+- interval (int): Delay between frames (ms).
+- save_path (str): Path to save animation; extension determines type.
+                  e.g. "anim.mp4" or "anim.gif".
+\end{DoxyVerb}
+ \Hypertarget{namespacevisualize__utils_aa90a38bec9b14496474295a81e386636}\label{namespacevisualize__utils_aa90a38bec9b14496474295a81e386636} 
+\index{visualize\_utils@{visualize\_utils}!animate\_time\_series\_difference@{animate\_time\_series\_difference}}
+\index{animate\_time\_series\_difference@{animate\_time\_series\_difference}!visualize\_utils@{visualize\_utils}}
+\doxysubsubsection{\texorpdfstring{animate\_time\_series\_difference()}{animate\_time\_series\_difference()}}
+{\footnotesize\ttfamily visualize\+\_\+utils.\+animate\+\_\+time\+\_\+series\+\_\+difference (\begin{DoxyParamCaption}\item[{str}]{data\+\_\+dir,  }\item[{str}]{prefix1,  }\item[{str}]{prefix2,  }\item[{np.\+ndarray}]{grid,  }\item[{list}]{steps,  }\item[{str}]{title,  }\item[{}]{interval = {\ttfamily 100},  }\item[{}]{save\+\_\+path = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate animation from the difference of two time series of CSV solution snapshots.
+
+Parameters:
+- data_dir (str): Directory containing CSV files.
+- prefix1 (str): File prefix, e.g. "rhs" for rhs_000100.csv.
+- prefix2 (str): File prefix, e.g. "solution" for solution_000100.csv.
+- grid (2D array): Grid mask data (same as visualize_solution).
+- steps (list[int]): A list of time steps, e.g. range(100, 5001, 100)
+- title (str): Title of the plot.
+- interval (int): Delay between frames (ms).
+- save_path (str): Path to save animation; extension determines type.
+                  e.g. "anim.mp4" or "anim.gif".
+\end{DoxyVerb}
+ \Hypertarget{namespacevisualize__utils_a4d2609ac561b85e021464983cc54e296}\label{namespacevisualize__utils_a4d2609ac561b85e021464983cc54e296} 
+\index{visualize\_utils@{visualize\_utils}!load\_solution\_from\_csv@{load\_solution\_from\_csv}}
+\index{load\_solution\_from\_csv@{load\_solution\_from\_csv}!visualize\_utils@{visualize\_utils}}
+\doxysubsubsection{\texorpdfstring{load\_solution\_from\_csv()}{load\_solution\_from\_csv()}}
+{\footnotesize\ttfamily visualize\+\_\+utils.\+load\+\_\+solution\+\_\+from\+\_\+csv (\begin{DoxyParamCaption}\item[{}]{filename }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Loads a solution from a CSV file.
+
+Parameters:
+filename (str): Path to the CSV file.
+
+Returns:
+2D array: Loaded solution values.
+\end{DoxyVerb}
+ \Hypertarget{namespacevisualize__utils_a5d057365eb8ea3abe0aa39233e0c2186}\label{namespacevisualize__utils_a5d057365eb8ea3abe0aa39233e0c2186} 
+\index{visualize\_utils@{visualize\_utils}!visualize\_solution@{visualize\_solution}}
+\index{visualize\_solution@{visualize\_solution}!visualize\_utils@{visualize\_utils}}
+\doxysubsubsection{\texorpdfstring{visualize\_solution()}{visualize\_solution()}}
+{\footnotesize\ttfamily visualize\+\_\+utils.\+visualize\+\_\+solution (\begin{DoxyParamCaption}\item[{np.\+ndarray}]{data,  }\item[{np.\+ndarray}]{grid,  }\item[{}]{title = {\ttfamily "{}Data~Visualization"{}},  }\item[{}]{save\+\_\+path = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Visualizes the data on a 2D grid using a heatmap.
+
+Parameters:
+data (2D array): Data values at the grid points.
+grid (2D array): Grid informations at the grid points.
+title (str): Title of the plot.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacevisualize__utils_af78f1156f8fe9349fda5138cb2ba38d8}\label{namespacevisualize__utils_af78f1156f8fe9349fda5138cb2ba38d8} 
+\index{visualize\_utils@{visualize\_utils}!grid\_data@{grid\_data}}
+\index{grid\_data@{grid\_data}!visualize\_utils@{visualize\_utils}}
+\doxysubsubsection{\texorpdfstring{grid\_data}{grid\_data}}
+{\footnotesize\ttfamily visualize\+\_\+utils.\+grid\+\_\+data = \mbox{\hyperlink{namespacevisualize__utils_a4d2609ac561b85e021464983cc54e296}{load\+\_\+solution\+\_\+from\+\_\+csv}}(\textquotesingle{}results/Parabolic/data/exact\+\_\+test/grid\+\_\+data.\+csv\textquotesingle{})}
+
+\Hypertarget{namespacevisualize__utils_a197a8ce9b2c2997aa5dfcb9480675fb3}\label{namespacevisualize__utils_a197a8ce9b2c2997aa5dfcb9480675fb3} 
+\index{visualize\_utils@{visualize\_utils}!save\_path@{save\_path}}
+\index{save\_path@{save\_path}!visualize\_utils@{visualize\_utils}}
+\doxysubsubsection{\texorpdfstring{save\_path}{save\_path}}
+{\footnotesize\ttfamily visualize\+\_\+utils.\+save\+\_\+path}
+

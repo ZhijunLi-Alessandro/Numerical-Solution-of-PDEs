@@ -1,62 +1,20 @@
 \doxysection{scripts/visualize\+\_\+\+Neumann.py File Reference}
 \hypertarget{visualize__Neumann_8py}{}\label{visualize__Neumann_8py}\index{scripts/visualize\_Neumann.py@{scripts/visualize\_Neumann.py}}
-
-
-A python script for visualizing the calculation results of the Neumann problem.  
-
-
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
 namespace \mbox{\hyperlink{namespacevisualize__Neumann}{visualize\+\_\+\+Neumann}}
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a64b5fe9e259951055d08f56c916eafea}{visualize\+\_\+\+Neumann.\+load\+\_\+solution\+\_\+from\+\_\+csv}} (filename)
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_aff475bf5f519f5abb490962c283c7a92}{visualize\+\_\+\+Neumann.\+visualize\+\_\+solution}} (\mbox{\hyperlink{namespacevisualize__Neumann_a47b4397a467761583135ac0727cad9d0}{grid\+\_\+x}}, \mbox{\hyperlink{namespacevisualize__Neumann_a4525d0f516e3904abdddd3af4073ff3b}{grid\+\_\+y}}, \mbox{\hyperlink{namespacevisualize__Neumann_a80245993f43085a0407eec35ea709501}{solution}}, \mbox{\hyperlink{namespacevisualize__Neumann_a028216f3699ba9c8e42ea6ee7da113a3}{title}}="{}Solution Visualization"{}, \mbox{\hyperlink{namespacevisualize__Neumann_a12f96dcce7b23c121e7ebe218b08d08a}{save\+\_\+path}}=None, overlay\+\_\+mask=None, overlay\+\_\+points=None, point\+\_\+style=None)
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a80245993f43085a0407eec35ea709501}{visualize\+\_\+\+Neumann.\+solution}} = \mbox{\hyperlink{namespacevisualize__Neumann_a64b5fe9e259951055d08f56c916eafea}{load\+\_\+solution\+\_\+from\+\_\+csv}}(\textquotesingle{}results/Neumann\+\_\+solution.\+csv\textquotesingle{})
+\mbox{\hyperlink{namespacevisualize__Neumann_a80245993f43085a0407eec35ea709501}{visualize\+\_\+\+Neumann.\+solution}} = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/Neumann\+\_\+solution.\+csv\textquotesingle{})
 \item 
-\mbox{\hyperlink{namespacevisualize__Neumann_ae582e12b8bb60997bc7cf27354d1ad16}{visualize\+\_\+\+Neumann.\+exact}} = \mbox{\hyperlink{namespacevisualize__Neumann_a64b5fe9e259951055d08f56c916eafea}{load\+\_\+solution\+\_\+from\+\_\+csv}}(\textquotesingle{}results/Neumann\+\_\+exact.\+csv\textquotesingle{})
+\mbox{\hyperlink{namespacevisualize__Neumann_ae582e12b8bb60997bc7cf27354d1ad16}{visualize\+\_\+\+Neumann.\+exact}} = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/Neumann\+\_\+exact.\+csv\textquotesingle{})
 \item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a254e174f3f2ce400ddd3a4ad6c03cbf1}{visualize\+\_\+\+Neumann.\+nx}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_aa08daf6c0e9d7c932b9c92dd424963b8}{visualize\+\_\+\+Neumann.\+ny}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a9af37d93e87a08fccef621afdf75fdfa}{visualize\+\_\+\+Neumann.\+x}} = np.\+linspace(0, 2, \mbox{\hyperlink{namespacevisualize__Neumann_a254e174f3f2ce400ddd3a4ad6c03cbf1}{nx}})
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a474c2ed42b67573a82fd20837ab91892}{visualize\+\_\+\+Neumann.\+y}} = np.\+linspace(-\/2, 2, \mbox{\hyperlink{namespacevisualize__Neumann_aa08daf6c0e9d7c932b9c92dd424963b8}{ny}})
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a47b4397a467761583135ac0727cad9d0}{visualize\+\_\+\+Neumann.\+grid\+\_\+x}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a4525d0f516e3904abdddd3af4073ff3b}{visualize\+\_\+\+Neumann.\+grid\+\_\+y}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_ac29e747cdad36ce27d7b36ecbdf0ef2a}{visualize\+\_\+\+Neumann.\+sol}} = solution.\+T
-\item 
-\mbox{\hyperlink{namespacevisualize__Neumann_a30d420c94f6cdd7e998b2df6291a9290}{visualize\+\_\+\+Neumann.\+ex}} = exact.\+T
-\item 
-int \mbox{\hyperlink{namespacevisualize__Neumann_a874eaf5d275e2299429bb5d89f38f3ef}{visualize\+\_\+\+Neumann.\+data\+\_\+mask}} = 0
+\mbox{\hyperlink{namespacevisualize__Neumann_a0b464256869e16cab06b20528d2e98f6}{visualize\+\_\+\+Neumann.\+grid\+\_\+data}} = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/grid\+\_\+data.\+csv\textquotesingle{})
 \item 
 \mbox{\hyperlink{namespacevisualize__Neumann_a028216f3699ba9c8e42ea6ee7da113a3}{visualize\+\_\+\+Neumann.\+title}}
 \item 
 \mbox{\hyperlink{namespacevisualize__Neumann_a12f96dcce7b23c121e7ebe218b08d08a}{visualize\+\_\+\+Neumann.\+save\+\_\+path}}
 \end{DoxyCompactItemize}
-
-
-\doxysubsection{Detailed Description}
-A python script for visualizing the calculation results of the Neumann problem. 
-
-This script is used to process and analyze data and generate figures. Includes data loading and preprocessing, generate multiple figures. \begin{DoxySeeAlso}{See also}
-\doxylink{Dirichlet_8c}{Dirichlet.\+c} 
-\end{DoxySeeAlso}
-\begin{DoxyAuthor}{Author}
-Li Zhijun 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Date}
-2025-\/10-\/29 
-\end{DoxyDate}

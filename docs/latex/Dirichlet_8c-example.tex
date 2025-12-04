@@ -12,11 +12,11 @@
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{Dirichlet_8c_aac37605abfd3877c437fde984df578fd}{region\_divider}}(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{double}\ hx,\ \textcolor{keywordtype}{double}\ hy)\ \{}
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ eps\ =\ 1e-\/12;}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ >\ 1.0\ \&\&\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ <=\ (2.0\ +\ eps))\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ >=\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ -\/\ 1.0\ -\/\ eps)\ \&\&\ \mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ <=\ (3.0\ -\/\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ +\ eps))\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ <=\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ -\/\ 1.0\ +\ hx\ -\/\ 2\ *\ eps)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (y\ >\ 1.0\ \&\&\ y\ <=\ (2.0\ +\ eps))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ >=\ (y\ -\/\ 1.0\ -\/\ eps)\ \&\&\ x\ <=\ (3.0\ -\/\ y\ +\ eps))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <=\ y\ -\/\ 1.0\ +\ hx\ -\/\ 2\ *\ eps)\ \{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 2;\ \textcolor{comment}{//\ Top\ left\ slant\ boundary}}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ >=\ 3.0\ -\/\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ -\/\ hx\ +\ 2\ *\ eps)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (x\ >=\ 3.0\ -\/\ y\ -\/\ hx\ +\ 2\ *\ eps)\ \{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 3;\ \textcolor{comment}{//\ Top\ right\ slant\ boundary}}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;\ \textcolor{comment}{//\ Active\ interior\ point}}
@@ -25,11 +25,11 @@
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\ \ \ \ \}}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ >\ -\/1.0\ \&\&\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ <=\ 1.0)\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ >=\ -\/eps\ \&\&\ \mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ <=\ (0.5\ *\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ +\ 1.5\ +\ eps))\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ <=\ hx\ -\/\ 2\ *eps)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (y\ >\ -\/1.0\ \&\&\ y\ <=\ 1.0)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ >=\ -\/eps\ \&\&\ x\ <=\ (0.5\ *\ y\ +\ 1.5\ +\ eps))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <=\ hx\ -\/\ 2\ *eps)\ \{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4;\ \textcolor{comment}{//\ Left\ boundary}}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ >=\ 0.5\ *\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ +\ 1.5\ -\/\ hx\ +\ 2\ *\ eps)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (x\ >=\ 0.5\ *\ y\ +\ 1.5\ -\/\ hx\ +\ 2\ *\ eps)\ \{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 5;\ \textcolor{comment}{//\ Upper\ right\ boundary}}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;\ \textcolor{comment}{//\ Active\ interior\ point}}
@@ -38,13 +38,13 @@
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\ \ \ \ \}}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ >=\ (-\/2.0\ -\/\ eps)\ \&\&\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ <=\ -\/1.0)\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ >=\ -\/eps\ \&\&\ \mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ <=\ (-\/\mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ +\ eps))\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ <=\ hx\ -\/\ 2\ *\ eps)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (y\ >=\ (-\/2.0\ -\/\ eps)\ \&\&\ y\ <=\ -\/1.0)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ >=\ -\/eps\ \&\&\ x\ <=\ (-\/y\ +\ eps))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <=\ hx\ -\/\ 2\ *\ eps)\ \{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4;\ \textcolor{comment}{//\ Left\ boundary}}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ >=\ -\/\mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ -\/\ hx\ +\ 2\ *\ eps)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (x\ >=\ -\/y\ -\/\ hx\ +\ 2\ *\ eps)\ \{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 6;\ \textcolor{comment}{//\ Lower\ right\ boundary}}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ <=\ -\/2.0\ +\ hy\ -\/\ 2\ *\ eps)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (y\ <=\ -\/2.0\ +\ hy\ -\/\ 2\ *\ eps)\ \{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 7;\ \textcolor{comment}{//\ Bottom\ boundary}}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;\ \textcolor{comment}{//\ Active\ interior\ point}}
@@ -67,27 +67,27 @@
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ x\_b,\ y\_b,\ result;}
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{switch}\ (boundary\_type)\ \{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ \textcolor{comment}{//\ Top\ left\ slant\ boundary}}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ x\_b\ =\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ +\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ -\/\ 1.0)\ /\ 2.0;}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ y\_b\ =\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ +\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ +\ 1.0)\ /\ 2.0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ x\_b\ =\ (x\ +\ y\ -\/\ 1.0)\ /\ 2.0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ y\_b\ =\ (x\ +\ y\ +\ 1.0)\ /\ 2.0;}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ \textcolor{comment}{//\ Top\ right\ slant\ boundary}}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ x\_b\ =\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ -\/\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ +\ 3.0)\ /\ 2.0;}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ y\_b\ =\ (-\/\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ +\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ +\ 3.0)\ /\ 2.0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ x\_b\ =\ (x\ -\/\ y\ +\ 3.0)\ /\ 2.0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ y\_b\ =\ (-\/x\ +\ y\ +\ 3.0)\ /\ 2.0;}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ \textcolor{comment}{//\ Left\ boundary}}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ x\_b\ =\ 0.0;}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ y\_b\ =\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ y\_b\ =\ y;}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:\ \textcolor{comment}{//\ Upper\ right\ boundary}}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ x\_b\ =\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ +\ 2.0\ *\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ +\ 6.0)\ /\ 5.0;}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ y\_b\ =\ (2.0\ *\ \mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ +\ 4.0\ *\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}}\ -\/3.0)\ /\ 5.0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ x\_b\ =\ (x\ +\ 2.0\ *\ y\ +\ 6.0)\ /\ 5.0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ y\_b\ =\ (2.0\ *\ x\ +\ 4.0\ *\ y\ -\/3.0)\ /\ 5.0;}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:\ \textcolor{comment}{//\ Lower\ right\ boundary}}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ x\_b\ =\ (\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ -\/\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}})\ /\ 2.0;}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ y\_b\ =\ (-\/\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}}\ +\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{y}})\ /\ 2.0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ x\_b\ =\ (x\ -\/\ y)\ /\ 2.0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ y\_b\ =\ (-\/x\ +\ y)\ /\ 2.0;}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:\ \textcolor{comment}{//\ Bottom\ boundary}}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ x\_b\ =\ \mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{x}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ x\_b\ =\ x;}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ y\_b\ =\ -\/2.0;}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
@@ -98,8 +98,8 @@
 \DoxyCodeLine{\}}
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{test__csr__3x3_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespacevisualize__Dirichlet_ad3ac391ebea89214f896b9083a909325}{nx}}\ =\ 41;}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespacevisualize__Dirichlet_a3d00d921c010ee0b28d3c6cd41849dd2}{ny}}\ =\ 81;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ nx\ =\ 41;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ ny\ =\ 81;}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{structGrid2D}{Grid2D}}*\ grid\ =\ \mbox{\hyperlink{grid_8h_a2c256fcb14b9e2ebb265d2ab35d936b0}{initialize\_Grid}}(nx,\ ny,\ 0.0,\ 2.0,\ -\/2.0,\ 2.0,\ \mbox{\hyperlink{Dirichlet_8c_aac37605abfd3877c437fde984df578fd}{region\_divider}});}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ printf("{}Number\ of\ active\ grid\ points:\ \%d\(\backslash\)n"{},\ grid-\/>n\_active);}}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ printf("{}\%.6f\(\backslash\)n"{},\ compute\_u\_exact(grid-\/>x[10],\ grid-\/>y[40]));}}
@@ -121,7 +121,7 @@
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ grid-\/>\mbox{\hyperlink{structGrid2D_a8231d84ac1f0a464234d02cd5d337069}{n\_active}};\ i++)\ \{}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacevisualize__Dirichlet_a58f01210f8d2b38ddfedc3681237e942}{solution}}[i]\ =\ 0.0;\ \textcolor{comment}{//\ Initial\ guess}}
 \DoxyCodeLine{\ \ \ \ \}}
-\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{csr_8h_a8e498df649d55f5935286ea1351ee89a}{GaussSeidel\_csr}}(matrix,\ rhs,\ solution,\ 1000,\ 1e-\/6);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{csr_8h_a9e9cdef8c8d7069f34646f6393448e9e}{GaussSeidel\_csr\_debug}}(matrix,\ rhs,\ solution,\ 1000,\ 1e-\/6);}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ *\mbox{\hyperlink{namespacevisualize__Dirichlet_a0f0076ba646b40bc1a7bbda06e1583ae}{exact}}\ =\ (\textcolor{keywordtype}{double}\ *)malloc(grid-\/>\mbox{\hyperlink{structGrid2D_a8231d84ac1f0a464234d02cd5d337069}{n\_active}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ grid-\/>\mbox{\hyperlink{structGrid2D_a8231d84ac1f0a464234d02cd5d337069}{n\_active}};\ i++)\ \{}
@@ -143,15 +143,18 @@
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ \ \ \ \ printf("{}u(\%.4f,\ \%.4f)\ =\ \%.6f,\ Exact\ =\ \%.6f,\ Error\ =\ \%.6e\(\backslash\)n"{},\ xi,\ yj,\ solution[i],\ u\_exact,\ fabs(solution[i]\ -\/\ u\_exact));}}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ \}}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ **data\_points\ =\ \mbox{\hyperlink{grid_8h_a1ea426a678e98ecb5bec65d4cb876ef4}{read\_indices\_to\_points}}(grid,\ solution);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ **data\_points\ =\ \mbox{\hyperlink{grid_8h_af2eedadd0f889624d4efe433d7c9d8bd}{create\_grid\_2D\_array}}(grid);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{grid_8h_a59cf713af413a93809a2ffc4ac87e69d}{read\_indices\_to\_points}}(grid,\ solution,\ data\_points);}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ print\_matrix((const\ double\ **)data\_points,\ grid-\/>nx,\ grid-\/>ny,\ 6);}}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ **exact\_points\ =\ \mbox{\hyperlink{grid_8h_a1ea426a678e98ecb5bec65d4cb876ef4}{read\_indices\_to\_points}}(grid,\ exact);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ **exact\_points\ =\ \mbox{\hyperlink{grid_8h_af2eedadd0f889624d4efe433d7c9d8bd}{create\_grid\_2D\_array}}(grid);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{grid_8h_a59cf713af413a93809a2ffc4ac87e69d}{read\_indices\_to\_points}}(grid,\ exact,\ exact\_points);}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ print\_matrix((const\ double\ **)exact\_points,\ grid-\/>nx,\ grid-\/>ny,\ 6);}}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Optionally,\ write\ the\ solution\ to\ a\ CSV\ file\ for\ visualization}}
-\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{utils_8h_ad5a657e8a54c161d913fa4761b9c9d41}{write\_csv\_matrix}}(\textcolor{stringliteral}{"{}results/Dirichlet\_solution.csv"{}},\ data\_points,\ grid-\/>\mbox{\hyperlink{structGrid2D_a0c3422cde3a4b614748cc292b951b164}{nx}},\ grid-\/>\mbox{\hyperlink{structGrid2D_af5921b23b32d3c3de66dd4a1c21732c1}{ny}});}
-\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{utils_8h_ad5a657e8a54c161d913fa4761b9c9d41}{write\_csv\_matrix}}(\textcolor{stringliteral}{"{}results/Dirichlet\_exact.csv"{}},\ exact\_points,\ grid-\/>\mbox{\hyperlink{structGrid2D_a0c3422cde3a4b614748cc292b951b164}{nx}},\ grid-\/>\mbox{\hyperlink{structGrid2D_af5921b23b32d3c3de66dd4a1c21732c1}{ny}});}
-\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{utils_8h_ad5a657e8a54c161d913fa4761b9c9d41}{write\_csv\_matrix}}(\textcolor{stringliteral}{"{}results/Poisson/data/Dirichlet\_solution.csv"{}},\ data\_points,\ grid-\/>\mbox{\hyperlink{structGrid2D_a0c3422cde3a4b614748cc292b951b164}{nx}},\ grid-\/>\mbox{\hyperlink{structGrid2D_af5921b23b32d3c3de66dd4a1c21732c1}{ny}});}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{utils_8h_ad5a657e8a54c161d913fa4761b9c9d41}{write\_csv\_matrix}}(\textcolor{stringliteral}{"{}results/Poisson/data/Dirichlet\_exact.csv"{}},\ exact\_points,\ grid-\/>\mbox{\hyperlink{structGrid2D_a0c3422cde3a4b614748cc292b951b164}{nx}},\ grid-\/>\mbox{\hyperlink{structGrid2D_af5921b23b32d3c3de66dd4a1c21732c1}{ny}});}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{utils_8h_ac1ecb461358d61022e853b83f118a171}{write\_csv\_int\_matrix}}(\textcolor{stringliteral}{"{}results/Poisson/data/grid\_data.csv"{}},\ grid-\/>\mbox{\hyperlink{structGrid2D_a4721ccb58cee6d39ac51bb9ce0d6b124}{region}},\ grid-\/>\mbox{\hyperlink{structGrid2D_a0c3422cde3a4b614748cc292b951b164}{nx}},\ grid-\/>\mbox{\hyperlink{structGrid2D_af5921b23b32d3c3de66dd4a1c21732c1}{ny}});}
+\DoxyCodeLine{\ \ \ \ }
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Clean\ up}}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Save\ grid\ dimensions\ because\ free\_grid(grid)\ will\ deallocate\ the\ structure}}
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ nx\_grid\ =\ grid-\/>\mbox{\hyperlink{structGrid2D_a0c3422cde3a4b614748cc292b951b164}{nx}};}
@@ -159,14 +162,11 @@
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{csr_8h_ad76b7aa766ec949cb15bcf6ede8aadcb}{freeSparseCSR}}(matrix);}
 \DoxyCodeLine{\ \ \ \ free(rhs);}
+\DoxyCodeLine{\ \ \ \ free(exact);}
 \DoxyCodeLine{\ \ \ \ free(solution);}
 \DoxyCodeLine{}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nx\_grid;\ i++)\ \{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ free(data\_points[i]);}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ free(exact\_points[i]);}
-\DoxyCodeLine{\ \ \ \ \}}
-\DoxyCodeLine{\ \ \ \ free(data\_points);}
-\DoxyCodeLine{\ \ \ \ free(exact\_points);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{grid_8h_abd0051e3e0bc770db2a33638dd509d3e}{free\_grid\_2D\_array}}(data\_points,\ grid);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{grid_8h_abd0051e3e0bc770db2a33638dd509d3e}{free\_grid\_2D\_array}}(exact\_points,\ grid);}
 \DoxyCodeLine{}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Now\ free\ the\ grid\ structure\ itself}}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{grid_8h_a31befaf760e994473b73acce12ad6546}{free\_grid}}(grid);}

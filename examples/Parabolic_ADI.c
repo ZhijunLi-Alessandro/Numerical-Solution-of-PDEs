@@ -1,3 +1,18 @@
+/**
+ * @file Parabolic_ADI.c
+ * @brief Example: solve the 2D parabolic PDE with Dirichlet boundary conditions using ADI.
+ *
+ * @details
+ * This example demonstrates constructing the mesh, assembling ADI split
+ * operators and time-stepping a manufactured solution using an alternating
+ * direction implicit (ADI) method. Output CSVs are produced for visualization
+ * and verification; see `ReadMe.md` for usage notes and expected outputs.
+ *
+ * @see csr.h, parabolic.h, bessel.h
+ * @author Li Zhijun
+ * @date 2025-12-03
+ * @example Parabolic_ADI.c
+ */
 # include <stdio.h>
 # include <stdlib.h>
 # include <math.h>

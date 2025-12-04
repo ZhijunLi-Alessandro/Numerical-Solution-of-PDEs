@@ -1,20 +1,39 @@
 /**
- * @file poisson2d.c
- * @brief Implementation of assembling the matrix and right-hand side (RHS) for the 
- *        Poisson equation with Dirichlet and Neumann boundary conditions.
- * 
- * This file includes functions to construct the finite difference discretization of 
- * the Poisson equation, handling both Dirichlet (essential) and Neumann (natural) 
- * boundary conditions. The system matrix and RHS vector are assembled accordingly for 
- * numerical solution.
- * 
+ * @file parabolic.c
+ * @brief Assembly helpers for finite-difference parabolic (heat) solvers.
+ *
+ * This file implements routines to assemble sparse matrices and right-hand-side
+ * vectors used by time-stepping schemes for the parabolic (heat) equation on the
+ * repository's structured grids. Implementations include:
+ *  - `assemble_Matrix_Parabolic_Explicit`: build the operator for an explicit
+ *    time-step update on the active grid points.
+ *  - `assemble_RHS_Parabolic`: fill the RHS vector using a provided source-term
+ *    callback and Dirichlet boundary value callback.
+ *  - `assemble_Matrix_Parabolic_ADI`: construct directional ADI split operators
+ *    (arrays of CSR matrices) for alternating-direction implicit methods.
+ *
+ * The functions operate on the `Grid2D` structure and return newly allocated
+ * `SparseCSR` objects (or arrays of them) which the caller must free when no
+ * longer needed.
+ *
  * @author Li Zhijun
- * @date 2025-10-22
+ * @date 2025-12-02
  */
 #include <stdlib.h>
 #include <math.h>
 #include "parabolic.h"
 
+/**
+ * @brief Assemble the sparse matrix for an explicit parabolic time-step.
+ *
+ * Constructs a CSR matrix containing the coefficients appropriate for an
+ * explicit finite-difference update on the active points of the grid. The
+ * returned matrix is newly allocated and must be freed using `freeSparseCSR`.
+ *
+ * @param grid Pointer to Grid2D describing the mesh and active indices.
+ * @param tau Time-step size.
+ * @return Pointer to the assembled SparseCSR matrix.
+ */
 SparseCSR* assemble_Matrix_Parabolic_Explicit(Grid2D* grid, double tau) {
     SparseCSR *matrix = createSparseCSR(grid->n_active, grid->n_active, 5 * grid->n_active);
     int *row_ptr = matrix->row_ptr;
@@ -82,10 +101,24 @@ SparseCSR* assemble_Matrix_Parabolic_Explicit(Grid2D* grid, double tau) {
     return matrix;
 }
 
+/**
+ * @brief Assemble the right-hand side vector for a parabolic step.
+ *
+ * For interior (active) points this fills the contribution from the source
+ * term integrated over the time-step; for boundary points it fills the
+ * Dirichlet boundary value via the provided callback.
+ *
+ * @param grid Pointer to Grid2D describing the mesh and active indices.
+ * @param f Source term callback with signature `f(x,y,t,hx,hy)`.
+ * @param compute_boundary_value Dirichlet boundary callback.
+ * @param b Preallocated array of length grid->n_active to be filled with RHS.
+ * @param t Current time.
+ * @param tau Time-step size.
+ */
 void assemble_RHS_Parabolic(Grid2D* grid, parabolic_source_term f, parabolic_Dirichlet_boundary compute_boundary_value, double *b, double t, double tau) {
     // double *b = (double *)malloc(grid->n_active * sizeof(double));
     double hx = grid->hx;
-    double hy = grid->hx;
+    double hy = grid->hy;
     for (int i = 0; i < grid->n_active; i++) {
         int gi = grid->id_i[i];
         int gj = grid->id_j[i];
@@ -105,6 +138,17 @@ void assemble_RHS_Parabolic(Grid2D* grid, parabolic_source_term f, parabolic_Dir
     // return b;
 }
 
+/**
+ * @brief Assemble the split ADI matrices used by an ADI parabolic solver.
+ *
+ * Returns four CSR matrices (allocated) representing directional operators
+ * used in a Peaceman–Rachford / Douglas ADI step. The caller receives an
+ * array of four `SparseCSR*` pointers and is responsible for freeing them.
+ *
+ * @param grid Pointer to the Grid2D structure.
+ * @param tau Time-step size.
+ * @return Array of 4 pointers to newly allocated SparseCSR matrices.
+ */
 SparseCSR** assemble_Matrix_Parabolic_ADI(Grid2D* grid, double tau) {
     SparseCSR **ADI_matrixs = (SparseCSR **)malloc(4 * sizeof(SparseCSR*));
 

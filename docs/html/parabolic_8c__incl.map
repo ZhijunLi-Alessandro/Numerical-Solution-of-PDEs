@@ -1,0 +1,15 @@
+<map id="src/pde/parabolic.c" name="src/pde/parabolic.c">
+<area shape="rect" id="Node000001" title="Assembly helpers for finite&#45;difference parabolic (heat) solvers." alt="" coords="59,5,191,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,69,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,33,64,72,61,68,110,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="94,79,157,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="128,31,128,65,123,65,123,31"/>
+<area shape="rect" id="Node000004" href="$parabolic_8h.html" title="API for parabolic/heat equation matrix and RHS assembly helpers." alt="" coords="181,79,267,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="143,29,198,68,195,73,140,33"/>
+<area shape="rect" id="Node000005" href="$grid_8h.html" title="Header file for a uniform grid structure and related functions." alt="" coords="158,152,213,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="220,106,200,141,196,139,215,103"/>
+<area shape="rect" id="Node000006" href="$csr_8h.html" title="Header file for CSR matrix operations and iterative solvers." alt="" coords="237,152,288,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="233,103,252,139,248,141,228,106"/>
+<area shape="rect" id="Node000007" href="$vec_8h.html" title="Header file for basic vector operations." alt="" coords="235,225,290,251"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="265,178,265,212,260,212,260,178"/>
+</map>

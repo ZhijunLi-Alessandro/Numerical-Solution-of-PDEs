@@ -1,0 +1,205 @@
+\doxysection{include/parabolic.h File Reference}
+\hypertarget{parabolic_8h}{}\label{parabolic_8h}\index{include/parabolic.h@{include/parabolic.h}}
+
+
+API for parabolic/heat equation matrix and RHS assembly helpers.  
+
+
+{\ttfamily \#include "{}grid.\+h"{}}\newline
+{\ttfamily \#include "{}csr.\+h"{}}\newline
+Include dependency graph for parabolic.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{parabolic_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{parabolic_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef double(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{parabolic_8h_aa982103a6967d41081322ed523713cdb}{parabolic\+\_\+source\+\_\+term}}) (double x, double y, double t, double hx, double hy)
+\begin{DoxyCompactList}\small\item\em Function type for parabolic source terms f(x,y,t;hx,hy). \end{DoxyCompactList}\item 
+typedef double(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{parabolic_8h_a42a70d2b780c58b170bc11f58f2019a4}{parabolic\+\_\+\+Dirichlet\+\_\+boundary}}) (double x, double y, double t, int boundary\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Function type for Dirichlet boundary values used by parabolic assembly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{parabolic_8h_acf44d587ca6946d98089c5e7d5199ec1}{assemble\+\_\+\+Matrix\+\_\+\+Parabolic\+\_\+\+Explicit}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid, double tau)
+\begin{DoxyCompactList}\small\item\em Assemble the system matrix for an explicit parabolic time-\/step. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{parabolic_8h_a45200ab2fb04cacd24df97b52fb6bcd7}{assemble\+\_\+\+RHS\+\_\+\+Parabolic}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid, \mbox{\hyperlink{parabolic_8h_aa982103a6967d41081322ed523713cdb}{parabolic\+\_\+source\+\_\+term}} f, \mbox{\hyperlink{parabolic_8h_a42a70d2b780c58b170bc11f58f2019a4}{parabolic\+\_\+\+Dirichlet\+\_\+boundary}} \mbox{\hyperlink{Dirichlet_8c_aeea3fae40839a4c211e863fb2d10657a}{compute\+\_\+boundary\+\_\+value}}, double \texorpdfstring{$\ast$}{*}b, double t, double tau)
+\begin{DoxyCompactList}\small\item\em Assemble the right-\/hand side vector for a parabolic time step. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{parabolic_8h_a96579f004710e0bd0efd47c5ef6aeac7}{assemble\+\_\+\+Matrix\+\_\+\+Parabolic\+\_\+\+ADI}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid, double tau)
+\begin{DoxyCompactList}\small\item\em Assemble ADI operator matrices used by the Peaceman–\+Rachford ADI method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+API for parabolic/heat equation matrix and RHS assembly helpers. 
+
+This header exposes typedefs and assembly routines used by explicit and ADI finite-\/difference solvers for the parabolic PDE examples in the repository.
+
+\begin{DoxyAuthor}{Author}
+Li Zhijun 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/12-\/02 
+\end{DoxyDate}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{parabolic_8h_a42a70d2b780c58b170bc11f58f2019a4}\label{parabolic_8h_a42a70d2b780c58b170bc11f58f2019a4} 
+\index{parabolic.h@{parabolic.h}!parabolic\_Dirichlet\_boundary@{parabolic\_Dirichlet\_boundary}}
+\index{parabolic\_Dirichlet\_boundary@{parabolic\_Dirichlet\_boundary}!parabolic.h@{parabolic.h}}
+\doxysubsubsection{\texorpdfstring{parabolic\_Dirichlet\_boundary}{parabolic\_Dirichlet\_boundary}}
+{\footnotesize\ttfamily typedef double(\texorpdfstring{$\ast$}{*} parabolic\+\_\+\+Dirichlet\+\_\+boundary) (double x, double y, double t, int boundary\+\_\+type)}
+
+
+
+Function type for Dirichlet boundary values used by parabolic assembly. 
+
+The callback receives (x,y,t) and an integer {\ttfamily boundary\+\_\+type} which allows callers to distinguish between multiple boundary segments. \Hypertarget{parabolic_8h_aa982103a6967d41081322ed523713cdb}\label{parabolic_8h_aa982103a6967d41081322ed523713cdb} 
+\index{parabolic.h@{parabolic.h}!parabolic\_source\_term@{parabolic\_source\_term}}
+\index{parabolic\_source\_term@{parabolic\_source\_term}!parabolic.h@{parabolic.h}}
+\doxysubsubsection{\texorpdfstring{parabolic\_source\_term}{parabolic\_source\_term}}
+{\footnotesize\ttfamily typedef double(\texorpdfstring{$\ast$}{*} parabolic\+\_\+source\+\_\+term) (double x, double y, double t, double hx, double hy)}
+
+
+
+Function type for parabolic source terms f(x,y,t;hx,hy). 
+
+The source term receives the spatial coordinates, current time, and the local cell sizes {\ttfamily hx} and {\ttfamily hy} in case the source depends on the mesh. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{parabolic_8h_a96579f004710e0bd0efd47c5ef6aeac7}\label{parabolic_8h_a96579f004710e0bd0efd47c5ef6aeac7} 
+\index{parabolic.h@{parabolic.h}!assemble\_Matrix\_Parabolic\_ADI@{assemble\_Matrix\_Parabolic\_ADI}}
+\index{assemble\_Matrix\_Parabolic\_ADI@{assemble\_Matrix\_Parabolic\_ADI}!parabolic.h@{parabolic.h}}
+\doxysubsubsection{\texorpdfstring{assemble\_Matrix\_Parabolic\_ADI()}{assemble\_Matrix\_Parabolic\_ADI()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} assemble\+\_\+\+Matrix\+\_\+\+Parabolic\+\_\+\+ADI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{double}]{tau }\end{DoxyParamCaption})}
+
+
+
+Assemble ADI operator matrices used by the Peaceman–\+Rachford ADI method. 
+
+Returns an array of four {\ttfamily Sparse\+CSR\texorpdfstring{$\ast$}{*}} pointers representing the split operators; caller owns the returned array and the matrices and must free them when no longer needed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & Pointer to the mesh/grid structure. \\
+\hline
+{\em tau} & Time-\/step size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of four pointers to \doxylink{structSparseCSR}{Sparse\+CSR} matrices.
+\end{DoxyReturn}
+Assemble ADI operator matrices used by the Peaceman–\+Rachford ADI method.
+
+Returns four CSR matrices (allocated) representing directional operators used in a Peaceman–\+Rachford / Douglas ADI step. The caller receives an array of four {\ttfamily Sparse\+CSR\texorpdfstring{$\ast$}{*}} pointers and is responsible for freeing them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & Pointer to the \doxylink{structGrid2D}{Grid2D} structure. \\
+\hline
+{\em tau} & Time-\/step size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of 4 pointers to newly allocated \doxylink{structSparseCSR}{Sparse\+CSR} matrices. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Parabolic_ADI_8c-example}{Parabolic\+\_\+\+ADI.\+c}}.\end{Desc}
+\Hypertarget{parabolic_8h_acf44d587ca6946d98089c5e7d5199ec1}\label{parabolic_8h_acf44d587ca6946d98089c5e7d5199ec1} 
+\index{parabolic.h@{parabolic.h}!assemble\_Matrix\_Parabolic\_Explicit@{assemble\_Matrix\_Parabolic\_Explicit}}
+\index{assemble\_Matrix\_Parabolic\_Explicit@{assemble\_Matrix\_Parabolic\_Explicit}!parabolic.h@{parabolic.h}}
+\doxysubsubsection{\texorpdfstring{assemble\_Matrix\_Parabolic\_Explicit()}{assemble\_Matrix\_Parabolic\_Explicit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSparseCSR}{Sparse\+CSR}} \texorpdfstring{$\ast$}{*} assemble\+\_\+\+Matrix\+\_\+\+Parabolic\+\_\+\+Explicit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{double}]{tau }\end{DoxyParamCaption})}
+
+
+
+Assemble the system matrix for an explicit parabolic time-\/step. 
+
+Produces a CSR matrix representing the update operator for the explicit time integration (I -\/ tau\texorpdfstring{$\ast$}{*}L) or similar form depending on implementation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & Pointer to the \doxylink{structGrid2D}{Grid2D} structure describing the mesh and indexing. \\
+\hline
+{\em tau} & Time-\/step size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a newly allocated \doxylink{structSparseCSR}{Sparse\+CSR} matrix. Caller owns and must free the returned matrix using {\ttfamily free\+Sparse\+CSR}.
+\end{DoxyReturn}
+Assemble the system matrix for an explicit parabolic time-\/step.
+
+Constructs a CSR matrix containing the coefficients appropriate for an explicit finite-\/difference update on the active points of the grid. The returned matrix is newly allocated and must be freed using {\ttfamily free\+Sparse\+CSR}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & Pointer to \doxylink{structGrid2D}{Grid2D} describing the mesh and active indices. \\
+\hline
+{\em tau} & Time-\/step size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the assembled \doxylink{structSparseCSR}{Sparse\+CSR} matrix. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Parabolic_Explicit_8c-example}{Parabolic\+\_\+\+Explicit.\+c}}, and \mbox{\hyperlink{Parabolic_Verify_8c-example}{Parabolic\+\_\+\+Verify.\+c}}.\end{Desc}
+\Hypertarget{parabolic_8h_a45200ab2fb04cacd24df97b52fb6bcd7}\label{parabolic_8h_a45200ab2fb04cacd24df97b52fb6bcd7} 
+\index{parabolic.h@{parabolic.h}!assemble\_RHS\_Parabolic@{assemble\_RHS\_Parabolic}}
+\index{assemble\_RHS\_Parabolic@{assemble\_RHS\_Parabolic}!parabolic.h@{parabolic.h}}
+\doxysubsubsection{\texorpdfstring{assemble\_RHS\_Parabolic()}{assemble\_RHS\_Parabolic()}}
+{\footnotesize\ttfamily void assemble\+\_\+\+RHS\+\_\+\+Parabolic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{\mbox{\hyperlink{parabolic_8h_aa982103a6967d41081322ed523713cdb}{parabolic\+\_\+source\+\_\+term}}}]{f,  }\item[{\mbox{\hyperlink{parabolic_8h_a42a70d2b780c58b170bc11f58f2019a4}{parabolic\+\_\+\+Dirichlet\+\_\+boundary}}}]{compute\+\_\+boundary\+\_\+value,  }\item[{double \texorpdfstring{$\ast$}{*}}]{b,  }\item[{double}]{t,  }\item[{double}]{tau }\end{DoxyParamCaption})}
+
+
+
+Assemble the right-\/hand side vector for a parabolic time step. 
+
+This fills the provided array {\ttfamily b} with contributions from the source term and Dirichlet boundary values for the current time {\ttfamily t} and step length {\ttfamily tau}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & Pointer to grid structure. \\
+\hline
+{\em f} & Source term callback. \\
+\hline
+{\em compute\+\_\+boundary\+\_\+value} & Dirichlet boundary callback. \\
+\hline
+{\em b} & Pre-\/allocated array of length {\ttfamily grid-\/\texorpdfstring{$>$}{>}n\+\_\+active} to receive RHS values. \\
+\hline
+{\em t} & Current time. \\
+\hline
+{\em tau} & Time-\/step size.\\
+\hline
+\end{DoxyParams}
+Assemble the right-\/hand side vector for a parabolic time step.
+
+For interior (active) points this fills the contribution from the source term integrated over the time-\/step; for boundary points it fills the Dirichlet boundary value via the provided callback.
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & Pointer to \doxylink{structGrid2D}{Grid2D} describing the mesh and active indices. \\
+\hline
+{\em f} & Source term callback with signature {\ttfamily f(x,y,t,hx,hy)}. \\
+\hline
+{\em compute\+\_\+boundary\+\_\+value} & Dirichlet boundary callback. \\
+\hline
+{\em b} & Preallocated array of length grid-\/\texorpdfstring{$>$}{>}n\+\_\+active to be filled with RHS. \\
+\hline
+{\em t} & Current time. \\
+\hline
+{\em tau} & Time-\/step size. \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{Parabolic_ADI_8c-example}{Parabolic\+\_\+\+ADI.\+c}}, and \mbox{\hyperlink{Parabolic_Explicit_8c-example}{Parabolic\+\_\+\+Explicit.\+c}}.\end{Desc}

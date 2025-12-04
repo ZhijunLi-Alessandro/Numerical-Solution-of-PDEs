@@ -1,0 +1,68 @@
+\doxysection{examples/\+Parabolic\+\_\+\+Verify.c File Reference}
+\hypertarget{Parabolic__Verify_8c}{}\label{Parabolic__Verify_8c}\index{examples/Parabolic\_Verify.c@{examples/Parabolic\_Verify.c}}
+
+
+Verification example for analytic Bessel/\+Hankel-\/based reference solutions.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$csr.\+h$>$}\newline
+{\ttfamily \#include $<$poisson2d.\+h$>$}\newline
+{\ttfamily \#include $<$utils.\+h$>$}\newline
+{\ttfamily \#include $<$bessel.\+h$>$}\newline
+{\ttfamily \#include $<$parabolic.\+h$>$}\newline
+Include dependency graph for Parabolic\+\_\+\+Verify.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Parabolic__Verify_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{Parabolic__Verify_8c_aac37605abfd3877c437fde984df578fd}{region\+\_\+divider}} (double x, double y, double hx, double hy)
+\item 
+double \mbox{\hyperlink{Parabolic__Verify_8c_aa2014b3ed00ccdb1768112533c1fd2f0}{compute\+\_\+u\+\_\+exact}} (double x, double y, double t, double hx, double hy)
+\item 
+int \mbox{\hyperlink{Parabolic__Verify_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Verification example for analytic Bessel/\+Hankel-\/based reference solutions. 
+
+This program evaluates the analytic/semi-\/analytic reference solution built from Bessel/\+Hankel functions and verifies the discrete assembly by comparing assembled RHS and operator actions against the manufactured solution. It writes diagnostic CSVs suitable for visualization and error analysis.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{csr_8h}{csr.\+h}, \doxylink{parabolic_8h}{parabolic.\+h}, \doxylink{bessel_8h}{bessel.\+h} 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Li Zhijun 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/12-\/03 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Parabolic__Verify_8c_aa2014b3ed00ccdb1768112533c1fd2f0}\label{Parabolic__Verify_8c_aa2014b3ed00ccdb1768112533c1fd2f0} 
+\index{Parabolic\_Verify.c@{Parabolic\_Verify.c}!compute\_u\_exact@{compute\_u\_exact}}
+\index{compute\_u\_exact@{compute\_u\_exact}!Parabolic\_Verify.c@{Parabolic\_Verify.c}}
+\doxysubsubsection{\texorpdfstring{compute\_u\_exact()}{compute\_u\_exact()}}
+{\footnotesize\ttfamily double compute\+\_\+u\+\_\+exact (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{t,  }\item[{double}]{hx,  }\item[{double}]{hy }\end{DoxyParamCaption})}
+
+\Hypertarget{Parabolic__Verify_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Parabolic__Verify_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{Parabolic\_Verify.c@{Parabolic\_Verify.c}!main@{main}}
+\index{main@{main}!Parabolic\_Verify.c@{Parabolic\_Verify.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{Parabolic__Verify_8c_aac37605abfd3877c437fde984df578fd}\label{Parabolic__Verify_8c_aac37605abfd3877c437fde984df578fd} 
+\index{Parabolic\_Verify.c@{Parabolic\_Verify.c}!region\_divider@{region\_divider}}
+\index{region\_divider@{region\_divider}!Parabolic\_Verify.c@{Parabolic\_Verify.c}}
+\doxysubsubsection{\texorpdfstring{region\_divider()}{region\_divider()}}
+{\footnotesize\ttfamily int region\+\_\+divider (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{hx,  }\item[{double}]{hy }\end{DoxyParamCaption})}
+

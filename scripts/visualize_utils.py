@@ -1,11 +1,16 @@
-## @file visualize_Neumann.py
-#  @brief A python script for visualizing the calculation results of the Neumann problem
-#  
-#  This script is used to process and analyze data and generate figures.
-#  Includes data loading and preprocessing, generate multiple figures.
-#  @see Dirichlet.c
-#  @author Li Zhijun
-#  @date 2025-10-29
+"""
+@file visualize_utils.py
+@brief Utility plotting helpers for all visualization scripts.
+
+Contains helper functions to load CSV outputs, visualize 2D solution fields,
+and build simple animations from a sequence of CSV snapshots. Functions are
+written for the repository's uniform-grid CSV output format and accept a grid
+mask produced by the C examples.
+
+@author Li Zhijun
+@date 2025-12-03
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
@@ -158,11 +163,12 @@ def animate_time_series_difference(
     save_path=None,
 ):
     """
-    Generate animation from a time series of CSV solution snapshots.
+    Generate animation from the difference of two time series of CSV solution snapshots.
 
     Parameters:
     - data_dir (str): Directory containing CSV files.
-    - prefix (str): File prefix, e.g. "rhs" for rhs_000100.csv.
+    - prefix1 (str): File prefix, e.g. "rhs" for rhs_000100.csv.
+    - prefix2 (str): File prefix, e.g. "solution" for solution_000100.csv.
     - grid (2D array): Grid mask data (same as visualize_solution).
     - steps (list[int]): A list of time steps, e.g. range(100, 5001, 100)
     - title (str): Title of the plot.

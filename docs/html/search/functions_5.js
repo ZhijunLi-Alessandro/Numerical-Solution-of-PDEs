@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jacobi_5fcsr_0',['Jacobi_csr_debug',['../csr_8h.html#a7cf1992062cdbed207ef7217c4a3e20d',1,'Jacobi_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c'],['../csr_8c.html#a7cf1992062cdbed207ef7217c4a3e20d',1,'Jacobi_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c']]]
+  ['hankel_5fh0_5f2_0',['hankel_H0_2',['../bessel_8c.html#a484a9ceab91bade3f927f1555e625499',1,'bessel.c']]]
 ];

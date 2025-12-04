@@ -1,0 +1,23 @@
+\doxysection{parabolic.\+h}
+\hypertarget{parabolic_8h_source}{}\label{parabolic_8h_source}\index{include/parabolic.h@{include/parabolic.h}}
+\mbox{\hyperlink{parabolic_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ PARABOLIC\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ PARABOLIC\_H}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{grid_8h}{grid.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{csr_8h}{csr.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ double\ (*\mbox{\hyperlink{parabolic_8h_aa982103a6967d41081322ed523713cdb}{parabolic\_source\_term}})(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{double}\ t,\ \textcolor{keywordtype}{double}\ hx,\ \textcolor{keywordtype}{double}\ hy);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{typedef}\ double\ (*\mbox{\hyperlink{parabolic_8h_a42a70d2b780c58b170bc11f58f2019a4}{parabolic\_Dirichlet\_boundary}})(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{double}\ t,\ \textcolor{keywordtype}{int}\ boundary\_type);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00044\ \mbox{\hyperlink{structSparseCSR}{SparseCSR}}*\ \mbox{\hyperlink{parabolic_8h_acf44d587ca6946d98089c5e7d5199ec1}{assemble\_Matrix\_Parabolic\_Explicit}}(\mbox{\hyperlink{structGrid2D}{Grid2D}}*\ grid,\ \textcolor{keywordtype}{double}\ tau);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parabolic_8h_a45200ab2fb04cacd24df97b52fb6bcd7}{assemble\_RHS\_Parabolic}}(\mbox{\hyperlink{structGrid2D}{Grid2D}}*\ grid,\ \mbox{\hyperlink{parabolic_8h_aa982103a6967d41081322ed523713cdb}{parabolic\_source\_term}}\ f,\ \mbox{\hyperlink{parabolic_8h_a42a70d2b780c58b170bc11f58f2019a4}{parabolic\_Dirichlet\_boundary}}\ \mbox{\hyperlink{Dirichlet_8c_aeea3fae40839a4c211e863fb2d10657a}{compute\_boundary\_value}},\ \textcolor{keywordtype}{double}\ *b,\ \textcolor{keywordtype}{double}\ t,\ \textcolor{keywordtype}{double}\ tau);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00073\ \mbox{\hyperlink{structSparseCSR}{SparseCSR}}**\ \mbox{\hyperlink{parabolic_8h_a96579f004710e0bd0efd47c5ef6aeac7}{assemble\_Matrix\_Parabolic\_ADI}}(\mbox{\hyperlink{structGrid2D}{Grid2D}}*\ grid,\ \textcolor{keywordtype}{double}\ tau);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['ex_0',['ex',['../namespacevisualize__Neumann.html#a30d420c94f6cdd7e998b2df6291a9290',1,'visualize_Neumann']]],
-  ['exact_1',['exact',['../namespacevisualize__Dirichlet.html#a0f0076ba646b40bc1a7bbda06e1583ae',1,'visualize_Dirichlet.exact'],['../namespacevisualize__Neumann.html#ae582e12b8bb60997bc7cf27354d1ad16',1,'visualize_Neumann.exact']]]
+  ['grid_5fdata_0',['grid_data',['../namespacevisualize__Dirichlet.html#a0bbc41be64d622cc0cdb70cf9405eb9c',1,'visualize_Dirichlet.grid_data'],['../namespacevisualize__Neumann.html#a0b464256869e16cab06b20528d2e98f6',1,'visualize_Neumann.grid_data'],['../namespacevisualize__Parabolic__ADI.html#ad371c48b72639949a266c819b875d34b',1,'visualize_Parabolic_ADI.grid_data'],['../namespacevisualize__Parabolic__ADI__refined.html#aae75deb3f3d845e4b5c4f6bd52477fc9',1,'visualize_Parabolic_ADI_refined.grid_data'],['../namespacevisualize__Parabolic__Explicit.html#acb81e9a0454d0ce86676ccef21c10ae7',1,'visualize_Parabolic_Explicit.grid_data'],['../namespacevisualize__Parabolic__Explicit__refined.html#a0fc3e897d3971e370597f91fed51210f',1,'visualize_Parabolic_Explicit_refined.grid_data'],['../namespacevisualize__utils.html#af78f1156f8fe9349fda5138cb2ba38d8',1,'visualize_utils.grid_data'],['../namespacevisualize__Verify.html#ac793bfacbe47f6e9b8f2197a3c20dc81',1,'visualize_Verify.grid_data']]]
 ];

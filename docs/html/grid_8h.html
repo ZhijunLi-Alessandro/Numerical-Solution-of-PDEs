@@ -88,17 +88,28 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="grid_8h__dep__incl.png" border="0" usemap="#ainclude_2grid_8hdep" alt=""/></div>
 <map name="ainclude_2grid_8hdep" id="ainclude_2grid_8hdep">
-<area shape="rect" title="Header file for a uniform grid structure and related functions." alt="" coords="268,5,367,31"/>
-<area shape="rect" href="poisson2d_8h.html" title="Header file for assembling 2D Poisson equation matrix and RHS vector." alt="" coords="177,79,314,104"/>
-<area shape="poly" title=" " alt="" coords="297,43,259,80,255,77,294,39"/>
-<area shape="rect" href="grid_8c.html" title="Implementation of uniform grid operations." alt="" coords="339,79,440,104"/>
-<area shape="poly" title=" " alt="" coords="341,39,380,77,376,80,337,43"/>
-<area shape="rect" href="Dirichlet_8c.html" title="Example program to solve a 2D Poisson problem with Dirichlet boundary condition." alt="" coords="5,152,147,177"/>
-<area shape="poly" title=" " alt="" coords="207,112,105,154,103,149,204,107"/>
-<area shape="rect" href="Neumann_8c.html" title="Example program to solve a 2D Poisson problem with Neumann boundary condition." alt="" coords="171,152,320,177"/>
-<area shape="poly" title=" " alt="" coords="248,118,248,152,243,152,243,118"/>
-<area shape="rect" href="poisson2d_8c.html" title="Implementation of assembling the matrix and right&#45;hand side (RHS) for the Poisson equation with Diric..." alt="" coords="344,152,483,177"/>
-<area shape="poly" title=" " alt="" coords="286,107,387,149,385,154,284,112"/>
+<area shape="rect" title="Header file for a uniform grid structure and related functions." alt="" coords="664,5,763,31"/>
+<area shape="rect" href="parabolic_8h.html" title="API for parabolic/heat equation matrix and RHS assembly helpers." alt="" coords="327,79,457,104"/>
+<area shape="poly" title=" " alt="" coords="651,36,444,81,443,76,650,31"/>
+<area shape="rect" href="poisson2d_8h.html" title="Header file for assembling 2D Poisson equation matrix and RHS vector." alt="" coords="645,79,782,104"/>
+<area shape="poly" title=" " alt="" coords="716,44,716,79,711,79,711,44"/>
+<area shape="rect" href="grid_8c.html" title="Implementation of uniform grid operations." alt="" coords="807,79,908,104"/>
+<area shape="poly" title=" " alt="" coords="750,34,835,76,833,81,747,39"/>
+<area shape="rect" href="Parabolic__ADI_8c.html" title="Example: solve the 2D parabolic PDE with Dirichlet boundary conditions using ADI." alt="" coords="5,152,141,192"/>
+<area shape="poly" title=" " alt="" coords="333,110,142,157,141,151,332,105"/>
+<area shape="rect" href="Parabolic__Explicit_8c.html" title="Example: solve the 2D parabolic PDE with Dirichlet boundary conditions using an explicit scheme." alt="" coords="165,152,301,192"/>
+<area shape="poly" title=" " alt="" coords="358,112,273,154,271,149,355,108"/>
+<area shape="rect" href="Parabolic__Verify_8c.html" title="Verification example for analytic Bessel/Hankel&#45;based reference solutions." alt="" coords="483,152,619,192"/>
+<area shape="poly" title=" " alt="" coords="429,108,513,149,511,154,426,112"/>
+<area shape="rect" href="parabolic_8c.html" title="Assembly helpers for finite&#45;difference parabolic (heat) solvers." alt="" coords="326,159,458,185"/>
+<area shape="poly" title=" " alt="" coords="395,118,395,159,389,159,389,118"/>
+<area shape="poly" title=" " alt="" coords="679,112,591,154,589,149,676,107"/>
+<area shape="rect" href="Dirichlet_8c.html" title="Example program to solve a 2D Poisson problem with Dirichlet boundary condition." alt="" coords="643,159,784,185"/>
+<area shape="poly" title=" " alt="" coords="716,118,716,159,711,159,711,118"/>
+<area shape="rect" href="Neumann_8c.html" title="Example program to solve a 2D Poisson problem with Neumann boundary condition." alt="" coords="808,159,957,185"/>
+<area shape="poly" title=" " alt="" coords="751,107,859,157,857,162,749,112"/>
+<area shape="rect" href="poisson2d_8c.html" title="Implementation of assembling the matrix and right&#45;hand side (RHS) for the Poisson equation with Diric..." alt="" coords="981,159,1120,185"/>
+<area shape="poly" title=" " alt="" coords="776,104,1002,157,1001,162,775,110"/>
 </map>
 </div>
 </div>
@@ -123,9 +134,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a2c256fcb14b9e2ebb265d2ab35d936b0" id="r_a2c256fcb14b9e2ebb265d2ab35d936b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGrid2D.html">Grid2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grid_8h.html#a2c256fcb14b9e2ebb265d2ab35d936b0">initialize_Grid</a> (int nx, int ny, double x0, double x1, double y0, double y1, <a class="el" href="grid_8h.html#a509e5659520129614e3072a7bd63c29d">region_divider_func</a> <a class="el" href="Dirichlet_8c.html#aac37605abfd3877c437fde984df578fd">region_divider</a>)</td></tr>
 <tr class="memdesc:a2c256fcb14b9e2ebb265d2ab35d936b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new 2D grid structure with the division of the computing domain.  <br /></td></tr>
 <tr class="separator:a2c256fcb14b9e2ebb265d2ab35d936b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ea426a678e98ecb5bec65d4cb876ef4" id="r_a1ea426a678e98ecb5bec65d4cb876ef4"><td class="memItemLeft" align="right" valign="top">double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grid_8h.html#a1ea426a678e98ecb5bec65d4cb876ef4">read_indices_to_points</a> (<a class="el" href="structGrid2D.html">Grid2D</a> *grid, double *data_indices)</td></tr>
-<tr class="memdesc:a1ea426a678e98ecb5bec65d4cb876ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remap the data in the form of column vectors to the grid points.  <br /></td></tr>
-<tr class="separator:a1ea426a678e98ecb5bec65d4cb876ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2eedadd0f889624d4efe433d7c9d8bd" id="r_af2eedadd0f889624d4efe433d7c9d8bd"><td class="memItemLeft" align="right" valign="top">double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grid_8h.html#af2eedadd0f889624d4efe433d7c9d8bd">create_grid_2D_array</a> (<a class="el" href="structGrid2D.html">Grid2D</a> *grid)</td></tr>
+<tr class="separator:af2eedadd0f889624d4efe433d7c9d8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd0051e3e0bc770db2a33638dd509d3e" id="r_abd0051e3e0bc770db2a33638dd509d3e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grid_8h.html#abd0051e3e0bc770db2a33638dd509d3e">free_grid_2D_array</a> (double **array, <a class="el" href="structGrid2D.html">Grid2D</a> *grid)</td></tr>
+<tr class="separator:abd0051e3e0bc770db2a33638dd509d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59cf713af413a93809a2ffc4ac87e69d" id="r_a59cf713af413a93809a2ffc4ac87e69d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grid_8h.html#a59cf713af413a93809a2ffc4ac87e69d">read_indices_to_points</a> (<a class="el" href="structGrid2D.html">Grid2D</a> *grid, double *data_indices, double **data_points)</td></tr>
+<tr class="memdesc:a59cf713af413a93809a2ffc4ac87e69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remap the data in the form of column vectors to the grid points.  <br /></td></tr>
+<tr class="separator:a59cf713af413a93809a2ffc4ac87e69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31befaf760e994473b73acce12ad6546" id="r_a31befaf760e994473b73acce12ad6546"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grid_8h.html#a31befaf760e994473b73acce12ad6546">free_grid</a> (<a class="el" href="structGrid2D.html">Grid2D</a> *grid)</td></tr>
 <tr class="memdesc:a31befaf760e994473b73acce12ad6546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the memory allocated for a grid structure.  <br /></td></tr>
 <tr class="separator:a31befaf760e994473b73acce12ad6546"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,6 +166,26 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="af2eedadd0f889624d4efe433d7c9d8bd" name="af2eedadd0f889624d4efe433d7c9d8bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2eedadd0f889624d4efe433d7c9d8bd">&#9670;&#160;</a></span>create_grid_2D_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ** create_grid_2D_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structGrid2D.html">Grid2D</a> *&#160;</td>
+          <td class="paramname"><em>grid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="Dirichlet_8c-example.html#a21">Dirichlet.c</a>, <a class="el" href="Neumann_8c-example.html#a27">Neumann.c</a>, <a class="el" href="Parabolic_ADI_8c-example.html#a16">Parabolic_ADI.c</a>, <a class="el" href="Parabolic_Explicit_8c-example.html#a16">Parabolic_Explicit.c</a>, and <a class="el" href="Parabolic_Verify_8c-example.html#a13">Parabolic_Verify.c</a>.</dd>
+</dl>
+
+</div>
+</div>
 <a id="a827f3575406b8b99a6eb56f476bbcf4d" name="a827f3575406b8b99a6eb56f476bbcf4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a827f3575406b8b99a6eb56f476bbcf4d">&#9670;&#160;</a></span>create_uniform_grid()</h2>
 
@@ -243,7 +278,37 @@ Use initialize_Grid to create a new grid structure </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="Dirichlet_8c-example.html#a24">Dirichlet.c</a>, and <a class="el" href="Neumann_8c-example.html#a30">Neumann.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="Dirichlet_8c-example.html#a27">Dirichlet.c</a>, <a class="el" href="Neumann_8c-example.html#a33">Neumann.c</a>, <a class="el" href="Parabolic_ADI_8c-example.html#a32">Parabolic_ADI.c</a>, <a class="el" href="Parabolic_Explicit_8c-example.html#a30">Parabolic_Explicit.c</a>, and <a class="el" href="Parabolic_Verify_8c-example.html#a26">Parabolic_Verify.c</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="abd0051e3e0bc770db2a33638dd509d3e" name="abd0051e3e0bc770db2a33638dd509d3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd0051e3e0bc770db2a33638dd509d3e">&#9670;&#160;</a></span>free_grid_2D_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * free_grid_2D_array </td>
+          <td>(</td>
+          <td class="paramtype">double **&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structGrid2D.html">Grid2D</a> *&#160;</td>
+          <td class="paramname"><em>grid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="Dirichlet_8c-example.html#a26">Dirichlet.c</a>, <a class="el" href="Neumann_8c-example.html#a32">Neumann.c</a>, <a class="el" href="Parabolic_ADI_8c-example.html#a31">Parabolic_ADI.c</a>, <a class="el" href="Parabolic_Explicit_8c-example.html#a29">Parabolic_Explicit.c</a>, and <a class="el" href="Parabolic_Verify_8c-example.html#a25">Parabolic_Verify.c</a>.</dd>
 </dl>
 
 </div>
@@ -330,19 +395,19 @@ Use initialize_Grid to create a new grid structure </dd></dl>
 </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The caller is responsible for freeing the allocated memory using <a class="el" href="grid_8h.html#a31befaf760e994473b73acce12ad6546" title="Free the memory allocated for a grid structure.">free_grid()</a>. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="grid_8h.html#a31befaf760e994473b73acce12ad6546" title="Free the memory allocated for a grid structure.">free_grid()</a> </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="Dirichlet_8c-example.html#a7">Dirichlet.c</a>, and <a class="el" href="Neumann_8c-example.html#a19">Neumann.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="Dirichlet_8c-example.html#a7">Dirichlet.c</a>, <a class="el" href="Neumann_8c-example.html#a19">Neumann.c</a>, <a class="el" href="Parabolic_ADI_8c-example.html#a10">Parabolic_ADI.c</a>, <a class="el" href="Parabolic_Explicit_8c-example.html#a10">Parabolic_Explicit.c</a>, and <a class="el" href="Parabolic_Verify_8c-example.html#a7">Parabolic_Verify.c</a>.</dd>
 </dl>
 
 </div>
 </div>
-<a id="a1ea426a678e98ecb5bec65d4cb876ef4" name="a1ea426a678e98ecb5bec65d4cb876ef4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ea426a678e98ecb5bec65d4cb876ef4">&#9670;&#160;</a></span>read_indices_to_points()</h2>
+<a id="a59cf713af413a93809a2ffc4ac87e69d" name="a59cf713af413a93809a2ffc4ac87e69d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59cf713af413a93809a2ffc4ac87e69d">&#9670;&#160;</a></span>read_indices_to_points()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double ** read_indices_to_points </td>
+          <td class="memname">void read_indices_to_points </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structGrid2D.html">Grid2D</a> *&#160;</td>
           <td class="paramname"><em>grid</em>, </td>
@@ -351,7 +416,13 @@ Use initialize_Grid to create a new grid structure </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>data_indices</em>&#160;</td>
+          <td class="paramname"><em>data_indices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double **&#160;</td>
+          <td class="paramname"><em>data_points</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -370,7 +441,7 @@ Use initialize_Grid to create a new grid structure </dd></dl>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="grid_8h.html#a2c256fcb14b9e2ebb265d2ab35d936b0" title="Create a new 2D grid structure with the division of the computing domain.">initialize_Grid()</a> </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="Dirichlet_8c-example.html#a21">Dirichlet.c</a>, and <a class="el" href="Neumann_8c-example.html#a27">Neumann.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="Dirichlet_8c-example.html#a22">Dirichlet.c</a>, <a class="el" href="Neumann_8c-example.html#a28">Neumann.c</a>, <a class="el" href="Parabolic_ADI_8c-example.html#a29">Parabolic_ADI.c</a>, <a class="el" href="Parabolic_Explicit_8c-example.html#a27">Parabolic_Explicit.c</a>, and <a class="el" href="Parabolic_Verify_8c-example.html#a23">Parabolic_Verify.c</a>.</dd>
 </dl>
 
 </div>

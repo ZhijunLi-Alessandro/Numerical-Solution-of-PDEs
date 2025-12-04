@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gaussseidel_5fcsr_0',['GaussSeidel_csr_debug',['../csr_8h.html#a8e498df649d55f5935286ea1351ee89a',1,'GaussSeidel_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c'],['../csr_8c.html#a8e498df649d55f5935286ea1351ee89a',1,'GaussSeidel_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c']]],
-  ['get_5fd_5fl_5fu_5fcsr_1',['get_d_l_u_csr',['../csr_8h.html#a511084c45e428b7302a4f789f43de246',1,'get_D_L_U_csr(const SparseCSR *matrix):&#160;csr.c'],['../csr_8c.html#a511084c45e428b7302a4f789f43de246',1,'get_D_L_U_csr(const SparseCSR *matrix):&#160;csr.c']]],
-  ['get_5fnormal_2',['get_normal',['../Neumann_8c.html#a56d53d0409ca28a73a903b974a8bf075',1,'Neumann.c']]]
+  ['free_5fgrid_0',['free_grid',['../grid_8h.html#a31befaf760e994473b73acce12ad6546',1,'free_grid(Grid2D *grid):&#160;grid.c'],['../grid_8c.html#a31befaf760e994473b73acce12ad6546',1,'free_grid(Grid2D *grid):&#160;grid.c']]],
+  ['free_5fgrid_5f2d_5farray_1',['free_grid_2d_array',['../grid_8h.html#abd0051e3e0bc770db2a33638dd509d3e',1,'free_grid_2D_array(double **array, Grid2D *grid):&#160;grid.c'],['../grid_8c.html#abd0051e3e0bc770db2a33638dd509d3e',1,'free_grid_2D_array(double **array, Grid2D *grid):&#160;grid.c']]],
+  ['freesparsecsr_2',['freesparsecsr',['../csr_8h.html#ad76b7aa766ec949cb15bcf6ede8aadcb',1,'freeSparseCSR(SparseCSR *matrix):&#160;csr.c'],['../csr_8c.html#ad76b7aa766ec949cb15bcf6ede8aadcb',1,'freeSparseCSR(SparseCSR *matrix):&#160;csr.c']]]
 ];

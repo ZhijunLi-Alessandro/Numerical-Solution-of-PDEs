@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['gaussseidel_5fcsr_0',['GaussSeidel_csr_debug',['../csr_8h.html#a8e498df649d55f5935286ea1351ee89a',1,'GaussSeidel_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c'],['../csr_8c.html#a8e498df649d55f5935286ea1351ee89a',1,'GaussSeidel_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c']]],
-  ['get_5fd_5fl_5fu_5fcsr_1',['get_d_l_u_csr',['../csr_8h.html#a511084c45e428b7302a4f789f43de246',1,'get_D_L_U_csr(const SparseCSR *matrix):&#160;csr.c'],['../csr_8c.html#a511084c45e428b7302a4f789f43de246',1,'get_D_L_U_csr(const SparseCSR *matrix):&#160;csr.c']]],
-  ['get_5fnormal_2',['get_normal',['../Neumann_8c.html#a56d53d0409ca28a73a903b974a8bf075',1,'Neumann.c']]],
-  ['grid_2ec_3',['grid.c',['../grid_8c.html',1,'']]],
-  ['grid_2eh_4',['grid.h',['../grid_8h.html',1,'']]],
-  ['grid2d_5',['Grid2D',['../structGrid2D.html',1,'']]],
-  ['grid_5fx_6',['grid_x',['../namespacevisualize__Dirichlet.html#a162c6b30cb4aead405d4fcff27d09690',1,'visualize_Dirichlet.grid_x'],['../namespacevisualize__Neumann.html#a47b4397a467761583135ac0727cad9d0',1,'visualize_Neumann.grid_x']]],
-  ['grid_5fy_7',['grid_y',['../namespacevisualize__Dirichlet.html#afa761d0c83dbbb1119bc66df67ca0eb9',1,'visualize_Dirichlet.grid_y'],['../namespacevisualize__Neumann.html#a4525d0f516e3904abdddd3af4073ff3b',1,'visualize_Neumann.grid_y']]]
+  ['gaussseidel_5fcsr_0',['gaussseidel_csr',['../csr_8h.html#a8e498df649d55f5935286ea1351ee89a',1,'GaussSeidel_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c'],['../csr_8c.html#a8e498df649d55f5935286ea1351ee89a',1,'GaussSeidel_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c']]],
+  ['gaussseidel_5fcsr_5fdebug_1',['gaussseidel_csr_debug',['../csr_8h.html#a9e9cdef8c8d7069f34646f6393448e9e',1,'GaussSeidel_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c'],['../csr_8c.html#a9e9cdef8c8d7069f34646f6393448e9e',1,'GaussSeidel_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c']]],
+  ['get_5fd_5fl_5fu_5fcsr_2',['get_d_l_u_csr',['../csr_8h.html#a511084c45e428b7302a4f789f43de246',1,'get_D_L_U_csr(const SparseCSR *matrix):&#160;csr.c'],['../csr_8c.html#a511084c45e428b7302a4f789f43de246',1,'get_D_L_U_csr(const SparseCSR *matrix):&#160;csr.c']]],
+  ['get_5fnormal_3',['get_normal',['../Neumann_8c.html#a56d53d0409ca28a73a903b974a8bf075',1,'Neumann.c']]],
+  ['grid_2ec_4',['grid.c',['../grid_8c.html',1,'']]],
+  ['grid_2eh_5',['grid.h',['../grid_8h.html',1,'']]],
+  ['grid2d_6',['Grid2D',['../structGrid2D.html',1,'']]],
+  ['grid_5fdata_7',['grid_data',['../namespacevisualize__Dirichlet.html#a0bbc41be64d622cc0cdb70cf9405eb9c',1,'visualize_Dirichlet.grid_data'],['../namespacevisualize__Neumann.html#a0b464256869e16cab06b20528d2e98f6',1,'visualize_Neumann.grid_data'],['../namespacevisualize__Parabolic__ADI.html#ad371c48b72639949a266c819b875d34b',1,'visualize_Parabolic_ADI.grid_data'],['../namespacevisualize__Parabolic__ADI__refined.html#aae75deb3f3d845e4b5c4f6bd52477fc9',1,'visualize_Parabolic_ADI_refined.grid_data'],['../namespacevisualize__Parabolic__Explicit.html#acb81e9a0454d0ce86676ccef21c10ae7',1,'visualize_Parabolic_Explicit.grid_data'],['../namespacevisualize__Parabolic__Explicit__refined.html#a0fc3e897d3971e370597f91fed51210f',1,'visualize_Parabolic_Explicit_refined.grid_data'],['../namespacevisualize__utils.html#af78f1156f8fe9349fda5138cb2ba38d8',1,'visualize_utils.grid_data'],['../namespacevisualize__Verify.html#ac793bfacbe47f6e9b8f2197a3c20dc81',1,'visualize_Verify.grid_data']]]
 ];

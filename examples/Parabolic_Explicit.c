@@ -1,3 +1,18 @@
+/**
+ * @file Parabolic_Explicit.c
+ * @brief Example: solve the 2D parabolic PDE with Dirichlet boundary conditions using an explicit scheme.
+ *
+ * @details
+ * This example constructs the grid, assembles the explicit time-step operator,
+ * and advances a manufactured/reference solution forward in time. It writes
+ * CSV output for the solution and exact/reference fields for visualization.
+ * See `ReadMe.md` for run instructions and expected output.
+ *
+ * @see csr.h, parabolic.h, bessel.h
+ * @author Li Zhijun
+ * @date 2025-12-03
+ * @example Parabolic_Explicit.c
+ */
 # include <stdio.h>
 # include <stdlib.h>
 # include <math.h>

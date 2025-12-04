@@ -6,6 +6,6 @@ var searchData=
   ['nnz_3',['nnz',['../structSparseCSR.html#aa28c2121443bb1d2cb2781fd5645a647',1,'SparseCSR']]],
   ['normal_5ffunc_4',['normal_func',['../poisson2d_8h.html#a87f39fd68deace58fb7e11121a69e547',1,'poisson2d.h']]],
   ['numerical_5fderiv_5',['numerical_deriv',['../Neumann_8c.html#adb62cc300f93151f4226125ed8e21215',1,'Neumann.c']]],
-  ['nx_6',['nx',['../structGrid2D.html#a0c3422cde3a4b614748cc292b951b164',1,'Grid2D::nx'],['../namespacevisualize__Dirichlet.html#ad3ac391ebea89214f896b9083a909325',1,'visualize_Dirichlet.nx'],['../namespacevisualize__Neumann.html#a254e174f3f2ce400ddd3a4ad6c03cbf1',1,'visualize_Neumann.nx']]],
-  ['ny_7',['ny',['../structGrid2D.html#af5921b23b32d3c3de66dd4a1c21732c1',1,'Grid2D::ny'],['../namespacevisualize__Dirichlet.html#a3d00d921c010ee0b28d3c6cd41849dd2',1,'visualize_Dirichlet.ny'],['../namespacevisualize__Neumann.html#aa08daf6c0e9d7c932b9c92dd424963b8',1,'visualize_Neumann.ny']]]
+  ['nx_6',['nx',['../structGrid2D.html#a0c3422cde3a4b614748cc292b951b164',1,'Grid2D']]],
+  ['ny_7',['ny',['../structGrid2D.html#af5921b23b32d3c3de66dd4a1c21732c1',1,'Grid2D']]]
 ];

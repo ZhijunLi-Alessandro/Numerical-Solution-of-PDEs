@@ -9,7 +9,13 @@ This project has only been tested on **Linux**.
 Currently includes a lightweight **C language library** for sparse matrix computation based on the **Compressed Sparse Row (CSR)** format.
 The library supports basic sparse operations, iterative solvers (Jacobi, Gauss-Seidel, Conjugate Gradient), and includes verification examples for the solvers.
 
-The current project includes an example of sparse matrix generation for solving the Poisson equation within a regular rectangular boundary, which will be updated later for the complete problem-solving.
+***25/11/01 Update:***  
+Add a PDE solving part: Enabling solving **2D-Poisson equations** with **Dirichlet Boundary Condition** and **Neumann Boundary Condition**.
+Add **python scripts** for visualizing the output data.
+
+***25/12/03 Update:***  
+Enhance the PDE solving part: Enabling solving **2D-Parablic PDEs** using **Explicit** and **Implicit (ADI) methods**.
+Rearrange the **python scripts** for visualizing time-series data and save animations.
 
 See this project on github: <https://github.com/ZhijunLi-Alessandro/Numerical-Solution-of-PDEs>
 
@@ -28,6 +34,10 @@ See this project on github: <https://github.com/ZhijunLi-Alessandro/Numerical-So
   - Basic grid operations: creation from user-define function, translation, destruction
   - matrix and RHS assembler for 2D Poisson equation with Dirichlet boundary
   - matrix and RHS assembler for 2D Poisson equation with Neumann boundary
+- 2D Parabolic Equation Solver
+  - Using same grid structure as 2D Poisson Equation Solver
+  - Explicit solver
+  - ADI Method
 - Python scripts for simple visualizing the output results
 - Doxygen-compatible documentation
 
@@ -37,13 +47,17 @@ See this project on github: <https://github.com/ZhijunLi-Alessandro/Numerical-So
 NPDE/
 │
 ├── include/ # Header files
+│ ├── bessel.h # Compute Bessel functions
 │ ├── csr.h # CSR matrix definition & operations, iterative solvers
 │ ├── grid.h # 2D grid definition & operations
+│ ├── parabolic.h # 2D Parabolic matrix and RHS assembler
 │ ├── poisson2d.h # 2D poisson matrix and RHS assembler
 │ ├── utils.h # console output functions & csv file output function
 │ └── vec.h # basic vector operations
 │
 ├── src/ # Source implementation
+│ ├── math
+│ | └── bessel.c
 │ ├── pde
 │ | ├── grid.c
 │ | └── poisson2d.c
@@ -62,11 +76,14 @@ NPDE/
 ├── examples/ # Toy problem solverse
 │ ├── Dirichlet.c # Solve a toy circular problem with Dirichlet boundary condition
 │ ├── Neumann.c # Solve a toy circular problem with Neumann boundary condition
+│ ├── Parabolic_Verify.c # Test the reference solution
+│ ├── Parabolic_Explicit.c # Solve a toy Parabolic problem using explicit method
+│ ├── Parabolic_ADI.c # Solve a toy Parabolic problem using ADI method
 │ └── CMakeLists.txt
 |
 ├── secripts/ # Python scripts for visualizing the output solution
-│ ├── visualize_Dirichlet.py # script for visualizing Dirichlet toy problem output
-│ └── visualize_Neumann.py # script for visualizing Neumann toy problem output
+│ ├── visualize_utils.py # script for visualizing functions
+│ └── visualize_... # script for visualizing certain data
 │
 ├── bin/ # Executable files of the tests and examples (output)
 │
@@ -115,12 +132,11 @@ bin\
 ./bin/Neumann.c
 ```
 
-## Toy Problem Output
+## Solving Poisson Problem
 
 ### Toy problem set up:
 
-Computational domain:
-
+Computational domain:  
 ![image](/results/Poisson/region.png)
 
 Function set up:
@@ -132,14 +148,12 @@ Exact Solution:
 
 $$ u=\frac{1}{5\pi^2}\sin(\pi x)\cos(2\pi y) $$
 
-Exact solution:
-
+Exact solution:  
 ![image](/results/Poisson/Dirichlet_exact.png)
 
 ### Dirichlet Boundary
 
-Output of *Dirichlet* gird setup:
-
+Output of *Dirichlet* gird setup:  
 ```bash
 # Run
 [[4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ],
@@ -185,17 +199,14 @@ Output of *Dirichlet* gird setup:
  [6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ]]
 ```
 
-Solution visualization:
-
+Solution visualization:  
 ![image](/results/Poisson/Dirichlet_solution.png)
 
-Solution Error visualization:
-
+Solution Error visualization:  
 ![image](/results/Poisson/Dirichlet_error.png)
 
 ### Neumann Boundary
-Output of *Neumann* gird setup (eliminate several corners):
-
+Output of *Neumann* gird setup (eliminate several corners):  
 ```bash
 [[4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ],
  [7 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ],
@@ -240,16 +251,74 @@ Output of *Neumann* gird setup (eliminate several corners):
  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ]]
 ```
 
-Solution visualization:
-
+Solution visualization:  
 ![image](/results/Poisson/Neumann_solution.png)
 
-Solution Error visualization:
-
+Solution Error visualization:  
 ![image](/results/Poisson/Neumann_error.png)
 
 **Notice:**  
 Under current grid point division, the interpolation of boundary points on the boundary in the Dirichlet boundary condition is accurate in the vast majority of edges. However, the approximation of the boundary normal derivative using the first-order difference in Neumann boundary conditions has errors at almost all boundary positions. This might be one of the reasons why the numerical solution error under the Neumann boundary condition is significantly higher than that under the Dirichlet boundary condition. The error on the boundary conditions can also be seen from the part near the boundary in the above figure.
+
+## Solving Parabolic PDE
+## Toy problem set up:
+
+Computational domain:  
+![image](/results/Poisson/region.png)
+
+Function set up:
+
+$$  \begin{cases}
+      \begin{aligned}
+        & u_{t} = \Delta u+\rho(t) \delta(x_0, y_0),\;\;\; &(x,y)\in\Omega, \;t>0 \\
+        & u(x,y,0) = Re\{ -\frac{1}{4}H_0^{(2)}(\frac{1-i}{\sqrt{2}} \sqrt{(x-x_0)^2+(y-y_0)^2}) \},\;\;\; &(x,y)\in \bar{\Omega}\\
+        & u(x,y,t) = Re\{ -\frac{1}{4} e^{it} H_0^{(2)}(\frac{1-i}{\sqrt{2}} \sqrt{(x-x_0)^2+(y-y_0)^2}) \},\;\;\; &(x,y) \in \partial \Omega,\;t>0
+      \end{aligned}
+    \end{cases}$$
+$$  $$
+
+Exact Solution:
+
+$$ u(x,y,t) = Re\{ -\frac{1}{4} e^{it} H_0^{(2)}(\frac{1-i}{\sqrt{2}} \sqrt{(x-x_0)^2+(y-y_0)^2}) \} $$
+
+Numerical solution (Approximate Bessel functions using series):  
+![image](/results/Parabolic/solution_refined.gif)
+
+### Explicit method
+
+```bash
+# run case
+bin/Parabolic_Explicit
+# visualize the solution
+python scripts/visualize_Parabolic_Explicit.py
+```
+
+Solution visualization:  
+![image](/results/Parabolic/Explicit.gif)
+
+Solution Error (Removed the cneter point $(x_0,y_0)$) visualization:  
+![image](/results/Parabolic/Explicit_error_without_center.gif)
+
+See also the solution for Refined mesh and its error:  
+![image](/results/Parabolic/Explicit_refined.gif)![image](/results/Parabolic/Explicit_error_refined_without_center.gif)
+
+### Implicit method
+
+```bash
+# run case
+bin/Parabolic_ADI
+# visualize the solution
+python scripts/visualize_Parabolic_ADI.py
+```
+
+Solution visualization:  
+![image](/results/Parabolic/ADI.gif)
+
+Solution Error (Removed the cneter point $(x_0,y_0)$) visualization:  
+![image](/results/Parabolic/ADI_error_without_center.gif)
+
+See also the solution for Refined mesh and its error:  
+![image](/results/Parabolic/ADI_refined.gif)![image](/results/Parabolic/ADI_error_refined_without_center.gif)
 
 ## Doxygen Documentation
  

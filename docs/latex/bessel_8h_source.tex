@@ -1,0 +1,28 @@
+\doxysection{bessel.\+h}
+\hypertarget{bessel_8h_source}{}\label{bessel_8h_source}\index{include/bessel.h@{include/bessel.h}}
+\mbox{\hyperlink{bessel_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ BESSEL\_H}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ BESSEL\_H}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <complex.h>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#ifndef\ M\_PI}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ M\_PI\ 3.14159265358979323846}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ NOTE:\ low-\/level\ complex\ Bessel\ functions\ are\ implemented\ in\ \`{}bessel.c`.}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ Their\ signatures\ are\ not\ part\ of\ the\ public\ API\ here,\ but\ may\ be}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ re-\/enabled\ if\ needed\ (commented\ out\ below).}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ double\ complex\ J0\_complex(double\ complex\ z);}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{bessel_8h_a344dc4a2251d132e5d7de0f0c144aba4}{plane\_solution\_function}}(\textcolor{keywordtype}{double}\ r,\ \textcolor{keywordtype}{double}\ t);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{bessel_8h_aafa02b81ce672bc84ac59a55a38b0abd}{average\_cell}}(\textcolor{keywordtype}{double}\ hx,\ \textcolor{keywordtype}{double}\ hy,\ \textcolor{keywordtype}{double}\ t);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -174,27 +174,27 @@ $(function() {
 <div class="line">    alpha = <a class="code hl_function" href="Neumann_8c.html#a56d53d0409ca28a73a903b974a8bf075">get_normal</a>(boundary_type);</div>
 <div class="line">    <span class="keywordflow">switch</span> (boundary_type) {</div>
 <div class="line">        <span class="keywordflow">case</span> 2: <span class="comment">// Top left slant boundary</span></div>
-<div class="line">            x_b = (<a class="code hl_variable" href="namespacevisualize__Dirichlet.html#ad9f0722dd450d88320c65b6f8173ef8a">x</a> + <a class="code hl_variable" href="namespacevisualize__Dirichlet.html#a3809a48f4e8c62db2ef4f1db00543720">y</a> - 1.0) / 2.0;</div>
-<div class="line">            y_b = (<a class="code hl_variable" href="namespacevisualize__Dirichlet.html#ad9f0722dd450d88320c65b6f8173ef8a">x</a> + <a class="code hl_variable" href="namespacevisualize__Dirichlet.html#a3809a48f4e8c62db2ef4f1db00543720">y</a> + 1.0) / 2.0;</div>
+<div class="line">            x_b = (x + y - 1.0) / 2.0;</div>
+<div class="line">            y_b = (x + y + 1.0) / 2.0;</div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">        <span class="keywordflow">case</span> 3: <span class="comment">// Top right slant boundary</span></div>
-<div class="line">            x_b = (<a class="code hl_variable" href="namespacevisualize__Dirichlet.html#ad9f0722dd450d88320c65b6f8173ef8a">x</a> - <a class="code hl_variable" href="namespacevisualize__Dirichlet.html#a3809a48f4e8c62db2ef4f1db00543720">y</a> + 3.0) / 2.0;</div>
-<div class="line">            y_b = (-<a class="code hl_variable" href="namespacevisualize__Dirichlet.html#ad9f0722dd450d88320c65b6f8173ef8a">x</a> + <a class="code hl_variable" href="namespacevisualize__Dirichlet.html#a3809a48f4e8c62db2ef4f1db00543720">y</a> + 3.0) / 2.0;</div>
+<div class="line">            x_b = (x - y + 3.0) / 2.0;</div>
+<div class="line">            y_b = (-x + y + 3.0) / 2.0;</div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">        <span class="keywordflow">case</span> 4: <span class="comment">// Left boundary</span></div>
 <div class="line">            x_b = 0.0;</div>
-<div class="line">            y_b = <a class="code hl_variable" href="namespacevisualize__Dirichlet.html#a3809a48f4e8c62db2ef4f1db00543720">y</a>;</div>
+<div class="line">            y_b = y;</div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">        <span class="keywordflow">case</span> 5: <span class="comment">// Upper right boundary</span></div>
-<div class="line">            x_b = (<a class="code hl_variable" href="namespacevisualize__Dirichlet.html#ad9f0722dd450d88320c65b6f8173ef8a">x</a> + 2.0 * <a class="code hl_variable" href="namespacevisualize__Dirichlet.html#a3809a48f4e8c62db2ef4f1db00543720">y</a> + 6.0) / 5.0;</div>
-<div class="line">            y_b = (2.0 * <a class="code hl_variable" href="namespacevisualize__Dirichlet.html#ad9f0722dd450d88320c65b6f8173ef8a">x</a> + 4.0 * <a class="code hl_variable" href="namespacevisualize__Dirichlet.html#a3809a48f4e8c62db2ef4f1db00543720">y</a> -3.0) / 5.0;</div>
+<div class="line">            x_b = (x + 2.0 * y + 6.0) / 5.0;</div>
+<div class="line">            y_b = (2.0 * x + 4.0 * y -3.0) / 5.0;</div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">        <span class="keywordflow">case</span> 6: <span class="comment">// Lower right boundary</span></div>
-<div class="line">            x_b = (<a class="code hl_variable" href="namespacevisualize__Dirichlet.html#ad9f0722dd450d88320c65b6f8173ef8a">x</a> - <a class="code hl_variable" href="namespacevisualize__Dirichlet.html#a3809a48f4e8c62db2ef4f1db00543720">y</a>) / 2.0;</div>
-<div class="line">            y_b = (-<a class="code hl_variable" href="namespacevisualize__Dirichlet.html#ad9f0722dd450d88320c65b6f8173ef8a">x</a> + <a class="code hl_variable" href="namespacevisualize__Dirichlet.html#a3809a48f4e8c62db2ef4f1db00543720">y</a>) / 2.0;</div>
+<div class="line">            x_b = (x - y) / 2.0;</div>
+<div class="line">            y_b = (-x + y) / 2.0;</div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">        <span class="keywordflow">case</span> 7: <span class="comment">// Bottom boundary</span></div>
-<div class="line">            x_b = <a class="code hl_variable" href="namespacevisualize__Dirichlet.html#ad9f0722dd450d88320c65b6f8173ef8a">x</a>;</div>
+<div class="line">            x_b = x;</div>
 <div class="line">            y_b = -2.0;</div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">        <span class="keywordflow">default</span>:</div>
@@ -240,8 +240,8 @@ $(function() {
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a id="a18" name="a18"></a><a class="code hl_function" href="test__csr__3x3_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
-<div class="line">    <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacevisualize__Dirichlet.html#ad3ac391ebea89214f896b9083a909325">nx</a> = 41;</div>
-<div class="line">    <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacevisualize__Dirichlet.html#a3d00d921c010ee0b28d3c6cd41849dd2">ny</a> = 81;</div>
+<div class="line">    <span class="keywordtype">int</span> nx = 41;</div>
+<div class="line">    <span class="keywordtype">int</span> ny = 81;</div>
 <div class="line">    <a class="code hl_struct" href="structGrid2D.html">Grid2D</a>* grid = <a id="a19" name="a19"></a><a class="code hl_function" href="grid_8h.html#a2c256fcb14b9e2ebb265d2ab35d936b0">initialize_Grid</a>(nx, ny, 0.0, 2.0, -2.0, 2.0, <a class="code hl_function" href="Dirichlet_8c.html#aac37605abfd3877c437fde984df578fd">region_divider</a>);</div>
 <div class="line">    <span class="comment">// printf(&quot;Number of active grid points: %d\n&quot;, grid-&gt;n_active);</span></div>
 <div class="line">    <span class="comment">// printf(&quot;%.6f\n&quot;, compute_u_exact(grid-&gt;x[10], grid-&gt;y[40]));</span></div>
@@ -263,7 +263,7 @@ $(function() {
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; grid-&gt;<a class="code hl_variable" href="structGrid2D.html#a8231d84ac1f0a464234d02cd5d337069">n_active</a>; i++) {</div>
 <div class="line">        <a class="code hl_variable" href="namespacevisualize__Dirichlet.html#a58f01210f8d2b38ddfedc3681237e942">solution</a>[i] = 0.0; <span class="comment">// Initial guess</span></div>
 <div class="line">    }</div>
-<div class="line">    <a id="a24" name="a24"></a><a class="code hl_function" href="csr_8h.html#a8e498df649d55f5935286ea1351ee89a">GaussSeidel_csr_debug</a>(matrix, rhs, solution, 1000, 1e-6);</div>
+<div class="line">    <a id="a24" name="a24"></a><a class="code hl_function" href="csr_8h.html#a9e9cdef8c8d7069f34646f6393448e9e">GaussSeidel_csr_debug</a>(matrix, rhs, solution, 1000, 1e-6);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">double</span> *<a class="code hl_variable" href="namespacevisualize__Dirichlet.html#a0f0076ba646b40bc1a7bbda06e1583ae">exact</a> = (<span class="keywordtype">double</span> *)malloc(grid-&gt;<a class="code hl_variable" href="structGrid2D.html#a8231d84ac1f0a464234d02cd5d337069">n_active</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; grid-&gt;<a class="code hl_variable" href="structGrid2D.html#a8231d84ac1f0a464234d02cd5d337069">n_active</a>; i++) {</div>
@@ -288,35 +288,35 @@ $(function() {
 <div class="line">    <span class="keywordtype">double</span> *solution_deriv = <a class="code hl_function" href="Neumann_8c.html#adb62cc300f93151f4226125ed8e21215">numerical_deriv</a>(grid, solution, 0);</div>
 <div class="line">    <span class="keywordtype">double</span> *exact_deriv = <a class="code hl_function" href="Neumann_8c.html#adb62cc300f93151f4226125ed8e21215">numerical_deriv</a>(grid, exact, 0);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">double</span> **data_points = <a id="a27" name="a27"></a><a class="code hl_function" href="grid_8h.html#a1ea426a678e98ecb5bec65d4cb876ef4">read_indices_to_points</a>(grid, solution);</div>
+<div class="line">    <span class="keywordtype">double</span> **data_points = <a id="a27" name="a27"></a><a class="code hl_function" href="grid_8h.html#af2eedadd0f889624d4efe433d7c9d8bd">create_grid_2D_array</a>(grid);</div>
+<div class="line">    <a id="a28" name="a28"></a><a class="code hl_function" href="grid_8h.html#a59cf713af413a93809a2ffc4ac87e69d">read_indices_to_points</a>(grid, solution, data_points);</div>
 <div class="line">    <span class="comment">// double **data_points = read_indices_to_points(grid, solution_deriv);</span></div>
 <div class="line">    <span class="comment">// print_matrix((const double **)data_points, grid-&gt;nx, grid-&gt;ny, 6);</span></div>
-<div class="line">    <span class="keywordtype">double</span> **exact_points = <a class="code hl_function" href="grid_8h.html#a1ea426a678e98ecb5bec65d4cb876ef4">read_indices_to_points</a>(grid, exact);</div>
+<div class="line">    <span class="keywordtype">double</span> **exact_points = <a class="code hl_function" href="grid_8h.html#af2eedadd0f889624d4efe433d7c9d8bd">create_grid_2D_array</a>(grid);</div>
+<div class="line">    <a class="code hl_function" href="grid_8h.html#a59cf713af413a93809a2ffc4ac87e69d">read_indices_to_points</a>(grid, exact, exact_points);</div>
 <div class="line">    <span class="comment">// double **exact_points = read_indices_to_points(grid, exact_deriv);</span></div>
 <div class="line">    <span class="comment">// print_matrix((const double **)exact_points, grid-&gt;nx, grid-&gt;ny, 6);</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Optionally, write the solution to a CSV file for visualization</span></div>
-<div class="line">    <a id="a28" name="a28"></a><a class="code hl_function" href="utils_8h.html#ad5a657e8a54c161d913fa4761b9c9d41">write_csv_matrix</a>(<span class="stringliteral">&quot;results/Neumann_solution.csv&quot;</span>, data_points, grid-&gt;<a class="code hl_variable" href="structGrid2D.html#a0c3422cde3a4b614748cc292b951b164">nx</a>, grid-&gt;<a class="code hl_variable" href="structGrid2D.html#af5921b23b32d3c3de66dd4a1c21732c1">ny</a>);</div>
-<div class="line">    <a class="code hl_function" href="utils_8h.html#ad5a657e8a54c161d913fa4761b9c9d41">write_csv_matrix</a>(<span class="stringliteral">&quot;results/Neumann_exact.csv&quot;</span>, exact_points, grid-&gt;<a class="code hl_variable" href="structGrid2D.html#a0c3422cde3a4b614748cc292b951b164">nx</a>, grid-&gt;<a class="code hl_variable" href="structGrid2D.html#af5921b23b32d3c3de66dd4a1c21732c1">ny</a>);</div>
+<div class="line">    <a id="a29" name="a29"></a><a class="code hl_function" href="utils_8h.html#ad5a657e8a54c161d913fa4761b9c9d41">write_csv_matrix</a>(<span class="stringliteral">&quot;results/Poisson/data/Neumann_solution.csv&quot;</span>, data_points, grid-&gt;<a class="code hl_variable" href="structGrid2D.html#a0c3422cde3a4b614748cc292b951b164">nx</a>, grid-&gt;<a class="code hl_variable" href="structGrid2D.html#af5921b23b32d3c3de66dd4a1c21732c1">ny</a>);</div>
+<div class="line">    <a class="code hl_function" href="utils_8h.html#ad5a657e8a54c161d913fa4761b9c9d41">write_csv_matrix</a>(<span class="stringliteral">&quot;results/Poisson/data/Neumann_exact.csv&quot;</span>, exact_points, grid-&gt;<a class="code hl_variable" href="structGrid2D.html#a0c3422cde3a4b614748cc292b951b164">nx</a>, grid-&gt;<a class="code hl_variable" href="structGrid2D.html#af5921b23b32d3c3de66dd4a1c21732c1">ny</a>);</div>
+<div class="line">    <a id="a30" name="a30"></a><a class="code hl_function" href="utils_8h.html#ac1ecb461358d61022e853b83f118a171">write_csv_int_matrix</a>(<span class="stringliteral">&quot;results/Poisson/data/grid_data.csv&quot;</span>, grid-&gt;<a class="code hl_variable" href="structGrid2D.html#a4721ccb58cee6d39ac51bb9ce0d6b124">region</a>, grid-&gt;<a class="code hl_variable" href="structGrid2D.html#a0c3422cde3a4b614748cc292b951b164">nx</a>, grid-&gt;<a class="code hl_variable" href="structGrid2D.html#af5921b23b32d3c3de66dd4a1c21732c1">ny</a>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Clean up</span></div>
 <div class="line">    <span class="comment">// Save grid dimensions because free_grid(grid) will deallocate the structure</span></div>
 <div class="line">    <span class="keywordtype">int</span> nx_grid = grid-&gt;<a class="code hl_variable" href="structGrid2D.html#a0c3422cde3a4b614748cc292b951b164">nx</a>;</div>
 <div class="line">    <span class="keywordtype">int</span> ny_grid = grid-&gt;<a class="code hl_variable" href="structGrid2D.html#af5921b23b32d3c3de66dd4a1c21732c1">ny</a>;</div>
 <div class="line"> </div>
-<div class="line">    <a id="a29" name="a29"></a><a class="code hl_function" href="csr_8h.html#ad76b7aa766ec949cb15bcf6ede8aadcb">freeSparseCSR</a>(matrix);</div>
+<div class="line">    <a id="a31" name="a31"></a><a class="code hl_function" href="csr_8h.html#ad76b7aa766ec949cb15bcf6ede8aadcb">freeSparseCSR</a>(matrix);</div>
 <div class="line">    free(rhs);</div>
+<div class="line">    free(exact);</div>
 <div class="line">    free(solution);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nx_grid; i++) {</div>
-<div class="line">        free(data_points[i]);</div>
-<div class="line">        free(exact_points[i]);</div>
-<div class="line">    }</div>
-<div class="line">    free(data_points);</div>
-<div class="line">    free(exact_points);</div>
+<div class="line">    <a id="a32" name="a32"></a><a class="code hl_function" href="grid_8h.html#abd0051e3e0bc770db2a33638dd509d3e">free_grid_2D_array</a>(data_points, grid);</div>
+<div class="line">    <a class="code hl_function" href="grid_8h.html#abd0051e3e0bc770db2a33638dd509d3e">free_grid_2D_array</a>(exact_points, grid);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Now free the grid structure itself</span></div>
-<div class="line">    <a id="a30" name="a30"></a><a class="code hl_function" href="grid_8h.html#a31befaf760e994473b73acce12ad6546">free_grid</a>(grid);</div>
+<div class="line">    <a id="a33" name="a33"></a><a class="code hl_function" href="grid_8h.html#a31befaf760e994473b73acce12ad6546">free_grid</a>(grid);</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aDirichlet_8c_html_a0c233fcb94ea9f05596b48427095806e"><div class="ttname"><a href="Dirichlet_8c.html#a0c233fcb94ea9f05596b48427095806e">Pi</a></div><div class="ttdeci">#define Pi</div><div class="ttdef"><b>Definition</b> Dirichlet.c:23</div></div>
@@ -328,17 +328,15 @@ $(function() {
 <div class="ttc" id="aNeumann_8c_html_a8ec7f7df68357f1e75b480c405dca6c1"><div class="ttname"><a href="Neumann_8c.html#a8ec7f7df68357f1e75b480c405dca6c1">compute_derivative_exact</a></div><div class="ttdeci">double compute_derivative_exact(double x, double y, int direction)</div><div class="ttdef"><b>Definition</b> Neumann.c:103</div></div>
 <div class="ttc" id="aNeumann_8c_html_adb62cc300f93151f4226125ed8e21215"><div class="ttname"><a href="Neumann_8c.html#adb62cc300f93151f4226125ed8e21215">numerical_deriv</a></div><div class="ttdeci">double * numerical_deriv(Grid2D *grid, double *data_indices, int direction)</div><div class="ttdef"><b>Definition</b> Neumann.c:150</div></div>
 <div class="ttc" id="acsr_8h_html"><div class="ttname"><a href="csr_8h.html">csr.h</a></div><div class="ttdoc">Header file for CSR matrix operations and iterative solvers.</div></div>
-<div class="ttc" id="acsr_8h_html_a8e498df649d55f5935286ea1351ee89a"><div class="ttname"><a href="csr_8h.html#a8e498df649d55f5935286ea1351ee89a">GaussSeidel_csr_debug</a></div><div class="ttdeci">void GaussSeidel_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol)</div><div class="ttdoc">Solve Ax = b using the Gauss-Seidel iterative method for CSR matrices.</div><div class="ttdef"><b>Definition</b> csr.c:130</div></div>
+<div class="ttc" id="acsr_8h_html_a9e9cdef8c8d7069f34646f6393448e9e"><div class="ttname"><a href="csr_8h.html#a9e9cdef8c8d7069f34646f6393448e9e">GaussSeidel_csr_debug</a></div><div class="ttdeci">void GaussSeidel_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol)</div><div class="ttdoc">Solve Ax = b using the Gauss-Seidel iterative method for CSR matrices.</div><div class="ttdef"><b>Definition</b> csr.c:156</div></div>
 <div class="ttc" id="acsr_8h_html_ad76b7aa766ec949cb15bcf6ede8aadcb"><div class="ttname"><a href="csr_8h.html#ad76b7aa766ec949cb15bcf6ede8aadcb">freeSparseCSR</a></div><div class="ttdeci">void freeSparseCSR(SparseCSR *matrix)</div><div class="ttdoc">Free the memory allocated for a SparseCSR matrix.</div><div class="ttdef"><b>Definition</b> csr.c:29</div></div>
-<div class="ttc" id="agrid_8h_html_a1ea426a678e98ecb5bec65d4cb876ef4"><div class="ttname"><a href="grid_8h.html#a1ea426a678e98ecb5bec65d4cb876ef4">read_indices_to_points</a></div><div class="ttdeci">double ** read_indices_to_points(Grid2D *grid, double *data_indices)</div><div class="ttdoc">Remap the data in the form of column vectors to the grid points.</div><div class="ttdef"><b>Definition</b> grid.c:86</div></div>
 <div class="ttc" id="agrid_8h_html_a2c256fcb14b9e2ebb265d2ab35d936b0"><div class="ttname"><a href="grid_8h.html#a2c256fcb14b9e2ebb265d2ab35d936b0">initialize_Grid</a></div><div class="ttdeci">Grid2D * initialize_Grid(int nx, int ny, double x0, double x1, double y0, double y1, region_divider_func region_divider)</div><div class="ttdoc">Create a new 2D grid structure with the division of the computing domain.</div><div class="ttdef"><b>Definition</b> grid.c:53</div></div>
-<div class="ttc" id="agrid_8h_html_a31befaf760e994473b73acce12ad6546"><div class="ttname"><a href="grid_8h.html#a31befaf760e994473b73acce12ad6546">free_grid</a></div><div class="ttdeci">void * free_grid(Grid2D *grid)</div><div class="ttdoc">Free the memory allocated for a grid structure.</div><div class="ttdef"><b>Definition</b> grid.c:101</div></div>
-<div class="ttc" id="anamespacevisualize__Dirichlet_html_a0f0076ba646b40bc1a7bbda06e1583ae"><div class="ttname"><a href="namespacevisualize__Dirichlet.html#a0f0076ba646b40bc1a7bbda06e1583ae">visualize_Dirichlet.exact</a></div><div class="ttdeci">exact</div><div class="ttdef"><b>Definition</b> visualize_Dirichlet.py:52</div></div>
-<div class="ttc" id="anamespacevisualize__Dirichlet_html_a3809a48f4e8c62db2ef4f1db00543720"><div class="ttname"><a href="namespacevisualize__Dirichlet.html#a3809a48f4e8c62db2ef4f1db00543720">visualize_Dirichlet.y</a></div><div class="ttdeci">y</div><div class="ttdef"><b>Definition</b> visualize_Dirichlet.py:57</div></div>
-<div class="ttc" id="anamespacevisualize__Dirichlet_html_a3d00d921c010ee0b28d3c6cd41849dd2"><div class="ttname"><a href="namespacevisualize__Dirichlet.html#a3d00d921c010ee0b28d3c6cd41849dd2">visualize_Dirichlet.ny</a></div><div class="ttdeci">ny</div><div class="ttdef"><b>Definition</b> visualize_Dirichlet.py:55</div></div>
-<div class="ttc" id="anamespacevisualize__Dirichlet_html_a58f01210f8d2b38ddfedc3681237e942"><div class="ttname"><a href="namespacevisualize__Dirichlet.html#a58f01210f8d2b38ddfedc3681237e942">visualize_Dirichlet.solution</a></div><div class="ttdeci">solution</div><div class="ttdef"><b>Definition</b> visualize_Dirichlet.py:51</div></div>
-<div class="ttc" id="anamespacevisualize__Dirichlet_html_ad3ac391ebea89214f896b9083a909325"><div class="ttname"><a href="namespacevisualize__Dirichlet.html#ad3ac391ebea89214f896b9083a909325">visualize_Dirichlet.nx</a></div><div class="ttdeci">nx</div><div class="ttdef"><b>Definition</b> visualize_Dirichlet.py:55</div></div>
-<div class="ttc" id="anamespacevisualize__Dirichlet_html_ad9f0722dd450d88320c65b6f8173ef8a"><div class="ttname"><a href="namespacevisualize__Dirichlet.html#ad9f0722dd450d88320c65b6f8173ef8a">visualize_Dirichlet.x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> visualize_Dirichlet.py:56</div></div>
+<div class="ttc" id="agrid_8h_html_a31befaf760e994473b73acce12ad6546"><div class="ttname"><a href="grid_8h.html#a31befaf760e994473b73acce12ad6546">free_grid</a></div><div class="ttdeci">void * free_grid(Grid2D *grid)</div><div class="ttdoc">Free the memory allocated for a grid structure.</div><div class="ttdef"><b>Definition</b> grid.c:116</div></div>
+<div class="ttc" id="agrid_8h_html_a59cf713af413a93809a2ffc4ac87e69d"><div class="ttname"><a href="grid_8h.html#a59cf713af413a93809a2ffc4ac87e69d">read_indices_to_points</a></div><div class="ttdeci">void read_indices_to_points(Grid2D *grid, double *data_indices, double **data_points)</div><div class="ttdoc">Remap the data in the form of column vectors to the grid points.</div><div class="ttdef"><b>Definition</b> grid.c:101</div></div>
+<div class="ttc" id="agrid_8h_html_abd0051e3e0bc770db2a33638dd509d3e"><div class="ttname"><a href="grid_8h.html#abd0051e3e0bc770db2a33638dd509d3e">free_grid_2D_array</a></div><div class="ttdeci">void * free_grid_2D_array(double **array, Grid2D *grid)</div><div class="ttdef"><b>Definition</b> grid.c:94</div></div>
+<div class="ttc" id="agrid_8h_html_af2eedadd0f889624d4efe433d7c9d8bd"><div class="ttname"><a href="grid_8h.html#af2eedadd0f889624d4efe433d7c9d8bd">create_grid_2D_array</a></div><div class="ttdeci">double ** create_grid_2D_array(Grid2D *grid)</div><div class="ttdef"><b>Definition</b> grid.c:86</div></div>
+<div class="ttc" id="anamespacevisualize__Dirichlet_html_a0f0076ba646b40bc1a7bbda06e1583ae"><div class="ttname"><a href="namespacevisualize__Dirichlet.html#a0f0076ba646b40bc1a7bbda06e1583ae">visualize_Dirichlet.exact</a></div><div class="ttdeci">exact</div><div class="ttdef"><b>Definition</b> visualize_Dirichlet.py:20</div></div>
+<div class="ttc" id="anamespacevisualize__Dirichlet_html_a58f01210f8d2b38ddfedc3681237e942"><div class="ttname"><a href="namespacevisualize__Dirichlet.html#a58f01210f8d2b38ddfedc3681237e942">visualize_Dirichlet.solution</a></div><div class="ttdeci">solution</div><div class="ttdef"><b>Definition</b> visualize_Dirichlet.py:19</div></div>
 <div class="ttc" id="apoisson2d_8h_html"><div class="ttname"><a href="poisson2d_8h.html">poisson2d.h</a></div><div class="ttdoc">Header file for assembling 2D Poisson equation matrix and RHS vector.</div></div>
 <div class="ttc" id="apoisson2d_8h_html_a9243db2282f8b4efe10a8bc305dc7519"><div class="ttname"><a href="poisson2d_8h.html#a9243db2282f8b4efe10a8bc305dc7519">assemble_Matrix_Neumann</a></div><div class="ttdeci">SparseCSR * assemble_Matrix_Neumann(Grid2D *grid, normal_func get_normal)</div><div class="ttdef"><b>Definition</b> poisson2d.c:104</div></div>
 <div class="ttc" id="apoisson2d_8h_html_aa2e4a20b7a92c6d45c0d91d94e70cb54"><div class="ttname"><a href="poisson2d_8h.html#aa2e4a20b7a92c6d45c0d91d94e70cb54">assemble_RHS_Neumann</a></div><div class="ttdeci">double * assemble_RHS_Neumann(Grid2D *grid, f_func f, boundary_func compute_boundary_value, f_func get_exact)</div><div class="ttdef"><b>Definition</b> poisson2d.c:202</div></div>
@@ -358,6 +356,7 @@ $(function() {
 <div class="ttc" id="atest__csr__3x3_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="test__csr__3x3_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Main function to test 3x3 CSR matrix operations and iterative solvers.</div><div class="ttdef"><b>Definition</b> test_csr_3x3.c:47</div></div>
 <div class="ttc" id="autils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div><div class="ttdoc">Header file for utility functions to print vectors and CSR matrices.</div></div>
 <div class="ttc" id="autils_8h_html_a1ba6ad9ac327380731ee2429984a974e"><div class="ttname"><a href="utils_8h.html#a1ba6ad9ac327380731ee2429984a974e">print_int_matrix</a></div><div class="ttdeci">void print_int_matrix(const int **matrix, int rows, int cols)</div><div class="ttdef"><b>Definition</b> utils.c:52</div></div>
+<div class="ttc" id="autils_8h_html_ac1ecb461358d61022e853b83f118a171"><div class="ttname"><a href="utils_8h.html#ac1ecb461358d61022e853b83f118a171">write_csv_int_matrix</a></div><div class="ttdeci">void write_csv_int_matrix(const char *filename, int **matrix, int rows, int cols)</div><div class="ttdef"><b>Definition</b> utils.c:117</div></div>
 <div class="ttc" id="autils_8h_html_ad5a657e8a54c161d913fa4761b9c9d41"><div class="ttname"><a href="utils_8h.html#ad5a657e8a54c161d913fa4761b9c9d41">write_csv_matrix</a></div><div class="ttdeci">void write_csv_matrix(const char *filename, double **matrix, int rows, int cols)</div><div class="ttdef"><b>Definition</b> utils.c:97</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->

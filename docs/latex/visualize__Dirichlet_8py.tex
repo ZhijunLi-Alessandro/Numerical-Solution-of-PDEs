@@ -1,58 +1,20 @@
 \doxysection{scripts/visualize\+\_\+\+Dirichlet.py File Reference}
 \hypertarget{visualize__Dirichlet_8py}{}\label{visualize__Dirichlet_8py}\index{scripts/visualize\_Dirichlet.py@{scripts/visualize\_Dirichlet.py}}
-
-
-A python script for visualizing the calculation results of the Dirichlet problem.  
-
-
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
 namespace \mbox{\hyperlink{namespacevisualize__Dirichlet}{visualize\+\_\+\+Dirichlet}}
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_a03f97f9d47fd007fd3a67e25f7e7fe18}{visualize\+\_\+\+Dirichlet.\+load\+\_\+solution\+\_\+from\+\_\+csv}} (filename)
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_ae90357613099e1ba2a3caac578255d6e}{visualize\+\_\+\+Dirichlet.\+visualize\+\_\+solution}} (\mbox{\hyperlink{namespacevisualize__Dirichlet_a162c6b30cb4aead405d4fcff27d09690}{grid\+\_\+x}}, \mbox{\hyperlink{namespacevisualize__Dirichlet_afa761d0c83dbbb1119bc66df67ca0eb9}{grid\+\_\+y}}, \mbox{\hyperlink{namespacevisualize__Dirichlet_a58f01210f8d2b38ddfedc3681237e942}{solution}}, \mbox{\hyperlink{namespacevisualize__Dirichlet_a893860ad4defb3904167d068b024fa69}{title}}="{}Solution Visualization"{}, \mbox{\hyperlink{namespacevisualize__Dirichlet_a892325c9a46fd78296850c344498b863}{save\+\_\+path}}=None)
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_a58f01210f8d2b38ddfedc3681237e942}{visualize\+\_\+\+Dirichlet.\+solution}} = \mbox{\hyperlink{namespacevisualize__Dirichlet_a03f97f9d47fd007fd3a67e25f7e7fe18}{load\+\_\+solution\+\_\+from\+\_\+csv}}(\textquotesingle{}results/Dirichlet\+\_\+solution.\+csv\textquotesingle{})
+\mbox{\hyperlink{namespacevisualize__Dirichlet_a58f01210f8d2b38ddfedc3681237e942}{visualize\+\_\+\+Dirichlet.\+solution}} = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/Dirichlet\+\_\+solution.\+csv\textquotesingle{})
 \item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_a0f0076ba646b40bc1a7bbda06e1583ae}{visualize\+\_\+\+Dirichlet.\+exact}} = \mbox{\hyperlink{namespacevisualize__Dirichlet_a03f97f9d47fd007fd3a67e25f7e7fe18}{load\+\_\+solution\+\_\+from\+\_\+csv}}(\textquotesingle{}results/Dirichlet\+\_\+exact.\+csv\textquotesingle{})
+\mbox{\hyperlink{namespacevisualize__Dirichlet_a0f0076ba646b40bc1a7bbda06e1583ae}{visualize\+\_\+\+Dirichlet.\+exact}} = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/Dirichlet\+\_\+exact.\+csv\textquotesingle{})
 \item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_ad3ac391ebea89214f896b9083a909325}{visualize\+\_\+\+Dirichlet.\+nx}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_a3d00d921c010ee0b28d3c6cd41849dd2}{visualize\+\_\+\+Dirichlet.\+ny}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_ad9f0722dd450d88320c65b6f8173ef8a}{visualize\+\_\+\+Dirichlet.\+x}} = np.\+linspace(0, 2, \mbox{\hyperlink{namespacevisualize__Dirichlet_ad3ac391ebea89214f896b9083a909325}{nx}})
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_a3809a48f4e8c62db2ef4f1db00543720}{visualize\+\_\+\+Dirichlet.\+y}} = np.\+linspace(-\/2, 2, \mbox{\hyperlink{namespacevisualize__Dirichlet_a3d00d921c010ee0b28d3c6cd41849dd2}{ny}})
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_a162c6b30cb4aead405d4fcff27d09690}{visualize\+\_\+\+Dirichlet.\+grid\+\_\+x}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_afa761d0c83dbbb1119bc66df67ca0eb9}{visualize\+\_\+\+Dirichlet.\+grid\+\_\+y}}
-\item 
-\mbox{\hyperlink{namespacevisualize__Dirichlet_a010ebafc37986c86af55b212b2729816}{visualize\+\_\+\+Dirichlet.\+T}}
+\mbox{\hyperlink{namespacevisualize__Dirichlet_a0bbc41be64d622cc0cdb70cf9405eb9c}{visualize\+\_\+\+Dirichlet.\+grid\+\_\+data}} = load\+\_\+solution\+\_\+from\+\_\+csv(\textquotesingle{}results/Poisson/data/grid\+\_\+data.\+csv\textquotesingle{})
 \item 
 \mbox{\hyperlink{namespacevisualize__Dirichlet_a893860ad4defb3904167d068b024fa69}{visualize\+\_\+\+Dirichlet.\+title}}
 \item 
 \mbox{\hyperlink{namespacevisualize__Dirichlet_a892325c9a46fd78296850c344498b863}{visualize\+\_\+\+Dirichlet.\+save\+\_\+path}}
 \end{DoxyCompactItemize}
-
-
-\doxysubsection{Detailed Description}
-A python script for visualizing the calculation results of the Dirichlet problem. 
-
-This script is used to process and analyze data and generate figures. Includes data loading and preprocessing, generate multiple figures. \begin{DoxySeeAlso}{See also}
-\doxylink{Dirichlet_8c}{Dirichlet.\+c} 
-\end{DoxySeeAlso}
-\begin{DoxyAuthor}{Author}
-Li Zhijun 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Date}
-2025-\/10-\/27 
-\end{DoxyDate}

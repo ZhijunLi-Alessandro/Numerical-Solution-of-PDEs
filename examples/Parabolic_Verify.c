@@ -1,3 +1,18 @@
+/**
+ * @file Parabolic_Verify.c
+ * @brief Verification example for analytic Bessel/Hankel-based reference solutions.
+ *
+ * @details
+ * This program evaluates the analytic/semi-analytic reference solution built
+ * from Bessel/Hankel functions and verifies the discrete assembly by comparing
+ * assembled RHS and operator actions against the manufactured solution. It
+ * writes diagnostic CSVs suitable for visualization and error analysis.
+ *
+ * @see csr.h, parabolic.h, bessel.h
+ * @author Li Zhijun
+ * @date 2025-12-03
+ * @example Parabolic_Verify.c
+ */
 # include <stdio.h>
 # include <stdlib.h>
 # include <math.h>

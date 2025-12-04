@@ -1,15 +1,21 @@
 <map id="include/utils.h" name="include/utils.h">
-<area shape="rect" id="Node000001" title="Header file for utility functions to print vectors and CSR matrices." alt="" coords="430,5,533,31"/>
-<area shape="rect" id="Node000002" href="$Dirichlet_8c.html" title="Example program to solve a 2D Poisson problem with Dirichlet boundary condition." alt="" coords="5,79,147,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="417,33,142,81,141,76,416,28"/>
-<area shape="rect" id="Node000003" href="$Neumann_8c.html" title="Example program to solve a 2D Poisson problem with Neumann boundary condition." alt="" coords="171,79,320,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="431,37,284,81,283,76,430,32"/>
-<area shape="rect" id="Node000004" href="$utils_8c.html" title="Utility functions for printing vectors and SparseCSR matrices." alt="" coords="344,79,467,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="461,42,420,80,416,76,457,38"/>
-<area shape="rect" id="Node000005" href="$2D-Poisson_8c.html" title="Example program to generate a 2D Poisson matrix in CSR format." alt="" coords="491,79,626,104"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="506,38,548,76,544,80,502,42"/>
-<area shape="rect" id="Node000006" href="$test__csr__3x3_8c.html" title="Test program for 3x3 CSR matrix operations and iterative solvers." alt="" coords="651,79,792,104"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="534,32,683,76,682,81,532,37"/>
-<area shape="rect" id="Node000007" href="$test__csr__5x5_8c.html" title="Test program for 5x5 CSR matrix operations and iterative solvers." alt="" coords="816,79,957,104"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="547,28,822,76,821,81,546,33"/>
+<area shape="rect" id="Node000001" title="Header file for utility functions to print vectors and CSR matrices." alt="" coords="681,5,783,31"/>
+<area shape="rect" id="Node000002" href="$Dirichlet_8c.html" title="Example program to solve a 2D Poisson problem with Dirichlet boundary condition." alt="" coords="5,86,147,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="667,26,441,45,301,61,159,81,122,89,121,83,158,76,300,56,441,40,666,21"/>
+<area shape="rect" id="Node000003" href="$Neumann_8c.html" title="Example program to solve a 2D Poisson problem with Neumann boundary condition." alt="" coords="171,86,320,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="667,30,514,52,332,81,296,89,295,83,332,76,513,47,666,25"/>
+<area shape="rect" id="Node000004" href="$Parabolic__ADI_8c.html" title="Example: solve the 2D parabolic PDE with Dirichlet boundary conditions using ADI." alt="" coords="344,79,480,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="673,36,481,83,480,78,672,31"/>
+<area shape="rect" id="Node000005" href="$Parabolic__Explicit_8c.html" title="Example: solve the 2D parabolic PDE with Dirichlet boundary conditions using an explicit scheme." alt="" coords="504,79,640,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="698,39,612,81,610,76,696,34"/>
+<area shape="rect" id="Node000006" href="$Parabolic__Verify_8c.html" title="Verification example for analytic Bessel/Hankel&#45;based reference solutions." alt="" coords="664,79,800,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="735,44,735,79,729,79,729,44"/>
+<area shape="rect" id="Node000007" href="$utils_8c.html" title="Utility functions for printing vectors and SparseCSR matrices." alt="" coords="824,86,947,111"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="768,35,864,83,861,88,766,39"/>
+<area shape="rect" id="Node000008" href="$2D-Poisson_8c.html" title="Example program to generate a 2D Poisson matrix in CSR format." alt="" coords="971,86,1106,111"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="790,31,995,83,993,89,789,37"/>
+<area shape="rect" id="Node000009" href="$test__csr__3x3_8c.html" title="Test program for 3x3 CSR matrix operations and iterative solvers." alt="" coords="1131,86,1272,111"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="797,25,945,47,1119,76,1154,83,1153,89,1118,81,944,52,796,30"/>
+<area shape="rect" id="Node000010" href="$test__csr__5x5_8c.html" title="Test program for 5x5 CSR matrix operations and iterative solvers." alt="" coords="1296,86,1437,111"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="798,21,1014,41,1149,56,1284,76,1321,83,1320,89,1284,81,1149,62,1014,46,797,27"/>
 </map>

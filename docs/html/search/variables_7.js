@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['region_0',['region',['../structGrid2D.html#a4721ccb58cee6d39ac51bb9ce0d6b124',1,'Grid2D']]],
-  ['row_5fptr_1',['row_ptr',['../structSparseCSR.html#aca3a053424b8f259cf0230bd0a38f4ad',1,'SparseCSR']]],
-  ['rows_2',['rows',['../structSparseCSR.html#a01028b80ac878638b97bba94e3163e24',1,'SparseCSR']]]
+  ['save_5fpath_0',['save_path',['../namespacevisualize__Dirichlet.html#a892325c9a46fd78296850c344498b863',1,'visualize_Dirichlet.save_path'],['../namespacevisualize__Neumann.html#a12f96dcce7b23c121e7ebe218b08d08a',1,'visualize_Neumann.save_path'],['../namespacevisualize__Parabolic__ADI.html#a0df80d3bf53085292741ddc147d2aac8',1,'visualize_Parabolic_ADI.save_path'],['../namespacevisualize__Parabolic__ADI__refined.html#ab94bd9fa57bc148060cd6373b3265acd',1,'visualize_Parabolic_ADI_refined.save_path'],['../namespacevisualize__Parabolic__Explicit.html#acc9d42c89527ffc07b2bda2791a2b4c4',1,'visualize_Parabolic_Explicit.save_path'],['../namespacevisualize__Parabolic__Explicit__refined.html#a852f97a120a2b38f26c60a0c515aebcd',1,'visualize_Parabolic_Explicit_refined.save_path'],['../namespacevisualize__utils.html#a197a8ce9b2c2997aa5dfcb9480675fb3',1,'visualize_utils.save_path'],['../namespacevisualize__Verify.html#a8fa027250e258999722473b46e370c2d',1,'visualize_Verify.save_path']]],
+  ['solution_1',['solution',['../namespacevisualize__Dirichlet.html#a58f01210f8d2b38ddfedc3681237e942',1,'visualize_Dirichlet.solution'],['../namespacevisualize__Neumann.html#a80245993f43085a0407eec35ea709501',1,'visualize_Neumann.solution']]]
 ];

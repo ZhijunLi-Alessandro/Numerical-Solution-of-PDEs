@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main_0',['main',['../2D-Poisson_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;2D-Poisson.c'],['../test__csr__3x3_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;test_csr_3x3.c'],['../test__csr__5x5_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;test_csr_5x5.c'],['../Dirichlet_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;Dirichlet.c'],['../Neumann_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;Neumann.c']]],
-  ['mapping_1',['mapping',['../2D-Poisson_8c.html#ac9bd6eed3b390d3a63607cecf8ef831f',1,'2D-Poisson.c']]]
+  ['jacobi_5fcsr_0',['jacobi_csr',['../csr_8h.html#a7cf1992062cdbed207ef7217c4a3e20d',1,'Jacobi_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c'],['../csr_8c.html#a7cf1992062cdbed207ef7217c4a3e20d',1,'Jacobi_csr(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c']]],
+  ['jacobi_5fcsr_5fdebug_1',['jacobi_csr_debug',['../csr_8h.html#af089bf84e8cfa337a88a9772a4d840a0',1,'Jacobi_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c'],['../csr_8c.html#af089bf84e8cfa337a88a9772a4d840a0',1,'Jacobi_csr_debug(const SparseCSR *matrix, const double *b, double *x, int max_iter, double tol):&#160;csr.c']]]
 ];

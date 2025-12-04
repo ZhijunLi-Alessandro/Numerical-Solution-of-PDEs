@@ -1,0 +1,9 @@
+<map id="include/parabolic.h" name="include/parabolic.h">
+<area shape="rect" id="Node000001" title="API for parabolic/heat equation matrix and RHS assembly helpers." alt="" coords="6,5,137,31"/>
+<area shape="rect" id="Node000002" href="$grid_8h.html" title="Header file for a uniform grid structure and related functions." alt="" coords="5,79,60,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,32,48,68,43,65,63,30"/>
+<area shape="rect" id="Node000003" href="$csr_8h.html" title="Header file for CSR matrix operations and iterative solvers." alt="" coords="85,79,135,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="80,30,100,65,95,68,75,32"/>
+<area shape="rect" id="Node000004" href="$vec_8h.html" title="Header file for basic vector operations." alt="" coords="83,152,137,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="113,104,113,138,107,138,107,104"/>
+</map>

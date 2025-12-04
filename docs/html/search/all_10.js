@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['save_5fpath_0',['save_path',['../namespacevisualize__Dirichlet.html#a892325c9a46fd78296850c344498b863',1,'visualize_Dirichlet.save_path'],['../namespacevisualize__Neumann.html#a12f96dcce7b23c121e7ebe218b08d08a',1,'visualize_Neumann.save_path']]],
-  ['sol_1',['sol',['../namespacevisualize__Neumann.html#ac29e747cdad36ce27d7b36ecbdf0ef2a',1,'visualize_Neumann']]],
-  ['solution_2',['solution',['../namespacevisualize__Dirichlet.html#a58f01210f8d2b38ddfedc3681237e942',1,'visualize_Dirichlet.solution'],['../namespacevisualize__Neumann.html#a80245993f43085a0407eec35ea709501',1,'visualize_Neumann.solution']]],
+  ['save_5fpath_0',['save_path',['../namespacevisualize__Dirichlet.html#a892325c9a46fd78296850c344498b863',1,'visualize_Dirichlet.save_path'],['../namespacevisualize__Neumann.html#a12f96dcce7b23c121e7ebe218b08d08a',1,'visualize_Neumann.save_path'],['../namespacevisualize__Parabolic__ADI.html#a0df80d3bf53085292741ddc147d2aac8',1,'visualize_Parabolic_ADI.save_path'],['../namespacevisualize__Parabolic__ADI__refined.html#ab94bd9fa57bc148060cd6373b3265acd',1,'visualize_Parabolic_ADI_refined.save_path'],['../namespacevisualize__Parabolic__Explicit.html#acc9d42c89527ffc07b2bda2791a2b4c4',1,'visualize_Parabolic_Explicit.save_path'],['../namespacevisualize__Parabolic__Explicit__refined.html#a852f97a120a2b38f26c60a0c515aebcd',1,'visualize_Parabolic_Explicit_refined.save_path'],['../namespacevisualize__utils.html#a197a8ce9b2c2997aa5dfcb9480675fb3',1,'visualize_utils.save_path'],['../namespacevisualize__Verify.html#a8fa027250e258999722473b46e370c2d',1,'visualize_Verify.save_path']]],
+  ['solution_1',['solution',['../namespacevisualize__Dirichlet.html#a58f01210f8d2b38ddfedc3681237e942',1,'visualize_Dirichlet.solution'],['../namespacevisualize__Neumann.html#a80245993f43085a0407eec35ea709501',1,'visualize_Neumann.solution']]],
+  ['solve_5fparabolic_5fadi_2',['solve_Parabolic_ADI',['../parabolic_8c.html#aec81f728a5e4c6ab2e92ce9eb4f445c0',1,'parabolic.c']]],
   ['sparsecsr_3',['SparseCSR',['../structSparseCSR.html',1,'']]],
   ['spmv_5fcsr_4',['spmv_csr',['../csr_8h.html#ad757786fcb200f58e1b48d771f2e5e6d',1,'spmv_csr(const SparseCSR *matrix, const double *x, double *y):&#160;csr.c'],['../csr_8c.html#ad757786fcb200f58e1b48d771f2e5e6d',1,'spmv_csr(const SparseCSR *matrix, const double *x, double *y):&#160;csr.c']]]
 ];

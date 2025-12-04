@@ -1,11 +1,15 @@
-## @file visualize_Neumann.py
-#  @brief A python script for visualizing the calculation results of the Neumann problem
-#  
-#  This script is used to process and analyze data and generate figures.
-#  Includes data loading and preprocessing, generate multiple figures.
-#  @see Dirichlet.c
-#  @author Li Zhijun
-#  @date 2025-10-29
+"""
+@file visualize_Verify.py
+@brief Visualization tools for parabolic verification outputs.
+
+This module creates animations and plots for verifying parabolic solver outputs
+against analytical/semi-analytical reference data. It relies on the
+`visualize_utils` helpers for loading and plotting CSV datasets.
+
+@author Li Zhijun
+@date 2025-12-03
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from visualize_utils import load_solution_from_csv, visualize_solution, animate_time_series, animate_time_series_difference

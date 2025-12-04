@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['load_5fsolution_5ffrom_5fcsv_0',['load_solution_from_csv',['../namespacevisualize__Dirichlet.html#a03f97f9d47fd007fd3a67e25f7e7fe18',1,'visualize_Dirichlet.load_solution_from_csv()'],['../namespacevisualize__Neumann.html#a64b5fe9e259951055d08f56c916eafea',1,'visualize_Neumann.load_solution_from_csv()']]]
+  ['initialize_5fgrid_0',['initialize_grid',['../grid_8h.html#a2c256fcb14b9e2ebb265d2ab35d936b0',1,'initialize_Grid(int nx, int ny, double x0, double x1, double y0, double y1, region_divider_func region_divider):&#160;grid.c'],['../grid_8c.html#a2c256fcb14b9e2ebb265d2ab35d936b0',1,'initialize_Grid(int nx, int ny, double x0, double x1, double y0, double y1, region_divider_func region_divider):&#160;grid.c']]],
+  ['integrated_5fsource_5fterm_1',['integrated_source_term',['../Parabolic__ADI_8c.html#aefe8678afd82684359020581f4364156',1,'integrated_source_term(double x, double y, double t, double hx, double hy):&#160;Parabolic_ADI.c'],['../Parabolic__Explicit_8c.html#aefe8678afd82684359020581f4364156',1,'integrated_source_term(double x, double y, double t, double hx, double hy):&#160;Parabolic_Explicit.c']]]
 ];

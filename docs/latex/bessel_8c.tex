@@ -1,0 +1,157 @@
+\doxysection{src/math/bessel.c File Reference}
+\hypertarget{bessel_8c}{}\label{bessel_8c}\index{src/math/bessel.c@{src/math/bessel.c}}
+
+
+Implementations of complex Bessel/\+Hankel helpers and plane-\/solution utilities used by analytic test cases.  
+
+
+{\ttfamily \#include "{}bessel.\+h"{}}\newline
+Include dependency graph for bessel.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{bessel_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double complex \mbox{\hyperlink{bessel_8c_a5cdb94d82f7d6d758bc07abf914f7454}{bessel\+\_\+\+J0\+\_\+complex}} (double complex z)
+\begin{DoxyCompactList}\small\item\em Compute the Bessel function J\+\_\+0 for a complex argument using its power-\/series expansion. \end{DoxyCompactList}\item 
+double complex \mbox{\hyperlink{bessel_8c_a1ada18bb0f9add42a231236031fa552e}{bessel\+\_\+\+Y0\+\_\+complex}} (double complex z)
+\begin{DoxyCompactList}\small\item\em Compute the Bessel function Y\+\_\+0 for a complex argument using the relationship to J\+\_\+0 and a series with harmonic-\/number coefficients. \end{DoxyCompactList}\item 
+double complex \mbox{\hyperlink{bessel_8c_a484a9ceab91bade3f927f1555e625499}{hankel\+\_\+\+H0\+\_\+2}} (double complex z)
+\begin{DoxyCompactList}\small\item\em Hankel function H\+\_\+0\texorpdfstring{$^\wedge$}{\string^}\{(2)\}(z) = J\+\_\+0(z) -\/ i Y\+\_\+0(z). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{bessel_8c_a344dc4a2251d132e5d7de0f0c144aba4}{plane\+\_\+solution\+\_\+function}} (double r, double t)
+\begin{DoxyCompactList}\small\item\em Evaluate the real plane-\/solution derived from Hankel function combination. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{bessel_8c_aafa02b81ce672bc84ac59a55a38b0abd}{average\+\_\+cell}} (double hx, double hy, double t)
+\begin{DoxyCompactList}\small\item\em Approximate average of the plane-\/solution over a rectangular cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementations of complex Bessel/\+Hankel helpers and plane-\/solution utilities used by analytic test cases. 
+
+The low-\/level functions compute J0 and Y0 via power-\/series expansions for complex arguments. Higher-\/level helpers build Hankel combinations and real plane-\/solution quantities derived from these special functions.
+
+\begin{DoxyAuthor}{Author}
+Li Zhijun 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/12-\/02 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bessel_8c_aafa02b81ce672bc84ac59a55a38b0abd}\label{bessel_8c_aafa02b81ce672bc84ac59a55a38b0abd} 
+\index{bessel.c@{bessel.c}!average\_cell@{average\_cell}}
+\index{average\_cell@{average\_cell}!bessel.c@{bessel.c}}
+\doxysubsubsection{\texorpdfstring{average\_cell()}{average\_cell()}}
+{\footnotesize\ttfamily double average\+\_\+cell (\begin{DoxyParamCaption}\item[{double}]{hx,  }\item[{double}]{hy,  }\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Approximate average of the plane-\/solution over a rectangular cell. 
+
+Approximate average value of the plane solution over a cell.
+
+The formula is derived from asymptotic expansions and includes the Euler--Mascheroni constant. It returns an approximate cell-\/average used in test RHS/\+BC assembly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hx} & Cell width in x-\/direction. \\
+\hline
+{\em hy} & Cell width in y-\/direction. \\
+\hline
+{\em t} & Phase parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Approximate average value on the cell. 
+\end{DoxyReturn}
+\Hypertarget{bessel_8c_a5cdb94d82f7d6d758bc07abf914f7454}\label{bessel_8c_a5cdb94d82f7d6d758bc07abf914f7454} 
+\index{bessel.c@{bessel.c}!bessel\_J0\_complex@{bessel\_J0\_complex}}
+\index{bessel\_J0\_complex@{bessel\_J0\_complex}!bessel.c@{bessel.c}}
+\doxysubsubsection{\texorpdfstring{bessel\_J0\_complex()}{bessel\_J0\_complex()}}
+{\footnotesize\ttfamily double complex bessel\+\_\+\+J0\+\_\+complex (\begin{DoxyParamCaption}\item[{double complex}]{z }\end{DoxyParamCaption})}
+
+
+
+Compute the Bessel function J\+\_\+0 for a complex argument using its power-\/series expansion. 
+
+The series used is the standard Bessel J0 Taylor series\+: J0(z) = sum\+\_\+\{k=0\}\texorpdfstring{$^\wedge$}{\string^} (-\/1)\texorpdfstring{$^\wedge$}{\string^}k (z/2)\texorpdfstring{$^\wedge$}{\string^}\{2k\} / (k!)\texorpdfstring{$^\wedge$}{\string^}2 The summation is performed until terms are small relative to the running sum or until a maximum iteration count is reached.
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & Complex argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Complex value of J\+\_\+0(z). 
+\end{DoxyReturn}
+\Hypertarget{bessel_8c_a1ada18bb0f9add42a231236031fa552e}\label{bessel_8c_a1ada18bb0f9add42a231236031fa552e} 
+\index{bessel.c@{bessel.c}!bessel\_Y0\_complex@{bessel\_Y0\_complex}}
+\index{bessel\_Y0\_complex@{bessel\_Y0\_complex}!bessel.c@{bessel.c}}
+\doxysubsubsection{\texorpdfstring{bessel\_Y0\_complex()}{bessel\_Y0\_complex()}}
+{\footnotesize\ttfamily double complex bessel\+\_\+\+Y0\+\_\+complex (\begin{DoxyParamCaption}\item[{double complex}]{z }\end{DoxyParamCaption})}
+
+
+
+Compute the Bessel function Y\+\_\+0 for a complex argument using the relationship to J\+\_\+0 and a series with harmonic-\/number coefficients. 
+
+The implementation follows the standard expansion for Y0 in terms of J0 and a logarithmic/harmonic series. This function assumes {\ttfamily z} is not on the negative real axis branch cut for the complex logarithm. Caller should ensure argument avoids singular points.
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & Complex argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Complex value of Y\+\_\+0(z). 
+\end{DoxyReturn}
+\Hypertarget{bessel_8c_a484a9ceab91bade3f927f1555e625499}\label{bessel_8c_a484a9ceab91bade3f927f1555e625499} 
+\index{bessel.c@{bessel.c}!hankel\_H0\_2@{hankel\_H0\_2}}
+\index{hankel\_H0\_2@{hankel\_H0\_2}!bessel.c@{bessel.c}}
+\doxysubsubsection{\texorpdfstring{hankel\_H0\_2()}{hankel\_H0\_2()}}
+{\footnotesize\ttfamily double complex hankel\+\_\+\+H0\+\_\+2 (\begin{DoxyParamCaption}\item[{double complex}]{z }\end{DoxyParamCaption})}
+
+
+
+Hankel function H\+\_\+0\texorpdfstring{$^\wedge$}{\string^}\{(2)\}(z) = J\+\_\+0(z) -\/ i Y\+\_\+0(z). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & Complex argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Complex value of the Hankel function of the second kind. 
+\end{DoxyReturn}
+\Hypertarget{bessel_8c_a344dc4a2251d132e5d7de0f0c144aba4}\label{bessel_8c_a344dc4a2251d132e5d7de0f0c144aba4} 
+\index{bessel.c@{bessel.c}!plane\_solution\_function@{plane\_solution\_function}}
+\index{plane\_solution\_function@{plane\_solution\_function}!bessel.c@{bessel.c}}
+\doxysubsubsection{\texorpdfstring{plane\_solution\_function()}{plane\_solution\_function()}}
+{\footnotesize\ttfamily double plane\+\_\+solution\+\_\+function (\begin{DoxyParamCaption}\item[{double}]{r,  }\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Evaluate the real plane-\/solution derived from Hankel function combination. 
+
+Evaluate an analytic plane-\/like solution built from Hankel functions.
+
+Implementation notes\+:
+\begin{DoxyItemize}
+\item The function protects against r==0 by clamping a tiny positive radius.
+\item Uses sqrt(-\/i) = exp(-\/i\texorpdfstring{$\ast$}{*}pi/4) to form the complex argument z = sqrt(-\/i)\texorpdfstring{$\ast$}{*}r.
+\item Evaluates H\+\_\+0\texorpdfstring{$^\wedge$}{\string^}\{(2)\}(z) and multiplies by exp(i t), returning the real part.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Radius (distance from origin). Small values are clamped for stability. \\
+\hline
+{\em t} & Phase parameter (real-\/valued). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Real-\/valued plane-\/solution (Re\{ e\texorpdfstring{$^\wedge$}{\string^}\{i t\} H\+\_\+0\texorpdfstring{$^\wedge$}{\string^}\{(2)\}(sqrt(-\/i) r) \}). 
+\end{DoxyReturn}

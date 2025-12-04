@@ -1,11 +1,16 @@
-## @file visualize_Dirichlet.py
-#  @brief A python script for visualizing the calculation results of the Dirichlet problem
-#  
-#  This script is used to process and analyze data and generate figures.
-#  Includes data loading and preprocessing, generate multiple figures.
-#  @see Dirichlet.c
-#  @author Li Zhijun
-#  @date 2025-10-27
+"""
+@file visualize_Dirichlet.py
+@brief Visualization helpers for Dirichlet problem outputs.
+
+This module loads CSV output produced by the Dirichlet example and
+generates figures (solution, exact, error) suitable for analysis and
+publication. It delegates plotting work to `visualize_utils.visualize_solution`.
+
+@see Dirichlet.c
+@author Li Zhijun
+@date 2025-10-27
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from visualize_utils import load_solution_from_csv, visualize_solution

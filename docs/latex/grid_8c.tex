@@ -21,7 +21,11 @@ Include dependency graph for grid.\+c\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Create new uniform 2D grid points. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8c_a2c256fcb14b9e2ebb265d2ab35d936b0}{initialize\+\_\+\+Grid}} (int nx, int ny, double x0, double x1, double y0, double y1, \mbox{\hyperlink{grid_8h_a509e5659520129614e3072a7bd63c29d}{region\+\_\+divider\+\_\+func}} \mbox{\hyperlink{Dirichlet_8c_aac37605abfd3877c437fde984df578fd}{region\+\_\+divider}})
 \begin{DoxyCompactList}\small\item\em Create a new 2D grid structure with the division of the computing domain. \end{DoxyCompactList}\item 
-double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8c_a1ea426a678e98ecb5bec65d4cb876ef4}{read\+\_\+indices\+\_\+to\+\_\+points}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid, double \texorpdfstring{$\ast$}{*}data\+\_\+indices)
+double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8c_af2eedadd0f889624d4efe433d7c9d8bd}{create\+\_\+grid\+\_\+2\+D\+\_\+array}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8c_abd0051e3e0bc770db2a33638dd509d3e}{free\+\_\+grid\+\_\+2\+D\+\_\+array}} (double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}array, \mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid)
+\item 
+void \mbox{\hyperlink{grid_8c_a59cf713af413a93809a2ffc4ac87e69d}{read\+\_\+indices\+\_\+to\+\_\+points}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid, double \texorpdfstring{$\ast$}{*}data\+\_\+indices, double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}data\+\_\+points)
 \begin{DoxyCompactList}\small\item\em Remap the data in the form of column vectors to the grid points. \end{DoxyCompactList}\item 
 void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grid_8c_a31befaf760e994473b73acce12ad6546}{free\+\_\+grid}} (\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}grid)
 \begin{DoxyCompactList}\small\item\em Free the memory allocated for a grid structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -41,6 +45,12 @@ Li Zhijun
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{grid_8c_af2eedadd0f889624d4efe433d7c9d8bd}\label{grid_8c_af2eedadd0f889624d4efe433d7c9d8bd} 
+\index{grid.c@{grid.c}!create\_grid\_2D\_array@{create\_grid\_2D\_array}}
+\index{create\_grid\_2D\_array@{create\_grid\_2D\_array}!grid.c@{grid.c}}
+\doxysubsubsection{\texorpdfstring{create\_grid\_2D\_array()}{create\_grid\_2D\_array()}}
+{\footnotesize\ttfamily double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} create\+\_\+grid\+\_\+2\+D\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption})}
+
 \Hypertarget{grid_8c_a827f3575406b8b99a6eb56f476bbcf4d}\label{grid_8c_a827f3575406b8b99a6eb56f476bbcf4d} 
 \index{grid.c@{grid.c}!create\_uniform\_grid@{create\_uniform\_grid}}
 \index{create\_uniform\_grid@{create\_uniform\_grid}!grid.c@{grid.c}}
@@ -89,6 +99,12 @@ Free the memory allocated for a grid structure.
 {\em grid} & Pointer to the grid structure to free. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{grid_8c_abd0051e3e0bc770db2a33638dd509d3e}\label{grid_8c_abd0051e3e0bc770db2a33638dd509d3e} 
+\index{grid.c@{grid.c}!free\_grid\_2D\_array@{free\_grid\_2D\_array}}
+\index{free\_grid\_2D\_array@{free\_grid\_2D\_array}!grid.c@{grid.c}}
+\doxysubsubsection{\texorpdfstring{free\_grid\_2D\_array()}{free\_grid\_2D\_array()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} free\+\_\+grid\+\_\+2\+D\+\_\+array (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{array,  }\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid }\end{DoxyParamCaption})}
+
 \Hypertarget{grid_8c_a2c256fcb14b9e2ebb265d2ab35d936b0}\label{grid_8c_a2c256fcb14b9e2ebb265d2ab35d936b0} 
 \index{grid.c@{grid.c}!initialize\_Grid@{initialize\_Grid}}
 \index{initialize\_Grid@{initialize\_Grid}!grid.c@{grid.c}}
@@ -138,11 +154,11 @@ The caller is responsible for freeing the allocated memory using \doxylink{grid_
 \begin{DoxySeeAlso}{See also}
 \doxylink{grid_8h_a31befaf760e994473b73acce12ad6546}{free\+\_\+grid()} 
 \end{DoxySeeAlso}
-\Hypertarget{grid_8c_a1ea426a678e98ecb5bec65d4cb876ef4}\label{grid_8c_a1ea426a678e98ecb5bec65d4cb876ef4} 
+\Hypertarget{grid_8c_a59cf713af413a93809a2ffc4ac87e69d}\label{grid_8c_a59cf713af413a93809a2ffc4ac87e69d} 
 \index{grid.c@{grid.c}!read\_indices\_to\_points@{read\_indices\_to\_points}}
 \index{read\_indices\_to\_points@{read\_indices\_to\_points}!grid.c@{grid.c}}
 \doxysubsubsection{\texorpdfstring{read\_indices\_to\_points()}{read\_indices\_to\_points()}}
-{\footnotesize\ttfamily double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} read\+\_\+indices\+\_\+to\+\_\+points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{double \texorpdfstring{$\ast$}{*}}]{data\+\_\+indices }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void read\+\_\+indices\+\_\+to\+\_\+points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrid2D}{Grid2D}} \texorpdfstring{$\ast$}{*}}]{grid,  }\item[{double \texorpdfstring{$\ast$}{*}}]{data\+\_\+indices,  }\item[{double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{data\+\_\+points }\end{DoxyParamCaption})}
 
 
 
